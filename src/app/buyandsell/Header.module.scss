@@ -45,9 +45,10 @@
     background-size: cover;
 
     @media (min-width: 0px) and (max-width: 1023px) {
-        height: 216.2666667vw;
+        height: 270.2666667vw;
+        background-size: 100% 100%;
+        background-position: bottom;
         background-image: url(/img/buy_sell_header_background_fluid_mobile.png);
-        background-size: cover;
         // background-position-x: calc(50% - 150px);        
     }
     // @media (min-width: 1024px) and (max-width: 1279px) {
@@ -203,9 +204,12 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-         .header-content-inner{
-            display: flex;
-            margin-top:15px;
+            .header-content-inner{
+                display: flex;
+                margin-top:15px;
+                @media (min-width: 0px) and (max-width: 600px) {
+                    margin-top:4px;
+                }
             .header-content-round{
                
                 .header-content-round-box{

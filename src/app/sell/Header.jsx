@@ -85,7 +85,7 @@ const Header = () => {
                   <div className={styles["before_round"]}></div>
                 </div>
                 <div className={styles["header-content-text"]}>
-                <span className={styles["only_mobile"]}>01.</span> Get matched with a HomeEasy Preferred Agent
+                 Get matched with a HomeEasy Preferred Agent
                 </div>
 
             </div>
@@ -97,7 +97,7 @@ const Header = () => {
                   <div className={styles["before_round"]}></div>
                 </div>
                 <div className={styles["header-content-text"]}>
-                <span className={styles["only_mobile"]}>02.</span>  Sell your home instantly for cash or list for 1%<sup>2</sup>
+                 Sell your home instantly for cash or list for 1%<sup>2</sup>
                 </div>
 
             </div>
@@ -108,7 +108,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className={styles["header-content-text"]}>
-                <span className={styles["only_mobile"]}>03.</span>  Save thousands, pop the champaign & start packing
+                 Save thousands, pop the champaign & start packing
                 </div>
 
             </div>
@@ -122,12 +122,7 @@ const Header = () => {
                             }}
                         />
           </div>
-          <div className={styles["transparentprocess-content-tabs-content"]}>
-                        <div className={styles["transparentprocess-content-tabs-content-item"]}>
-                            <input ref={searchInputRef} onKeyUp={(e)=>{handleKeyup(e);}} type="text" placeholder="Enter Your Home Address" />
-
-                        </div>
-                    </div>
+    
  
         </div>
       </div>

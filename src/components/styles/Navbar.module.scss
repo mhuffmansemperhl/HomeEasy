@@ -602,6 +602,9 @@
     grid-template-rows: 1fr;
   }
 }
+.header-menu-container-menu-links-item:nth-child(8){
+padding-bottom: 35px;
+}
 
 .header-menu-container-mobile-menu-buttons {
   display: none;
@@ -621,6 +624,7 @@
       display: flex;
       justify-content: center;
       padding: 6.8vw 0px;
+      // padding-top:5vh;
       // box-shadow: 0px -6px 6px rgba(0, 0, 0, .2);
       z-index: 1000;
   }
