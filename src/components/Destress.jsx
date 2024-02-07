@@ -6,7 +6,6 @@ import useWindowSize from "@/hooks/useWindowSize";
 import { motion } from "framer-motion";
 import ArrowButton from "./ArrowButton";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
-import useFlowGetStartedStore from "@/store/store.js"
 
 const Destress = () => {
   const windowSize = useWindowSize();
@@ -15,9 +14,6 @@ const Destress = () => {
 
   // const imageUrls = ["/img/sell_image.png", "/img/buy_image.png", "/img/buy_sell_image.png"];
   const [selectedIndex, setSelectedIndex] = useState(0);
-// top
-const flow = useFlowGetStartedStore(state => state.flow);
-const setFlow = useFlowGetStartedStore(state => state.setFlow);
 
   useEffect(() => {
     // setTimeout(() => {
@@ -28,8 +24,8 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
     //  }, 10000);
   }, []);
 
-  function handleTabClick(index) {
-    setSelectedIndex(index);
+  function changeIndex(idx) {
+    setSelectedIndex(idx);
   }
 
   function doGetStarted() {
@@ -94,23 +90,22 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
               }`}
             ></motion.div>
           )}
-           
+
           <div className={styles["transparentprocess-content-tabs-holder"]}>
             <div className={styles["transparentprocess-content-tabs-title"]}>
               We de-stress the process.
             </div>
             <div className={styles["transparentprocess-content-tabs-tabs"]}>
               <div
-                // onClick={() => {
-                //   gtmPush(["callback", "home_destress_sell",
-                //     () => {
-                //       changeIndex(0);
-                //     },
-                    
-                //   ]);
-                // }}
-                onClick={() => handleTabClick(0)}
-
+                onClick={() => {
+                  gtmPush([
+                    "callback",
+                    "home_destress_sell",
+                    () => {
+                      changeIndex(0);
+                    },
+                  ]);
+                }}
                 className={`${styles["transparentprocess-content-tabs-tab"]} ${
                   selectedIndex === 0
                     ? styles["transparentprocess-content-tabs-tab-selected"]
@@ -119,19 +114,17 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
               >
                 Sell
               </div>
-              {/* {console.log(flow)} */}
               <div
-                // onClick={() => {
-                
-                //   gtmPush([
-                //     "callback",
-                //     "home_destress_buy",
-                //     () => {
-                //       changeIndex(1);
-                //     },
-                //   ]);
-                // }}
-                onClick={() => handleTabClick(1)}
+                onClick={() => {
+                  // changeIndex(1);
+                  gtmPush([
+                    "callback",
+                    "home_destress_buy",
+                    () => {
+                      changeIndex(1);
+                    },
+                  ]);
+                }}
                 className={`${styles["transparentprocess-content-tabs-tab"]} ${
                   selectedIndex === 1
                     ? styles["transparentprocess-content-tabs-tab-selected"]
@@ -141,16 +134,16 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
                 Buy
               </div>
               <div
-                // onClick={() => {
-                //   gtmPush([
-                //     "callback",
-                //     "home_destress_buy_sell",
-                //     () => {
-                //       changeIndex(2);
-                //     },
-                //   ]);
-                // }}
-                onClick={() => handleTabClick(2)}
+                onClick={() => {
+                  // changeIndex(2);
+                  gtmPush([
+                    "callback",
+                    "home_destress_buy_sell",
+                    () => {
+                      changeIndex(2);
+                    },
+                  ]);
+                }}
                 className={`${styles["transparentprocess-content-tabs-tab"]} ${
                   selectedIndex === 2
                     ? styles["transparentprocess-content-tabs-tab-selected"]
@@ -161,7 +154,7 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
               </div>
             </div>
             <div className={styles["transparentprocess-content-tabs-content"]}>
-              {(selectedIndex === 1 || flow === "buy") && (
+              {selectedIndex === 1 && (
                 <div
                   className={
                     styles["transparentprocess-content-tabs-content-item"]
@@ -188,7 +181,7 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
                   </div>
                 </div>
               )}
-              {(selectedIndex === 1 || flow === "buy") && (
+              {selectedIndex === 1 && (
                 <div
                   className={
                     styles["transparentprocess-content-tabs-content-item"]
@@ -215,7 +208,7 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
                   </div>
                 </div>
               )}
-              {(selectedIndex === 1 || flow === "buy") && (
+              {selectedIndex === 1 && (
                 <div
                   className={
                     styles["transparentprocess-content-tabs-content-item"]
@@ -242,7 +235,7 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
                   </div>
                 </div>
               )}
-              {(selectedIndex === 1 || flow === "buy") && (
+              {selectedIndex === 1 && (
                 <div
                   className={
                     styles["transparentprocess-content-tabs-content-item"]
@@ -269,8 +262,7 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
                   </div>
                 </div>
               )}
-
-              {(selectedIndex === 0 || flow === "sell") && (
+              {selectedIndex === 0 && (
                 <div
                   className={
                     styles["transparentprocess-content-tabs-content-item"]
@@ -285,7 +277,6 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
                   >
                     1. My house is worth what?!
                   </div>
-
                   <div
                     className={
                       styles[
@@ -296,11 +287,9 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
                     Use our free home value calculator to instantly see your
                     home’s current value.
                   </div>
-
-
                 </div>
               )}
-              {(selectedIndex === 0 || flow === "sell") && (
+              {selectedIndex === 0 && (
                 <div
                   className={
                     styles["transparentprocess-content-tabs-content-item"]
@@ -327,13 +316,12 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
                   </div>
                 </div>
               )}
-              {(selectedIndex === 0 || flow === "sell") && (
+              {selectedIndex === 0 && (
                 <div
                   className={
                     styles["transparentprocess-content-tabs-content-item"]
                   }
                 >
-
                   <div
                     className={
                       styles[
@@ -353,10 +341,9 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
                     When it comes to selling your home, we have options. No need
                     to be confined to the old, traditional way of doing things.
                   </div>
-
                 </div>
               )}
-              {(selectedIndex === 0 || flow === "sell") && (
+              {selectedIndex === 0 && (
                 <div
                   className={
                     styles["transparentprocess-content-tabs-content-item"]
@@ -384,9 +371,7 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
                   </div>
                 </div>
               )}
-
-              
-              {(selectedIndex === 2 || flow === "sellbuy") && (
+              {selectedIndex === 2 && (
                 <div
                   className={
                     styles["transparentprocess-content-tabs-content-item"]
@@ -413,7 +398,7 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
                   </div>
                 </div>
               )}
-              {(selectedIndex === 2 || flow === "sellbuy") && (
+              {selectedIndex === 2 && (
                 <div
                   className={
                     styles["transparentprocess-content-tabs-content-item"]
@@ -440,7 +425,7 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
                   </div>
                 </div>
               )}
-              {(selectedIndex === 2 || flow === "sellbuy") && (
+              {selectedIndex === 2 && (
                 <div
                   className={
                     styles["transparentprocess-content-tabs-content-item"]
@@ -467,7 +452,7 @@ const setFlow = useFlowGetStartedStore(state => state.setFlow);
                   </div>
                 </div>
               )}
-              {(selectedIndex === 2 || flow === "sellbuy") && (
+              {selectedIndex === 2 && (
                 <div
                   className={
                     styles["transparentprocess-content-tabs-content-item"]
