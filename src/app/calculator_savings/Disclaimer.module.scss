@@ -1,0 +1,147 @@
+.main-component {    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // padding-bottom: 1.770833333vw;
+    // padding-bottom: 0px;
+    background-color: #F5F7F9;
+
+}
+
+.main-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.020833333vw 0px 3.020833333vw 0px;
+    border-top: 1px solid #193A52;
+
+    @media (min-width: 0px) and (max-width: 1023px) {
+        width: 84.66666667vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15.73333333vw 0vw 16.26666667vw 0vw;
+        // margin-top: -90vw;      
+    }
+}
+
+
+.main-title-container {
+    font-weight: var(--secondarytitleweight);
+    width: 100%;
+    text-align: center;
+    // font-size: 4.1015625vw;
+    // line-height: 5.078125vw;
+    // width: 66.6015625vw;                
+    font-size: 2.1875vw;
+    line-height: 2.708333333vw;
+    width: 35.52083333vw;                
+
+    @media (min-width: 0px) and (max-width: 1023px) {
+        font-size: 7.466666667vw;
+        line-height: 8.533333333vw;
+        // width: 620px;
+        width: calc(100vw - 40px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    // @media (min-width: 1024px) and (max-width: 1279px) {
+    //     font-size: var(--secondarytitlesize);
+    //     line-height: var(--secondarytitlelineheight);
+    //     width: 682px;                
+    // }
+    // @media (min-width: 1280px) and (max-width: 1919px) {
+    //     font-size: var(--secondarytitlesize);
+    //     line-height: var(--secondarytitlelineheight);
+    //     width: 682px;        
+    // }
+    // @media (min-width: 1920px) {
+    //     font-size: var(--secondarytitlesize);
+    //     line-height: var(--secondarytitlelineheight);
+    //     width: 42.70833333vw;
+    // }
+
+}
+
+.main-copy-container {
+    font-weight: 400;
+    width: 44.89583333vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.833333333vw;
+    line-height: 1.302083333vw;
+    padding: 0px 0px;
+    letter-spacing: 0px;
+    text-align: center;
+
+    @media (min-width: 0px) and (max-width: 1023px) {
+        width: 100%;
+        font-size: 4.266666667vw;
+        line-height: 6.4vw;
+        // padding: 0px 10.66666667vw 0px 10.66666667vw;
+        text-align: center;
+    }
+    // @media (min-width: 1024px) and (max-width: 1279px) {
+    //     // width: 813px;
+    //     font-size: 28px;
+    //     line-height: 35px;
+    //     padding: 20px 0px 50px 0px;
+        
+    // }
+    // @media (min-width: 1280px) and (max-width: 1919px) {
+    //     // width: 813px;
+    //     font-size: 28px;
+    //     line-height: 35px;
+    //     padding: 20px 0px 50px 0px;
+        
+    // }
+    // @media (min-width: 1920px) {
+    //     // width: 1058px;
+    //     font-size: 28px;
+    //     line-height: 35px;
+    //     padding: 20px 0px 50px 0px;
+    // }
+
+}
+
+.main-button-container {
+    button {
+        all: unset;
+        cursor: pointer;
+        background-color: var(--semperred);
+        font-weight: 700;
+        // letter-spacing: 0.6px;
+        color: white;
+        border-radius: 10px;
+
+        padding: 0.520833333vw  1.145833333vw;
+        font-size: 0.833333333vw;
+        // line-height: ;            
+
+
+        @media (min-width: 0px) and (max-width: 1023px) {
+            // padding: 20px  22px;
+            font-size: 16px;
+            line-height: 36px;
+            width: 70.66666667vw;
+            height: 14.13333333vw;
+            text-align: center;
+        }
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            border-radius: 5px;
+            // padding: 10px  22px;
+            // font-size: 16px;
+            // line-height: 36px;            
+        }
+        // @media (min-width: 1280px) and (max-width: 1919px) {
+        //     padding: 10px  22px;
+        //     font-size: 16px;
+        //     line-height: 36px;            
+        // }
+        // @media (min-width: 1920px) {
+        //     padding: 10px  22px;
+        //     font-size: 16px;
+        //     line-height: 36px;
+        // }
+    }
+    
+}

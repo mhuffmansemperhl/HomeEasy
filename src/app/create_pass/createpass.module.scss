@@ -1,0 +1,144 @@
+.main {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    width: 100vw;
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    // justify-content: space-between;
+  }
+
+.progress-container {
+  width: 80vw;
+  overflow-x: hidden;
+ 
+  @media (min-width: 0px) and (max-width: 1023px) {
+      // width: 80vw;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 180px;
+  }
+  .form_heading{
+    font-size: 2.266666667vw;
+    // line-height: 6.4vw;
+    // width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 35px;
+    @media (min-width: 0px) and (max-width: 1023px) {
+        font-size: 6.266666667vw;
+    }
+  }
+  .form_tick{
+    width:25vw;
+    margin: auto;
+    @media (min-width: 0px) and (max-width: 1023px) {
+      width: 100vw;
+  }
+    .form_tick_box{
+    margin-top: 15px;
+    padding-left: 25px;
+    }::after{
+      position: absolute;
+      content: "";
+width: 40px;
+height: 40px;
+background: url(/img/tick.png) no-repeat;
+left:0px;
+    }
+
+  }
+  .input_box{
+    margin-top: 25px;
+    .input_div{
+        text-align: center;
+        margin-top: 12px;
+       input{
+        width: 40%;
+        border-radius: 12px;
+        border: 2px solid rgb(131, 124, 124);
+        height: 55px;
+        padding: 0 12px;
+        @media (min-width: 0px) and (max-width: 1023px) {
+            width: 100%;
+        }
+       }
+    }
+  }
+  .terms{
+    font-size: 13px;
+    text-align: center;
+    margin-top: 40px;
+    a{
+      color: black;
+    }
+   }
+
+}
+.submit_btn_main{
+  text-align: center;
+  padding: 25px 0;
+  background-color: rgba(142, 135, 177, 0.178);
+  margin-top: 25px;
+  padding-bottom: 35;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  @media (min-width: 0px) and (max-width: 1023px) {
+display: block;
+
+}
+  .submit_btn{
+
+    button{
+      padding: 15px 50px;
+      border-radius: 12px;
+      border: none;
+      background-color: rgb(107, 105, 105);
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 150px;
+      margin-top: 12px;
+      margin-right: 10px;
+      @media (min-width: 0px) and (max-width: 1023px) {
+      margin-right: 0;
+        }
+    }
+   }
+  .content-container {
+    // height: 100% !important;
+    // margin-top: auto;
+    margin-bottom: auto;
+    @media (min-width: 0px) and (max-width: 1023px) {
+        // margin-bottom: 0px;
+        padding-bottom: 29.06666667vw;
+        overflow-y: scroll;
+    }
+    // background-color: red;
+    width: 100%;
+  }
+}
+
+
+.footer-container {
+    // margin-top: auto;
+    @media (min-width: 0px) and (max-width: 1023px) {
+        position: sticky !important;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 100000000;
+    }
+}
+// .allways-bottom {
+//     position: absolute;
+//     bottom: 0;
+// }

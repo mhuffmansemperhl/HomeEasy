@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="414" height="460" viewBox="0 0 414 460">
+  <g id="Group_571" data-name="Group 571" transform="translate(-1205 -6899)">
+    <rect id="Rectangle_225" data-name="Rectangle 225" width="414" height="455" rx="15" transform="translate(1205 6899)" fill="#fff"/>
+    <text id="Estimated_monthly_payments_calculator." data-name="Estimated monthly
+payments calculator." transform="translate(1230 6950)" fill="#1d1d1d" font-size="24" font-family="ProximaNova-Extrabld, Proxima Nova" letter-spacing="0.05em"><tspan x="68.384" y="22">Estimated monthly</tspan><tspan x="56.6" y="52">payments calculator.</tspan></text>
+    <text id="Estimate_your_monthly_payments_and_understand_the_cost_of_buying_a_home." data-name="Estimate your monthly payments and understand the cost of buying a home." transform="translate(1259 7030)" fill="#1d1d1d" font-size="16" font-family="ProximaNova-Light, Proxima Nova" font-weight="300" letter-spacing="0.05em"><tspan x="12.976" y="15">Estimate your monthly payments and </tspan><tspan x="5.912" y="40">understand the cost of buying a home.</tspan></text>
+    <path id="Rectangle_233" data-name="Rectangle 233" d="M15,0H311a15,15,0,0,1,15,15V214a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V15A15,15,0,0,1,15,0Z" transform="translate(1249 7140)" fill="#193a52"/>
+    <text id="Est_Monthly_payment" data-name="Est Monthly payment" transform="translate(1249 7168)" fill="#beebfc" font-size="16" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="63.528" y="15">EST MONTHLY PAYMENT</tspan></text>
+    <text id="Mortgage_principal_interest" data-name="Mortgage principal &amp; interest" transform="translate(1249 7272)" fill="#beebfc" font-size="11" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="64.836" y="10">MORTGAGE PRINCIPAL &amp; INTEREST</tspan></text>
+    <text id="Property_taxes" data-name="Property taxes" transform="translate(1249 7332)" fill="#beebfc" font-size="11" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="113.181" y="10">PROPERTY TAXES</tspan></text>
+    <text id="_2_575" data-name="$2,575" transform="translate(1249 7189)" fill="#fff" font-size="38" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="96.861" y="35">$2,575</tspan></text>
+    <text id="_1_950" data-name="$1,950" transform="translate(1249 7290)" fill="#fff" font-size="24" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="122.596" y="22">$1,950</tspan></text>
+    <line id="Line_104" data-name="Line 104" x2="268" transform="translate(1278.5 7240.5)" fill="none" stroke="#fff" stroke-width="0.25"/>
+  </g>
+</svg>

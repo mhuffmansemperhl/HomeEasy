@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="75" viewBox="0 0 75 75">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_228" data-name="Path 228" d="M-3.135-4.188H26.517V46.1H-3.135Z" fill="none" stroke="#707070" stroke-width="2"/>
+    </clipPath>
+  </defs>
+  <g id="Group_579" data-name="Group 579" transform="translate(-953 -1830.982)">
+    <circle id="Ellipse_6" data-name="Ellipse 6" cx="37.5" cy="37.5" r="37.5" transform="translate(953 1830.982)" fill="#193a52"/>
+    <g id="Group_489" data-name="Group 489" transform="translate(978.224 1847.246)">
+      <g id="Mask_Group_3" data-name="Mask Group 3" clip-path="url(#clip-path)">
+        <path id="Path_227" data-name="Path 227" d="M27.545,16.772A10.772,10.772,0,1,0,13.833,27.164V34.18l1.7,2.191-1.7,2.668,1.851,2.44-1.6,2.253,1.657,2-1.178,2.546,3.09,2.233,2.055-4.723V27.164A10.7,10.7,0,0,0,27.545,16.772Z" transform="translate(-5.495 -5.495)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"/>
+        <circle id="Ellipse_7" data-name="Ellipse 7" cx="2.147" cy="2.147" r="2.147" transform="matrix(0.257, -0.966, 0.966, 0.257, 8.651, 8.512)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

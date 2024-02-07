@@ -1,0 +1,157 @@
+.main-component {    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // padding-bottom: 1.770833333vw;
+    // padding-bottom: 0px;
+}
+
+.main-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    width: 27.5vw;
+
+    @media (min-width: 0px) and (max-width: 1023px) {
+        width: 100%;        
+    }
+    @media (min-width: 1024px) and (max-width: 1279px) {
+        
+    }
+    @media (min-width: 1280px) and (max-width: 1919px) {
+        
+    }
+    @media (min-width: 1920px) {
+        // width: 528px;
+    }
+
+    .contact-form-text-input {
+        position: relative;
+        width: 100%;
+        .contact-form-text-input-error {
+            width: 100%;
+            text-align: left;
+            position: absolute;
+            left: 1vw;
+            bottom: -0.8vw;
+            color: #D30200;
+            font-weight: bold;
+            font-size: 0.625vw;
+
+            @media (min-width: 0px) and (max-width: 1023px) {
+                font-size: 2.666666667vw;
+                bottom: -3.466666667vw;
+                left: 3.466666667vw;
+            }
+        }
+
+        input, select {
+            width: 100%;
+            border: 1px solid #707070;
+            border-radius: 15px;
+            font-size: 0.9375vw;
+            color: #1D1D1D;
+            padding: 1.145833333vw 1.25vw;
+            &::placeholder {
+                color: #898989;
+            }
+            &:focus {
+                border: 2px solid #1D1D1D;
+            }
+            @media (min-width: 0px) and (max-width: 1023px) {
+                width: 100%;
+                font-size: 3.733333333vw;
+                padding: 5.333333333vw 3.466666667vw;            
+                    
+            }
+            @media (min-width: 1024px) and (max-width: 1279px) {
+                
+            }
+            @media (min-width: 1280px) and (max-width: 1919px) {
+                
+            }
+            @media (min-width: 1920px) {
+                // padding: 22px 24px;
+            }    
+        }
+
+        select {
+            display: flex;
+            align-items: center;
+            // text-align: right;
+            padding-right: 2.5vw;
+            position: relative;
+            // --chevron:url();
+            --chevron:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18.278' height='9.983' viewBox='0 0 18.278 9.983'%3E%3Cpath id='Path_374' data-name='Path 374' d='M2328.983,119l-8.716,8.716L2311.55,119' transform='translate(-2311.128 -118.574)' fill='none' stroke='%23898989' stroke-miterlimit='10' stroke-width='1.195'/%3E%3C/svg%3E");
+            appearance: none;
+            background: var(--chevron) right center no-repeat white;
+            background-size: 0.9078125vw 0.454166667vw;
+            background-position-y: center;
+            background-position-x: calc(100% - 0.78125vw);
+
+            @media (min-width: 0px) and (max-width: 1023px) {
+                padding-right: 10.333333333vw;
+                background-size: 2.922666667vw 1.461333333vw;
+                background-position-y: center;
+                background-position-x: calc(100% - 4.266666667vw);
+                text-align: left;
+            }
+
+        }
+
+    }
+    .contact-form-text-input ~ .contact-form-text-input {
+        margin-top: 1.041666667vw;
+        @media (min-width: 0px) and (max-width: 1023px) {
+            margin-top: 4.266666667vw;
+        }
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            
+        }
+        @media (min-width: 1280px) and (max-width: 1919px) {
+            
+        }
+        @media (min-width: 1920px) {
+            // margin-top: 20px;
+        }
+    }
+}
+
+.contact-form-disclaimer-container {
+    color: #1D1D1D;
+    font-weight: 300;
+    text-align: center;
+    // letter-spacing: 0.6px;
+    padding: 1.979166667vw 0px;
+    width: 25.04427083vw;
+    font-size: 0.625vw;
+    line-height: 0.9375vw;
+
+    @media (min-width: 0px) and (max-width: 1023px) {
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 2.666666667vw;
+        line-height: 3.733333333vw;
+        padding: 10.13333333vw 0px;
+    }
+    @media (min-width: 1024px) and (max-width: 1279px) {
+        
+    }
+    @media (min-width: 1280px) and (max-width: 1919px) {
+        
+    }
+    @media (min-width: 1920px) {
+        // padding: 38px 0px;
+        // width: 480.85px;
+        // font-size: 12px;
+        // line-height: 18px;
+    }
+}

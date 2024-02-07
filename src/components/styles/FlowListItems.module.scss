@@ -1,0 +1,113 @@
+.main-component {    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // padding-bottom: 1.770833333vw;
+    // padding-bottom: 0px;
+}
+
+.main-content-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-items-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 27.5vw;
+
+    @media (min-width: 0px) and (max-width: 1023px) {
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media (min-width: 1024px) and (max-width: 1279px) {
+        
+    }
+    @media (min-width: 1280px) and (max-width: 1919px) {
+        
+    }
+    @media (min-width: 1920px) {
+        // width: 528px;
+    }
+
+    .list-item {
+        cursor: pointer;
+        border: 1px solid #707070;
+        border-radius: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 1.041666667vw 0px;
+
+        &:hover, &:focus, &.selected {
+            transition: all 0.3s ease-in-out !important;
+            // border: 2px solid #1D1D1D;
+            box-shadow: 0 0 0 2px #1D1D1D;            
+            background-color: #F5F7F9;
+        }
+
+        @media (min-width: 0px) and (max-width: 1023px) {
+            padding: 4.8vw 0px;
+        }
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            
+        }
+        @media (min-width: 1280px) and (max-width: 1919px) {
+            
+        }
+        @media (min-width: 1920px) {
+            // padding: 20px 0px;
+        }
+    }
+
+    .list-item ~ .list-item {
+        margin-top: 1.041666667vw;
+
+        @media (min-width: 0px) and (max-width: 1023px) {
+            margin-top: 4.266666667vw;
+        }
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            
+        }
+        @media (min-width: 1280px) and (max-width: 1919px) {
+            
+        }
+        @media (min-width: 1920px) {
+            // margin-top: 20px;
+        }
+    }
+
+    .list-item-title {
+        color: #1D1D1D;
+        font-weight: 700;
+        font-size: 0.9375vw;
+        line-height: 2.25vw;
+
+        &:hover, &:focus, &.selected {
+            font-weight: 900;
+        }
+
+
+        @media (min-width: 0px) and (max-width: 1023px) {
+            font-size: 4.266666667vw;
+            line-height: 4.266666667vw;
+            padding: 0px 20px;
+            // text-align: center;
+
+        }
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            
+        }
+        @media (min-width: 1280px) and (max-width: 1919px) {
+            
+        }
+        @media (min-width: 1920px) {
+            // font-size: 28px;
+            // line-height: 43.2px;
+        }
+    }
+}

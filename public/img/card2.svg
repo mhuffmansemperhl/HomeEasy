@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="414" height="471" viewBox="0 0 414 471">
+  <defs>
+    <filter id="Rectangle_229" x="211" y="243" width="167" height="212" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_185" data-name="Rectangle 185" width="105.417" height="19.52" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_570" data-name="Group 570" transform="translate(-753 -6899)">
+    <rect id="Rectangle_224" data-name="Rectangle 224" width="414" height="455" rx="15" transform="translate(753 6899)" fill="#fff"/>
+    <text id="HomeEasy_Homes_savings_calculator." data-name="HomeEasy Homes
+savings calculator." transform="translate(778 6950)" fill="#1d1d1d" font-size="24" font-family="ProximaNova-Extrabld, Proxima Nova" letter-spacing="0.05em"><tspan x="73.784" y="22">HomeEasy Homes</tspan><tspan x="69.596" y="52">savings calculator.</tspan></text>
+    <text id="Compare_your_savings_with_HomeEasy_Homes_vs_traditional_brokers." data-name="Compare your savings with HomeEasy Homes vs traditional brokers." transform="translate(807 7030)" fill="#1d1d1d" font-size="16" font-family="ProximaNova-Light, Proxima Nova" font-weight="300" letter-spacing="0.05em"><tspan x="7.008" y="15">Compare your savings with HomeEasy </tspan><tspan x="41.456" y="40">Homes vs traditional brokers.</tspan></text>
+    <path id="Rectangle_228" data-name="Rectangle 228" d="M15,0H151a15,15,0,0,1,15,15V212a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V15A15,15,0,0,1,15,0Z" transform="translate(788 7142)" fill="#e5e5e5"/>
+    <text id="TRADITIONAL_BROKER" data-name="TRADITIONAL
+BROKER" transform="translate(788 7158)" fill="#1d1d1d" font-size="9" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="52.189" y="8">TRADITIONAL</tspan><tspan x="64.677" y="20">BROKER</tspan></text>
+    <g data-type="innerShadowGroup">
+      <path id="Rectangle_229-2" data-name="Rectangle 229" d="M15,0H152a15,15,0,0,1,15,15V212a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V15A15,15,0,0,1,15,0Z" transform="translate(964 7142)" fill="#193a52"/>
+      <g transform="matrix(1, 0, 0, 1, 753, 6899)" filter="url(#Rectangle_229)">
+        <path id="Rectangle_229-3" data-name="Rectangle 229" d="M15,0H152a15,15,0,0,1,15,15V212a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V15A15,15,0,0,1,15,0Z" transform="translate(211 243)" fill="#fff"/>
+      </g>
+    </g>
+    <text id="_650_000" data-name="$650,000" transform="translate(965 7226)" fill="#fff" font-size="18" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="38.945" y="17">$650,000</tspan></text>
+    <text id="_650_000-2" data-name="$650,000" transform="translate(788 7226)" fill="#1d1d1d" font-size="18" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="38.945" y="17">$650,000</tspan></text>
+    <text id="_6_500" data-name="$6,500" transform="translate(965 7282)" fill="#fff" font-size="18" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="50.816" y="17">$6,500</tspan></text>
+    <text id="_13_000" data-name="$13,000" transform="translate(966 7333)" fill="#fff" font-size="18" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="46.748" y="17">$13,000</tspan></text>
+    <text id="_19_500" data-name="$19,500" transform="translate(788 7282)" fill="#1d1d1d" font-size="18" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="46.856" y="17">$19,500</tspan></text>
+    <text id="_19_500-2" data-name="$19,500" transform="translate(789 7333)" fill="#1d1d1d" font-size="18" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="46.856" y="17">$19,500</tspan></text>
+    <g id="Group_481" data-name="Group 481" transform="translate(994.792 7158)">
+      <path id="Path_23" data-name="Path 23" d="M169.885,18.276V12.762h-7.357v5.513h-.991V6.675h.991v5.183h7.357V6.675h1.009v11.6Z" transform="translate(-137.327 -5.675)" fill="#fff"/>
+      <g id="Group_325" data-name="Group 325">
+        <g id="Mask_Group_324" data-name="Mask Group 324" clip-path="url(#clip-path)">
+          <path id="Path_24" data-name="Path 24" d="M239.64,31.035c0-2.452,1.583-4.4,4.035-4.4,2.487,0,4.052,1.948,4.052,4.4s-1.565,4.418-4.052,4.418c-2.452,0-4.035-1.965-4.035-4.418m7.113,0c0-1.861-1.1-3.583-3.078-3.583-1.948,0-3.061,1.722-3.061,3.583,0,1.878,1.113,3.6,3.061,3.6,1.983,0,3.078-1.722,3.078-3.6" transform="translate(-203.725 -22.643)" fill="#fff"/>
+          <path id="Path_25" data-name="Path 25" d="M319.155,35.244V29.366c0-1.183-.5-1.913-1.687-1.913a3.118,3.118,0,0,0-2.4,1.426v6.365h-.922V29.366c0-1.183-.487-1.913-1.687-1.913a3.224,3.224,0,0,0-2.4,1.444v6.348h-.9v-8.4h.9v1.27a3.694,3.694,0,0,1,2.713-1.478,2.114,2.114,0,0,1,2.209,1.583,3.493,3.493,0,0,1,2.783-1.583c1.548,0,2.3.87,2.3,2.557v6.052Z" transform="translate(-262.821 -22.643)" fill="#fff"/>
+          <path id="Path_26" data-name="Path 26" d="M401.523,26.635c2.557,0,3.966,2.035,3.966,4.453v.243h-7.027a3.274,3.274,0,0,0,3.287,3.339,3.692,3.692,0,0,0,2.748-1.165l.47.591a4.335,4.335,0,0,1-3.287,1.356,4.15,4.15,0,0,1-4.209-4.418,4.175,4.175,0,0,1,4.052-4.4m-3.061,3.983h6.1a3.08,3.08,0,0,0-3.061-3.2,3.162,3.162,0,0,0-3.044,3.2" transform="translate(-337.902 -22.643)" fill="#fff"/>
+          <path id="Path_27" data-name="Path 27" d="M464.781,18.276V6.675h8.209V8.8h-5.74v2.522h5.618v2.122H467.25v2.7h5.74v2.139Z" transform="translate(-395.124 -5.675)" fill="#fff"/>
+          <path id="Path_28" data-name="Path 28" d="M534.076,35.245v-.869a3.477,3.477,0,0,1-2.661,1.078,2.8,2.8,0,0,1-2.922-2.783,2.66,2.66,0,0,1,2.922-2.678,3.4,3.4,0,0,1,2.661,1.026V29.853c0-.852-.731-1.409-1.844-1.409a3.534,3.534,0,0,0-2.452.991l-.835-1.478a5.512,5.512,0,0,1,3.67-1.322c1.913,0,3.67.765,3.67,3.183v5.426Zm0-3.061a2.21,2.21,0,0,0-1.774-.73c-.869,0-1.583.47-1.583,1.269,0,.783.713,1.235,1.583,1.235a2.211,2.211,0,0,0,1.774-.731Z" transform="translate(-449.287 -22.644)" fill="#fff"/>
+          <path id="Path_29" data-name="Path 29" d="M591.189,32.6a4.81,4.81,0,0,0,2.9,1.148c.956,0,1.409-.331,1.409-.852,0-.591-.731-.8-1.687-.991-1.443-.278-3.3-.626-3.3-2.626,0-1.409,1.235-2.644,3.444-2.644a5.279,5.279,0,0,1,3.374,1.148l-.87,1.513a3.544,3.544,0,0,0-2.487-.974c-.8,0-1.322.3-1.322.783,0,.522.661.713,1.6.9,1.444.278,3.374.661,3.374,2.748,0,1.548-1.3,2.7-3.635,2.7a5.656,5.656,0,0,1-3.757-1.3Z" transform="translate(-501.774 -22.644)" fill="#fff"/>
+          <path id="Path_30" data-name="Path 30" d="M643.69,37.733a1.911,1.911,0,0,0,.7.139,1.114,1.114,0,0,0,1.165-.609l.313-.713-3.409-8.522h2.365l2.192,5.844,2.191-5.844h2.383L647.638,37.8a3.052,3.052,0,0,1-3.183,2.035,6.054,6.054,0,0,1-1.1-.122Z" transform="translate(-546.17 -23.827)" fill="#fff"/>
+          <path id="Path_31" data-name="Path 31" d="M0,0V10.462l6.556-5.73v.025l.022-.025L14.5,11.656l-.021,3.131L6.567,7.873,0,13.612V19.52H19.52V0Z" transform="translate(0 0)" fill="#d30200"/>
+          <path id="Path_32" data-name="Path 32" d="M14.48,41.631,14.5,38.5,6.579,31.576l-.022.025v-.025L0,37.306v3.15l6.567-5.739Z" transform="translate(0 -26.844)" fill="#fff"/>
+          <path id="Path_33" data-name="Path 33" d="M164.122,103.662v-1.584H162.34v1.584h-.8V99.888h.8v1.482h1.782V99.888h.809v3.774Z" transform="translate(-137.327 -84.918)" fill="#fff"/>
+          <path id="Path_34" data-name="Path 34" d="M204.994,99.474a1.952,1.952,0,1,1-1.969,1.952,1.9,1.9,0,0,1,1.969-1.952m0,.713a1.243,1.243,0,1,0,1.149,1.239,1.141,1.141,0,0,0-1.149-1.239" transform="translate(-172.597 -84.566)" fill="#fff"/>
+          <path id="Path_35" data-name="Path 35" d="M251.5,103.662v-2.716l-1.064,2.716h-.351l-1.064-2.716v2.716h-.8V99.888h1.126l.916,2.354.917-2.354H252.3v3.774Z" transform="translate(-211.014 -84.918)" fill="#fff"/>
+          <path id="Path_36" data-name="Path 36" d="M295.592,103.662V99.888h2.67v.69H296.4v.82h1.828v.69H296.4v.877h1.867v.7Z" transform="translate(-251.291 -84.918)" fill="#fff"/>
+          <path id="Path_37" data-name="Path 37" d="M331.406,102.2a1.654,1.654,0,0,0,1.2.509c.441,0,.656-.209.656-.424,0-.283-.328-.379-.764-.481-.617-.141-1.409-.311-1.409-1.154,0-.628.543-1.137,1.431-1.137a2.1,2.1,0,0,1,1.471.526l-.447.588a1.61,1.61,0,0,0-1.081-.413c-.362,0-.555.158-.555.385,0,.255.317.334.753.436.622.141,1.414.328,1.414,1.165,0,.69-.492,1.211-1.511,1.211a2.174,2.174,0,0,1-1.6-.6Z" transform="translate(-281.363 -84.597)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+    <text id="Home_Sale_price" data-name="Home Sale price" transform="translate(965 7210)" fill="#beebfc" font-size="9" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="40.97" y="8">HOME SALE PRICE</tspan></text>
+    <text id="Home_Sale_price-2" data-name="Home Sale price" transform="translate(788 7210)" fill="#868585" font-size="9" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="40.97" y="8">HOME SALE PRICE</tspan></text>
+    <text id="Selling_agent_commission" data-name="Selling agent commission" transform="translate(965 7266)" fill="#beebfc" font-size="9" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="14.231" y="8">SELLING AGENT COMMISSION</tspan></text>
+    <text id="Buyer_s_agent_commission" data-name="Buyer’s agent commission" transform="translate(966 7317)" fill="#beebfc" font-size="9" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="13.52" y="8">BUYER’S AGENT COMMISSION</tspan></text>
+    <text id="Selling_agent_commission-2" data-name="Selling agent commission" transform="translate(788 7266)" fill="#868585" font-size="9" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="14.231" y="8">SELLING AGENT COMMISSION</tspan></text>
+    <text id="Buyer_s_agent_commission-2" data-name="Buyer’s agent commission" transform="translate(789 7317)" fill="#868585" font-size="9" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700" letter-spacing="0.05em"><tspan x="13.52" y="8">BUYER’S AGENT COMMISSION</tspan></text>
+    <line id="Line_102" data-name="Line 102" x2="140" transform="translate(801.5 7187.5)" fill="none" stroke="#707070" stroke-width="0.25"/>
+    <line id="Line_103" data-name="Line 103" x2="140" transform="translate(978 7187.5)" fill="none" stroke="#fff" stroke-width="0.25"/>
+  </g>
+</svg>

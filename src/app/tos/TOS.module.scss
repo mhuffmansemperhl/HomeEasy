@@ -1,0 +1,28 @@
+.main-component {
+    background-color: white;
+    width: 100%;
+
+    @media (min-width: 0px) and (max-width: 1023px) {
+    }
+}
+
+.main-content-container {
+    position: relative;
+}
+.tos-content-container {
+    color: #1D1D1D;
+    text-align: left;
+    font-size: 1.25vw;
+    line-height: 1.822916667vw;
+    padding: 0px 0px 5vw 0px;
+
+    @media (min-width: 0px) and (max-width: 1023px) {
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 4.266666667vw;
+        line-height: 6.4vw;
+        // text-align: center;
+    }
+
+}
