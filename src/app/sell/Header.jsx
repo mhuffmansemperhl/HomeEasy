@@ -97,7 +97,7 @@ const Header = () => {
                   <div className={styles["before_round"]}></div>
                 </div>
                 <div className={styles["header-content-text"]}>
-                <span className={styles["only_mobile"]}>02.</span>  Sell your home instantly for cash or list for 1%<span>2</span>
+                <span className={styles["only_mobile"]}>02.</span>  Sell your home instantly for cash or list for 1%<sup>2</sup>
                 </div>
 
             </div>

@@ -240,27 +240,7 @@ const Navbar = () => {
           </div>
 
           {windowSize.width > 1023 && (
-            <div className={styles["header-link-group"]}>
-              <div className={styles["header-link-group-link"]}>
-                {" "}
-                <a
-                  onClick={(e) => {
-                    e.preventDefault();
-                    // router.push("/buy");
-                    gtmPush([
-                      "callback",
-                      "nav_buy",
-                      () => {
-                        router.push(`/buy`);
-                      },
-                    ]);
-                  }}
-                  className="underline-on-hover-red"
-                  href="/buy"
-                >
-                  Buy
-                </a>{" "}
-              </div>
+            <div className={styles["header-link-group"]}>     
               <div className={styles["header-link-group-link"]}>
                 {" "}
                 <a
@@ -279,6 +259,26 @@ const Navbar = () => {
                   href="/sell"
                 >
                   Sell
+                </a>{" "}
+              </div>
+              <div className={styles["header-link-group-link"]}>
+                {" "}
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // router.push("/buy");
+                    gtmPush([
+                      "callback",
+                      "nav_buy",
+                      () => {
+                        router.push(`/buy`);
+                      },
+                    ]);
+                  }}
+                  className="underline-on-hover-red"
+                  href="/buy"
+                >
+                  Buy
                 </a>{" "}
               </div>
               <div className={styles["header-link-group-link"]}>

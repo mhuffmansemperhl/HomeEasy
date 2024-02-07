@@ -115,7 +115,9 @@
         }
     
         .header-content-copy {
-
+              sup{
+                font-size:14px;
+              }
             font-weight: 300 !important;
             @media (min-width: 0px) and (max-width: 1023px) {
                 width: 76.736vw;

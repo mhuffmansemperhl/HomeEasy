@@ -7,7 +7,7 @@
 // import Plan from '../components/Plan';
 // import GettingStarted from '../components/GettingStarted';
 import Header from './Header';
-import Footer from '@/components/fluid/Footer';
+import Footer2 from '@/components/fluid/Footer2';
 // import ThreeByOneBlocksSellEasy from './ThreeByOneBlocksSellEasy';
 // import HomeEasyBuyers from './HomeEasyBuyers';
 // import GetStarted from './GetStarted';
@@ -63,7 +63,7 @@ export default function Home() {
           },        
       ]}
       />
-      <Footer />
+      <Footer2 />
     </main>
   )
 }

@@ -94,7 +94,7 @@ const Header = () => {
                   <div className={styles["before_round"]}></div>
                 </div>
                 <div className={styles["header-content-text"]}>
-                Sell your home instantly for cash or list for 1%<span>2</span>
+                Sell your home instantly for cash or list for 1%<sup>2</sup>
                 </div>
 
             </div>
@@ -105,7 +105,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className={styles["header-content-text"]}>
-                Get 1.5% of the loan amount back in closing credits, up to $10,000<span>1</span>
+                Get 1.5% of the loan amount back in closing credits, up to $10,000<sup>1</sup>
                 </div>
 
             </div>

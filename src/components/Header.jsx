@@ -640,7 +640,7 @@ const Header = () => {
                     }
                     
                     {flow === "sell" && 
-                    <div className={styles['header-content-copy']}>List for only 1%2 and save thousands in fees, it’s that easy.</div>
+                    <div className={styles['header-content-copy']}>List for only 1%<sup>2</sup> and save thousands in fees, it’s that easy.</div>
                     }
                     {flow === "buy" && 
                     <div className={styles['header-content-copy']}>Become a HomeEasy Buyer & get money back with your new home.</div>

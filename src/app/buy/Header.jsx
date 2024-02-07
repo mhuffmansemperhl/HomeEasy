@@ -236,7 +236,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className={styles["header-content-text"]}>
-                <span className={styles["only_mobile"]}>03</span> Get 1.5% of the loan amount back in closing credits,up to $10,0001
+                <span className={styles["only_mobile"]}>03</span> Get 1.5% of the loan amount back in closing credits,up to $10,000<sup>1</sup>
                 </div>
 
             </div>

@@ -1,6 +1,6 @@
 "use client"
 
-import styles from './Footer.module.scss';
+import styles from './Footer2.module.scss';
 import useWindowSize from '@/hooks/useWindowSize';
 // import CookieConsent from '../CookieConsent';
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
@@ -171,7 +171,7 @@ const Footer = ({centered_style}) => {
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_buy_sell_pricing", ()=>{router.push(`/calculator_savings`);}]);}}>Pricing</a> </div>
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_buy_sell_brows_homes", ()=>{router.push(`https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&idxStatus=active&ccz=city&lp=100000&srt=newest&city%5B%5D=37986`);}]);}}>Browse homes</a> </div>
                                     </div>
-{/* 
+
                                     {windowSize.width > 1023 && 
                                     <div className={styles["upper-footer-content-left-links-item"]}>
                                         <div className={styles["upper-footer-content-left-links-title"]}>Mortgage</div>
@@ -179,7 +179,7 @@ const Footer = ({centered_style}) => {
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_mort_home_loans", ()=>{router.push(`https://www.gethomeeasy.com/`);}]);}}>Home loans</a> </div>
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_mort_refi", ()=>{router.push(`https://www.gethomeeasy.com/`);}]);}}>Refinance</a> </div>
                                     </div>
-                                } */}
+                                }
 
                                 </div>
                             </div>
@@ -187,12 +187,6 @@ const Footer = ({centered_style}) => {
                             {true &&
                             <div className={styles["upper-footer-content-left-links-container"]}>
                                 <div className={styles["upper-footer-content-left-links"]}>
-                                    <div className={styles["upper-footer-content-left-links-item"]}>
-                                        <div className={styles["upper-footer-content-left-links-title"]}>Mortgage</div>
-                                        <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_mort_todays_rates", ()=>{router.push(`https://www.gethomeeasy.com/`);}]);}}>Today’s rates</a> </div>
-                                        <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_mort_home_loans", ()=>{router.push(`https://www.gethomeeasy.com/`);}]);}}>Home loans</a> </div>
-                                        <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_mort_refi", ()=>{router.push(`https://www.gethomeeasy.com/`);}]);}}>Refinance</a> </div>
-                                    </div>
                                     <div className={styles["upper-footer-content-left-links-item"]}>
                                         <div className={styles["upper-footer-content-left-links-title"]}>Agents</div>
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_agents_partner", ()=>{router.push(`/agents`);}]);}}>Partner with us</a> </div>
@@ -202,26 +196,16 @@ const Footer = ({centered_style}) => {
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_about_comp_mission", ()=>{router.push(`/about`);}]);}}>Company + Mission</a> </div>
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_about_contact", ()=>{router.push(`/contact`);}]);}}>Contact</a> </div>
                                     </div>
-                                   
-                                </div>
-
-                                <div className={styles["upper-footer-content-left-links"]}>
                                     <div className={styles["upper-footer-content-left-links-item"]}>
                                         <div className={styles["upper-footer-content-left-links-title"]}>Calculators</div>
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_calc_net_proceeds", ()=>{router.push(`/calculator_proceeds`);}]);}}>Net proceeds</a> </div>
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_calc_he_savings", ()=>{router.push(`/calculator_savings`);}]);}}>HomeEasy savings</a> </div>
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_calc_est_mnt_pmts", ()=>{router.push(`/calculator_monthly_payments`);}]);}}>Est. monthly payments</a> </div>
                                     </div>
-        
                                     <div className={styles["upper-footer-content-left-links-item"]}>
                                         <div className={styles["upper-footer-content-left-links-title"]}>Help Center</div>
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_help_faq", ()=>{router.push(`/questions`);}]);}}>FAQ</a> </div>
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_help_contact", ()=>{router.push(`/contact`);}]);}}>Contact</a> </div>
-                                    </div>
-                                    <div className={styles["upper-footer-content-left-links-item"]}>
-                                        <div className={styles["upper-footer-content-left-links-title"]}>Finds Homes on The Go</div>
-                                        <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_agents_partner", ()=>{router.push(`/`);}]);}}><img src="/img/google (1).png" alt="google" /></a> </div>
-                                        <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_agents_partner", ()=>{router.push(`/`);}]);}}><img src="/img/google (2).png" alt="apple" /></a> </div>
                                     </div>
                                 </div>
                             </div>
@@ -237,18 +221,16 @@ const Footer = ({centered_style}) => {
                                 <a href="/"><img src="/img/equal-housing-opportunity-logo-1200w copy.svg" alt="Equal Housing Opportunity" /></a>
                             </div>
                             <div className={styles["upper-footer-content-right-copy-container"]}>
-                                <p>HOMEEASY HOMES IS COMMITTED TO AND ABIDES BY THE FAIR HOUSING ACT AND EQUAL OPPORTUNITY ACT. READ HOMEEASY HOME’S <a href="/files/heh_fheo.pdf" target="_blank">FAIR HOUSING POLICY</a> AND THE <a href="https://dos.ny.gov/system/files/documents/2021/08/fairhousingnotice.pdf" target="_blank">NEW YORK STATE FAIR HOUSING NOTICE</a>.</p>
-
-                                <p>HomeEasy&trade; is a registered trademark licensed to HomeEasy LLC.</p> 
-
-                                <p>HomeEasy Homes is committed to ensuring digital accessibility for individuals with disabilities. If you wish to report an issue or seek an accommodation, please contact us at info@homeeasyhomes.com.
-
-By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, <a href="/files/privacy.pdf" target="_blank">Privacy Policy</a> and <a href="https://oag.ca.gov/privacy/ccpa" target="_blank">California Privacy Notice</a>. California DRE #02012110</p>
-
-<p>TREC: <a href="/files/TREC.pdf" target="_blank">Info about Brokerage Services</a>, <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank">Consumer Protection Notice</a>, <a href="https://www.sml.texas.gov/wp-content/uploads/2021/07/rmlo_80_200_b_recovery_fund_notice.pdf" target="_blank">Texas Mortgage Company Compliant/Recovery Fund Notice</a></p>
+                                <p>By searching, you agree to the Terms of Use, Privacy
+Policy and California Privacy Notice. California DRE
+#02012110; Semper Home Loans: NMLS #1053
+TREC: Info about Brokerage Services, Consumer
+Protection Notice, Texas Mortgage Company Compliant/ <br />
+Recovery Fund Notice <br />
+Real estate brokerage licenses</p>
 
 <p><sup>1</sup>Homes are subject to our approval and must be listed within an MLS in the areas that HomeEasy Homes operates. Homes are subject to inspections and other limitations.</p>
-
+<p>HomeEasy Homes is registered trademark of , Inc.</p>
 <p><a href="https://www.nmlsconsumeraccess.org/" target="_blank">NMLS Consumer Access</a></p>
 <p><a href="https://help.jmaclending.com/hc/files/11272354/12124268/1/1548800701341/Affiliated+Business+Disclosure.pdf" target="_blank">Affiliated Business Arrangement Disclosure</a></p>
                             {/* By searching, you agree to the Terms of Use, Privacy Policy and California Privacy Notice. California DRE #02012110; Semper Home Loans: NMLS #1053
@@ -336,8 +318,8 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                             </div>   
                         </div>
                     </div>
-                    {/* footer custom text */}
-                    <div className={`${styles['bottom_footer_text']} centered-content2`}> 
+                      {/* footer custom text */}
+                      <div className={`${styles['bottom_footer_text']} centered-content2`}> 
                         <div className={styles["inner"]}>
                             <p>* Overall, the national average Realtor commission in 2022 was 5.37 percent, according to data from Clever</p>
                             <p>**Average InstantOffer closes in 15 days. This does not guarantee that every sale will.</p>
