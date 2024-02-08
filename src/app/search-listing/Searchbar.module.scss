@@ -1,0 +1,37 @@
+.main{
+    margin-top: 100px;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    .filter_main{
+     display: flex;
+     justify-content: space-between;
+   .left_search {
+            input{
+                width: 20vw;
+                height: 39px;
+                border: 1px solid #D1D2D6;
+                padding-left: 15px;
+            }
+    }
+    .right_search {
+        button{
+        height:39px;
+        width: 111px;
+        border: 1px solid #D1D2D6;
+        background-color: transparent;
+       }
+       
+    }
+}
+.search_body{
+    display: flex;
+    justify-content: space-between;
+    .map_div{
+        width: 48%;
+    }
+    .card_div{
+        width: 48%;
+    }
+}
+}

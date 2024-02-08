@@ -38,13 +38,12 @@ const Advantage = () => {
                 className={`${styles["advantage-content-item-card"]} ${styles["advantage-content-item-card0"]}`}
               >
                 <div className={styles["advantage-content-item-card-title"]}>
-                  It’s time to stop working with your mom’s cousin’s realtor
-                  friend.
+                Buy a home the easy way and save up to $10,000<sup>1</sup>
                 </div>
                 <div className={styles["advantage-content-item-card-copy"]}>
-                  Our licensed agents are at the top of their game, work for
-                  less commission, and committed to getting you home faster,
-                  smarter, and easier.{" "}
+                Find your dream home with one of our Preferred Agents and get
+                1.5% of the loan amount back in closing credit, up to $10,000
+                from our Preferred Lender.{" "}
                 </div>
                 <div
                   className={styles["advantage-content-item-get-started-link"]}
@@ -80,7 +79,7 @@ const Advantage = () => {
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    Connect
+                    Get Pre-approved
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]
@@ -95,12 +94,15 @@ const Advantage = () => {
                     className={styles["advantage-content-callout-item-icon"]}
                   >
                     {" "}
-                    <img src="/img/icon_strategy.svg" alt="Strategy" />{" "}
+                    <img
+                      src="/img/icon_home_search.svg"
+                      alt="Home search"
+                    />{" "}
                   </div>
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    Strategy
+                    Find Your Dream home
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]
@@ -121,7 +123,7 @@ const Advantage = () => {
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    Offer
+                    Get money back
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]
@@ -143,7 +145,7 @@ const Advantage = () => {
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    Close
+                    Time to celebrate
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]
@@ -172,12 +174,12 @@ const Advantage = () => {
                 className={`${styles["advantage-content-item-card"]} ${styles["advantage-content-item-card1"]}`}
               >
                 <div className={styles["advantage-content-item-card-title"]}>
-                  Industry experts + AI-driven technology.
+                Sell your home instantly for cash or list it for only 1%<sup>2</sup>.
                 </div>
                 <div className={styles["advantage-content-item-card-copy"]}>
-                  Combining our agent’s local expertise with advanced
-                  data-driven tools, they will seamlessly guide you through the
-                  entire process, ensuring a smooth and personalized experience.{" "}
+                Sell your home with one of our Preferred Agents and save! Sell your
+                home instantly for cash avoiding listing and closing fees, or list with for
+                only 1% (compared to the average 5.37%*)!{" "}
                 </div>
                 <div
                   className={styles["advantage-content-item-get-started-link"]}
@@ -210,14 +212,14 @@ const Advantage = () => {
                   >
                     {" "}
                     <img
-                      src="/img/icon_real_time_insights.svg"
-                      alt="Real-time insights"
+                      src="/img/icon_instant_cash_offer.svg"
+                      alt="Instant cash offer"
                     />{" "}
                   </div>
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    Real-time insights
+                    Receive an instantOffer
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]
@@ -234,14 +236,14 @@ const Advantage = () => {
                   >
                     {" "}
                     <img
-                      src="/img/icon_market_analysis.svg"
-                      alt="Market analysis"
+                      src="/img/icon_list_one_percent.png"
+                      alt="List for 1%"
                     />{" "}
                   </div>
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    Market analysis
+                    List Your home for 1%
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]
@@ -258,15 +260,12 @@ const Advantage = () => {
                     className={styles["advantage-content-callout-item-icon"]}
                   >
                     {" "}
-                    <img
-                      src="/img/icon_home_search.svg"
-                      alt="Home search"
-                    />{" "}
+                    <img src="/img/icon_offer.svg" alt="Offer" />{" "}
                   </div>
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    Home search
+                    Save Thousand
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]
@@ -295,12 +294,13 @@ const Advantage = () => {
                 className={`${styles["advantage-content-item-card"]} ${styles["advantage-content-item-card2"]}`}
               >
                 <div className={styles["advantage-content-item-card-title"]}>
-                  Fast, friction-free financing.
+                The best of both worlds! Buy, sell,
+                & save thousands - the easy way.
                 </div>
                 <div className={styles["advantage-content-item-card-copy"]}>
-                  We have financing options that skip all of the BS in the
-                  application process, getting you pre-approved and ready to
-                  make an offer in minutes, not days.{" "}
+                Sell for cash instantly or list for less with one of our Preferred
+                Agents. Want to save more? Receive 1.5% of the loan amount
+                back in closing credit, up to $10,000 from our Preferred Lender<sup>1</sup>.{" "}
                 </div>
                 <div
                   className={styles["advantage-content-item-get-started-link"]}
@@ -326,12 +326,12 @@ const Advantage = () => {
                                     <div className={styles['advantage-content-item-card-link-text']}>Get Started</div>
                                     <a onClick={() => router.push('/get_started')}>Get started</a>
                                 </div> */}
-                <div className={styles["advantage-content-item-card-subcopy"]}>
+                {/* <div className={styles["advantage-content-item-card-subcopy"]}>
                   *Semper Home Loans is an affiliate of HomeEasy Homes. NMLS
                   1053. 225 Dupont Drive, Providence, RI, 02907. Any approval is
                   subject to Semper Home Loan’s underwriting criteria. This is
                   not a commitment to lend.
-                </div>
+                </div> */}
               </div>
               <div
                 className={`${styles["advantage-content-callout-items"]} ${styles["advantage-content-callout-items2"]}`}
@@ -389,6 +389,30 @@ const Advantage = () => {
                   >
                     {" "}
                     <img
+                      src="/img/icon_home_search.svg"
+                      alt="Home search"
+                    />{" "}
+                  </div>
+                  <div
+                    className={styles["advantage-content-callout-item-title"]}
+                  >
+                    Find your dream home
+                    <div
+                      className={
+                        styles["advantage-content-callout-item-popover"]
+                      }
+                    >
+                      Secure your home now, unlock even greater possibilities
+                      later.
+                    </div>
+                  </div>
+                </div>
+                <div className={styles["advantage-content-callout-item"]}>
+                  <div
+                    className={styles["advantage-content-callout-item-icon"]}
+                  >
+                    {" "}
+                    <img
                       src="/img/icon_buy_now_refi_later.svg"
                       alt="Buy Now Refi Later"
                     />{" "}
@@ -396,7 +420,7 @@ const Advantage = () => {
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    Buy now refi later
+                    Receive 1.5% back<sup>1</sup>
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]

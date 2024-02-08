@@ -15,7 +15,7 @@ const ThreeByOneBlocks = ({}) => {
     return (
         <div className={`${styles['main-component']}`}>
             <div className={`${styles['main-content-container']}  centered-content2`}>
-                <div className={`${styles['main-component-title']}`}>Sell more.  Sell easy.</div>
+                <div className={`${styles['main-component-title']}`}>The HomeEasy advantage.</div>
                 <div className={`${styles['main-component-copy']}`}>Unlock new opportunities for your business by teaming up with HomeEasy Homes.</div>
                 <div className={`${styles['items']}`}>
                     

@@ -17,7 +17,7 @@ const HowItWorks = ({}) => {
         <div className={`${styles['main-component']}`}>
             <div className={`${styles['main-content-container']}  centered-content2`}>
 
-            <div className={`${styles['title-container']}`}>How it works.</div>
+            <div className={`${styles['title-container']}`}>Our easy process.</div>
             <div className={`${styles['copy-container']}`}>It’s not too good to be true, it’s just the way things should be.</div>
 
             <div className={`${styles['content-container']}`}>
@@ -50,16 +50,16 @@ const HowItWorks = ({}) => {
 
 
                     <div className={`${styles['main-copy-copy-title']}`}>Step 1</div>
-                    <div className={`${styles['main-copy-copy']}`}>Use our free home value calculator to instantly see your home’s current value. </div>
+                    <div className={`${styles['main-copy-copy']}`}>Use our free home value calculator to instantly see your home’s current value.</div>
 
                     <div className={`${styles['main-copy-copy-title']}`}>Step 2</div>
-                    <div className={`${styles['main-copy-copy']}`}>Simplifying your life is our priority. Choose between an InstantOffer or list with us for just 1% – whatever suits you best, we’ll make it happen!</div>
+                    <div className={`${styles['main-copy-copy']}`}>Simplifying your life is our priority. Choose between an InstantOffer or list with us for just 1%<sup>2</sup> – whatever suits you best, we’ll make it happen!</div>
 
                     <div className={`${styles['main-copy-copy-title']}`}>Step 3</div>
-                    <div className={`${styles['main-copy-copy']}`}>Talk to us! Just take a few mins to fill us in on your home’s details and your agent will be there every step of the way, from contract to close.</div>
+                    <div className={`${styles['main-copy-copy']}`}>Talk to us! Just take a few mins to fill us in on your home’s details and your Preferred Agent will be there every step of the way, from contract to close.</div>
 
                     <div className={`${styles['main-copy-copy-title']}`}>Step 4</div>
-                    <div className={`${styles['main-copy-copy']}`}>Sold! Pop the champagne and get packing!</div>
+                    <div className={`${styles['main-copy-copy']}`}>Sold! Save thousands, pop the champagne and get packing!</div>
 
                     <div className={`${styles['main-copy-footer']}`}>
                         <ArrowButton

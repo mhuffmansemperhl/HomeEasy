@@ -167,7 +167,7 @@ const Destress = () => {
                       ]
                     }
                   >
-                    1. Get matched with the best Agent.
+                    1. Get matched with the best agent.
                   </div>
                   <div
                     className={
@@ -176,8 +176,8 @@ const Destress = () => {
                       ]
                     }
                   >
-                    Gone are the days of resorting to work with your mom’s
-                    cousin’s realtor friend.
+                    Gone are the days of resorting to work with your mom’s cousin’s realtor
+                    friend. Get matched with one of our vetted Preferred Agents.
                   </div>
                 </div>
               )}
@@ -194,7 +194,7 @@ const Destress = () => {
                       ]
                     }
                   >
-                    2. Fast, friction-free financing.
+                    2. Fast, friction-free financing
                   </div>
                   <div
                     className={
@@ -203,8 +203,8 @@ const Destress = () => {
                       ]
                     }
                   >
-                    Get pre-approved and ready to make an offer in minutes, not
-                    days.
+                    Get pre-approved with our Preferred Lender and ready to make an offer in
+                    minutes, not days.
                   </div>
                 </div>
               )}
@@ -230,8 +230,8 @@ const Destress = () => {
                       ]
                     }
                   >
-                    With instant access to new listings, you will be alerted the
-                    moment a home hits the market.
+                    With instant access to new listings, you will be alerted the moment a home
+                    with your wants and needs hits the market.
                   </div>
                 </div>
               )}
@@ -248,7 +248,7 @@ const Destress = () => {
                       ]
                     }
                   >
-                    4. Put thousands back in your pocket.
+                    4. Save thousands<sup>1</sup>.
                   </div>
                   <div
                     className={
@@ -257,8 +257,8 @@ const Destress = () => {
                       ]
                     }
                   >
-                    Lower commission, lower fees, and lower rates…can we get a
-                    hell yea for savings?
+                    Lower payments, lower fees, and lower rates with our Preferred Lender.
+                    Plus get 1.5% of the loan amount back in closing credit, up to $10,000!
                   </div>
                 </div>
               )}
@@ -311,8 +311,8 @@ const Destress = () => {
                       ]
                     }
                   >
-                    Gone are the days of resorting to work with your mom’s
-                    cousin’s realtor friend.
+                    Gone are the days of resorting to work with your mom’s cousin’s realtor
+                    friend. Get matched with one of our Preferred Agents and save.
                   </div>
                 </div>
               )}
@@ -329,7 +329,7 @@ const Destress = () => {
                       ]
                     }
                   >
-                    3. Choose your selling model.
+                    3. Get an instant cash offer.
                   </div>
                   <div
                     className={
@@ -338,8 +338,8 @@ const Destress = () => {
                       ]
                     }
                   >
-                    When it comes to selling your home, we have options. No need
-                    to be confined to the old, traditional way of doing things.
+                    No staging, no photos, no open house, no inspections, no negotiating, no
+                    time wasted. Done in 15 days**.
                   </div>
                 </div>
               )}
@@ -356,8 +356,7 @@ const Destress = () => {
                       ]
                     }
                   >
-                    4. Throw a moving party with the extra money you save with
-                    us.
+                    4. Or list with us for only 1%<sup>2</sup>.
                   </div>
                   <div
                     className={
@@ -366,8 +365,8 @@ const Destress = () => {
                       ]
                     }
                   >
-                    Lower commission and lower fees…can we get a hell yea for
-                    savings?
+                    Our Preferred Agents will list your property, capture beautiful photos, and
+                    host a single open house for only 1% listing fee, saving you thousands.
                   </div>
                 </div>
               )}
@@ -411,7 +410,7 @@ const Destress = () => {
                       ]
                     }
                   >
-                    2. Choose your selling model.
+                    2. Get an instant cash offer.
                   </div>
                   <div
                     className={
@@ -420,8 +419,8 @@ const Destress = () => {
                       ]
                     }
                   >
-                    When it comes to selling your home, we have options. No need
-                    to be confined to the old, traditional way of doing things.
+                    No staging, no photos, no open house, no inspections, no negotiating, no
+                    time wasted. Done in 15 days**.
                   </div>
                 </div>
               )}
@@ -438,7 +437,7 @@ const Destress = () => {
                       ]
                     }
                   >
-                    3. Find your dream home.
+                    3. List with us for only 1%<sup>2</sup>.
                   </div>
                   <div
                     className={
@@ -447,8 +446,8 @@ const Destress = () => {
                       ]
                     }
                   >
-                    With instant access to new listings, you will be alerted the
-                    moment a home hits the market.
+                    Our expert agents will list your property, capture beautiful photos, and host
+                    a single open house for only 1% listing fee, saving you thousands.
                   </div>
                 </div>
               )}
@@ -465,7 +464,7 @@ const Destress = () => {
                       ]
                     }
                   >
-                    4. Put thousands back in your pocket.
+                    4. Save thousands<sup>1</sup>.
                   </div>
                   <div
                     className={
@@ -474,8 +473,8 @@ const Destress = () => {
                       ]
                     }
                   >
-                    Lower commission, lower fees, and lower rates…can we get a
-                    hell yea for savings?
+                    Lower payments, lower fees, and lower rates with our Preferred Lender.
+                    Plus get 1.5% of the loan amount back in closing credit, up to $10,000!
                   </div>
                 </div>
               )}

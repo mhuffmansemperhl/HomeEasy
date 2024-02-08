@@ -231,7 +231,7 @@ export default function Question() {
         title={options.title || "Let’s start with the basics!"}
         copy={
           options.copy ||
-          "You will be connected with a HomeEasy Homes specialist.  No obligation, no pressure."
+          "You will be connected with a HomeEasy Homes specialist. No obligation, no pressure."
         }
         content={
           <FlowSignupForm
@@ -917,7 +917,7 @@ export default function Question() {
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
-        title={options.title || "Create an account to"}
+        title={options.title || "Create a password to"}
         content={
           <FlowPasswordForm
             store_key={options.store_key || "contact"}

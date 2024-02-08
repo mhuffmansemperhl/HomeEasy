@@ -15,8 +15,8 @@ const ThreeByOneBlocks = ({}) => {
     return (
         <div className={`${styles['main-component']}`}>
             <div className={`${styles['main-content-container']}  centered-content2`}>
-                <div className={`${styles['main-component-title']}`}>Sell fast.  Buy easy.</div>
-                <div className={`${styles['main-component-copy']}`}>We are de-stressing the entire real estate process.</div>
+                <div className={`${styles['main-component-title']}`}>The HomeEasy advantage.</div>
+                <div className={`${styles['main-component-copy']}`}>Sell & save. Buy & save. It’s that easy.</div>
                 <div className={`${styles['items']}`}>
                     
                     
@@ -35,12 +35,12 @@ const ThreeByOneBlocks = ({}) => {
                     </div>
                     
                     <div className={`${styles['item']}`}>
-                        <div className={`${styles['item-title-container']}`}>Save thousands, list for only 1%.</div>
+                        <div className={`${styles['item-title-container']}`}>Save thousands, list for only 1%<sup>2</sup> .</div>
                         <div className={`${styles['item-copy-container']}`}>Why pay the 6% listing fee to a realtor? List your home for only 1%, keeping thousands in your pocket.</div>
                         <div className={`${styles['item-foot-container']}`}>
                             <ArrowButton
                                 small_text={true}
-                                link_text="Listing for One"
+                                link_text="Get your HomeOne Listing"
                                 callback={()=>{
                                     gtmPush(["callback", "buysell_listing_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=8`);}]);
                                     // 
@@ -50,8 +50,18 @@ const ThreeByOneBlocks = ({}) => {
                     </div>
 
                     <div className={`${styles['item']}`}>
-                        <div className={`${styles['item-title-container']}`}>Receive a 1% lender paid credit.</div>
-                        <div className={`${styles['item-copy-container']}`}>Our affiliated lender will provide 1% of your financed loan amount to go towards  your closing costs or buying down your interest rate.</div>
+                        <div className={`${styles['item-title-container']}`}>Receive a 1.50% lender paid credit<sup>1</sup>.</div>
+                        <div className={`${styles['item-copy-container']}`}>Our affiliated lender will provide 1% of your financed loan amount to go towards  your closing costs<sup>1</sup></div>
+                        <div className={`${styles['item-foot-container']}`}>
+                            <ArrowButton
+                                small_text={true}
+                                link_text="Get Pre-approved"
+                                callback={()=>{
+                                    gtmPush(["callback", "buysell_listing_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=8`);}]);
+                                    // 
+                                }}
+                            />
+                        </div>
                     </div>
 
 

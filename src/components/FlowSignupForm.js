@@ -240,7 +240,7 @@ const FlowSignupForm = ({callback, store_key}) => {
                     </div>
 
                     <div className={`${styles['signup-form-disclaimer-container']}`}>
-                    By signing up, I agree to HomeEasy Home’s Terms of Use, Privacy Policy, and expressly agree to receive HomeEasy Homes email and texts.  Message and data rates may apply. 
+                    By signing up, I agree to HomeEasy Home’s <a href="">Terms of Use</a>,<a href="">Privacy Policy</a>, and expressly agree to receive HomeEasy Homes email and texts.  Message and data rates may apply. 
                     </div>
 
                 </div>

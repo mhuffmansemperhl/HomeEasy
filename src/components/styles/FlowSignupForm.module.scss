@@ -215,7 +215,9 @@
     font-weight: 300;
     // letter-spacing: 0.6px;
     text-align: center;
-
+    a{
+        color: black;
+    }
     @media (min-width: 0px) and (max-width: 1023px) {
         font-size: 2.666666667vw;
         line-height: 4.8vw;

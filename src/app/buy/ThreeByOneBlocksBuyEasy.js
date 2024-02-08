@@ -3,7 +3,7 @@
 // import { useEffect } from "react";
 // import useFlowGetStartedStore from "@/store/store.js";
 // import useWindowSize from "@/hooks/useWindowSize";
-
+import ArrowButton from '@/components/fluid/ArrowButton';
 import styles from './ThreeByOneBlocksBuyEasy.module.scss';
 // import ArrowButton from './ArrowButton';
 
@@ -12,18 +12,22 @@ const ThreeByOneBlocksBuyEasy = ({}) => {
     return (
         <div className={`${styles['main-component']}`}>
             <div className={`${styles['main-content-container']}  centered-content2`}>
-                <div className={`${styles['main-component-title']}`}>Buy easy.  Buy fast.</div>
-                <div className={`${styles['main-component-copy']}`}>Become a HomeEasy buyer and save big!</div>
+                <div className={`${styles['main-component-title']}`}>The HomeEasy advantage.</div>
+                <div className={`${styles['main-component-copy']}`}>Become a HomeEasy Buyer and save big!</div>
                 <div className={`${styles['items']}`}>
                     
                      <div className={`${styles['item']}`}>
-                        <div className={`${styles['item-title-container']}`}>We’re your wallet’s new BFF.</div>
-                        <div className={`${styles['item-copy-container']}`}>Our buyer’s rebate cuts your interest rate, lowering the monthly payment for your entire mortgage, which means you may be pre-approved for more! </div>
+                        <div className={`${styles['item-title-container']}`}>With us, our friends are your friends.</div>
+                        <div className={`${styles['item-copy-container']}`}>Make the most of our tight-knit group of
+Preferred Agents and Preferred Lender to
+maximize your savings!</div>
                     </div>
                     
                     <div className={`${styles['item']}`}>
-                        <div className={`${styles['item-title-container']}`}>With us, our friends are your friends.</div>
-                        <div className={`${styles['item-copy-container']}`}>Make the most of our tight-knit group of local agents, loan experts, title companies and more to maximize your savings! </div>
+                        <div className={`${styles['item-title-container']}`}>Receive a 1.50% lender paid credit<sup>1</sup>.</div>
+                        <div className={`${styles['item-copy-container']}`}>Our Preferred Lender will provide 1.50%
+of your financed loan amount, up to
+$10,000 to go towards closing costs. </div>
                         {/* <div className={`${styles['item-foot-container']}`}>
                             <ArrowButton
                                 link_text="Get your InstantOffer"
@@ -33,14 +37,21 @@ const ThreeByOneBlocksBuyEasy = ({}) => {
                     </div>
                     
                     <div className={`${styles['item']}`}>
-                        <div className={`${styles['item-title-container']}`}>Receive a 1% lender paid credit.</div>
-                        <div className={`${styles['item-copy-container']}`}>Our affiliated lender will provide 1% of your financed loan amount to go towards  your closing costs or buying down your interest rate.</div>
-                        {/* <div className={`${styles['item-foot-container']}`}>
+                        <div className={`${styles['item-title-container']}`}>We’re your wallet’s new BFF.</div>
+                        <div className={`${styles['item-copy-container']}`}>Our Preferred Lender cuts your interest
+rate, lowering the monthly payment for
+your entire mortgage!</div>
+<div className={`${styles['item-foot-container']}`}>
                             <ArrowButton
-                                link_text="Listing for One"
-                                callback={()=>{console.log("clicked")}}
+                                small_text={true}
+                                link_text="Get started"
+                                callback={()=>{
+                                    // router.push(`/get_started?flow=instantoffer&step=1`);
+                                    gtmPush(["callback", "sell_io", ()=>{router.push(`/get_started?flow=instantoffer&step=1`);}]);
+
+                                }}
                             />
-                        </div> */}
+                        </div>
                     </div>
 
                 </div>

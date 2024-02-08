@@ -14,7 +14,7 @@ const HomeEasyAgents = ({}) => {
             <div className={`${styles['main-content-container']}  centered-content2`}>
                 <div className={`${styles['main-copy-container']}`}>
 
-                    <div className={`${styles['main-copy-supertitle']}`}>HomeEasy Homes Agents</div>
+                    <div className={`${styles['main-copy-supertitle']}`}>The perks of a HomeEasy Homes Agent</div>
 
                     <div className={`${styles['main-copy-title']}`}>More clients, more products, and more support.</div>
 
@@ -32,7 +32,18 @@ const HomeEasyAgents = ({}) => {
 
                     <div className={`${styles['main-copy-copy-title']}`}>Look like a hero.</div>
                     <div className={`${styles['main-copy-copy']}`}>When your clients save thousands, you’ll be the one they high-five with gratitude!</div>
-
+                    <div className={`${styles['main-copy-footer']}`}>
+                        <ArrowButton
+                            link_text="Sign up now"
+                            callback={()=>{
+                                // router.push(`/get_started?flow=sell&step=0&branch=9`);
+                                // window.open("https://homeeasyhomes.idxbroker.com/idx/map/mapsearch", "_blank");
+                                // gtmPush(["callback", "buy_how_it_works_gs", ()=>{window.open("https://homeeasyhomes.idxbroker.com/idx/map/mapsearch?srt=newest", "_blank");}]);
+                                gtmPush(["callback", "buy_how_it_works_gs", ()=>{window.open("https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&idxStatus=active&ccz=city&lp=100000&srt=newest&city%5B%5D=37986", "_blank");}]);
+                                
+                            }}
+                        />
+                    </div>
 
                 </div>
                 <div className={`${styles['main-image-container']}`}>

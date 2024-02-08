@@ -119,13 +119,9 @@
     }
 
     .main-copy-title {
-        font-weight: 800;
-        // padding-bottom: 1.822916667vw;
-        // font-size: 2.05078125vw;
-        // line-height: 2.5390625vw;
-        // padding-bottom: 3.125vw;
-        font-size: 1.458333333vw;
-        line-height: 1.666666667vw;
+        font-weight: 700;
+        font-size: 2.258333vw;
+        line-height: 3.066667vw;
         padding-bottom: 1.458333333vw;
 
         @media (min-width: 0px) and (max-width: 1023px) {
@@ -165,7 +161,7 @@
         // padding-bottom: 1.953125vw;
         font-size: 0.833333333vw;
         line-height: 1.302083333vw;
-        padding-bottom: 2.34375vw;
+        padding-bottom: 1vw;
 
         @media (min-width: 0px) and (max-width: 1023px) {
             font-size: 4.266666667vw;
@@ -207,7 +203,7 @@
             // padding-bottom: 1.953125vw;
             font-size: 0.833333333vw;
             line-height: 1.302083333vw;
-            padding-bottom: 2.34375vw;
+            padding-bottom: 1vw;
         
             @media (min-width: 0px) and (max-width: 1023px) {
                 font-size: 4.266666667vw;
@@ -239,7 +235,7 @@
         ul {
             all: unset;
             list-style-type: none;
-
+margin-bottom: 15px;
             li {
                 font-weight: 300;        
                 // font-size: 1.5625vw;

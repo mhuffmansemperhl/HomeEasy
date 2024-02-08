@@ -153,6 +153,10 @@ const FlowPasswordForm = ({callback, store_key}) => {
                         <div className={`${styles['contact-form-text-input-feedback']}`}>Creating account</div>
                         }
                     </div>
+
+                    <div className={`${styles['contact-form-text-input']}`}>
+                        <input  type="password" placeholder="Create a password" />
+                    </div>
                     {/* <div name="password" className={`${styles['contact-form-text-input']}`}>
                         <input onChange={(e)=>{handlePasswordChange(e)}} value={form_data[store_key]?.password || ""} onKeyUp={(e) => {validatePassword(e);}} type="password" placeholder="Password" />
                         <div className={`${styles['contact-form-text-input-error']}`}>{password_error}</div>

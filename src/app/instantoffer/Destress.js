@@ -20,11 +20,11 @@ const Destress = ({}) => {
             <div className={`${styles['main-content-container']}  centered-content2`}>
                 <div className={`${styles['main-copy-container']}`}>
 
-                    <div className={`${styles['main-copy-supertitle']}`}>De-stress the selling process</div>
+                    <div className={`${styles['main-copy-supertitle']}`}>How to de-stress the selling process</div>
 
                     <div className={`${styles['main-copy-title']}`}>A quick, convenient, and secure sale that puts cash in your hands.</div>
 
-                    <div className={`${styles['main-copy-copy']}`}>Share your home’s details, receive a competitive cash offer within 24 hours, and close the deal in just 15 days. Move forward with ease and excitement!</div>
+                    <div className={`${styles['main-copy-copy']}`}>Share your home’s details, receive a competitive cash offer within 24 hours, and close the deal in just 15 days**. Move forward with ease and excitement!</div>
 
                     <div className={`${styles['main-copy-list']}`}>
                         <div className={`${styles['main-copy-list-title']}`}>How it works</div>

@@ -107,7 +107,9 @@
     width: 25.04427083vw;
     font-size: 0.625vw;
     line-height: 0.9375vw;
-
+a{
+    color: black;
+}
     @media (min-width: 0px) and (max-width: 1023px) {
         width: 80vw;
         margin-left: auto;

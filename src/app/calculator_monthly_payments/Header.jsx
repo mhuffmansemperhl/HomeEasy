@@ -1,6 +1,6 @@
 "use client"
 // import { useRef, useState, useEffect } from 'react';
-import Navbar from '@/components/fluid/Navbar';
+import Navbar from '@/components/Navbar';
 import styles from './Header.module.scss';
 import useWindowSize from '../../hooks/useWindowSize';
 import { useRouter } from "next/navigation";
