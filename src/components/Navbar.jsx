@@ -556,7 +556,7 @@ const Navbar = () => {
             }
           >
             {" "}
-            <button>Your account</button>{" "}
+            <button>My account</button>{" "}
           </div>
           <div
             onClick={() => {
