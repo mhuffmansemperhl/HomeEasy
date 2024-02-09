@@ -104,13 +104,23 @@
         border-radius: 12px;
         overflow: hidden;
         position: relative;
-
+        .advantage-content-item-get-started-link{
+           display: none;
+            @media (min-width: 0px) and (max-width: 1023px) {
+                // z-index: 99999999999;
+                position: absolute;
+                top: 44%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                 display: block;
+            }
+        }
         @media (min-width: 0px) and (max-width: 1023px) {
             width: calc(100vw - 40px);
             margin-left: auto;
             margin-right: auto;
-            padding-top: 10vw;
-            
+            margin-top: 10vw;
+         
         }
         @media (min-width: 1024px) and (max-width: 1279px) {
             width: 290.55px;

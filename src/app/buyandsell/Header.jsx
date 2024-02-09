@@ -112,7 +112,7 @@ const Header = () => {
           </div>
           <div className={`${styles['main-copy-footer']} arrow`}>
                         <ArrowButton
-                            link_text="Let’s sell your home!"
+                            link_text="Let’s get started!"
                             callback={()=>{
                                 // router.push(`/get_started?flow=sell&step=0&branch=9`);
                                 gtmPush(["callback", "sell_list_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);

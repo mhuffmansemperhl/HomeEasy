@@ -20,7 +20,7 @@ const Buy = ({}) => {
                     <button onClick={()=>{ 
                         // router.push(`/get_started?flow=sell&step=0&branch=11`); 
                         gtmPush(["callback", "sell_learn_more", ()=>{router.push(`/get_started?flow=sell&step=0&branch=11`);}]);
-                    }} className='darken-on-hover'>Learn More &rarr;</button>
+                    }} className='darken-on-hover'>Get Started &rarr;</button>
                 </div>
 
             </div>

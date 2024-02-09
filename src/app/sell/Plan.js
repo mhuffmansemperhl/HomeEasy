@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import useWindowSize from '@/hooks/useWindowSize';
 import { motion } from "framer-motion";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
-
+import ArrowButton from '@/components/fluid/ArrowButton';
 const Plan = () => {
     const windowSize = useWindowSize();
     const router = useRouter();
@@ -25,11 +25,34 @@ const Plan = () => {
                 <div onClick={()=>{
                     // window.location.href="/calculator_proceeds";
                     gtmPush(["callback", "sell_card1", ()=>{window.location.href="/calculator_proceeds";}]);
-                }} className={styles['image-holder']}> <img src="/img/card1.png" alt="how much can I make selling my house" /></div>
+                }} className={styles['image-holder']}> <img src="/img/card1.png" alt="how much can I make selling my house" />
+                
+                <div className={styles["advantage-content-item-get-started-link"]}>
+              <ArrowButton
+                link_text="Get started"
+                callback={() => {
+                    gtmPush(["callback", "sell_card1", ()=>{window.location.href="/calculator_proceeds";}]);
+                }}
+                large_text={true}
+              />
+            </div>
+                
+                </div>
+                
                 <div onClick={()=>{
                     // window.location.href="/calculator_savings";
                     gtmPush(["callback", "sell_card2", ()=>{window.location.href="/calculator_savings";}]);
-                }} className={styles['image-holder']}> <img src="/img/card2.png" alt="savings calculator" /></div>
+                }} className={styles['image-holder']}> <img src="/img/card2.png" alt="savings calculator" />
+                     <div className={styles["advantage-content-item-get-started-link"]}>
+              <ArrowButton
+                link_text="Get started"
+                callback={() => {
+                    gtmPush(["callback", "sell_card2", ()=>{window.location.href="/calculator_savings";}]);
+                }}
+                large_text={true}
+              />
+            </div>
+                </div>
             </motion.div>
         </div>
             

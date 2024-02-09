@@ -17,7 +17,7 @@ export default function Home() {
               </div>
               <div className={styles["search_body"]}>
               <div className={styles["map_div"]}>
-                 <img src="/img/map.png" alt="" srcset="map" />
+                 <img src="./img/map.png" alt="" srcset="map" />
                  </div>
               <div className={styles["card_div"]}>
                  

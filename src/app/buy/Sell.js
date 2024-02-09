@@ -21,7 +21,7 @@ const Sell = ({}) => {
                         // router.push(`/get_started?flow=instantoffer&step=1`); 
                         gtmPush(["callback", "buy_learn_more", ()=>{router.push(`/get_started?flow=instantoffer&step=1`);}]);
 
-                    }} className='darken-on-hover'>Learn More &rarr;</button>
+                    }} className='darken-on-hover'>Get Started &rarr;</button>
                 </div>
 
             </div>

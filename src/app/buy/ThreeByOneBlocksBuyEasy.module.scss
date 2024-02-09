@@ -189,6 +189,9 @@
         // line-height: 2.5390625vw;
         font-size: 1.458333333vw;
         line-height: 1.666666667vw;
+        sup{
+            font-size: 14px;
+        }
 
         @media (min-width: 0px) and (max-width: 1023px) {
             font-size: 5.6vw;

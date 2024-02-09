@@ -106,7 +106,18 @@
 .image-holder {
 
     width: 100%;
-
+    position: relative;
+    .advantage-content-item-get-started-link{
+        display: none;
+         @media (min-width: 0px) and (max-width: 1023px) {
+            //  z-index: 99999999999;
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%,-50%);
+              display: block;
+         }
+     }
     @media (min-width: 0px) and (max-width: 1023px) {
         padding-top: 10.4vw;
     }

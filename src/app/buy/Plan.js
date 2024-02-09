@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 import { motion } from "framer-motion";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
-
+import ArrowButton from '@/components/fluid/ArrowButton';
 const Plan = () => {
     const windowSize = useWindowSize();
     const router = useRouter();
@@ -29,7 +29,18 @@ const Plan = () => {
                     // router.push('/calculator_monthly_payments')
                     gtmPush(["callback", "buy_plan_confidence", ()=>{router.push(`/calculator_monthly_payments`);}]);
 
-                }} className={styles['image-holder']}> <img src="/img/card3.png" alt="savings calculator" /></div>
+                }} className={styles['image-holder']}> <img src="/img/card3.png" alt="savings calculator" />
+                
+                <div className={styles["advantage-content-item-get-started-link"]}>
+              <ArrowButton
+                link_text="Get started"
+                callback={() => {
+                    gtmPush(["callback", "buy_plan_confidence", ()=>{router.push(`/calculator_monthly_payments`);}]);
+                }}
+                large_text={true}
+              />
+            </div>
+                </div>      
             </motion.div>
         </div>
             

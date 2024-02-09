@@ -231,7 +231,7 @@ const Footer = ({centered_style}) => {
 
                         </div>
 
-                        {windowSize.width > 1023 &&
+                        {/* {windowSize.width > 1023 && */}
                         <div className={styles["upper-footer-content-right"]}>
                             <div className={styles["upper-footer-content-right-image-container"]}>
                                 <a href="/"><img src="/img/equal-housing-opportunity-logo-1200w copy.svg" alt="Equal Housing Opportunity" /></a>
@@ -264,7 +264,7 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                             </div>
                         </div>
                     
-                        }
+                        {/* } */}
                     </div>
                 </div>
 
@@ -336,32 +336,7 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                             </div>   
                         </div>
                     </div>
-                    {/* footer custom text */}
-                    <div className={`${styles['bottom_footer_text']} centered-content2`}> 
-                        <div className={styles["inner"]}>
-                            <p>* Overall, the national average Realtor commission in 2022 was 5.37 percent, according to data from Clever</p>
-                            <p>**Average InstantOffer closes in 15 days. This does not guarantee that every sale will.</p>
-                       
-                        </div>
-                        <div className={styles["grand_text"]}>
-                            1 The following offers are available only to clients who are purchasing a home and financing with HomeEasy Mortgage: (1) Client purchasing with a HomeEasy Homes Partner Agent
-                            through HomeEasy Homes will receive a lender paid credit that is 1.50% of their loan amount. For example, a $200,000 home purchase price minus a 5% down payment of $10,000
-                            results in a loan amount of $190,000. Client would receive a credit of 1.50% of the $190,000, for a credit of $2,850 toward closing costs. (2) Client is referred by a real estate agent
-                            to buy a new home will not receive a lender paid credit. Offer does not apply to new loans submitted through an Executive Loan Officer, mortgage broker, through Schwab, or on nonagency jumbo loans, non-QM loans, bank statement loans, second lien products or team member loans. Offer may not be redeemed for cash and is nontransferable. Offer cannot be
-                            retroactively applied to loans where the rate has been locked. Conditions and exclusions apply. This is not a commitment to lend and is contingent on qualification per full
-                            underwriting guidelines.
-                            </div>
-                        <div className={styles["grand_text2"]}>
-                        <div className={styles["grand_text"]}>
-                        2 Save with HomeEasy Homes’ lower 1% listing fee when you buy and sell with a Preferred HomeEasy Homes Agent, versus a more-typical 2.5% listing fee. Fees subject to change,
-                         <a href="">minimums apply</a> . Buyer’s agent fee not included.
-                            </div>
-                        <div className={styles["bottom_text"]}>
-                        <p>Apple and the Apple logo are trademarks of Apple Inc. registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
-                        <p>Wear OS by Google and Google Play are trademarks of Google LLC.</p>
-                            </div>
-                            </div>
-                    </div>
+                   
                     {windowSize.width < 1024 && 
                     <div className={`${styles['lower-footer-content-container']} ${styles['second-lower']} centered-content`}>
                         <div className={styles["lower-footer-content-middle"]}>
@@ -396,7 +371,32 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                     </div>
                 
                     }
-
+ {/* footer custom text */}
+ <div className={`${styles['bottom_footer_text']} centered-content2`}> 
+                        <div className={styles["inner"]}>
+                            <p>* Overall, the national average Realtor commission in 2022 was 5.37 percent, according to data from Clever</p>
+                            <p>**Average InstantOffer closes in 15 days. This does not guarantee that every sale will.</p>
+                       
+                        </div>
+                        <div className={styles["grand_text"]}>
+                            1 The following offers are available only to clients who are purchasing a home and financing with HomeEasy Mortgage: (1) Client purchasing with a HomeEasy Homes Partner Agent
+                            through HomeEasy Homes will receive a lender paid credit that is 1.50% of their loan amount. For example, a $200,000 home purchase price minus a 5% down payment of $10,000
+                            results in a loan amount of $190,000. Client would receive a credit of 1.50% of the $190,000, for a credit of $2,850 toward closing costs. (2) Client is referred by a real estate agent
+                            to buy a new home will not receive a lender paid credit. Offer does not apply to new loans submitted through an Executive Loan Officer, mortgage broker, through Schwab, or on nonagency jumbo loans, non-QM loans, bank statement loans, second lien products or team member loans. Offer may not be redeemed for cash and is nontransferable. Offer cannot be
+                            retroactively applied to loans where the rate has been locked. Conditions and exclusions apply. This is not a commitment to lend and is contingent on qualification per full
+                            underwriting guidelines.
+                            </div>
+                        <div className={styles["grand_text2"]}>
+                        <div className={styles["grand_text"]}>
+                        2 Save with HomeEasy Homes’ lower 1% listing fee when you buy and sell with a Preferred HomeEasy Homes Agent, versus a more-typical 2.5% listing fee. Fees subject to change,
+                         <a href="">minimums apply</a> . Buyer’s agent fee not included.
+                            </div>
+                        <div className={styles["bottom_text"]}>
+                        <p>Apple and the Apple logo are trademarks of Apple Inc. registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
+                        <p>Wear OS by Google and Google Play are trademarks of Google LLC.</p>
+                            </div>
+                            </div>
+                    </div>
                 </div>    
 
 

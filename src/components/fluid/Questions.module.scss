@@ -103,7 +103,9 @@
         }
         padding: 1.5625vw 1.5625vw;
         margin-bottom: 1.5625vw;
-
+        @media (min-width: 0px) and (max-width: 1023px) {
+            padding: 1.5625vw 4.5625vw;
+        }
         .main-component-question-item-title, .main-component-question-item-title-visible {
             width: 100%;
             position: relative;
@@ -247,7 +249,7 @@
     @media (min-width: 0px) and (max-width: 1023px) {
         font-size: 4.266666667vw;
         line-height: 6.666666667vw;
-        padding: 0px 0px 0px 40px;                        
+        padding: 0px 0px 4px 40px;                        
     }
     // @media (min-width: 1024px) and (max-width: 1279px) {
     //     font-size: 16px;
