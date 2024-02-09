@@ -305,8 +305,9 @@
   @media (min-width: 0px) and (max-width: 1023px) {
     width: 100vw;
     padding: 12.8vw 7.466666667vw;      
-    overflow: auto;
-    height: 100vh;
+    height: 725px;
+    overflow-y: auto;
+
   }
   @media (min-width: 1024px) and (max-width: 1279px) {
     width: 28.64583333vw;
