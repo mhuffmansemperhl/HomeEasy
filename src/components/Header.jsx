@@ -529,7 +529,7 @@ const Header = () => {
         true && console.log("...checking flow");
         if(!flow) {
           true && console.log("...setting flow to buy");
-          setFlow("sell");
+          setFlow("buy");
         }else{
           true && console.log("...flow already set");
           true && console.log(flow);
