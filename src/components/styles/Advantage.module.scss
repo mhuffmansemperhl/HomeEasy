@@ -133,7 +133,7 @@
     isolation: isolate;
     display: flex;
     justify-content: flex-start;
-    z-index: -99999999;
+    z-index: -9;
 
     @media (min-width: 0px) and (max-width: 1023px) {
         flex-direction: column;        
@@ -173,6 +173,7 @@
     }
 }
 .advantage-content-item0 {
+    z-index: 999;
     @media (min-width: 0px) and (max-width: 1023px) {
         // margin-top: 11.13333333vw;
     }
