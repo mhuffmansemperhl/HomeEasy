@@ -819,7 +819,7 @@ const Footer = ({ centered_style }) => {
                     {/* footer custom text */}
                     <div className={`${styles["bottom_footer_text"]} centered-content2`}>
                         <div className={styles["inner"]}>
-                        <p>*Overall, the national average Realtor commission in 2023 was 5.46% according to data from <a href="">Statista.com</a></p>
+                        <p>*Overall, the national average Realtor commission in 2023 was 5.46% according to data from <a href="https://www.statista.com/">Statista.com</a></p>
                             <p>**Average InstantOffer closes in 15 days. This does not guarantee that every sale will.</p>
                         </div>
                         <div className={styles["grand_text"]}>
