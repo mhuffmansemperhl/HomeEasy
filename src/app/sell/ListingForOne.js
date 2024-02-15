@@ -15,22 +15,22 @@ const ListingForOne = ({}) => {
 
                 {size.width > 1023 &&
                 <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/listingforone_house.png" alt="listing for one percent" />
+                    <img src="/img/listingforone_house.webp" alt="listing for one percent" />
                 </div>
                 }
                 {/* {size.width < 1920 && size.width > 1279 &&
                 <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/listingforone_house_1280.png" alt="listing for one percent" />
+                    <img src="/img/listingforone_house_1280.webp" alt="listing for one percent" />
                 </div>
                 }
                 {size.width < 1280 && size.width > 1023 &&
                 <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/listingforone_house_1024.png" alt="listing for one percent" />
+                    <img src="/img/listingforone_house_1024.webp" alt="listing for one percent" />
                 </div>
                 } */}
                 {size.width < 1024 &&
                 <div className={`${styles['main-image-container']}`} >
-                    <img src="/img/listingforone_house.png" alt="listing for one percent" />
+                    <img src="/img/listingforone_house.webp" alt="listing for one percent" />
                 </div>
                 }
 

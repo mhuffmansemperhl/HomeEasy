@@ -32,7 +32,7 @@ const Advantage = () => {
             >
               <div className={styles["advantage-content-item-image-holder"]}>
                 {" "}
-                <img src="/img/hand_home.png" alt="hand holding home" />
+                <img src="/img/hand_home.webp" alt="hand holding home" />
               </div>
               <div
                 className={`${styles["advantage-content-item-card"]} ${styles["advantage-content-item-card0"]}`}
@@ -164,7 +164,7 @@ const Advantage = () => {
             >
               <div className={styles["advantage-content-item-image-holder"]}>
                 {" "}
-                <img src="/img/white_board.png" alt="White Board" />
+                <img src="/img/white_board.webp" alt="White Board" />
               </div>
               <div
                 className={`${styles["advantage-content-item-card"]} ${styles["advantage-content-item-card1"]}`}
@@ -281,7 +281,7 @@ const Advantage = () => {
             >
               <div className={styles["advantage-content-item-image-holder"]}>
                 {" "}
-                <img src="/img/piggie_bank.png" alt="piggie bank" />
+                <img src="/img/piggie_bank.webp" alt="piggie bank" />
               </div>
               <div
                 className={`${styles["advantage-content-item-card"]} ${styles["advantage-content-item-card2"]}`}

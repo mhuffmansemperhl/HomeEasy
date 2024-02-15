@@ -47,22 +47,22 @@ costs. That’s an extra 4%* kept safely in your pockets.</div>
                 </div>
                 {size.width > 1023 &&
                 <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/instantoffer_balance.png" alt="instantoffer" />
+                    <img src="/img/instantoffer_balance.webp" alt="instantoffer" />
                 </div>
                 }
                 {/* {size.width < 1920 && size.width > 1279 &&
                 <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/instantoffer_balance_1280.png" alt="instantoffer" />
+                    <img src="/img/instantoffer_balance_1280.webp" alt="instantoffer" />
                 </div>
                 }
                 {size.width < 1280 && size.width > 1023 &&
                 <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/instantoffer_balance_1024.png" alt="instantoffer" />
+                    <img src="/img/instantoffer_balance_1024.webp" alt="instantoffer" />
                 </div>
                 } */}
                 {size.width < 1024 &&
                 <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/instantoffer_balance.png" alt="instantoffer" />
+                    <img src="/img/instantoffer_balance.webp" alt="instantoffer" />
                 </div>
                 }
 
