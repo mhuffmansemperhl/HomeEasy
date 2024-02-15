@@ -32,7 +32,7 @@
 .transparentprocess-content-image-holder0 { 
     width: 31.4583vw;
     // background-color: red;
-    background-image: url('/img/sell_image.png');
+    background-image: url('/img/sell_image.webp');
     background-repeat: no-repeat;
     @media (min-width: 1024px) and (max-width: 1919px) {
         // overflow: hidden;
@@ -61,7 +61,7 @@
 .transparentprocess-content-image-holder2 { 
     width: 31.4583vw;
     // background-color: red;
-    background-image: url('/img/buy_image.png');
+    background-image: url('/img/buy_image.webp');
     background-repeat: no-repeat;
     @media (min-width: 1024px) and (max-width: 1919px) {
         // overflow: hidden;
@@ -90,7 +90,7 @@
 .transparentprocess-content-image-holder3 { 
     width: 31.4583vw;
     // background-color: red;
-    background-image: url('/img/buy_sell_image.png');
+    background-image: url('/img/buy_sell_image.webp');
     background-repeat: no-repeat;
     @media (min-width: 1024px) and (max-width: 1919px) {
         // overflow: hidden;
@@ -105,7 +105,7 @@
         position: absolute;
         @media (min-width: 0px) and (max-width: 1023px) {
             content: '';
-            background-image: url('/img/mobile_buy_sell_image.png');
+            background-image: url('/img/buy_sell_image.webp');
             background-repeat: no-repeat;
             background-position: center;
             width: 100vw !important;

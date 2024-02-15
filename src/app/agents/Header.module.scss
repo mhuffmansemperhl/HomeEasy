@@ -5,7 +5,7 @@
     // 896 / 1920 * 100 
     // height: 896px;
     width: 100%;
-    background-image: url(/img/agents_header_background_fluid2.png);
+    background-image: url(/img/agents_header_background_fluid2.webp);
     background-repeat: no-repeat;
     // background-size: auto 100%;
     // background-size: 100%;
@@ -47,7 +47,7 @@
 
     @media (min-width: 0px) and (max-width: 1023px) {
         height: 216.2666667vw;
-        background-image: url(/img/agents_header_background_fluid_mobile.png);
+        background-image: url(/img/agents_header_background_fluid_mobile.webp);
         background-size: cover;
         // background-position-x: calc(50% - 150px);        
     }
