@@ -10,7 +10,7 @@ import ArrowButton from '@/components/ArrowButton';
 const ListingForOne = ({}) => {
     const size = useWindowSize();
     return (
-        <div className={`${styles['main-component']}`}>
+        <div className={`${styles['main-component']}`} id="listings">
             <div className={`${styles['main-content-container']}  centered-content2`}>
 
                 {size.width > 1023 &&
@@ -29,18 +29,17 @@ const ListingForOne = ({}) => {
                 </div>
                 } */}
                 {size.width < 1024 &&
-                <div className={`${styles['main-image-container']}`} id="listings">
+                <div className={`${styles['main-image-container']}`} >
                     <img src="/img/listingforone_house.png" alt="listing for one percent" />
                 </div>
                 }
 
 
-                <div className={`${styles['main-copy-container']}`}>
+                <div className={`${styles['main-copy-container']}`} >
 
                     <div className={`${styles['main-copy-supertitle']}`}>How it works: HomeOne</div>
 
-                    <div className={`${styles['main-copy-title']}`}>Work with a full-service Preferred
-Agent for only 1%.</div>
+                    <div className={`${styles['main-copy-title']}`}>Work with a full-service Preferred Agent for only 1%.</div>
 
                     <div className={`${styles['main-copy-copy']}`}> Prefer to list? No problem! Our listing fee is just 1%<sup>2</sup> helping our
 average seller cuts costs by 50% on commissions and fees. We’ve

@@ -216,7 +216,7 @@ const FlowContactForm = ({callback, store_key}) => {
                         <div className={`${styles['contact-form-text-input-error']}`}>{mobile_phone_number_error}</div>
                     </div>
                 </div>
-                <div className={`${styles['contact-form-disclaimer-container']}`}>By clicking Continue, I agree to HomeEasy Home’s <a href="">Terms of Use</a> , <a href="/tos">Privacy Policy</a> , and the <a href="">Affiliated Business Disclosure and Privacy Notice</a> and I agree that HomeEasy Homes and its affiliated companies may contact me via phone or text, including by automated means. I understand that standard message/data rates may apply. HomeEasy Homes does not sell customer data.</div>
+                <div className={`${styles['contact-form-disclaimer-container']}`}> By clicking Continue, I agree to HomeEasy Home’s <a href="/tos">Terms of Use</a> , <a href="/files/privacy.pdf" target="_blank">Privacy Policy</a> , and the <a href="">Affiliated Business Disclosure and Privacy Notice</a> and I agree that HomeEasy Homes and its affiliated companies may contact me via phone or text, including by automated means. I understand that standard message/data rates may apply. HomeEasy Homes does not sell customer data.</div>
             </div>
         </div>
     )
