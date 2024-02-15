@@ -133,6 +133,7 @@
     isolation: isolate;
     display: flex;
     justify-content: flex-start;
+    z-index: -99999999;
 
     @media (min-width: 0px) and (max-width: 1023px) {
         flex-direction: column;        
