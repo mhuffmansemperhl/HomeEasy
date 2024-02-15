@@ -44,7 +44,7 @@ function updateRoute(pathname, router, searchParams) {
 }
 
 const initialState = {
-    flow: "sell",
+    flow: "buy",
     step: undefined,
     branch: undefined,
     chip: undefined,

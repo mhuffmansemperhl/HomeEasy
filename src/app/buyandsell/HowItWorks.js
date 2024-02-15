@@ -49,14 +49,14 @@ const HowItWorks = ({}) => {
                         </div>
 
                         <div className={`${styles["main-copy-copy-title"]}`}>Step 2</div>
-                        <div className={`${styles["main-copy-copy"]}`}>Get a same day pre-approval with our Preferred Lender for low interest rates and same day pre-approval</div>
+                        <div className={`${styles["main-copy-copy"]}`}>Get a same day pre-approval with our Preferred Lender for low interest rates and same day pre-approval.</div>
 
                         <div className={`${styles["main-copy-copy-title"]}`}>Step 3</div>
-                        <div className={`${styles["main-copy-copy"]}`}>Discover a home you love, make an offer, negotiate, inspect, and appraise – all with your agent right by your side</div>
+                        <div className={`${styles["main-copy-copy"]}`}>Discover a home you love, make an offer, negotiate, inspect, and appraise – all with your agent right by your side.</div>
 
                         <div className={`${styles["main-copy-copy-title"]}`}>Step 4</div>
                         <div className={`${styles["main-copy-copy"]}`}>
-                            Sold & offer accepted! Save thousands, pop the champagne and get packing! Plus receive a lender paid credit of 1.50%1 of your financed loan amount up to $10,000 to put towards your closing costs
+                            Sold & offer accepted! Save thousands, pop the champagne and get packing! Plus receive a lender paid credit of 1.50%<sup>1</sup> of your financed loan amount up to $10,000 to put towards your closing costs.
                         </div>
                         <div className={`${styles["main-copy-footer"]}`}>
                             <ArrowButton

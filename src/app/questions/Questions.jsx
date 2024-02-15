@@ -120,18 +120,24 @@ const Questions = () => {
     ];
     const questions3 = [
         {
-            title: "Why should I partner up with HomeEasy Homes?",
-            copy: "Elevate your business. Engage motivated, pre-approved buyers. Simplify transactions, concentrate on dedicated clients, and enhance negotiation capabilities, leading to quicker, seamless deals. Empower sellers with instant all-cash offers, reducing listing stress. Our real estate brokerage and closing units team up with mortgage experts, guaranteeing clients a fantastic deal and a frictionless process. When your clients save thousands, you’ll be the high-five hero!",
+            title: "Do I have to leave my brokerage to become a HomeEasy Homes Preferred Agent?",
+            copy: "Nope! You can stick with your current brokerage, the only difference is you get extra referral business from HomeEasy Homes.",
             visible: true,
         },
         {
-            title: "Can I keep working with buyers and sellers outside of HomeEasy Homes?",
-            copy: "Just like buying a home with a traditional broker – just a lot easier.  Everything you need to get started is right here at your fingertips.  Click through homes, 3D floor plans, virtual tours, detailed home descriptions, and location maps.  We even have a built in payment calculators to help you estimate your monthly costs.<br /><br />Found a home that catches your eye? Right from the listing page, you will be instantly matched with one of our friendly local real estate experts.  They&apos;re ready to provide you with the personalized guidance and support you need throughout your homebuying journey.<br /><br />No need to stress or search endlessly – we&apos;ve simplified the process to make it seamless and enjoyable for you.  So go ahead and start searching for your dream home right here, right now.  Your next home is just a click away!",
+            title: "Will I receive both buyer and seller leads?",
+            copy: " Yes, although most of our leads are buyers.",
             visible: false,
         },
         {
-            title: "Can I list homes that HomeEasy Homes owns",
-            copy: "o	Congrats! You found a home you love! We will start the process by matching you with a top local real estate expert who is there to guide you every step of the way, ensuring your homebuying journey is smooth, successful, and tailored to your unique needs.  From there, your agent will reach out and review your offer and answer any questions you may have.  They can also refer you to one of our mortgage experts to get you pre-approved and increase your buying power.  Once you and your agent come up with an offer you are comfortable with, you&apos;ll be able to sign and submit it digitally.<br/><br/>If your offer is accepted, your agent will draft a purchase agreement for both parties to sign.  Once the T&apos;s are crossed and the I&apos;s are dotted, you are officially in escrow.<br/><br/>If your offer is not accepted, we know it can be heartbreaking, but your agent will remain by your side and there to land the next one!",
+            title: "How many referrals can I expect?",
+            copy: "That will depend on the market, season, and inventory.",
+            visible: false,
+        },
+       
+        {
+            title: " Bummer you aren’t in my area. What can I do?",
+            copy: "We are expanding into new markets! If you are interested, please inquire and we will reach out as soon as we make it to your area.",
             visible: false,
         },
        

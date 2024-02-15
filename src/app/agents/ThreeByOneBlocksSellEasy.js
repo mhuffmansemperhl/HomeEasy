@@ -16,12 +16,12 @@ const ThreeByOneBlocks = ({}) => {
         <div className={`${styles['main-component']}`}>
             <div className={`${styles['main-content-container']}  centered-content2`}>
                 <div className={`${styles['main-component-title']}`}>The HomeEasy advantage.</div>
-                <div className={`${styles['main-component-copy']}`}>Unlock new opportunities for your business by teaming up with HomeEasy Homes.</div>
+                <div className={`${styles['main-component-copy']}`}>Stay at your brokerage. Get motivate leads.</div>
                 <div className={`${styles['items']}`}>
                     
                      <div className={`${styles['item']}`}>
                         <div className={`${styles['item-title-container']}`}>A steady flow of motivated customers.</div>
-                        <div className={`${styles['item-copy-container']}`}>HomeEasy Homes is the top choice for more and more buyers and sellers who are really serious. Your leads are all pre-approved and ready to shop, giving you great earning potential.</div>
+                        <div className={`${styles['item-copy-container']}`}>Our buyer’s leads are all pre-approved and ready to shop, giving you great earning potential.</div>
                     </div>
                     
                     <div className={`${styles['item']}`}>
@@ -41,7 +41,7 @@ const ThreeByOneBlocks = ({}) => {
                     
                     <div className={`${styles['item']}`}>
                         <div className={`${styles['item-title-container']}`}>A commission rate that your wallet loves.</div>
-                        <div className={`${styles['item-copy-container']}`}>We’re not like the others – our commission is just 35%, leaving you with more of your hard-earned money.  Because we believe as a team, your success is our success.</div>
+                        <div className={`${styles['item-copy-container']}`}>We’re not like the others – our commission leaves you with more of your hard-earned money.  Because we believe as a team, your success is our success.</div>
                     </div>
 
                 </div>

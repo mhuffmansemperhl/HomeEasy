@@ -5,7 +5,7 @@
 import useWindowSize from "@/hooks/useWindowSize";
 
 import styles from "./HomeEasyBuyers.module.scss";
-import ArrowButton from "../../components/fluid/ArrowButton";
+import ArrowButton from '@/components/ArrowButton';
 
 const HomeEasyBuyers = ({}) => {
     const size = useWindowSize();
@@ -25,14 +25,14 @@ const HomeEasyBuyers = ({}) => {
                     </div>
 
                     <div className={`${styles["main-copy-copy-title"]}`}>Same day pre-approval.</div>
-                    <div className={`${styles["main-copy-copy"]}`}>Ready to buy a home in today’s market? Speed is key, and our Preferred Lender, offers same-day pre-approvals for eligible buyers</div>
+                    <div className={`${styles["main-copy-copy"]}`}>Ready to buy a home in today’s market? Speed is key, and our Preferred Lender, offers same-day pre-approvals for eligible buyers.</div>
 
                     <div className={`${styles["main-copy-copy-title"]}`}>Instant access to listings.</div>
-                    <div className={`${styles["main-copy-copy"]}`}>Get the latest listings sent directly to your phone or email, keeping the real estate market at your fingertips</div>
+                    <div className={`${styles["main-copy-copy"]}`}>Get the latest listings sent directly to your phone or email, keeping the real estate market at your fingertips.</div>
 
                     <div className={`${styles["main-copy-copy-title"]}`}>Who you work with matters.</div>
                     <div className={`${styles["main-copy-copy"]}`}>
-                        Tap into our close-knit network of Preferred Agents and Lenders, and get 1.50% of your financed loan up to $10,000 towards your closing costs<sup>1</sup>
+                        Tap into our close-knit network of Preferred Agents and Lenders, and get 1.50% of your financed loan up to $10,000 towards your closing costs<sup>1</sup>.
                     </div>
 
                     <ArrowButton

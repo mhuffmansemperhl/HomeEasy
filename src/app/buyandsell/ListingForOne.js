@@ -39,7 +39,7 @@ const ListingForOne = ({}) => {
                     <div className={`${styles["main-copy-title"]}`}>Work with a full-service local agent for only 1%.</div>
 
                     <div className={`${styles["main-copy-copy"]}`}>
-                        Prefer to list? No problem! Our listing fee is just 1%2 helping our average seller cuts costs by 50% on commissions and fees. We’ve got your back from listing to closing, ensuring a stress-free experience.
+                        Prefer to list? No problem! Our listing fee is just 1%<sup>2</sup> helping our average seller cuts costs by 50% on commissions and fees. We’ve got your back from listing to closing, ensuring a stress-free experience.
                     </div>
 
                     <div className={`${styles["main-copy-copy-title"]}`}>Tell us about your home.</div>

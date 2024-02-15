@@ -655,19 +655,18 @@ const Header = () => {
                     <div className={styles['header-content']}>
                     <div className={styles["transparentprocess-content-tabs-tabs"]}>
 
+                    <div onClick={()=>{
+                          // gtmPush(["callback", "home_hero_buy", ()=>{changeIndex("buy");}]);
+                          changeIndex("buy");
+                        }} className={`${styles["transparentprocess-content-tabs-tab"]} ${flow === "buy" ? styles["transparentprocess-content-tabs-tab-selected"] : ''}`}>
+                        Buy
+                        </div>
                         <div onClick={()=>{
                           // gtmPush(["callback", "home_hero_sell", ()=>{changeIndex("sell");}]);
                           changeIndex("sell");                          
                         }} className={`${styles["transparentprocess-content-tabs-tab"]} ${flow === "sell" ? styles["transparentprocess-content-tabs-tab-selected"] : ''}`}>
                         Sell
-                        </div>
-
-                        <div onClick={()=>{
-                          // gtmPush(["callback", "home_hero_buy", ()=>{changeIndex("buy");}]);
-                          changeIndex("buy");
-                        }} className={`${styles["transparentprocess-content-tabs-tab"]} ${flow === "buy" ? styles["transparentprocess-content-tabs-tab-selected"] : ''}`}>
-                        Buy
-                        </div>                     
+                        </div>      
                         <div onClick={()=>{
                           // gtmPush(["callback", "home_hero_buy_sell", ()=>{changeIndex("sellbuy");}]);
                           changeIndex("sellbuy");

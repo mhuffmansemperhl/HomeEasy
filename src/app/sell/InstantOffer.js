@@ -26,7 +26,7 @@ while keeping thousands in your pockets by avoiding listing fees.</div>
 
                     <div className={`${styles['main-copy-copy-title']}`}>Receive a competitive offer in 24 hours.</div>
                     <div className={`${styles['main-copy-copy']}`}>Tell us about your home and receive an offer carefully evaluated by
-our real estate partners specializing in your local market..</div>
+our real estate partners specializing in your local market.</div>
 
                     <div className={`${styles['main-copy-copy-title']}`}>Pay no closing costs or realtor fees.</div>
                     <div className={`${styles['main-copy-copy']}`}>You literally save thousands by avoiding the listing fee & closing

@@ -85,7 +85,7 @@ const Advantage = () => {
                         styles["advantage-content-callout-item-popover"]
                       }
                     >
-                      We will match you with top local agents.
+                      They are our Preferred Lender for a reason - their low rates are hard to beat!
                     </div>
                   </div>
                 </div>
@@ -108,8 +108,7 @@ const Advantage = () => {
                         styles["advantage-content-callout-item-popover"]
                       }
                     >
-                      Expert guidance and support to help you create a
-                      personalized plan when buying or selling a house.
+                     Get matched with a Preferred Agent and find your dream home!
                     </div>
                   </div>
                 </div>
@@ -129,9 +128,7 @@ const Advantage = () => {
                         styles["advantage-content-callout-item-popover"]
                       }
                     >
-                      Our agents are experts in negotiation and can help you in
-                      put together a competitive offer, even in the toughest
-                      markets.
+                      Get 1.5% of the loan amount back in closing credit, up to $10,000 from our Preferred Lender<sup>1</sup>.
                     </div>
                   </div>
                 </div>
@@ -151,8 +148,7 @@ const Advantage = () => {
                         styles["advantage-content-callout-item-popover"]
                       }
                     >
-                      Our streamlined process will have you closed in 30 days or
-                      less
+                      High-five! You found your dream home and saved thousands of dollars!
                     </div>
                   </div>
                 </div>
@@ -179,7 +175,7 @@ const Advantage = () => {
                 <div className={styles["advantage-content-item-card-copy"]}>
                 Sell your home with one of our Preferred Agents and save! Sell your
                 home instantly for cash avoiding listing and closing fees, or list with for
-                only 1% (compared to the average 5.37%*)!{" "}
+                only 1% (compared to the average  5.46%*)!{" "}
                 </div>
                 <div
                   className={styles["advantage-content-item-get-started-link"]}
@@ -225,8 +221,7 @@ const Advantage = () => {
                         styles["advantage-content-callout-item-popover"]
                       }
                     >
-                      Continuously monitor market data, listings, and buyer
-                      preferences.
+                       No staging, no photos, no open house, no inspections, no negotiating, no time wasted. Done in 15 days**.
                     </div>
                   </div>
                 </div>
@@ -250,8 +245,7 @@ const Advantage = () => {
                       }
                     >
                       {" "}
-                      Utilize the power of AI to analyze numerous data points to
-                      forecast market trends and opportunity.
+                      Don’t want an InstantOffer? Why pay the avg. 5.46%* listing fee to a realtor? List your home for only 1%<sup>2</sup>, keeping thousands in your pocket.
                     </div>
                   </div>
                 </div>
@@ -271,8 +265,7 @@ const Advantage = () => {
                         styles["advantage-content-callout-item-popover"]
                       }
                     >
-                      Analyze your search patterns creating a more accurate
-                      picture of what you really want.
+                       Our listing fee is just 1%<sup>2</sup> helping our average seller cuts costs by 50% on commissions and fees. Get the same full-service experience for thousands less!
                     </div>
                   </div>
                 </div>
@@ -355,7 +348,7 @@ const Advantage = () => {
                         styles["advantage-content-callout-item-popover"]
                       }
                     >
-                      The fastest way to sell your home, easy.
+                      No staging, no photos, no open house, no inspections, no negotiating, no time wasted. Done in 15 days**.
                     </div>
                   </div>
                 </div>
@@ -379,7 +372,7 @@ const Advantage = () => {
                       }
                     >
                       {" "}
-                      Save thousands in commissions.
+                      11.Don’t want an InstantOffer? Why pay the avg. 5.46%* listing fee to a realtor? List your home for only 1%<sup>2</sup>, keeping thousands in your pocket.
                     </div>
                   </div>
                 </div>
@@ -402,8 +395,7 @@ const Advantage = () => {
                         styles["advantage-content-callout-item-popover"]
                       }
                     >
-                      Secure your home now, unlock even greater possibilities
-                      later.
+                      Our Preferred Agent will also help you find your dream home!
                     </div>
                   </div>
                 </div>
@@ -426,8 +418,7 @@ const Advantage = () => {
                         styles["advantage-content-callout-item-popover"]
                       }
                     >
-                      Secure your home now, unlock even greater possibilities
-                      later.
+                     Bundle for savings. Get 1.5% of the loan amount back in closing credit, up to $10,000 from our Preferred Lender<sup>1</sup>.
                     </div>
                   </div>
                 </div>

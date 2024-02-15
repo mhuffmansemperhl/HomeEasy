@@ -67,7 +67,7 @@ const Header = () => {
             <div className={`${styles['main-content-container']} centered-content2`}>
             <div className={`${styles["header-content-container"]}`}>
           <div className={styles["header-content-title"]}>
-          How to sell,buy & save, the <span>easy way.</span>
+          How to sell, buy & save, the <span>easy way.</span>
           </div>
           <div className={styles["header-content-copy"]}>
                   We save you time, money & stress.

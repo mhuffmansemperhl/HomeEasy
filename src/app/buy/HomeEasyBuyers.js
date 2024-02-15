@@ -5,7 +5,7 @@
 import useWindowSize from "@/hooks/useWindowSize";
 
 import styles from "./HomeEasyBuyers.module.scss";
-import ArrowButton from "../../components/fluid/ArrowButton";
+import ArrowButton from '@/components/ArrowButton';
 
 const HomeEasyBuyers = ({}) => {
     const size = useWindowSize();

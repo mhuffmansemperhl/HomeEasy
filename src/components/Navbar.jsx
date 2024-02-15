@@ -32,7 +32,7 @@ const Navbar = () => {
    
         {
           title: "See how much you save",
-          link: "/how_much_you_save",
+          link: "/calculator_savings",
           gtag: "how_much_save",
         },
       ],

@@ -22,7 +22,7 @@ const ThreeByOneBlocks = ({}) => {
                     
                     <div className={`${styles['item']}`}>
                         <div className={`${styles['item-title-container']}`}>Get an InstantOffer and avoid listing.</div>
-                        <div className={`${styles['item-copy-container']}`}>No staging, no photos, no open house, no inspections, no negotiating, no time wasted. Done in 15 days.</div>
+                        <div className={`${styles['item-copy-container']}`}>No staging, no photos, no open house, no inspections, no negotiating, no time wasted. Done in 15 days**</div>
                         <div className={`${styles['item-foot-container']}`}>
                             <ArrowButton
                                 small_text={true}
@@ -36,7 +36,7 @@ const ThreeByOneBlocks = ({}) => {
                     
                     <div className={`${styles['item']}`}>
                         <div className={`${styles['item-title-container']}`}>Save thousands, list for only 1%<sup>2</sup> .</div>
-                        <div className={`${styles['item-copy-container']}`}>Why pay the 6% listing fee to a realtor? List your home for only 1%, keeping thousands in your pocket.</div>
+                        <div className={`${styles['item-copy-container']}`}>Why pay the 5.46% listing fee to a realtor? List your home for only 1%, keeping thousands in your pocket.</div>
                         <div className={`${styles['item-foot-container']}`}>
                             <ArrowButton
                                 small_text={true}

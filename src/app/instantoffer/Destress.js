@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import useWindowSize from "@/hooks/useWindowSize";
 
 import styles from './Destress.module.scss';
-import ArrowButton from '../../components/fluid/ArrowButton';
+import ArrowButton from '@/components/ArrowButton';
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 
 const Destress = ({}) => {

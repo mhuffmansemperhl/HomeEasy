@@ -5,7 +5,7 @@
 import useWindowSize from "@/hooks/useWindowSize";
 
 import styles from './HomeEasyAgents.module.scss';
-import ArrowButton from '../../components/fluid/ArrowButton';
+import ArrowButton from '@/components/ArrowButton';
 
 const HomeEasyAgents = ({}) => {
     const size = useWindowSize();
@@ -28,10 +28,10 @@ const HomeEasyAgents = ({}) => {
                     <div className={`${styles['main-copy-copy']}`}>Keep more of your hard-earned money with only 35% commission.  An extra perk, we take that 35% and give it back to your client to put towards closing costs or buying down their interest rates.</div>
 
                     <div className={`${styles['main-copy-copy-title']}`}>Who you work with matters.</div>
-                    <div className={`${styles['main-copy-copy']}`}>By partnering up with our mortgage experts, you can ensure your client not only scores a fantastic deal but also breeze through the mortgage process effortlessly.</div>
+                    <div className={`${styles['main-copy-copy']}`}>By partnering up with our mortgage experts, you can ensure your client not only receives a closing credit, but also breeze through the mortgage process effortlessly and with low rates.</div>
 
                     <div className={`${styles['main-copy-copy-title']}`}>Look like a hero.</div>
-                    <div className={`${styles['main-copy-copy']}`}>When your clients save thousands, you’ll be the one they high-five with gratitude!</div>
+                    <div className={`${styles['main-copy-copy']}`}>When your clients save thousands, you’ll be the one they high-five!</div>
                     <div className={`${styles['main-copy-footer']}`}>
                         <ArrowButton
                             link_text="Sign up now"

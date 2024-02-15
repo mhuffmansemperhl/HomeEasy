@@ -677,10 +677,10 @@ export default function Question() {
         label={"Next"}
         callback={(data) => {
           console.log("this is form_data________", data);
-          // nextStepValidate(pathname, router, searchParams);
-          nextStepValidate(pathname, router, searchParams, () =>
-            createNewAccount(data)
-          );
+          nextStepValidate(pathname, router, searchParams);
+          // nextStepValidate(pathname, router, searchParams, () =>
+          //   createNewAccount(data)
+          // );
         }}
       />
     );

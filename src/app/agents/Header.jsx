@@ -64,7 +64,7 @@ const Header = () => {
             <Navbar />
             <div className={`${styles['main-content-container']} centered-content2`}>
                 <div className={`${styles['header-content-container']}`}>
-                    <div className={styles['header-content-title']}>Become a Preferred Agent,get high-quality leads.</div>
+                    <div className={styles['header-content-title']}>Become a Preferred Agent, get high-quality leads.</div>
                     <div className={styles['header-content-copy']}>Close more deals with no upfront cost or obligations.</div>
                     <div className={styles["transparentprocess-content-tabs-content"]}>
                         <div className={styles["transparentprocess-content-tabs-content-item"]}>

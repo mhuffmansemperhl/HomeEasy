@@ -48,7 +48,7 @@ wasted. Done in 15 days.</div>
                     
                     <div className={`${styles['item']}`}>
                         <div className={`${styles['item-title-container']}`}>Or save thousands, list for only 1%<sup>2</sup> .</div>
-                        <div className={`${styles['item-copy-container']}`}>Why pay the avg. 5.37%* listing fee to a
+                        <div className={`${styles['item-copy-container']}`}>Why pay the avg. 5.46%* listing fee to a
 realtor? List your home for only 1%,
 keeping thousands in your pocket.</div>
                         <div className={`${styles['item-foot-container']}`}>
