@@ -7,7 +7,9 @@ import useWindowSize from "@/hooks/useWindowSize";
 import styles from './HomeEasyAgents.module.scss';
 import ArrowButton from '@/components/ArrowButton';
 
+
 const HomeEasyAgents = ({}) => {
+    
     const size = useWindowSize();
     return (
         <div className={`${styles['main-component']}`}>
@@ -35,13 +37,11 @@ const HomeEasyAgents = ({}) => {
                     <div className={`${styles['main-copy-footer']}`}>
                         <ArrowButton
                             link_text="Sign up now"
-                            callback={()=>{
-                                // router.push(`/get_started?flow=sell&step=0&branch=9`);
-                                // window.open("https://homeeasyhomes.idxbroker.com/idx/map/mapsearch", "_blank");
-                                // gtmPush(["callback", "buy_how_it_works_gs", ()=>{window.open("https://homeeasyhomes.idxbroker.com/idx/map/mapsearch?srt=newest", "_blank");}]);
-                                gtmPush(["callback", "buy_how_it_works_gs", ()=>{window.open("https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&idxStatus=active&ccz=city&lp=100000&srt=newest&city%5B%5D=37986", "_blank");}]);
-                                
-                            }}
+                           onClick={()=>{
+                                    
+                                    gtmPush(["callback", "agents_hero_sign_up_now", ()=>{processPlaceSelection();}]);
+
+                                }}
                         />
                     </div>
 

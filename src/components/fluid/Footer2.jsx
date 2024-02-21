@@ -600,16 +600,7 @@ const Footer = ({ centered_style }) => {
                                         {/* <a href="/">Affiliated Business Arrangement Disclosure</a> */}
                                         <a href="/files/EConsent.pdf" target="_blank">Electronic Consent</a>
                                         <a
-                                            onClick={(e) => {
-                                                e.preventDefault();
-                                                gtmPush([
-                                                    "callback",
-                                                    "foot_2_terms_conds",
-                                                    () => {
-                                                        router.push(`/tos`);
-                                                    },
-                                                ]);
-                                            }}
+                                       href="/tos" target="_blank"
                                         >
                                             Terms &amp; Conditions of Use
                                         </a>
@@ -730,16 +721,7 @@ const Footer = ({ centered_style }) => {
                                         {/* <a href="/">Affiliated Business Arrangement Disclosure</a> */}
                                         <a href="/files/EConsent.pdf" target="_blank">Electronic Consent</a>
                                         <a
-                                            onClick={(e) => {
-                                                e.preventDefault();
-                                                gtmPush([
-                                                    "callback",
-                                                    "foot_2_terms_conds",
-                                                    () => {
-                                                        router.push(`/tos`);
-                                                    },
-                                                ]);
-                                            }}
+                                          href="/tos" target="_blank"
                                         >
                                             Terms &amp; Conditions of Use
                                         </a>

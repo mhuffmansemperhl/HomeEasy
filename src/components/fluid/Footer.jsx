@@ -284,7 +284,7 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                                 <div className={styles["lower-footer-content-middle-links"]}>
                                     {/* <a href="/">Affiliated Business Arrangement Disclosure</a> */}
                                     <a href="/files/EConsent.pdf" target="_blank">Electronic Consent</a>
-                                    <a href="/files/tos" target="_blank">Terms &amp; Conditions of Use</a>
+                                    <a href="/tos" target="_blank">Terms &amp; Conditions of Use</a>
                                     <a href="/files/privacy.pdf" target="_blank">Privacy Policy</a>
                                     <a onClick={()=>{
                                         console.log(window.CC);
@@ -347,7 +347,7 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                                 <div className={styles["lower-footer-content-middle-links"]}>
                                     {/* <a href="/">Affiliated Business Arrangement Disclosure</a> */}
                                     <a href="/files/EConsent.pdf" target="_blank">Electronic Consent</a>
-                                    <a href="/files/tos" target="_blank">Terms &amp; Conditions of Use</a>
+                                    <a href="/tos" target="_blank">Terms &amp; Conditions of Use</a>
                                     <a href="/files/privacy.pdf" target="_blank">Privacy Policy</a>
                                     <a onClick={()=>{
                                         console.log(window.CC);
