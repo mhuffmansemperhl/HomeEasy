@@ -283,9 +283,9 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                             <div className={styles["lower-footer-content-middle-links-container"]}>
                                 <div className={styles["lower-footer-content-middle-links"]}>
                                     {/* <a href="/">Affiliated Business Arrangement Disclosure</a> */}
-                                    <a href="/files/EConsent.pdf">Electronic Consent</a>
-                                    <a onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_2_terms_conds", ()=>{router.push(`/tos`);}]);}}>Terms &amp; Conditions of Use</a>
-                                    <a onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_2_privacy", ()=>{router.push(`/files/privacy.pdf`);}]);}}>Privacy Policy</a>
+                                    <a href="/files/EConsent.pdf" target="_blank">Electronic Consent</a>
+                                    <a href="/files/tos" target="_blank">Terms &amp; Conditions of Use</a>
+                                    <a href="/files/privacy.pdf" target="_blank">Privacy Policy</a>
                                     <a onClick={()=>{
                                         console.log(window.CC);
                                         console.log("doing cookies")
@@ -300,8 +300,8 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                             <div className={styles["lower-footer-content-middle-links-container"]}>
                                 <div className={styles["lower-footer-content-middle-links"]}>
                                     <strong>TREC: </strong>
-                                    <a href="/files/TREC.pdf">Information About Brokerage Services</a>
-                                    <a href="https://www.trec.texas.gov/forms/consumer-protection-notice">Consumer Protection Notice</a>
+                                    <a href="/files/TREC.pdf" target="_blank">Information About Brokerage Services</a>
+                                    <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank">Consumer Protection Notice</a>
                                 </div>
                             </div>
                             
@@ -346,9 +346,9 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                             <div className={styles["lower-footer-content-middle-links-container"]}>
                                 <div className={styles["lower-footer-content-middle-links"]}>
                                     {/* <a href="/">Affiliated Business Arrangement Disclosure</a> */}
-                                    <a href="/">Electronic Consent</a>
-                                    <a onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_2_terms_conds", ()=>{router.push(`/tos`);}]);}}>Terms &amp; Conditions of Use</a>
-                                    <a onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_2_privacy", ()=>{router.push(`/files/privacy.pdf`);}]);}}>Privacy Policy</a>
+                                    <a href="/files/EConsent.pdf" target="_blank">Electronic Consent</a>
+                                    <a href="/files/tos" target="_blank">Terms &amp; Conditions of Use</a>
+                                    <a href="/files/privacy.pdf" target="_blank">Privacy Policy</a>
                                     <a onClick={()=>{
                                         console.log(window.CC);
                                         console.log("doing cookies")
@@ -362,8 +362,8 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                             <div className={styles["lower-footer-content-middle-links-container"]}>
                                 <div className={styles["lower-footer-content-middle-links"]}>
                                     <strong>TREC: &nbsp; </strong>
-                                    <a onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_2_info_brokerage_svcs", ()=>{router.push(`/files/TREC.pdf`);}]);}}>Information About Brokerage Services</a>
-                                    <a onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_2_consumer_prot_notice", ()=>{router.push(`https://www.trec.texas.gov/forms/consumer-protection-notice`);}]);}}>Consumer Protection Notice</a>
+                                    <a href="/files/TREC.pdf" target="_blank">Information About Brokerage Services</a>
+                                    <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank">Consumer Protection Notice</a>
                                 </div>
                             </div>
                         </div>
@@ -374,7 +374,7 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
  {/* footer custom text */}
  <div className={`${styles['bottom_footer_text']} centered-content2`}> 
                         <div className={styles["inner"]}>
-                            <p>*Overall, the national average Realtor commission in 2023 was 5.46% according to data from <a href="https://www.statista.com/">Statista.com</a></p>
+                            <p>*Overall, the national average Realtor commission in 2023 was 5.46% according to data from <a href="https://www.statista.com/statistics/777612/average-commission-rate-realtors-usa/" target="_blank">Statista.com</a></p>
                             <p>**Average InstantOffer closes in 15 days. This does not guarantee that every sale will.</p>
                        
                         </div>
