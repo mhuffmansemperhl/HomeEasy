@@ -259,7 +259,7 @@ const Advantage = () => {
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    Save Thousand
+                    Save Thousands
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]
