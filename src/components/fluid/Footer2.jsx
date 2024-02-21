@@ -543,7 +543,7 @@ const Footer = ({ centered_style }) => {
                                 </div>
                                 <div className={styles["upper-footer-content-right-copy-container"]}>
                                     <p>
-                                        By searching, you agree to the Terms of Use, Privacy Policy and California Privacy Notice. California DRE #02012110; Semper Home Loans: NMLS #1053 TREC: Info about Brokerage Services, Consumer
+                                        By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, <a href="/files/privacy.pdf" target="_blank">Privacy Policy</a> and California Privacy Notice. California DRE #02012110; Semper Home Loans: NMLS #1053 TREC: Info about Brokerage Services, Consumer
                                         Protection Notice, Texas Mortgage Company Compliant/ <br />
                                         Recovery Fund Notice <br />
                                         Real estate brokerage licenses
