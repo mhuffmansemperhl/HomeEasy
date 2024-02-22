@@ -9,7 +9,11 @@ import ArrowButton from '@/components/ArrowButton';
 
 
 const HomeEasyAgents = ({}) => {
-    
+    function processPlaceSelection(){
+        router.push(`/get_started?flow=partner&step=1`);
+    }
+
+
     const size = useWindowSize();
     return (
         <div className={`${styles['main-component']}`}>
