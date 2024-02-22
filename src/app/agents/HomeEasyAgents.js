@@ -9,6 +9,8 @@ import ArrowButton from '@/components/ArrowButton';
 
 
 const HomeEasyAgents = ({}) => {
+    const router = useRouter();
+
        function processPlaceSelection(){
         // false && console.log('processPlaceSelection');
         router.push(`/get_started?flow=partner&step=1`);
