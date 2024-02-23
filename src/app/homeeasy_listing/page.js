@@ -17,10 +17,10 @@ export default function Home() {
       <Calculator />
  
 
-      <HomeSearchLinks
+      {/* <HomeSearchLinks
         main_component_style={"main-component-white"}
         centered_style={"centered-content2"}
-        />
+        /> */}
 
       <Footer2 />
     </main>
