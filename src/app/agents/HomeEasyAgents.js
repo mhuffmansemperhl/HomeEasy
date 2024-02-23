@@ -3,19 +3,14 @@ import { useRouter } from "next/navigation";
 // import { useEffect } from "react";
 // import useFlowGetStartedStore from "@/store/store.js";
 import useWindowSize from "@/hooks/useWindowSize";
-
+import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 import styles from './HomeEasyAgents.module.scss';
 import ArrowButton from '@/components/ArrowButton';
 
 
 const HomeEasyAgents = ({}) => {
     const router = useRouter();
-
-       function processPlaceSelection(){
-        // false && console.log('processPlaceSelection');
-        router.push(`/get_started?flow=partner&step=1`);
-    }
-
+    const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
 
     const size = useWindowSize();
     return (
@@ -44,11 +39,10 @@ const HomeEasyAgents = ({}) => {
                     <div className={`${styles['main-copy-footer']}`}>
                         <ArrowButton
                             link_text="Sign up now"
-                           onClick={()=>{
-                                    
-                                    gtmPush(["callback", "agents_hero_sign_up_now", ()=>{processPlaceSelection();}]);
-
-                                }}
+                            callback={()=>{
+                                // router.push(`/get_started?flow=instantoffer&step=1`);
+                                gtmPush(["callback", "agents_sell_more_io", ()=>{router.push(`/get_started?flow=partner&step=1`);}]);
+                            }}
                         />
                     </div>
 
