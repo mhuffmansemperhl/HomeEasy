@@ -394,6 +394,9 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                         <div className={styles["bottom_text"]}>
                         <p>Apple and the Apple logo are trademarks of Apple Inc. registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
                         <p>Wear OS by Google and Google Play are trademarks of Google LLC.</p>
+                        <p>
+                        Semper Home Loans, Inc., HomeEasy Homes, LLC, and HomeEasy Mortgage, LLC are separate operating subsidiaries of Semper Home Loans, Inc. Each company is a distinct legal entity, operated and managed through its own management and governance structure as necessitated by its state of incorporation and the relevant legal and regulatory requirements.
+                        </p>
                             </div>
                             </div>
                     </div>
