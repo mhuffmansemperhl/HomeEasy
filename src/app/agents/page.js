@@ -40,6 +40,7 @@ export default function Home() {
       {/* <Plan /> */}
       <Questions 
         question_show_link={true}
+        question_index={3}
         question_questions={[
           {
               title: "Why should I partner up with HomeEasy Homes?",

@@ -65,6 +65,7 @@ const initialState = {
     account_creation_error: undefined,
     account_created: false,
     selected_questions_tab_index: 0,
+    selected_questions_tab_index_agent:3
 };
 
 export const useFlowGetStartedStore = create(devtools((set, get) => ({
