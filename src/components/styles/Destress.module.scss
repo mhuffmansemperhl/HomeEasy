@@ -30,13 +30,13 @@
     }
 }
 .transparentprocess-content-image-holder0 { 
-    width: 38.4583vw;
+    width: 31.4583vw;
     // background-color: red;
     background-image: url('/img/sell_image.webp');
     background-repeat: no-repeat;
     @media (min-width: 1024px) and (max-width: 1919px) {
         // overflow: hidden;
-        background-size: cover;
+        background-size: contain;
         
     }
     @media (min-width: 1920px) {
@@ -59,13 +59,13 @@
 }
 
 .transparentprocess-content-image-holder2 { 
-    width: 38.4583vw;
+    width: 31.4583vw;
     // background-color: red;
     background-image: url('/img/buy_image.webp');
     background-repeat: no-repeat;
     @media (min-width: 1024px) and (max-width: 1919px) {
         // overflow: hidden;
-        background-size: cover;
+        background-size: contain;
         
     }
     @media (min-width: 1920px) {
@@ -88,13 +88,13 @@
 }
 
 .transparentprocess-content-image-holder3 { 
-    width: 38.4583vw;
+    width: 31.4583vw;
     // background-color: red;
     background-image: url('/img/buy_sell_image.webp');
     background-repeat: no-repeat;
     @media (min-width: 1024px) and (max-width: 1919px) {
         // overflow: hidden;
-        background-size: cover;
+        background-size: contain;
     }
     @media (min-width: 1920px) {
         // overflow: hidden;
