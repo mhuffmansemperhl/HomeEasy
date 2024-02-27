@@ -108,7 +108,7 @@
     }
     @media (min-width: 1920px) {
         // overflow: hidden;
-        background-size: 100% 100%;
+          background-size: 100% 100%;
         background-position: center;
     }
     position: relative;
@@ -121,7 +121,7 @@
             background-position: center;
             width: 100vw !important;
             height: 85.33333333vw !important;
-            background-size: contain;
+            background-size: inherit;
         }
     }
 }
