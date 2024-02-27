@@ -43,7 +43,8 @@
     }
     @media (min-width: 1920px) {
         // overflow: hidden;
-        
+        background-size: 100% 100%;
+        background-position: center;
     }
     position: relative;
     &::after{
@@ -74,7 +75,8 @@
     }
     @media (min-width: 1920px) {
         // overflow: hidden;
-        
+        background-size: 100% 100%;
+        background-position: center;
     }
     position: relative;
     &::after{
@@ -96,6 +98,8 @@
     // background-color: red;
     background-image: url('/img/buy_sell_image.webp');
     background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
     @media (min-width: 1024px) and (max-width: 1919px) {
         // overflow: hidden;
         // background-size: cover;
@@ -104,7 +108,8 @@
     }
     @media (min-width: 1920px) {
         // overflow: hidden;
-        
+        background-size: 100% 100%;
+        background-position: center;
     }
     position: relative;
     &::after{
