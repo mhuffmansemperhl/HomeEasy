@@ -81,7 +81,7 @@ const Questions = ({question_title, question_copy, question_questions, question_
     return (
         <div>
             <div className={styles['main-component']}>
-                <div className={`${styles['main-component-content-container']} centered-content`}>
+                <div className={`${styles['main-component-content-container']} centered-content2`}>
                     <div className={styles['main-component-title']} dangerouslySetInnerHTML={{ __html: title }}></div>
                     <div className={styles['main-component-copy']} dangerouslySetInnerHTML={{ __html: copy }}></div>
                     <div className={styles['main-component-question-container']}>

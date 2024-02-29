@@ -20,9 +20,10 @@
     padding: 3.020833333vw 0px 3.020833333vw 0px;
     width: 100%;
     .table_heading{
-        font-size: 3.75vw;
+        font-size: 3.44vw;
         text-align: center;
         line-height: 3.385416667vw;
+        font-weight: 600;
            
     @media (min-width: 0px) and (max-width: 1023px) {
      padding-bottom: 5vw;   
@@ -70,6 +71,7 @@
 table{
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 thead{
     tr{
 
@@ -82,6 +84,8 @@ thead{
             box-shadow: -9px 25px 40px -38px rgba(0,0,0,0.75);
 -webkit-box-shadow: -9px 25px 40px -38px rgba(0,0,0,0.75);
 -moz-box-shadow: -9px 25px 40px -38px rgba(0,0,0,0.75);
+font-weight: 800;
+font-size: 1.5vw;
         }
     }
 
@@ -93,6 +97,7 @@ tbody{
             text-align: center;
             padding:5px 0;
             font-weight: 500;
+            font-size: 1.5vw;
         }   
     }
     tr:nth-child(1) td{
