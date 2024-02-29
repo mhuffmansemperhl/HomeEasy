@@ -555,7 +555,7 @@ useEffect(() => {
                     link_text="Get your InstantOffer"
                     callback={()=>{
                         // router.push(`/get_started?flow=instantoffer&step=1`);
-                        gtmPush(["callback", "calc_proceeds_gs", ()=>{router.push(`/get_started?flow=instantoffer&step=1`);}]);
+                        gtmPush(["callback", "calc_proceeds_gs", ()=>{router.push(`/instantoffer`);}]);
 
                       }}
                 />

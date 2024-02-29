@@ -859,7 +859,7 @@ useEffect(() => {
                   white_button={true}
                   link_text="Get your InstantOffer"
                   callback={()=>{
-                      router.push(`/get_started?flow=instantoffer&step=1`);
+                      router.push(`/instantoffer`);
                   }}
               />
               
@@ -956,7 +956,7 @@ useEffect(() => {
                   white_button={true}
                   link_text="Listing for One"
                   callback={()=>{
-                      router.push(`/get_started?flow=listingforone&step=1`);
+                      router.push(`/sell`);
                   }}
               />
               

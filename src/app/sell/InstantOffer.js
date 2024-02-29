@@ -1,13 +1,17 @@
 "use client"
 // import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 // import { useEffect } from "react";
 // import useFlowGetStartedStore from "@/store/store.js";
 import useWindowSize from "@/hooks/useWindowSize";
 
 import styles from './InstantOffer.module.scss';
 import ArrowButton from '@/components/ArrowButton';
+import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 
 const InstantOffer = ({}) => {
+ const router = useRouter();
+    const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
     const size = useWindowSize();
     return (
         <div className={`${styles['main-component']}`}>

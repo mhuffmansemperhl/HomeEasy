@@ -74,7 +74,7 @@ const Navbar = () => {
         },
         {
           title: "See how much you save",
-          link: "/sellbuy_how_much_you_save",
+          link: "/calculator_savings",
           gtag: "sellbuy_how_much_save",
         },
       ],

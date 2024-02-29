@@ -28,7 +28,7 @@ const ThreeByOneBlocks = ({}) => {
                                 small_text={true}
                                 link_text="Get your InstantOffer"
                                 callback={()=>{
-                                    gtmPush(["callback", "buysell_io", ()=>{router.push(`/get_started?flow=instantoffer&step=1`);}]);
+                                    gtmPush(["callback", "buysell_io", ()=>{router.push(`/instantoffer`);}]);
                                 }}
                             />
                         </div>
@@ -42,7 +42,7 @@ const ThreeByOneBlocks = ({}) => {
                                 small_text={true}
                                 link_text="Get your HomeOne Listing"
                                 callback={()=>{
-                                    gtmPush(["callback", "buysell_listing_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=8`);}]);
+                                    gtmPush(["callback", "buysell_listing_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);
                                     // 
                                 }}
                             />
@@ -57,7 +57,7 @@ const ThreeByOneBlocks = ({}) => {
                                 small_text={true}
                                 link_text="Get Pre-approved"
                                 callback={()=>{
-                                    gtmPush(["callback", "buysell_listing_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=8`);}]);
+                                    gtmPush(["callback", "buysell_listing_one", ()=>{router.push(`/booking`);}]);
                                     // 
                                 }}
                             />

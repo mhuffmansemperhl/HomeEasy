@@ -1,13 +1,16 @@
 "use client";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 // import { useEffect } from "react";
 // import useFlowGetStartedStore from "@/store/store.js";
 // import useWindowSize from "@/hooks/useWindowSize";
 import ArrowButton from "@/components/fluid/ArrowButton";
 import styles from "./ThreeByOneBlocksHassleFree.module.scss";
+import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 // import ArrowButton from './ArrowButton';
 
 const ThreeByOneBlocks = ({}) => {
+    const router = useRouter();
+    const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
     return (
         <div className={`${styles["main-component"]}`}>
             <div className={`${styles["main-content-container"]}  centered-content2`}>
@@ -45,7 +48,7 @@ const ThreeByOneBlocks = ({}) => {
                                         "callback",
                                         "sell_io",
                                         () => {
-                                            router.push(`/get_started?flow=instantoffer&step=1`);
+                                            router.push(`/get_started?flow=sell&step=0&branch=9`);
                                         },
                                     ]);
                                 }}

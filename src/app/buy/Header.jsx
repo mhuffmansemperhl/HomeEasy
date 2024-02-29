@@ -246,7 +246,7 @@ const Header = () => {
                             link_text="Let’s find your dream home!"
                             callback={()=>{
                                 // router.push(`/get_started?flow=sell&step=0&branch=9`);
-                                gtmPush(["callback", "sell_list_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);
+                                gtmPush(["callback", "sell_list_one", ()=>{router.push(`https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=city&a_statusCategory[]=active&city[]=37986&srt=newest`);}]);
                             }}
                         />
           </div>

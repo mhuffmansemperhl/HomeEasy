@@ -1,14 +1,17 @@
 "use client";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 // import { useEffect } from "react";
 // import useFlowGetStartedStore from "@/store/store.js";
 import useWindowSize from "@/hooks/useWindowSize";
 
 import styles from "./HomeEasyBuyers.module.scss";
 import ArrowButton from '@/components/ArrowButton';
+import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 
 const HomeEasyBuyers = ({}) => {
     const size = useWindowSize();
+    const router = useRouter();
+    const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
     return (
         <div className={`${styles["main-component"]}`}>
             <div className={`${styles["main-content-container"]}  centered-content2`}>
@@ -37,17 +40,10 @@ const HomeEasyBuyers = ({}) => {
                     <div className={`${styles["main-copy-footer"]}`}>
                         <ArrowButton
                             link_text="Get started"
-                            callback={() => {
-                                // router.push(`/get_started?flow=sell&step=0&branch=9`);
-                                // window.open("https://homeeasyhomes.idxbroker.com/idx/map/mapsearch", "_blank");
-                                // gtmPush(["callback", "buy_how_it_works_gs", ()=>{window.open("https://homeeasyhomes.idxbroker.com/idx/map/mapsearch?srt=newest", "_blank");}]);
-                                gtmPush([
-                                    "callback",
-                                    "buy_how_it_works_gs",
-                                    () => {
-                                        window.open("https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&idxStatus=active&ccz=city&lp=100000&srt=newest&city%5B%5D=37986", "_blank");
-                                    },
-                                ]);
+                            callback={()=>{
+                                // router.push(`/get_started?flow=instantoffer&step=1`);
+                                gtmPush(["callback", "sell_io", ()=>{router.push(`/get_started?flow=buy&step=1`);}]);
+
                             }}
                         />
                     </div>

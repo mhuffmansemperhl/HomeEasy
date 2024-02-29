@@ -36,11 +36,14 @@
     background-repeat: no-repeat;
     @media (min-width: 1024px) and (max-width: 1919px) {
         // overflow: hidden;
-        background-size: contain;
+        background-size: 100% 100%;
+        background-position: center;
         
     }
     @media (min-width: 1920px) {
         // overflow: hidden;
+        background-size: 100% 100%;
+        background-position: center;
         
     }
     position: relative;
@@ -65,11 +68,14 @@
     background-repeat: no-repeat;
     @media (min-width: 1024px) and (max-width: 1919px) {
         // overflow: hidden;
-        background-size: contain;
+        background-size: 100% 100%;
+        background-position: center;
         
     }
     @media (min-width: 1920px) {
         // overflow: hidden;
+        background-size: 100% 100%;
+        background-position: center;
         
     }
     position: relative;
@@ -98,7 +104,8 @@
     }
     @media (min-width: 1920px) {
         // overflow: hidden;
-        
+        background-size: 100% 100%;
+        background-position: center;
     }
     position: relative;
     &::after{
@@ -110,7 +117,8 @@
             background-position: center;
             width: 100vw !important;
             height: 85.33333333vw !important;
-            background-size: contain;
+            background-size: 100% 100%;
+            background-position: center;
         }
     }
 }

@@ -1,14 +1,17 @@
 "use client";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 // import { useEffect } from "react";
 // import useFlowGetStartedStore from "@/store/store.js";
 import useWindowSize from "@/hooks/useWindowSize";
 
 import styles from "./InstantOffer.module.scss";
 import ArrowButton from "@/components/ArrowButton";
+import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 
 const InstantOffer = ({}) => {
     const size = useWindowSize();
+    const router = useRouter();
+    const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
     return (
         <div className={`${styles["main-component"]}`}>
             <div className={`${styles["main-content-container"]}  centered-content2`}>
@@ -36,7 +39,7 @@ const InstantOffer = ({}) => {
                                     "callback",
                                     "buysell_listing_one",
                                     () => {
-                                        router.push(`/get_started?flow=sell&step=0&branch=8`);
+                                        router.push(`/get_started?flow=sell&step=0&branch=9`);
                                     },
                                 ]);
                                 //

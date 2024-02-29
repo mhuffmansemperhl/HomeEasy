@@ -39,7 +39,7 @@ wasted. Done in 15 days.</div>
                                 link_text="Get your InstantOffer"
                                 callback={()=>{
                                     // router.push(`/get_started?flow=instantoffer&step=1`);
-                                    gtmPush(["callback", "sell_io", ()=>{router.push(`/get_started?flow=instantoffer&step=1`);}]);
+                                    gtmPush(["callback", "sell_io", ()=>{router.push(`/instantoffer`);}]);
 
                                 }}
                             />
@@ -57,7 +57,7 @@ keeping thousands in your pocket.</div>
                                 link_text="Get your HomeOne Listing"
                                 callback={()=>{
                                     // router.push(`/get_started?flow=sell&step=0&branch=8`);
-                                    gtmPush(["callback", "sell_list_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=8`);}]);
+                                    gtmPush(["callback", "sell_list_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);
                                 }}
                             />
                         </div>

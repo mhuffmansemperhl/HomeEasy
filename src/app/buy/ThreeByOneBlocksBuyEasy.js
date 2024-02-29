@@ -1,13 +1,16 @@
 "use client";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 // import { useEffect } from "react";
 // import useFlowGetStartedStore from "@/store/store.js";
 // import useWindowSize from "@/hooks/useWindowSize";
 import ArrowButton from "@/components/fluid/ArrowButton";
 import styles from "./ThreeByOneBlocksBuyEasy.module.scss";
+import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 // import ArrowButton from './ArrowButton';
 
 const ThreeByOneBlocksBuyEasy = ({}) => {
+    const router = useRouter();
+    const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
     return (
         <div className={`${styles["main-component"]}`}>
             <div className={`${styles["main-content-container"]}  centered-content2`}>
@@ -17,6 +20,22 @@ const ThreeByOneBlocksBuyEasy = ({}) => {
                     <div className={`${styles["item"]}`}>
                         <div className={`${styles["item-title-container"]}`}>With us, our friends are your friends.</div>
                         <div className={`${styles["item-copy-container"]}`}>Make the most of our tight-knit group of Preferred Agents and Preferred Lender to maximize your savings!</div>
+                        <div className={`${styles["item-foot-container"]}`}>
+                            <ArrowButton
+                                small_text={true}
+                                link_text="Get started"
+                                callback={() => {
+                                    // router.push(`/get_started?flow=instantoffer&step=1`);
+                                    gtmPush([
+                                        "callback",
+                                        "sell_io",
+                                        () => {
+                                            router.push(`/get_started?flow=buy&step=1`);
+                                        },
+                                    ]);
+                                }}
+                            />
+                        </div>
                     </div>
 
                     <div className={`${styles["item"]}`}>
@@ -30,6 +49,22 @@ const ThreeByOneBlocksBuyEasy = ({}) => {
                                 callback={()=>{console.log("clicked")}}
                             />
                         </div> */}
+                         <div className={`${styles["item-foot-container"]}`}>
+                            <ArrowButton
+                                small_text={true}
+                                link_text="Get started"
+                                callback={() => {
+                                    // router.push(`/get_started?flow=instantoffer&step=1`);
+                                    gtmPush([
+                                        "callback",
+                                        "sell_io",
+                                        () => {
+                                            router.push(`/booking`);
+                                        },
+                                    ]);
+                                }}
+                            />
+                        </div>
                     </div>
 
                     <div className={`${styles["item"]}`}>
@@ -45,7 +80,7 @@ const ThreeByOneBlocksBuyEasy = ({}) => {
                                         "callback",
                                         "sell_io",
                                         () => {
-                                            router.push(`/get_started?flow=instantoffer&step=1`);
+                                            router.push(`https://www.gethomeeasy.com/`);
                                         },
                                     ]);
                                 }}
