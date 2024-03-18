@@ -59,7 +59,7 @@ const ThreeByOneBlocksBuyEasy = ({}) => {
                                         "callback",
                                         "sell_io",
                                         () => {
-                                            router.push(`/booking`);
+                                            router.push(`/mortgage`);
                                         },
                                     ]);
                                 }}
@@ -80,7 +80,7 @@ const ThreeByOneBlocksBuyEasy = ({}) => {
                                         "callback",
                                         "sell_io",
                                         () => {
-                                            router.push(`https://www.gethomeeasy.com/`);
+                                            router.push(`/mortgage`);
                                         },
                                     ]);
                                 }}

@@ -15,7 +15,7 @@ const TOS = () => {
 
                     <p>This Terms of Service Agreement (this “Agreement”) is a binding agreement between you and HomeEasy Homes Inc. and its affiliated companies (collectively, “HomeEasy Homes,” “we,” “us,” or “our”) providing the terms and conditions for your use of our Services.</p>
                     <p>By “Services,” we mean all the products and services owned and operated by HomeEasy Homes, including the content, features, data, and software made available through www.HomeEasyHomes.com (the “Web Site”), our mobile applications, and other websites or applications we operate.</p>
-                    <p><strong>Please review this Agreement carefully.  By accessing and using our Services, you agree to all the terms and conditions of this Agreement.</strong>  Please be sure to also review our <a href="/privacy">Privacy Policy</a>, which is incorporated and made a part of this Agreement.</p>
+                    <p><strong>Please review this Agreement carefully.  By accessing and using our Services, you agree to all the terms and conditions of this Agreement.</strong>  Please be sure to also review our <a href="/privacy_policy">Privacy Policy</a>, which is incorporated and made a part of this Agreement.</p>
 
                     <h2>1. General Terms</h2>
                     <h3>1.1 Using Our Services</h3>

@@ -310,7 +310,7 @@ useEffect(() => {
   return (
     <div className={`${styles["main-component"]}`}>
 
-      <div className={`${styles["main-content-container"]}  centered-content2`}>
+      <div className={`${styles["main-content-container"]}  centered-content`}>
         <div className={`${styles["main-calculator-container"]}`}>
           <div className={`${styles["main-calculator-form-container"]}`}>
             <div className={`${styles["main-calculator-form"]}`}>
@@ -350,7 +350,7 @@ useEffect(() => {
                   <div className={`${styles["main-calculator-form-sub-item-line"]}`}>Not sure what you could get for your home?
                   </div>
                   <div className={`${styles["main-calculator-form-sub-item-line"]}`}>
-                  <a target="_blank" href="https://401homevalues.areahomevalues.net/">Get a Free Estimate from us</a>
+                  <a target="_blank" href="https://homeeasyhomes.areahomevalues.net/">Get a Free Estimate from us</a>
                   </div>
                 {/* </div> */}
                 <div className={`${styles["main-calculator-form-item-input"]}`}>

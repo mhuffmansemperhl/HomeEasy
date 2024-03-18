@@ -816,7 +816,7 @@ useEffect(() => {
     <div className={`${styles["main-component"]}`}>
          { !google_api_loaded && <GooglePlacesScript />}
 
-      <div className={`${styles["main-content-container"]}  centered-content2`}>
+      <div className={`${styles["main-content-container"]}  centered-content`}>
         <div className={`${styles["main-calculator-container"]}`}>
           <div className={`${styles["main-calculator-form-container"]}`}>
             <div className={`${styles["main-calculator-form"]}`}>

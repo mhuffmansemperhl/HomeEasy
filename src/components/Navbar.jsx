@@ -85,7 +85,7 @@ const Navbar = () => {
       links: [
         {
           title: "Today's rates",
-          link: "https://www.gethomeeasy.com/",
+          link: "/mortgage",
           gtag: "menu_mtg_todays_rates",
         },
         {
@@ -133,17 +133,20 @@ const Navbar = () => {
       links: [
         {
           title: "Net proceeds",
-          link: "/calculator_proceeds",
+          // link: "/calculator_proceeds",
+          link: "/calculators",
           gtag: "menu_calc_net_proceeds",
         },
         {
           title: "HomeEasy savings",
-          link: "/calculator_savings",
+          // link: "/calculator_savings",
+          link: "/calculators",
           gtag: "menu_calc_he_savings",
         },
         {
           title: "Estimated monthly payments",
-          link: "/calculator_monthly_payments",
+          // link: "/calculator_monthly_payments",
+          link: "/calculator",
           gtag: "menu_calc_est_mnt_pmts",
         },
       ],
@@ -437,7 +440,7 @@ const Navbar = () => {
           }
         >
           <div className={styles["header-menu-container-menu-nav"]}>
-            <div className={styles["header-menu-container-menu-nav-title"]}>
+            <div className={styles["header-menu-container-menu-nav-title"]}   onClick={() => router.push("/")}>
               <img src="/img/footer_logo_icon.svg" alt="Logo" />
             </div>
             <div

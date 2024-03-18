@@ -237,13 +237,13 @@ const Footer = ({centered_style}) => {
                                 <a href="/"><img src="/img/equal-housing-opportunity-logo-1200w copy.svg" alt="Equal Housing Opportunity" /></a>
                             </div>
                             <div className={styles["upper-footer-content-right-copy-container"]}>
-                                <p>HOMEEASY HOMES IS COMMITTED TO AND ABIDES BY THE FAIR HOUSING ACT AND EQUAL OPPORTUNITY ACT. READ HOMEEASY HOME’S <a href="/files/heh_fheo.pdf" target="_blank">FAIR HOUSING POLICY</a> AND THE <a href="https://dos.ny.gov/system/files/documents/2021/08/fairhousingnotice.pdf" target="_blank">NEW YORK STATE FAIR HOUSING NOTICE</a>.</p>
+                                <p>HOMEEASY HOMES IS COMMITTED TO AND ABIDES BY THE FAIR HOUSING ACT AND EQUAL OPPORTUNITY ACT. READ HOMEEASY HOME’S <a href="/fair_housing" target="_blank">FAIR HOUSING POLICY</a> AND THE <a href="https://dos.ny.gov/system/files/documents/2021/08/fairhousingnotice.pdf" target="_blank">NEW YORK STATE FAIR HOUSING NOTICE</a>.</p>
 
                                 <p>HomeEasy&trade; is a registered trademark licensed to HomeEasy LLC.</p> 
 
                                 <p>HomeEasy Homes is committed to ensuring digital accessibility for individuals with disabilities. If you wish to report an issue or seek an accommodation, please contact us at info@homeeasyhomes.com.
 
-By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, <a href="/files/privacy.pdf" target="_blank">Privacy Policy</a> and <a href="https://oag.ca.gov/privacy/ccpa" target="_blank">California Privacy Notice</a>. California DRE #02012110</p>
+By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, <a href="/privacy_policy" target="_blank">Privacy Policy</a> and <a href="https://oag.ca.gov/privacy/ccpa" target="_blank">California Privacy Notice</a>. California DRE #02012110</p>
 
 <p>TREC: <a href="/files/TREC.pdf" target="_blank">Info about Brokerage Services</a>, <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank">Consumer Protection Notice</a>, <a href="https://www.sml.texas.gov/wp-content/uploads/2021/07/rmlo_80_200_b_recovery_fund_notice.pdf" target="_blank">Texas Mortgage Company Compliant/Recovery Fund Notice</a></p>
 
@@ -283,9 +283,9 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                             <div className={styles["lower-footer-content-middle-links-container"]}>
                                 <div className={styles["lower-footer-content-middle-links"]}>
                                     {/* <a href="/">Affiliated Business Arrangement Disclosure</a> */}
-                                    <a href="/files/EConsent.pdf" target="_blank">Electronic Consent</a>
+                                    <a href="/electronic_consent" target="_blank">Electronic Consent</a>
                                     <a href="/tos" target="_blank">Terms &amp; Conditions of Use</a>
-                                    <a href="/files/privacy.pdf" target="_blank">Privacy Policy</a>
+                                    <a href="/privacy_policy" target="_blank">Privacy Policy</a>
                                     <a onClick={()=>{
                                         console.log(window.CC);
                                         console.log("doing cookies")
@@ -346,9 +346,9 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                             <div className={styles["lower-footer-content-middle-links-container"]}>
                                 <div className={styles["lower-footer-content-middle-links"]}>
                                     {/* <a href="/">Affiliated Business Arrangement Disclosure</a> */}
-                                    <a href="/files/EConsent.pdf" target="_blank">Electronic Consent</a>
+                                    <a href="/electronic_consent" target="_blank">Electronic Consent</a>
                                     <a href="/tos" target="_blank">Terms &amp; Conditions of Use</a>
-                                    <a href="/files/privacy.pdf" target="_blank">Privacy Policy</a>
+                                    <a href="/privacy_policy" target="_blank">Privacy Policy</a>
                                     <a onClick={()=>{
                                         console.log(window.CC);
                                         console.log("doing cookies")

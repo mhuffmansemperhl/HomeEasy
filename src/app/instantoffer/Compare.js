@@ -3,7 +3,7 @@
 // import { useEffect } from "react";
 // import useFlowGetStartedStore from "@/store/store.js";
 import useWindowSize from "@/hooks/useWindowSize";
-
+import IconPopover from "@/components/fluid/IconPopover";
 import styles from './Compare.module.scss';
 import ArrowButton from '@/components/ArrowButton';
 
@@ -28,6 +28,18 @@ const Compare = ({}) => {
                     {size.width < 1024 && 
                     <img src="/img/compare_instantoffer_mobile.png" alt="compare instantoffer" />
                     }
+                    <div className={`${styles['hover_icon1']}`}>
+                    <IconPopover
+                 text="The national average listing fee is 5.37%. This would be $21,480 on a $400,000 home."
+                 
+                   />
+                    </div>             
+                    <div className={`${styles['hover_icon2']}`}>
+                    <IconPopover
+                 text="Buyers typically request a 3-6% seller paid closing concession which is $12,000-$24,000 on a $400,000 home."
+                 
+                   />
+                    </div>             
                 </div>
 
             </div>

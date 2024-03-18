@@ -93,6 +93,55 @@
 
 .main-image-container {
     width: 100%;
+    position: relative;
+.hover_icon1{
+    position:absolute;
+    top: 42%;
+    left: 16%;
+    // height: 30px;
+    // width: 30px;
+    img{
+        width: 15px;
+        height: 15px;
+    }
+    @media (min-width: 421px) and (max-width: 768px) {
+        position: absolute;
+        top: 36%;
+        left: 34%;
+    
+    }
+    @media (min-width: 0px) and (max-width: 420px) {
+        position: absolute;
+        top: 34%;
+        left: 34%;
+    
+    }
+}
+.hover_icon2{
+    position:absolute;
+    left: 19%;
+    bottom: 19%;
+    // height: 30px;
+    // width: 30px;
+    img{
+        width: 15px;
+        height: 15px;
+    }
+    @media (min-width: 421px) and (max-width: 768px) {
+        position: absolute;
+        bottom: 13%;
+        left: 41%;
+    
+    
+    }
+    @media (min-width: 0px) and (max-width: 420px) {
+        position: absolute;
+        bottom: 15%;
+        left: 41%;
+    
+    
+    }
+}
 
     @media (min-width: 0px) and (max-width: 1023px) {
         width: 84.688vw;

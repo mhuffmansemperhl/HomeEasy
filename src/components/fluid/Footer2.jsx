@@ -543,7 +543,7 @@ const Footer = ({ centered_style }) => {
                                 </div>
                                 <div className={styles["upper-footer-content-right-copy-container"]}>
                                     <p>
-                                        By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, <a href="/files/privacy.pdf" target="_blank">Privacy Policy</a> and California Privacy Notice. California DRE #02012110; Semper Home Loans: NMLS #1053 TREC: Info about Brokerage Services, Consumer
+                                        By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, <a href="/privacy_policy" target="_blank">Privacy Policy</a> and California Privacy Notice. California DRE #02012110; Semper Home Loans: NMLS #1053 TREC: Info about Brokerage Services, Consumer
                                         Protection Notice, Texas Mortgage Company Compliant/ <br />
                                         Recovery Fund Notice <br />
                                         Real estate brokerage licenses
@@ -598,14 +598,14 @@ const Footer = ({ centered_style }) => {
                                 <div className={styles["lower-footer-content-middle-links-container"]}>
                                     <div className={styles["lower-footer-content-middle-links"]}>
                                         {/* <a href="/">Affiliated Business Arrangement Disclosure</a> */}
-                                        <a href="/files/EConsent.pdf" target="_blank">Electronic Consent</a>
+                                        <a href="/electronic_consent" target="_blank">Electronic Consent</a>
                                         <a
                                        href="/tos" target="_blank"
                                         >
                                             Terms &amp; Conditions of Use
                                         </a>
                                         <a
-           href="/files/privacy.pdf" target="_blank"
+           href="/privacy_policy" target="_blank"
                                         >
                                             Privacy Policy
                                         </a>
@@ -719,14 +719,14 @@ const Footer = ({ centered_style }) => {
                                 <div className={styles["lower-footer-content-middle-links-container"]}>
                                     <div className={styles["lower-footer-content-middle-links"]}>
                                         {/* <a href="/">Affiliated Business Arrangement Disclosure</a> */}
-                                        <a href="/files/EConsent.pdf" target="_blank">Electronic Consent</a>
+                                        <a href="/electronic_consent" target="_blank">Electronic Consent</a>
                                         <a
                                           href="/tos" target="_blank"
                                         >
                                             Terms &amp; Conditions of Use
                                         </a>
                                         <a
-                                          href="/files/privacy.pdf" target="_blank"
+                                          href="/privacy_policy" target="_blank"
                                         >
                                             Privacy Policy
                                         </a>

@@ -22,7 +22,7 @@ const Questions = () => {
     const questions0 = [
         {
             title: "This sounds too good to be true.  What&apos;s the catch here?",
-            copy: "You know we get that a lot.  But the truth is it&apos;s not too good to be true, it&apos;s just the way things should be.  By automating parts of the home buying process, our agents are able to work more efficiently for less commission.   And with our long lasting relationships with local attorney&apos;s, title companies, escrow companies, and mortgage lenders, you can save thousands more when working with our preferred partners.",
+            copy: "You know we get that a lot.  But the truth is it&apos;s not too good to be true, it&apos;s just the way things should be.  By automating parts of the home buying process, our agents are able to work more efficiently for less commission.   And with our long lasting relationships with local attorneys, title companies, escrow companies, and mortgage lenders, you can save thousands more when working with our preferred partners.",
             visible: true,
         },
         {

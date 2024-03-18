@@ -25,7 +25,7 @@ const ThreeByOneBlocks = ({}) => {
                     <div className={`${styles["item"]}`}>
                         <div className={`${styles["item-title-container"]}`}>Save money.</div>
                         <div className={`${styles["item-copy-container"]}`}>
-                            Keep thousands in your pocket! Pay no realtor fees. Pay no closing costs. Make no repairs. Get fast cash. Don’t like our offer? No worries, you can still <a href="/sell"> list for less </a>
+                            Keep thousands in your pocket! Pay no realtor fees. Pay no closing costs. Make no repairs. Get fast cash. Don’t like our offer? No worries, you can still <a href="/sell/#listings"> list for less </a>
                         </div>
                         {/* <div className={`${styles['item-foot-container']}`}>
                             <ArrowButton

@@ -208,7 +208,7 @@ useEffect(() => {
   return (
     <div className={`${styles["main-component"]}`}>
 
-      <div className={`${styles["main-content-container"]}  centered-content2`}>
+      <div className={`${styles["main-content-container"]}  centered-content`}>
 
         <div className={`${styles["main-calculator-container"]}`}>
 
@@ -253,7 +253,7 @@ useEffect(() => {
                   Not sure what you could get for your home?
                   </div> 
                   <div className={`${styles["main-calculator-info-link-link"]}`}>
-                    <a target="_blank" href="https://401homevalues.areahomevalues.net/">Get a Free Estimate from us</a>
+                    <a target="_blank" href="https://homeeasyhomes.areahomevalues.net/">Get a Free Estimate from us</a>
                   </div>     
                 </div>
                 }
@@ -386,7 +386,7 @@ useEffect(() => {
 
                       <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row"]}`}>
                         <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row-left"]}`}>
-                          3%
+                          1%
                         </div>
                         <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row-right"]}`}>
                           {closing_costs_tb}
@@ -395,7 +395,7 @@ useEffect(() => {
 
                       <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row"]}`}>
                         <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row-left"]}`}>
-                          1%
+                          0.5% 
                         </div>
                         <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row-right"]}`}>
                           {avg_home_prep_cost_and_move_tb}
@@ -510,7 +510,7 @@ useEffect(() => {
 
                       <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row"]}`}>
                         <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row-left"]}`}>
-                          0.5%
+                          0%
                         </div>
                         <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row-right"]}`}>
                           {avg_home_prep_cost_and_move_io}
@@ -542,7 +542,7 @@ useEffect(() => {
                 <div className={`${styles["main-calculator-bottom-mobile-infoblock-title-image-holder"]}`}>
                 <img src="/img/heh_logo_small.svg" alt="arrow" />
                 </div>
-                LISTING FOR ONE
+                HomeOne
                 <IconPopover 
                   white={false}
                   text="Expedite the process significantly with an instant cash offer from us." 
@@ -618,7 +618,7 @@ useEffect(() => {
 
                       <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row"]}`}>
                         <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row-left"]}`}>
-                          0.5%
+                          0%
                         </div>
                         <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row-right"]}`}>
                           {closing_costs_lfo}
@@ -627,7 +627,7 @@ useEffect(() => {
 
                       <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row"]}`}>
                         <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row-left"]}`}>
-                          1%
+                          0.5%
                         </div>
                         <div className={`${styles["main-calculator-bottom-mobile-infoblock-right-row-right"]}`}>
                           {avg_home_prep_cost_and_move_lfo}
@@ -740,7 +740,7 @@ useEffect(() => {
                 <div className={`${styles["main-calculator-bottom-card-middle-row-title"]}`}>
                   <div className={`${styles["main-calculator-bottom-card-middle-row-title-container"]}`}>
                     <div className={`${styles["main-calculator-bottom-card-middle-row-left"]}`}>
-                    3%
+                    1%
                     </div>
                     <div className={`${styles["main-calculator-bottom-card-middle-row-right"]}`}>
                     {closing_costs_tb}
@@ -753,7 +753,7 @@ useEffect(() => {
                 <div className={`${styles["main-calculator-bottom-card-middle-row-title"]}`}>
                   <div className={`${styles["main-calculator-bottom-card-middle-row-title-container"]}`}>
                     <div className={`${styles["main-calculator-bottom-card-middle-row-left"]}`}>
-                    1%
+                    0.5%
                     </div>
                     <div className={`${styles["main-calculator-bottom-card-middle-row-right"]}`}>
                     {avg_home_prep_cost_and_move_tb}
@@ -833,7 +833,7 @@ useEffect(() => {
                 <div className={`${styles["main-calculator-bottom-card-middle-row-title"]}`}>
                   <div className={`${styles["main-calculator-bottom-card-middle-row-title-container"]}`}>
                     <div className={`${styles["main-calculator-bottom-card-middle-row-left"]}`}>
-                    0.5%
+                    0%
                     </div>
                     <div className={`${styles["main-calculator-bottom-card-middle-row-right"]}`}>
                     {avg_home_prep_cost_and_move_io}
@@ -916,7 +916,7 @@ useEffect(() => {
                 <div className={`${styles["main-calculator-bottom-card-middle-row-title"]}`}>
                   <div className={`${styles["main-calculator-bottom-card-middle-row-title-container"]}`}>
                     <div className={`${styles["main-calculator-bottom-card-middle-row-left"]}`}>
-                    0.5%
+                    0%
                     </div>
                     <div className={`${styles["main-calculator-bottom-card-middle-row-right"]}`}>
                     {closing_costs_lfo}
@@ -929,7 +929,7 @@ useEffect(() => {
                 <div className={`${styles["main-calculator-bottom-card-middle-row-title"]}`}>
                   <div className={`${styles["main-calculator-bottom-card-middle-row-title-container"]}`}>
                     <div className={`${styles["main-calculator-bottom-card-middle-row-left"]}`}>
-                    1%
+                    0.5%
                     </div>
                     <div className={`${styles["main-calculator-bottom-card-middle-row-right"]}`}>
                     {avg_home_prep_cost_and_move_lfo}
