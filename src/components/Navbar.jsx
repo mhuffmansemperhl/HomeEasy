@@ -326,29 +326,7 @@ const Navbar = () => {
                   (866) 904-3250
                 </div>
               </div>
-              <div className={styles["header-button-group-button-container"]}>
-                <div
-                  onClick={() => {
-                    console.log("clicked");
-                    openIDXMenu();
-                    // header_idx_menu_shown_style = styles["header-idx-menu-shown"];
-                    // gtmPush(["callback", "nav_sign_in", ()=>{window.open('https://homeeasyhomes.idxbroker.com/idx/userlogin', '_blank');}]);
-                  }}
-                  className={
-                    styles[
-                      "header-button-group-button-container-user-icon-holder"
-                    ]
-                  }
-                >
-                  <div
-                    className={
-                      styles["header-button-group-button-container-user-icon"]
-                    }
-                  >
-                    <img src="/img/user.png" alt="User icon" />
-                  </div>
-                </div>
-              </div>
+              
 
               {showIDXMenu && (
                 <div
@@ -545,23 +523,7 @@ const Navbar = () => {
           </div>
 {/* account */}
 <div className={styles["header-menu-container-mobile-menu-buttons"]}>
-          <div
-            onClick={() => {
-              window.open(
-                "https://homeeasyhomes.idxbroker.com/idx/userlogin",
-                "_blank"
-              );
-            }}
-            className={
-              styles[
-                "header-menu-container-mobile-menu-buttons-button-container"
-              ]
-            }
-          >
-            {" "}
-            <button>My account</button>{" "}
-          </div>
-          <div
+         <div
             onClick={() => {
               window.open("tel:866-904-3250");
             }}

@@ -388,7 +388,7 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                             </div>
                         <div className={styles["grand_text2"]}>
                         <div className={styles["grand_text"]}>
-                        2 Save with HomeEasy Homes’ lower 1% listing fee when you buy and sell with a Preferred HomeEasy Homes Agent, versus a more-typical 2.5% listing fee. Fees subject to change,
+                        2 Save with HomeEasy Homes’ lower 1% listing fee when you buy and sell with a Preferred HomeEasy Homes Agent, versus a more-typical 2.5% listing fee. Fees subject to change, 1% Listings is currently in Beta Testing. Only available in the following area codes 02760, 02763, 02761, 02056, 02070, 02093, and 02762. 
                          <a href="/homeeasy_listing" target='_blank'>minimums apply</a> . Buyer’s agent fee not included.
                             </div>
                         <div className={styles["bottom_text"]}>

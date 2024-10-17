@@ -38,7 +38,7 @@ const Advantage = () => {
                 className={`${styles["advantage-content-item-card"]} ${styles["advantage-content-item-card0"]}`}
               >
                 <div className={styles["advantage-content-item-card-title"]}>
-                Buy a home the easy way and save up to $10,000<sup>1</sup>
+                Buy a home the easy way and save up to $10,000
                 </div>
                 <div className={styles["advantage-content-item-card-copy"]}>
                 Find your dream home with one of our Preferred Agents and get
@@ -169,8 +169,11 @@ const Advantage = () => {
               <div
                 className={`${styles["advantage-content-item-card"]} ${styles["advantage-content-item-card1"]}`}
               >
+                <div>
+                  <img src="/img/beta.svg" alt="Beta" />
+                </div>
                 <div className={styles["advantage-content-item-card-title"]}>
-                Sell your home instantly for cash or list it for only 1%<sup>2</sup>.
+                Sell your home instantly for cash or list it for only 1%.
                 </div>
                 <div className={styles["advantage-content-item-card-copy"]}>
                 Sell your home with one of our Preferred Agents and save! Sell your

@@ -356,7 +356,7 @@ const Destress = () => {
                       ]
                     }
                   >
-                    4. Or list with us for only 1%<sup>2</sup>.
+                    4. Or list with us for only 1%.
                   </div>
                   <div
                     className={
