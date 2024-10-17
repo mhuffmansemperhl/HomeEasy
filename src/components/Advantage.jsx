@@ -170,7 +170,7 @@ const Advantage = () => {
                 className={`${styles["advantage-content-item-card"]} ${styles["advantage-content-item-card1"]}`}
               >
                 <div>
-                  <img src="/img/beta.svg" alt="Beta" />
+                  <img src="/img/beta.svg" alt="Beta" width={"48"} />
                 </div>
                 <div className={styles["advantage-content-item-card-title"]}>
                 Sell your home instantly for cash or list it for only 1%.

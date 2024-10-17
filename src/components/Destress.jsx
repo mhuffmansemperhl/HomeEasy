@@ -112,7 +112,10 @@ const Destress = () => {
                     : ""
                 }`}
               >
-                Sell
+                <div style={{ display: "flex",  gap: "4px" }}>
+                  Sell
+                  <img src="/img/beta.svg" width={"48"} />
+                </div>
               </div>
               <div
                 onClick={() => {

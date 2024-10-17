@@ -263,6 +263,8 @@ const Navbar = () => {
                 >
                   Sell
                 </a>{" "}
+                  <img src="/img/beta.svg" alt="Beta" width={39} style={{marginBottom: 10, marginLeft: 4, marginRight: -18}} />
+                  
               </div>
               <div className={styles["header-link-group-link"]}>
                 {" "}

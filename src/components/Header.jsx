@@ -628,8 +628,13 @@ const Header = () => {
                     {flow === "sell" && 
                     <div className={styles['header-content-title']}>Maximize Your<br/>Profit. Minimize <br /> the fees.</div>
                     }
-                    {flow === "buy" && 
+                    {flow === "buy" &&
+                    <>
+                    <div>
+                      <img src='/img/beta.svg' alt='beta' width={54} height={"auto"} />
+                    </div>
                     <div className={styles['header-content-title']}>Buy a home the <br /> easy way and <br /> save thousands.</div>
+                    </>
                     }
                     {flow === "sellbuy" && 
                     <div className={styles['header-content-title']}>Sell, buy & <br /> pocket thousands <br /> in savings.</div>
