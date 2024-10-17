@@ -263,8 +263,26 @@ const Navbar = () => {
                 >
                   Sell
                 </a>{" "}
-                  <img src="/img/beta.svg" alt="Beta" width={39} style={{marginBottom: 10, marginLeft: 4, marginRight: -18}} />
-                  
+              
+                  <div
+                      className={styles["beta-content-callout-item"]}
+                      style={{
+                        position: "absolute",
+                        height: "auto",
+                        top: "-10px ",
+                        left: "34px",
+                      }}
+                  >
+                    <img src="/img/beta.svg" alt="Beta"/>
+                    <div
+                      className={
+                        styles["beta-content-callout-item-popover"]
+                      }
+                    >
+                      1% Listings is currently in beta and available only in select area codes.2
+                    </div>
+                  </div> 
+               
               </div>
               <div className={styles["header-link-group-link"]}>
                 {" "}
