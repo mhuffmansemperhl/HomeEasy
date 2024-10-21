@@ -215,7 +215,7 @@ const Advantage = () => {
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    Receive an instantOffer
+                    Receive an instant offer
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]
@@ -238,7 +238,7 @@ const Advantage = () => {
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    List Your home for 1%
+                    List your home for 1%
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]
@@ -259,13 +259,13 @@ const Advantage = () => {
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    Save Thousands
+                    Save thousands
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]
                       }
                     >
-                       Our listing fee is just 1%<sup>2</sup> helping our average seller cuts costs by 50% on commissions and fees. Get the same full-service experience for thousands less!
+                       Our listing fee is just 1%<sup>2</sup> helping our average seller cut costs by 50% on commissions and fees. Get the same full-service experience for thousands less!
                     </div>
                   </div>
                 </div>
@@ -372,7 +372,7 @@ const Advantage = () => {
                       }
                     >
                       {" "}
-                      11.Don’t want an InstantOffer? Why pay the avg. 5.46%* listing fee to a realtor? List your home for only 1%<sup>2</sup>, keeping thousands in your pocket.
+                      Don’t want an InstantOffer? Why pay the avg. 5.46%* listing fee to a realtor? List your home for only 1%<sup>2</sup>, keeping thousands in your pocket.
                     </div>
                   </div>
                 </div>

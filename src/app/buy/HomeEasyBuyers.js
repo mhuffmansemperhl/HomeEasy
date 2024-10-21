@@ -31,7 +31,7 @@ const HomeEasyBuyers = ({}) => {
                     <div className={`${styles["main-copy-copy"]}`}>Ready to buy a home in today’s market? Speed is key, and our Preferred Lender, offers same-day pre-approvals for eligible buyers.</div>
 
                     <div className={`${styles["main-copy-copy-title"]}`}>Instant access to listings.</div>
-                    <div className={`${styles["main-copy-copy"]}`}>Get the latest listings sent directly to your phone or email, keeping the real estate market at your fingertips</div>
+                    <div className={`${styles["main-copy-copy"]}`}>Get the latest listings sent directly to your phone or email, keeping the real estate market at your fingertips.</div>
 
                     <div className={`${styles["main-copy-copy-title"]}`}>Who you work with matters.</div>
                     <div className={`${styles["main-copy-copy"]}`}>

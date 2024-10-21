@@ -48,7 +48,7 @@ const ListingForOne = ({}) => {
                     <div className={`${styles["main-copy-copy"]}`}>Answer a few quick questions about your home and one of our Preferred Agents will be in touch.</div>
 
                     <div className={`${styles["main-copy-copy-title"]}`}>Sign a listing agreement.</div>
-                    <div className={`${styles["main-copy-copy"]}`}>Hit the ground running with one of our Preferred Agents committed to getting you home faster, smarter, and easier</div>
+                    <div className={`${styles["main-copy-copy"]}`}>Hit the ground running with one of our Preferred Agents committed to getting you home faster, smarter, and easier.</div>
 
                     <div className={`${styles["main-copy-copy-title"]}`}>Close on your home with more money in your pocket!</div>
                     <div className={`${styles["main-copy-copy"]}`}>Get the same full-service experience for thousands less!</div>

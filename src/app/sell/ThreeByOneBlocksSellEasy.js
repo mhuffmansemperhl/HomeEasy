@@ -1,5 +1,6 @@
 "use client"
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 // import { useEffect } from "react";
 // import useFlowGetStartedStore from "@/store/store.js";
 // import useWindowSize from "@/hooks/useWindowSize";
@@ -32,7 +33,7 @@ putting thousands in your pocket.</div>
 and avoid listing.</div>
                         <div className={`${styles['item-copy-container']}`}>No staging, no photos, no open house, no
 inspections, no negotiating, no time
-wasted. Done in 15 days.</div>
+wasted. Done in 15 days**.</div>
                         <div className={`${styles['item-foot-container']}`}>
                             <ArrowButton
                                 small_text={true}

@@ -203,7 +203,7 @@ const Destress = () => {
                       ]
                     }
                   >
-                    Get pre-approved with our Preferred Lender and ready to make an offer in
+                    Get pre-approved with our Preferred Lender and be ready to make an offer in
                     minutes, not days.
                   </div>
                 </div>

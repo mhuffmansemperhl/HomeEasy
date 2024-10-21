@@ -15,7 +15,7 @@ const Buy = ({}) => {
         <div className={`${styles['main-component']}`}>
             <div className={`${styles['main-content-container']}  centered-content2`}>
                 <div className={`${styles['main-title-container']}`}>Need to buy a home as well?  Well we make that easy too.</div>
-                <div className={`${styles['main-copy-container']}`}>Buying is easy too easy too with our seamless and headache-free process.</div>
+                <div className={`${styles['main-copy-container']}`}>Buying is easy too with our seamless and headache-free process.</div>
                 <div className={`${styles['main-button-container']}`}>
                     <button onClick={()=>{ 
                         // router.push(`/get_started?flow=sell&step=0&branch=11`); 

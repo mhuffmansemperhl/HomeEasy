@@ -45,7 +45,7 @@ const Calculator = ({}) => {
 
     const[closing_costs_tb, setClosingCostsTB] = useState("$15,000");
     const[closing_costs_io, setClosingCostsIO] = useState("$0");
-    const[closing_costs_lfo, setClosingCostsLFO] = useState("$2,500");
+    const[closing_costs_lfo, setClosingCostsLFO] = useState("$2,500"); //vals
 
     const[avg_home_prep_cost_and_move_tb, setAvgHomePrepCostAndMoveTB] = useState("$5,000");
     const[avg_home_prep_cost_and_move_io, setAvgHomePrepCostAndMoveIO] = useState("$2,500");
@@ -91,13 +91,13 @@ useEffect(() => {
   setSellerConcessionsIO(`$${(expected_home_sale_price * 0.00).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
   setSellerConcessionsLFO(`$${(expected_home_sale_price * 0.005).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
 
-  setClosingCostsTB(`$${(expected_home_sale_price * 0.03).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
+  setClosingCostsTB(`$${(expected_home_sale_price * 0.01).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
   setClosingCostsIO(`$${(expected_home_sale_price * 0.00).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
-  setClosingCostsLFO(`$${(expected_home_sale_price * 0.005).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
+  setClosingCostsLFO(`$${(expected_home_sale_price * 0.00).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
 
-  setAvgHomePrepCostAndMoveTB(`$${(expected_home_sale_price * 0.01).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
-  setAvgHomePrepCostAndMoveIO(`$${(expected_home_sale_price * 0.005).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
-  setAvgHomePrepCostAndMoveLFO(`$${(expected_home_sale_price * 0.01).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);  
+  setAvgHomePrepCostAndMoveTB(`$${(expected_home_sale_price * 0.005).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
+  setAvgHomePrepCostAndMoveIO(`$${(expected_home_sale_price * 0.00).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
+  setAvgHomePrepCostAndMoveLFO(`$${(expected_home_sale_price * 0.005).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);  
 
   // setTimeout(() => {
 
@@ -297,7 +297,7 @@ useEffect(() => {
                 Not sure what you could get for your home?
                 </div> 
                 <div className={`${styles["main-calculator-info-link-link"]}`}>
-                  <a target="_blank" href="https://401homevalues.areahomevalues.net/">Get a Free Estimate from us</a>
+                  <a target="_blank" href="https://homeeasyhomes.areahomevalues.net/">Get a Free Estimate from us</a>
                 </div>     
               </div>
               }
@@ -874,7 +874,7 @@ useEffect(() => {
               <div className={`${styles["main-calculator-bottom-card-top-title-image"]}`}>
               <img src="/img/heh_logo_small.svg" alt="arrow" />
               </div>
-              Listing for one<IconPopover 
+              HOMEONE<IconPopover 
                   white={true}
                   text="Our listing fee is only 1% compared to the national average of 6%. That’s literally putting thousands back in your pocket!" 
                   cssStyles={window_size.width < 1024 ? {marginLeft: "2.933333333vw", width: "5.6vw", height: "6.133333333vw"} : {marginLeft: "0.3125vw", width: "1.09375vw", height: "1.197916667vw"}}
@@ -954,7 +954,7 @@ useEffect(() => {
                   small_text={true}
                   centered={true}
                   white_button={true}
-                  link_text="Listing for One"
+                  link_text="HOMEONE"
                   callback={()=>{
                       router.push(`/sell`);
                   }}

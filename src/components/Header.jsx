@@ -39,75 +39,11 @@ const Header = () => {
     const setNewAddress = useFlowGetStartedStore(state => state.setNewAddress);
 
     const google_api_loaded = useFlowGetStartedStore(state => state.google_api_loaded);
-    // const places_suggestions = useFlowGetStartedStore(state => state.places_suggestions);
-    // const setPlacesSuggestions = useFlowGetStartedStore(state => state.setPlacesSuggestions);
+
     const searchInputRef = useRef();
     const autoCompleteRef = useRef();
 
-
-
-    // useEffect(() => {
-
-    //   console.log("testing hubspot api");
-    //   const payload = {
-    //       "property_address": "123 Test St.",
-    //       "property_city": "Providence",
-    //       "property_state": "RI",
-    //       "property_zip_code": "02860",
-    //       "phone": "800-555-1212",
-    //       "email": "test1@semperhl.com",
-    //       "firstname": "TestFirst",
-    //       "lastname": "TestLast",
-    //       "milestone_stage": ""
-    //   };
-    //   // if("contact" in form_data){
-    //   //   if("first_name" in form_data.contact){
-    //   //     payload.firstName = form_data.contact.first_name;
-    //   //   }
-    //   //   if("last_name" in form_data.contact){
-    //   //     payload.lastName = form_data.contact.last_name;
-    //   //   }
-    //   //   if("email" in form_data.contact){
-    //   //     payload.email = form_data.contact.email;
-    //   //   }
-    //   //   if("mobile_phone_number" in form_data.contact){
-    //   //     payload.phone = form_data.contact.mobile_phone_number;
-    //   //   }
-  
-    //     fetch('/api/hubspot_api', {
-    //       method: 'POST',
-    //       headers: { 
-    //         'Content-Type': 'application/json',
-    //         'Authorization': 'Bearer pat-na1-33cf6163-5250-4aa6-bb18-77804d1a2bc2'
-    //       },
-    //       // body: JSON.stringify({
-    //       //   params: payload
-    //       // })
-    //       body: JSON.stringify({
-    //         properties: payload
-    //       })
-    //     })
-    //     .then(response => {
-    //       console.log(response.status);
-    //       console.log(response);
-    //       // setIsBusy(false);
-    //       return response.json();
-    //     });
-    //   //   }).then(data => {
-    //   //     const jdata = data.body;
-    //   //     if(jdata.status){
-    //   //       setAccountCreated(true);
-    //   //       // nextStep(pathname, router, searchParams);
-    //   //     }else{
-    //   //       doAccountCreationError("Error creating account. Please try again or contact us for assistance. Code: 102");
-  
-    //   //       // console.log(jdata.message); //error
-    //   //     }
-    //   //     });
-    // }, []);
     
-
-
     useEffect(() => {
       true && console.log("...checking form for address data");
       true && console.log(new_address);
@@ -173,8 +109,8 @@ const Header = () => {
               }
               if(flow === "buy") {
                 draft['buy_address'] = place;
-                true && console.log("buy address");
-                true && console.log(place);
+                // true && console.log("buy address");
+                // true && console.log(place);
               }
             }));
 
@@ -182,92 +118,6 @@ const Header = () => {
 
           })
           .catch(error => console.error(error));
-  
-          // try {
-
-            // const res = await fetch(`https://jsonplaceholder.typicode.com/posts/1`);
-            // const response = await fetch(`https://jsonplaceholder.typicode.com/posts/1`);
-          //   const response = await fetch(turl, {
-          //           method: 'POST',
-          //           headers: {'Content-Type': 'application/json' },
-          //           body: JSON.stringify(jdata)
-          //       });
-          //   const data = await response.text();
-                
-          //   console.log(data);
-          //   console.log(response.status);
-        
-          //       if(response.status > 200){
-          //           res.status = false;
-          //           res.message = "Error geocoding. Please try again or contact us for assistance.";
-          //           return await getResponse(request, res);
-          //       }else{
-          //           res.status = true;
-          //           res.message = "geocoded successfully.";
-          //           return await getResponse(request, res);
-          //       }
-          // } catch (err) {
-          //   console.log(err);
-          //       return await getResponse(request, res);
-          // }
-        
-            // fetch('/api/gedecoder_api', {
-            //   method: 'POST',
-            //   headers: { 'Content-Type': 'application/json' },
-            //   body: JSON.stringify({
-            //     params: payload
-            //   })
-            // })
-            // .then(response => {
-            //   console.log(response.status);
-            //   console.log(response);
-            //   // setIsBusy(false);
-            //   return response.json();
-            // }).then(data => {
-            //   const jdata = data.body;
-            //   true && console.log(jdata);
-            //   // if(jdata.status){
-            //   //   setAccountCreated(true);
-            //   //   // return true;
-            //   //   nextStep(pathname, router, searchParams);
-            //   //   createNewHubspotAccount();
-  
-            //   // }else{
-            //   //   doAccountCreationError("Error creating account. Please try again or contact us for assistance. Code: 102");
-            //   //   return false;
-            //   //   // console.log(jdata.message); //error
-            //   // }
-
-
-            //   });
-  
-  
-          // ENDING NEW GEOCODER          
-          // getSuggestions(name, (results) => {
-          //   true && console.log("---suggestions---")
-          //   true && console.log(results);
-          //   true && console.log("---suggestions---")
-  
-          //   const place = results[0];
-            
-          //   setFormData(produce(form_data, draft => {
-          //     if(flow === "instantoffer") {
-          //       draft['sell_address'] = place;
-          //     }
-          //     if(flow === "sell") {
-          //       draft['sell_address'] = place;
-          //     }
-          //     if(flow === "sellbuy") {
-          //       draft['sell_address'] = place;
-          //     }
-          //     if(flow === "buy") {
-          //       draft['buy_address'] = place;
-          //       true && console.log("buy address");
-          //       true && console.log(place);
-          //     }
-          //   }));
-            
-          // });  
 
         }
 
@@ -331,19 +181,6 @@ const Header = () => {
           }
   
       }else{
-        // if(size.width < 1024){
-        //   router.push(`/get_started?flow=${flow}`);
-        // }else{
-
-
-        // }
-        // else{
-        //   if(flow === "instantoffer"){
-        //     router.push(`/get_started?flow=instantoffer&step=1`);
-        //   }else{
-        //     router.push(`/get_started?flow=${flow}`);
-        //   }
-        // }
       }
 
     }
@@ -365,56 +202,12 @@ const Header = () => {
         false && console.log("doing sellbuy");
         router.push('/get_started?flow=sellbuy&step=2');
       }
-
       if(flow === "buy"){
         false && console.log("doing buy");
-        let turl = undefined;
-        if(the_address === undefined){
-            the_address = form_data['address'];
-        }
-        if(search_type === undefined){
-            search_type = last_search_type;
-        }
-        if(search_type === 'street'){
-            turl = `https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=city&aw_address=${the_address}&a_statusCategory%5B%5D=active&srt=newest`;
-        }
-
-        if(search_type === 'zipcode'){
-            turl = `https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=zipcode&a_statusCategory[]=active&zipcode[]=${the_address}&srt=newest`;
-        }
-        
-        if(search_type === 'town'){
-            false && console.log(the_address);
-            let matches = [];
-            const add_match = the_address.toLowerCase().split(',')[0].trim();
-            false && console.log(add_match); 
-            for(let i = 0; i < city_codes.length; i++){
-                let next_city = city_codes[i][1].toLowerCase().trim();
-                if(next_city === add_match){
-                    matches.push(city_codes[i][0]);
-                }else if(next_city > add_match){
-                    break;
-                }
-            }
-            if(matches.length > 0){
-                const tcities = `&city[]=${matches.join('&city[]=')}`;
-                // false && console.log(matches);
-                // false && console.log(tcities);
-                turl = `https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=city&a_statusCategory[]=active${tcities}&srt=newest`;
-            }
-            // &city[]=50031&city[]=50036
-            // &city[]=50036&city[]=50031
-            // turl = `https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=zipcode&a_statusCategory[]=active&a_statusCategory[]=sold&zipcode[]=${the_address}`;
-        }
-
-
-        // window.location.href = `https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=city&aw_address=1+Dalton+St&a_statusCategory[]=active&a_statusCategory[]=sold&city[]=5046`;
-        if(turl !== undefined) {
-          window.location.href = turl;
-            // window.open(turl, '_blank');
-        }
+        router.push('/get_started?flow=buy&step=1');
       }
-      
+
+
       
 
     }
@@ -423,108 +216,10 @@ const Header = () => {
       false && console.log(evt.keyCode);
       false && console.log(evt.target.value);
       
-      // if(evt.keyCode === 13) {
-      //   // doAddressSearch();
-      //   getSuggestions(evt.target.value, (results) => {
-      //     true && console.log(results);
-
-      //     const place = results[0];
-      //     setFormData(produce(form_data, draft => {
-      //       if(flow === "instantoffer") {
-      //         draft['sell_address'] = place;
-      //       }
-      //       if(flow === "sell") {
-      //         draft['sell_address'] = place;
-      //       }
-      //       if(flow === "sellbuy") {
-      //         draft['sell_address'] = place;
-      //       }
-      //       if(flow === "buy") {
-      //         draft['buy_address'] = place;
-      //         true && console.log("buy address");
-      //         true && console.log(place);
-      //       }
-      //     }));
-          
-      //   });
-      //   // alert("hey");
-
-      // }
-
-      // return false;
     }
-    // function updateAddress(elem) {
-    //     if(elem.keyCode === 13) {
-    //         doAddressSearch();
-    //     }else{
-    //         setAddress(elem.target.value);
-    //     }
-    //     // false && console.log(elem.keyCode);
-    //     // false && console.log(elem.target.value);
-    // }
+
       
     const size = useWindowSize();
-
-    // constructor(props) {
-    //     super(props);
-    //     this.state = { address: '' };
-    //   }
-    
-      // function handleChange(address) {
-      //   setAddress(address);
-      //   // this.setState({ address });
-      // };
-    
-      // function handleSelect(address) {
-
-      //   geocodeByAddress(address)
-      //   .then(results => {
-      //       if(results.length > 0) {
-      //           const gadd = results[0]['address_components'];
-      //           const add_obj = {};
-      //           const items = gadd.map((item) => {
-      //               return `${item.types[0]}:${item.long_name}`;
-      //           }).forEach((item) => {
-      //               const key = item.split(':')[0];
-      //               const val = item.split(':')[1];
-      //               add_obj[key] = val;
-      //           });
-      //           false && console.log(add_obj);
-
-      //           if(add_obj['route'] !== undefined) {
-      //               const tadd = `${add_obj['street_number']} ${add_obj['route']}`;
-      //               last_search_type = "street";
-      //               doAddressSearch("street", tadd);
-      //               setAddress(tadd);
-      //           }else if(add_obj['postal_code'] !== undefined){
-      //               const tadd = `${add_obj['postal_code']}`;
-      //               last_search_type = "zipcode";
-      //               doAddressSearch("zipcode", tadd);
-      //               setAddress(tadd);
-      //           }else if(add_obj['locality'] !== undefined && add_obj['administrative_area_level_1'] !== undefined) {
-      //               const tadd = `${add_obj['locality']}, ${add_obj['administrative_area_level_1']}`;
-      //               last_search_type = "town";
-      //               doAddressSearch("town", tadd);
-      //               // setAddress(tadd);
-      //           }
-        
-      //       }
-    
-      //       // false && console.log(results);
-      //       // getLatLng(results[0])
-      //   })
-      //   //   .then(results => getLatLng(results[0]))
-      //   //   .then(latLng => false && console.log('Success', latLng))
-      //   //   .catch(error => console.error('Error', error));
-      // };
-
-      // useEffect(() => {
-      //   true && console.log("...checking flow");
-      //   // if(!flow) {
-      //   //   setFlow("buy");
-      //   // }
-      // }, [flow]);
-
       useEffect(() => {
         true && console.log("...checking flow");
         if(!flow) {
@@ -580,28 +275,10 @@ const Header = () => {
               true && console.log(`flow is ${flow}`);
                 const place = await autoCompleteRef.current.getPlace();
                 setFormData(produce(form_data, draft => {
-                  // if(flow === "instantoffer") {
-                  //   draft['sell_address'] = place;
-                  // }
-                  // if(flow === "sell") {
-                  //   draft['sell_address'] = place;
-                  // }
-                  // if(flow === "sellbuy") {
-                  //   draft['sell_address'] = place;
-                  // }
-                  // if(flow === "buy") {
-                  //   draft['buy_address'] = place;
-                  //   true && console.log("buy address");
-                  //   true && console.log(place);
-                  // }
+                
                   draft['changed_address'] = place;
                 }));
-                // setNewAddress(true);
-  
-                // processPlaceSelection(place);
-                    // false && console.log(results);
-                    // getLatLng(results[0])
-                // })                
+              
                });            
         }
     }, [google_api_loaded]);
@@ -609,18 +286,10 @@ const Header = () => {
 
     return (
         <div  className={styles['main-component']}>
-            {/* <Head> */}
-            {/* <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEAax0e2MX0H37S9EK9K18GpHhOYOrFSk&libraries=places"></script> */}
-            {/* </Head> */}
-            {/* <GoogleJS  */}
-                {/* ga_id={'AIzaSyDEAax0e2MX0H37S9EK9K18GpHhOYOrFSk'} */}
-            {/* /> */}
+     
             { !google_api_loaded && <GooglePlacesScript />}
 
-            {/* <Script
-              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEAax0e2MX0H37S9EK9K18GpHhOYOrFSk&libraries=places"
-              onLoad={() => setGoogleApiLoaded(true)}
-            ></Script> */}
+   
             <Navbar />
             {console.log(flow)}
             <div className={`${styles['main-content-container']} centered-content`}>
@@ -686,74 +355,12 @@ const Header = () => {
                     <div className={styles["transparentprocess-content-tabs-content"]}>
                         <div className={styles["transparentprocess-content-tabs-content-item"]}>
                             <input ref={searchInputRef} onKeyUp={(e)=>{handleKeyup(e);}} type="text" placeholder={placeholder_text} />
- {/* {googleApiLoaded &&  <PlacesAutocomplete
-        value={address}
-        onChange={(e)=>{handleChange(e)}}
-        onSelect={(e)=>{handleSelect(e)}}
-      >
-        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div className={styles['autocomplete-holder']}>
-            <input
-              {...getInputProps({
-                placeholder: selectedIndex === 0 && "Enter your home address" || selectedIndex === 1 && "Enter a city, state, or zip code" || selectedIndex === 2 && "Enter your home address",
-                // placeholder: 'Enter Home Address',
-                className: 'location-search-input',
-              })}
-            />
-            <div className="autocomplete-dropdown-container">
-              {loading && <div>Loading...</div>}
-              {suggestions.map((suggestion, index) => {
-                const className = suggestion.active
-                  ? 'suggestion-item--active'
-                  : 'suggestion-item';
-                // inline style for demonstration purpose
-                const style = suggestion.active
-                  ? { backgroundColor: '#fafafa', cursor: 'pointer' }
-                  : { backgroundColor: '#ffffff', cursor: 'pointer' };
-                return (
-                  <div key={index}
-                    {...getSuggestionItemProps(suggestion, {
-                      className,
-                      style,
-                    })}
-                  >
-                    <span>{suggestion.description}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-      </PlacesAutocomplete>} */}
-
-                            {/* <div className={styles["transparentprocess-content-tabs-content-item-button-holder"]}>
-                                <button onClick={()=>{
-              
-                                  gtmPush(["callback", "home_hero_get_started", ()=>{processPlaceSelection();}]);
-
-                                }} className='darken-on-hover'>{size.width < 1280 || flow === "buy"  ? "" : "Get Started"} {flow !== "buy" ? <img src="/img/button_arrow.svg" alt="button arrow" /> : <img className={styles['search-image']} src="/img/search-solid.png" alt="button search" />} </button>
-                            </div> */}
+ 
+                  
                         </div>
                     </div>
 
-                    {/* <div className={styles["transparentprocess-content-tabs-content"]}>
-                    {selectedIndex === 1 && 
-                            <div className={styles["transparentprocess-content-tabs-content-item"]}> 
-                            </div>                
-                        }
-                        {selectedIndex === 0 && 
-                            <div className={styles["transparentprocess-content-tabs-content-item"]}> 
-                                <div className={styles["transparentprocess-content-tabs-content-item-title"]}>1. My house is worth what?!</div>
-                                <div className={styles["transparentprocess-content-tabs-content-item-copy"]}>Use our free home value calculator to instantly see your home’s current value.</div>
-                            </div>
-                        }
-                        {selectedIndex === 2 && 
-                            <div className={styles["transparentprocess-content-tabs-content-item"]}> 
-                                <div className={styles["transparentprocess-content-tabs-content-item-title"]}>1. Get matched with the best Agent.</div>
-                                <div className={styles["transparentprocess-content-tabs-content-item-copy"]}>Gone are the days of resorting to work with your mom’s cousin’s realtor friend.</div>
-                            </div>
-                        }
-                    </div> */}
+                  
                     </div>
                 </div>
             </div>

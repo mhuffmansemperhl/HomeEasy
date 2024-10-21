@@ -13,7 +13,8 @@ const ListingForOne = ({}) => {
     const router = useRouter();
     const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
     return (
-        <div className={`${styles['main-component']}`} id="listings">
+        <div id="listings">
+        <div className={`${styles['main-component']}`} >
             <div className={`${styles['main-content-container']}  centered-content2`}>
 
                 {size.width > 1023 &&
@@ -73,6 +74,7 @@ to getting you home faster, smarter, and easier.</div>
 
 
             </div>
+        </div>
         </div>
     );
 };

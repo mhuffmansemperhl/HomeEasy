@@ -20,14 +20,14 @@ const ThreeByOneBlocks = ({}) => {
                 <div className={`${styles['items']}`}>
                     
                      <div className={`${styles['item']}`}>
-                        <div className={`${styles['item-title-container']}`}>A steady flow of motivated customers.</div>
-                        <div className={`${styles['item-copy-container']}`}>Our buyer’s leads are all pre-approved and ready to shop, giving you great earning potential.</div>
+                        <div className={`${styles['item-title-container']}`}>Instantly receive motivated referrals.</div>
+                        <div className={`${styles['item-copy-container']}`}>Easily manage incoming leads with our user-friendly CRM, providing quick access at no cost.</div>
                     </div>
                     
                     <div className={`${styles['item']}`}>
-                        <div className={`${styles['item-title-container']}`}>Special products and cool perks.</div>
-                        <div className={`${styles['item-copy-container']}`}>Your clients get unique perks like a chance to receive an instant cash offer from us!</div>
-                        <div className={`${styles['item-foot-container']}`}>
+                        <div className={`${styles['item-title-container']}`}>Who you work with matters.</div>
+                        <div className={`${styles['item-copy-container']}`}>By partnering up with our Preferred Lender, you can ensure your client not only receives a closing credit, but also breezes through the mortgage process effortlessly and with low rates.</div>
+                        {/* <div className={`${styles['item-foot-container']}`}>
                             <ArrowButton
                                 small_text={true}
                                 link_text="Get your InstantOffer"
@@ -36,12 +36,12 @@ const ThreeByOneBlocks = ({}) => {
                                     gtmPush(["callback", "agents_sell_more_io", ()=>{router.push(`/get_started?flow=instantoffer&step=1`);}]);
                                 }}
                             />
-                        </div>
+                        </div> */}
                     </div>
                     
                     <div className={`${styles['item']}`}>
-                        <div className={`${styles['item-title-container']}`}>A commission rate that your wallet loves.</div>
-                        <div className={`${styles['item-copy-container']}`}>We’re not like the others – our commission leaves you with more of your hard-earned money.  Because we believe as a team, your success is our success.</div>
+                        <div className={`${styles['item-title-container']}`}>Experience the perks of a Preferred Agent.</div>
+                        <div className={`${styles['item-copy-container']}`}>We have innovative training sessions that go beyond traditional methods. From CE credit classes to trivia nights, we optimize your real estate knowledge and skills for business success.</div>
                     </div>
 
                 </div>

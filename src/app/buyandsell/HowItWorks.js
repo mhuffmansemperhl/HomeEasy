@@ -45,7 +45,7 @@ const HowItWorks = ({}) => {
                         {/* <div className={`${styles["main-copy-title"]}`}>Selling the easy way.</div> */}
                         <div className={`${styles["main-copy-copy-title"]}`}>Step 1</div>
                         <div className={`${styles["main-copy-copy"]}`}>
-                            Simplifying your life is our priority. Choose between an InstantOffer or list with us for just 1%<sup>2</sup> – whatever suits you best, we’ll make it happen!.{" "}
+                            Simplifying your life is our priority. Choose between an InstantOffer or list with us for just 1%<sup>2</sup> – whatever suits you best, we’ll make it happen!{" "}
                         </div>
 
                         <div className={`${styles["main-copy-copy-title"]}`}>Step 2</div>
