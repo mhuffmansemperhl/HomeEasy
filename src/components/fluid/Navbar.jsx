@@ -314,7 +314,28 @@ const Navbar = () => {
                   (866) 904-3250
                 </div>
               </div>
-              
+              <div className={styles["header-button-group-button-container"]}>
+                <div
+                  onClick={() => {
+                    console.log("clicked");
+                    openIDXMenu();
+                    // gtmPush(["callback", "nav_sign_in", ()=>{window.open('https://homeeasyhomes.idxbroker.com/idx/userlogin', '_blank');}]);
+                  }}
+                  className={
+                    styles[
+                      "header-button-group-button-container-user-icon-holder"
+                    ]
+                  }
+                >
+                  <div
+                    className={
+                      styles["header-button-group-button-container-user-icon"]
+                    }
+                  >
+                    <img src="/img/user.png" alt="User icon" />
+                  </div>
+                </div>
+              </div>
 
               {showIDXMenu && (
                 <div

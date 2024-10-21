@@ -26,7 +26,7 @@ export default function Home() {
         question_questions={[
           {
             title: "This sounds too good to be true.  What’s the catch here?",
-            copy: "You know we get that a lot.  But the truth is it’s not too good to be true, it’s just the way things should be.  By automating parts of the home buying process, our agents are able to work more efficiently for less commission.   And with our long lasting relationships with local attorney’s, title companies, escrow companies, and mortgage lenders, you can save thousands more when working with our preferred partners.",
+            copy: "You know we get that a lot.  But the truth is it’s not too good to be true, it’s just the way things should be.  By automating parts of the home buying process, our agents are able to work more efficiently for less commission.   And with our long lasting relationships with local attorneys, title companies, escrow companies, and mortgage lenders, you can save thousands more when working with our preferred partners.",
             visible: true,
           },
           {
@@ -50,10 +50,10 @@ export default function Home() {
       />
       <Plan />
       <GettingStarted />
-      <HomeSearchLinks
+      {/* <HomeSearchLinks
         main_component_style={"main-component-gray"}
         centered_style={"centered-content"}
-      />
+      /> */}
       <Footer centered_style={"centered-content"} />
     </main>
   );

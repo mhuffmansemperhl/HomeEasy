@@ -236,7 +236,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className={styles["header-content-text"]}>
-                 Get 1.5% of the loan amount back in closing credits,up to $10,000<sup>1</sup>
+                 Get 1.5% of the loan amount back in closing credits, up to $10,000<sup>1</sup>
                 </div>
 
             </div>
@@ -246,7 +246,7 @@ const Header = () => {
                             link_text="Let’s find your dream home!"
                             callback={()=>{
                                 // router.push(`/get_started?flow=sell&step=0&branch=9`);
-                                gtmPush(["callback", "sell_list_one", ()=>{router.push(`https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=city&a_statusCategory[]=active&city[]=37986&srt=newest`);}]);
+                                gtmPush(["callback", "sell_io", ()=>{router.push(`/get_started?flow=buy&step=1`);}]);
                             }}
                         />
           </div>

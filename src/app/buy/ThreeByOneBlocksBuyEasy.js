@@ -40,9 +40,9 @@ const ThreeByOneBlocksBuyEasy = ({}) => {
 
                     <div className={`${styles["item"]}`}>
                         <div className={`${styles["item-title-container"]}`}>
-                            Receive a 1.50% lender paid credit.
+                            Receive a 1.50% lender paid credit<sup>1</sup>.
                         </div>
-                        <div className={`${styles["item-copy-container"]}`}>Our Preferred Lender will provide 1.50%<sup>1</sup> of your financed loan amount, up to $10,000 to go towards closing costs. </div>
+                        <div className={`${styles["item-copy-container"]}`}>Our Preferred Lender will provide 1.50% of your financed loan amount, up to $10,000 to go towards closing costs. </div>
                         {/* <div className={`${styles['item-foot-container']}`}>
                             <ArrowButton
                                 link_text="Get your InstantOffer"

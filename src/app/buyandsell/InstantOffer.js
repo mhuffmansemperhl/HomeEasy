@@ -22,8 +22,8 @@ const InstantOffer = ({}) => {
 
                     <div className={`${styles["main-copy-copy"]}`}>Say goodbye to the complexities of traditional real estate - our hassle-free InstantOffer ensures a seamless and stress-free experience for homeowners like you.</div>
 
-                    <div className={`${styles["main-copy-copy-title"]}`}>Receive a competitive offer in 24 hours</div>
-                    <div className={`${styles["main-copy-copy"]}`}>Tell us about your home and receive an offer carefully evaluated by our real estate partners specializing in your local market</div>
+                    <div className={`${styles["main-copy-copy-title"]}`}>Receive a competitive offer in 24 hours.</div>
+                    <div className={`${styles["main-copy-copy"]}`}>Tell us about your home and receive an offer carefully evaluated by our real estate partners specializing in your local market.</div>
 
                     <div className={`${styles["main-copy-copy-title"]}`}>Pay no closing costs or realtor fees.</div>
                     <div className={`${styles["main-copy-copy"]}`}>You literally save thousands by avoiding the listing fee & closing costs. That’s an extra 4%* kept safely in your pockets.</div>

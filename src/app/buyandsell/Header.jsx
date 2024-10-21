@@ -94,7 +94,7 @@ const Header = () => {
                   <div className={styles["before_round"]}></div>
                 </div>
                 <div className={styles["header-content-text"]}>
-                Sell your home instantly for cash or list for 1%
+                Sell your home instantly for cash or list for 1%<sup>2</sup>
                 </div>
 
             </div>

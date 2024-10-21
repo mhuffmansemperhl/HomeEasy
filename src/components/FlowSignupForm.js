@@ -231,15 +231,17 @@ const FlowSignupForm = ({callback, store_key}) => {
                     </div>
 
                     <div className={`${styles['signup-form-divider']}`}>
-                       
+                        <div className={`${styles['signup-form-divider-line']}`}></div>
+                        <div className={`${styles['signup-form-divider-text']}`}>or</div>
                     </div>
-                    {/* TODO: add links to terms of use and privacy policy */}
+
+                    <div className={`${styles['signup-form-signin-container']}`}>
+                        <a href="https://homeeasyhomes.idxbroker.com/idx/userlogin" target="_blank" >Sign in</a>
+                    </div>
 
                     <div className={`${styles['signup-form-disclaimer-container']}`}>
                     By signing up, I agree to HomeEasy Home’s <a href="">Terms of Use</a>,<a href="">Privacy Policy</a>, and expressly agree to receive HomeEasy Homes email and texts.  Message and data rates may apply. 
                     </div>
-                  
-
 
                 </div>
 

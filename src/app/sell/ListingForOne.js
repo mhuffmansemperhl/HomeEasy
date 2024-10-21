@@ -7,14 +7,14 @@ import useWindowSize from "@/hooks/useWindowSize";
 import styles from './ListingForOne.module.scss';
 import ArrowButton from '@/components/ArrowButton';
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
-import BetaIcon from "@/compositions/BetaIcon";
 
 const ListingForOne = ({}) => {
     const size = useWindowSize();
     const router = useRouter();
     const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
     return (
-        <div className={`${styles['main-component']}`} id="listings">
+        <div id="listings">
+        <div className={`${styles['main-component']}`} >
             <div className={`${styles['main-content-container']}  centered-content2`}>
 
                 {size.width > 1023 &&
@@ -41,10 +41,7 @@ const ListingForOne = ({}) => {
 
                 <div className={`${styles['main-copy-container']}`} >
 
-                    <div style={{display: "flex"}} className={`${styles['main-copy-supertitle']}`}>
-                        <BetaIcon popupSx={{position: "absolute"}}/>
-                        <span style={{marginLeft: "-30px"}}>How it works: HomeOne</span>
-                    </div>
+                    <div className={`${styles['main-copy-supertitle']}`}>How it works: HomeOne</div>
 
                     <div className={`${styles['main-copy-title']}`}>Work with a full-service Preferred Agent for only 1%.</div>
 
@@ -77,6 +74,7 @@ to getting you home faster, smarter, and easier.</div>
 
 
             </div>
+        </div>
         </div>
     );
 };

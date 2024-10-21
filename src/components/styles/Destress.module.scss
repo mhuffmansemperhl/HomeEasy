@@ -100,7 +100,7 @@
     background-repeat: no-repeat;
     @media (min-width: 1024px) and (max-width: 1919px) {
         // overflow: hidden;
-        background-size: contain;
+        background-size: 100% 100%;
     }
     @media (min-width: 1920px) {
         // overflow: hidden;
@@ -112,7 +112,7 @@
         position: absolute;
         @media (min-width: 0px) and (max-width: 1023px) {
             content: '';
-            background-image: url('/img/buy_sell_image.webp');
+            background-image: url('/img/mobile_buy_sell.png');
             background-repeat: no-repeat;
             background-position: center;
             width: 100vw !important;
