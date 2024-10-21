@@ -18,6 +18,7 @@ import city_codes from "public/data/city_codes.json";
 //     getLatLng,
 //   } from 'react-places-autocomplete';
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import BetaIcon from '@/compositions/BetaIcon';
 
 
 const Header = () => {
@@ -630,10 +631,7 @@ const Header = () => {
                     }
                     {flow === "buy" &&
                     <>
-                    <div>
-                      <img src='/img/beta.svg' alt='beta' width={54} height={"auto"} />
-                    </div>
-                    <div className={styles['header-content-title']}>Buy a home the <br /> easy way and <br /> save thousands.</div>
+                      <div className={styles['header-content-title']}>Buy a home the <br /> easy way and <br /> save thousands.</div>
                     </>
                     }
                     {flow === "sellbuy" && 
@@ -665,28 +663,43 @@ const Header = () => {
                           changeIndex("buy");
                         }} className={`${styles["transparentprocess-content-tabs-tab"]} ${flow === "buy" ? styles["transparentprocess-content-tabs-tab-selected"] : ''}`}>
                         Buy
-                        </div>
-                        <div onClick={()=>{
-                          // gtmPush(["callback", "home_hero_sell", ()=>{changeIndex("sell");}]);
-                          changeIndex("sell");                          
-                        }} className={`${styles["transparentprocess-content-tabs-tab"]} ${flow === "sell" ? styles["transparentprocess-content-tabs-tab-selected"] : ''}`}>
-                        Sell
-                        </div>      
-                        <div onClick={()=>{
-                          // gtmPush(["callback", "home_hero_buy_sell", ()=>{changeIndex("sellbuy");}]);
-                          changeIndex("sellbuy");
-                        }} className={`${styles["transparentprocess-content-tabs-tab"]} ${flow === "sellbuy" ? styles["transparentprocess-content-tabs-tab-selected"] : ''}`}>
-                        Buy &amp; Sell
-                        </div>
-                        {size.width >= 1024 &&
-                        <div onClick={()=>{
-                          // gtmPush(["callback", "home_hero_io", ()=>{changeIndex("instantoffer");}]);
-                          changeIndex("instantoffer");
-                          }} className={`${styles["transparentprocess-content-tabs-tab"]} ${flow === "instantoffer" ? styles["transparentprocess-content-tabs-tab-selected"] : ''}`}>
-                        InstantOffer
-                        </div>
-                        }
                     </div>
+                    <div
+                        style={{display: "flex", opacity: "1", marginRight: "74px"}}
+                        onClick={()=>{
+                        // gtmPush(["callback", "home_hero_sell", ()=>{changeIndex("sell");}]);
+                        changeIndex("sell");                          
+                      }} 
+                      className={`${styles["transparentprocess-content-tabs-tab"]} ${flow === "sell" ? styles["transparentprocess-content-tabs-tab-selected"] : ''}`}
+                    >
+                      <span style={{opacity: flow === "sell" ? 1 : 0.5 }} >Sell</span>
+                      <BetaIcon 
+                        containerSx={{
+                          position: "absolute",
+                          left: "34px",
+                          zIndex: "100",
+                        }}
+                        popupSx={{
+                          position: "absolute",
+                          left: "-20px",
+                        }}
+                      />
+                    </div>      
+                    <div onClick={()=>{
+                        // gtmPush(["callback", "home_hero_buy_sell", ()=>{changeIndex("sellbuy");}]);
+                        changeIndex("sellbuy");
+                      }} className={`${styles["transparentprocess-content-tabs-tab"]} ${flow === "sellbuy" ? styles["transparentprocess-content-tabs-tab-selected"] : ''}`}>
+                      Buy &amp; Sell
+                    </div>
+                      {size.width >= 1024 &&
+                    <div onClick={()=>{
+                        // gtmPush(["callback", "home_hero_io", ()=>{changeIndex("instantoffer");}]);
+                        changeIndex("instantoffer");
+                        }} className={`${styles["transparentprocess-content-tabs-tab"]} ${flow === "instantoffer" ? styles["transparentprocess-content-tabs-tab-selected"] : ''}`}>
+                      InstantOffer
+                    </div>
+                        }
+                  </div>
 
                     <div className={styles["transparentprocess-content-tabs-content"]}>
                         <div className={styles["transparentprocess-content-tabs-content-item"]}>

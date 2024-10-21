@@ -5,6 +5,7 @@ import styles from "./styles/Advantage.module.scss";
 import { motion } from "framer-motion";
 import ArrowButton from "./ArrowButton";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import BetaIcon from "@/compositions/BetaIcon";
 
 const Advantage = () => {
   const router = useRouter();
@@ -42,7 +43,7 @@ const Advantage = () => {
                 </div>
                 <div className={styles["advantage-content-item-card-copy"]}>
                 Find your dream home with one of our Preferred Agents and get
-                1.5% of the loan amount back in closing credit, up to $10,000
+                1.5% of the loan amount back in closing credit, up to $10,000<sup>1</sup>{" "}
                 from our Preferred Lender.{" "}
                 </div>
                 <div
@@ -169,9 +170,7 @@ const Advantage = () => {
               <div
                 className={`${styles["advantage-content-item-card"]} ${styles["advantage-content-item-card1"]}`}
               >
-                <div>
-                  <img src="/img/beta.svg" alt="Beta" width={"48"} />
-                </div>
+                <BetaIcon containerSx={{ marginBottom: "22px" }} imgSx={{width: "48px"}} popupSx={{zIndex: "100"}} />
                 <div className={styles["advantage-content-item-card-title"]}>
                 Sell your home instantly for cash or list it for only 1%.
                 </div>

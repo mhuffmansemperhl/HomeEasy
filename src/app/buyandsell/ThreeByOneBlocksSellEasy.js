@@ -35,8 +35,8 @@ const ThreeByOneBlocks = ({}) => {
                     </div>
                     
                     <div className={`${styles['item']}`}>
-                        <div className={`${styles['item-title-container']}`}>Save thousands, list for only 1%<sup>2</sup> .</div>
-                        <div className={`${styles['item-copy-container']}`}>Why pay the 5.46% listing fee to a realtor? List your home for only 1%, keeping thousands in your pocket.</div>
+                        <div className={`${styles['item-title-container']}`}>Save thousands, list for only 1% .</div>
+                        <div className={`${styles['item-copy-container']}`}>Why pay the 5.46%<sup>*</sup> listing fee to a realtor? List your home for only 1%<sup>2</sup>, keeping thousands in your pocket.</div>
                         <div className={`${styles['item-foot-container']}`}>
                             <ArrowButton
                                 small_text={true}
@@ -50,7 +50,7 @@ const ThreeByOneBlocks = ({}) => {
                     </div>
 
                     <div className={`${styles['item']}`}>
-                        <div className={`${styles['item-title-container']}`}>Receive a 1.50% lender paid credit<sup>1</sup>.</div>
+                        <div className={`${styles['item-title-container']}`}>Receive a 1.50% lender paid credit.</div>
                         <div className={`${styles['item-copy-container']}`}>Our affiliated lender will provide 1% of your financed loan amount to go towards  your closing costs<sup>1</sup></div>
                         <div className={`${styles['item-foot-container']}`}>
                             <ArrowButton

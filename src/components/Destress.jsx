@@ -6,6 +6,7 @@ import useWindowSize from "@/hooks/useWindowSize";
 import { motion } from "framer-motion";
 import ArrowButton from "./ArrowButton";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import BetaIcon from "@/compositions/BetaIcon";
 
 const Destress = () => {
   const windowSize = useWindowSize();
@@ -114,9 +115,9 @@ const Destress = () => {
               >
                 <div style={{ display: "flex",  gap: "4px" }}>
                   Sell
-                  <img src="/img/beta.svg" width={"48"} />
                 </div>
               </div>
+                  <BetaIcon containerSx={{position: "absolute", left: "43px"}} imgSx={{width: "48px"}} />
               <div
                 onClick={() => {
                   // changeIndex(1);

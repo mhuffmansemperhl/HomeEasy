@@ -7,6 +7,7 @@ import useWindowSize from "@/hooks/useWindowSize";
 import styles from "./ListingForOne.module.scss";
 import ArrowButton from "@/components/ArrowButton";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import BetaIcon from "@/compositions/BetaIcon";
 const ListingForOne = ({}) => {
     const size = useWindowSize();
     const router = useRouter();
@@ -36,7 +37,10 @@ const ListingForOne = ({}) => {
                 )}
 
                 <div className={`${styles["main-copy-container"]}`}>
-                    <div className={`${styles["main-copy-supertitle"]}`}>How it works: HomeOne</div>
+                    <div style={{display: "flex"}} className={`${styles["main-copy-supertitle"]}`}>
+                        <BetaIcon containerSx={{width: "auto", position: "absolute"}} popupSx={{position: "absolute"}} imgSx={{width: "56px"}} />
+                        <span style={{marginLeft: "60px", marginTop: "4px"}}>How it works: HomeOne</span>
+                    </div>
 
                     <div className={`${styles["main-copy-title"]}`}>Work with a full-service local agent for only 1%.</div>
 

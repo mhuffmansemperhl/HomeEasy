@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import styles from "./styles/Navbar.module.scss";
 import useWindowSize from "@/hooks/useWindowSize";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import BetaIcon from "@/compositions/BetaIcon";
 
 const Navbar = () => {
   const router = useRouter();
@@ -279,7 +280,7 @@ const Navbar = () => {
                         styles["beta-content-callout-item-popover"]
                       }
                     >
-                      1% Listings is currently in beta and available only in select area codes.2
+                      1% Listings is currently in beta and available only in select area codes.<sup>2</sup>
                     </div>
                   </div> 
                
@@ -477,8 +478,13 @@ const Navbar = () => {
                         ]
                       : styles["header-menu-container-menu-links-item-title"]
                   }
+                  style={{
+                    display: "flex",
+                    gap: "9px",
+                  }}
                 >
                   {item.title}
+                  {item.title === "Sell" && <BetaIcon showPopup={false} />}
                 </div>
 
                 <div
