@@ -282,16 +282,7 @@ export default function Question() {
         }
       />
     );
-    setFooterNav(
-      <ButtonFooter
-        className={styles["allways-bottom"]}
-        label={"Next"}
-        store_key={options.store_key || "looking_to_sell"}
-        callback={() => {
-          nextStep(pathname, router, searchParams);
-        }}
-      />
-    );
+    
   }
 
   function loadLearnMoreAboutHomeEasyHomesPage(options) {
@@ -346,16 +337,7 @@ export default function Question() {
         }
       />
     );
-    setFooterNav(
-      <ButtonFooter
-        className={styles["allways-bottom"]}
-        label={"Next"}
-        store_key={options.store_key || "motivating_to_buy"}
-        callback={() => {
-          nextStep(pathname, router, searchParams);
-        }}
-      />
-    );
+   
   }
 
   function loadWhatWouldYouLikeToDoNextBuyPage(options) {
@@ -373,9 +355,10 @@ export default function Question() {
             list_items={what_would_you_like_to_do_next_buy_list_items}
             callback={(index) => {
               if ("branch" in options) {
+                
                 setBranch(options.branch + index);
               } else {
-                setBranch(index);
+                setBranch(index === 0 ? 1 : index);
               }
               if ("next_step" in options) {
                 options.next_step(index);
@@ -385,16 +368,6 @@ export default function Question() {
             }}
           />
         }
-      />
-    );
-    setFooterNav(
-      <ButtonFooter
-        className={styles["allways-bottom"]}
-        label={"Next"}
-        store_key={options.store_key || "what_would_you_like_to_do_next_buy"}
-        callback={() => {
-          nextStep(pathname, router, searchParams);
-        }}
       />
     );
   }
@@ -574,16 +547,7 @@ export default function Question() {
         }
       />
     );
-    setFooterNav(
-      <ButtonFooter
-        className={styles["allways-bottom"]}
-        label={"Next"}
-        store_key={options.store_key || "also_need_to_buy"}
-        callback={() => {
-          nextStep(pathname, router, searchParams);
-        }}
-      />
-    );
+    
   }
 
   function loadSorryOnlyHomeownersPage(options) {
@@ -1439,7 +1403,7 @@ export default function Question() {
           }
 
           case "sell_5_9": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
@@ -1499,7 +1463,7 @@ export default function Question() {
           }
 
           case "sell_4_11": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
@@ -1533,13 +1497,9 @@ export default function Question() {
             loadWhatWouldYouLikeToDoNextBuyPage({
               progress: "50%",
               next_step: (index) => {
-                if (index === 0) {
-                  const turl =
-                    "https://homeeasyhomes.idxbroker.com/idx/search/advanced?&a_propStatus%5B%5D=Active&a_propStatus%5B%5D=Active+Under+Contract&a_propStatus%5B%5D=Pending&srt=newest";
-                  window.open(turl, "_blank");
-                } else {
+               
                   nextStep(pathname, router, searchParams);
-                }
+                
               },
             });
             break;
@@ -1574,7 +1534,7 @@ export default function Question() {
           }
 
           case "buy_5_1": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
@@ -1588,12 +1548,12 @@ export default function Question() {
           }
 
           case "buy_5_3": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
           case "buy_5_4": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
@@ -1606,7 +1566,7 @@ export default function Question() {
           }
 
           case "buy_6_2": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
@@ -1693,7 +1653,7 @@ export default function Question() {
           }
 
           case "sellbuy_6_2": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
@@ -1706,7 +1666,7 @@ export default function Question() {
           }
 
           case "sellbuy_7_1": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
@@ -1719,7 +1679,7 @@ export default function Question() {
           }
 
           case "sellbuy_8_0": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 

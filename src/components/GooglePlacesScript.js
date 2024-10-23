@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Script from "next/script";
 import useFlowGetStartedStore from "@/store/store.js"
 
-const GOOGLE_MAPS_API_KEY = "AIzaSyDEAax0e2MX0H37S9EK9K18GpHhOYOrFSk";
+const GOOGLE_MAPS_API_KEY = "AIzaSyDJ8ajGxShBN-_cmSsdw-QhNAgN0z1JRaA";
 const source = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&libraries=places&callback=Function.prototype`;
 
 export function getSuggestionsWidget(the_ref) {
