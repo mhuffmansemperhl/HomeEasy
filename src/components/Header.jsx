@@ -366,56 +366,12 @@ const Header = () => {
         false && console.log("doing sellbuy");
         router.push('/get_started?flow=sellbuy&step=2');
       }
-
       if(flow === "buy"){
         false && console.log("doing buy");
-        let turl = undefined;
-        if(the_address === undefined){
-            the_address = form_data['address'];
-        }
-        if(search_type === undefined){
-            search_type = last_search_type;
-        }
-        if(search_type === 'street'){
-            turl = `https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=city&aw_address=${the_address}&a_statusCategory%5B%5D=active&srt=newest`;
-        }
-
-        if(search_type === 'zipcode'){
-            turl = `https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=zipcode&a_statusCategory[]=active&zipcode[]=${the_address}&srt=newest`;
-        }
-        
-        if(search_type === 'town'){
-            false && console.log(the_address);
-            let matches = [];
-            const add_match = the_address.toLowerCase().split(',')[0].trim();
-            false && console.log(add_match); 
-            for(let i = 0; i < city_codes.length; i++){
-                let next_city = city_codes[i][1].toLowerCase().trim();
-                if(next_city === add_match){
-                    matches.push(city_codes[i][0]);
-                }else if(next_city > add_match){
-                    break;
-                }
-            }
-            if(matches.length > 0){
-                const tcities = `&city[]=${matches.join('&city[]=')}`;
-                // false && console.log(matches);
-                // false && console.log(tcities);
-                turl = `https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=city&a_statusCategory[]=active${tcities}&srt=newest`;
-            }
-            // &city[]=50031&city[]=50036
-            // &city[]=50036&city[]=50031
-            // turl = `https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=zipcode&a_statusCategory[]=active&a_statusCategory[]=sold&zipcode[]=${the_address}`;
-        }
-
-
-        // window.location.href = `https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=city&aw_address=1+Dalton+St&a_statusCategory[]=active&a_statusCategory[]=sold&city[]=5046`;
-        if(turl !== undefined) {
-          window.location.href = turl;
-            // window.open(turl, '_blank');
-        }
+        router.push('/get_started?flow=buy&step=2');
       }
-      
+
+
       
 
     }
