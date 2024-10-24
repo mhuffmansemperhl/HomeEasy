@@ -19,6 +19,7 @@ import styles from "./page.module.scss";
 import { set } from "immutable";
 import { useDebouncedCallback } from "use-debounce";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import getZipCode from "@/helpers/getCustomerZipCode";
 
 export default function Question() {
   const pathname = usePathname();
@@ -198,7 +199,7 @@ export default function Question() {
     setContent(
       <FlowContent
         title={
-          options.title || "What’s the address of the home you want to buy?"
+          options.title || "Where do you want to buy?"
         }
         copy={options.copy || "Enter a city, neighborhood, or address."}
         content={
@@ -282,16 +283,7 @@ export default function Question() {
         }
       />
     );
-    setFooterNav(
-      <ButtonFooter
-        className={styles["allways-bottom"]}
-        label={"Next"}
-        store_key={options.store_key || "looking_to_sell"}
-        callback={() => {
-          nextStep(pathname, router, searchParams);
-        }}
-      />
-    );
+    
   }
 
   function loadLearnMoreAboutHomeEasyHomesPage(options) {
@@ -346,16 +338,7 @@ export default function Question() {
         }
       />
     );
-    setFooterNav(
-      <ButtonFooter
-        className={styles["allways-bottom"]}
-        label={"Next"}
-        store_key={options.store_key || "motivating_to_buy"}
-        callback={() => {
-          nextStep(pathname, router, searchParams);
-        }}
-      />
-    );
+   
   }
 
   function loadWhatWouldYouLikeToDoNextBuyPage(options) {
@@ -373,9 +356,10 @@ export default function Question() {
             list_items={what_would_you_like_to_do_next_buy_list_items}
             callback={(index) => {
               if ("branch" in options) {
+                
                 setBranch(options.branch + index);
               } else {
-                setBranch(index);
+                setBranch(index === 0 ? 1 : index);
               }
               if ("next_step" in options) {
                 options.next_step(index);
@@ -385,16 +369,6 @@ export default function Question() {
             }}
           />
         }
-      />
-    );
-    setFooterNav(
-      <ButtonFooter
-        className={styles["allways-bottom"]}
-        label={"Next"}
-        store_key={options.store_key || "what_would_you_like_to_do_next_buy"}
-        callback={() => {
-          nextStep(pathname, router, searchParams);
-        }}
       />
     );
   }
@@ -497,16 +471,7 @@ export default function Question() {
         }
       />
     );
-    setFooterNav(
-      <ButtonFooter
-        className={styles["allways-bottom"]}
-        label={"Next"}
-        store_key={options.store_key || "signed_seller_agreement_agent"}
-        callback={() => {
-          nextStep(pathname, router, searchParams);
-        }}
-      />
-    );
+    
   }
 
   function loadAgentLookingForInstantOffer(options) {
@@ -574,16 +539,7 @@ export default function Question() {
         }
       />
     );
-    setFooterNav(
-      <ButtonFooter
-        className={styles["allways-bottom"]}
-        label={"Next"}
-        store_key={options.store_key || "also_need_to_buy"}
-        callback={() => {
-          nextStep(pathname, router, searchParams);
-        }}
-      />
-    );
+    
   }
 
   function loadSorryOnlyHomeownersPage(options) {
@@ -619,16 +575,35 @@ export default function Question() {
   }
 
   function loadWellBeInTouchPage(options) {
+    
+    const validPromoZipCodes = ["02760","02763","02761", "02056","02070","02093","02762"];
+    const customerZipCode = getZipCode(form_data?.sell_address?.address_components);
+    const isCustomerZipCodeValidForPromo = validPromoZipCodes.includes(customerZipCode);
+    const iframe = 'https://api.leadconnectorhq.com/widget/booking/pyXj7RFuqzcePo2Oo1A1';
+    let copy = '';
+    if(flow === "sell"){
+      if(isCustomerZipCodeValidForPromo){
+        copy = 'Let’s schedule a call at a time that works best for you to go over next steps.';
+      } else {
+        copy = 'Our 1% listing option isn’t available in your area at the moment. However, we’ll get in touch to go over other options with you.'
+      }
+    }
+
+    if (flow === "buy" || flow === "sellbuy") {
+      copy = 'Let’s schedule a call at a time that works best for you to go over next steps.'
+    }
+   
     false && console.log("loading  loadWellBeInTouchPage");
     fireEventTag(options.event_tag);
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
-        title={options.title || "We’ll be in touch!"}
+        title={options.title || "Next steps"}
         copy={
-          options.copy ||
+          copy || options.copy ||
           "One of our representatives will call you shortly to learn more about what you are looking for and to discuss options."
         }
+        iframe={iframe}
       />
     );
     setFooterNav(
@@ -1439,7 +1414,7 @@ export default function Question() {
           }
 
           case "sell_5_9": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
@@ -1499,7 +1474,7 @@ export default function Question() {
           }
 
           case "sell_4_11": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
@@ -1533,13 +1508,9 @@ export default function Question() {
             loadWhatWouldYouLikeToDoNextBuyPage({
               progress: "50%",
               next_step: (index) => {
-                if (index === 0) {
-                  const turl =
-                    "https://homeeasyhomes.idxbroker.com/idx/search/advanced?&a_propStatus%5B%5D=Active&a_propStatus%5B%5D=Active+Under+Contract&a_propStatus%5B%5D=Pending&srt=newest";
-                  window.open(turl, "_blank");
-                } else {
+               
                   nextStep(pathname, router, searchParams);
-                }
+                
               },
             });
             break;
@@ -1574,7 +1545,7 @@ export default function Question() {
           }
 
           case "buy_5_1": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
@@ -1588,12 +1559,12 @@ export default function Question() {
           }
 
           case "buy_5_3": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
           case "buy_5_4": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
@@ -1606,7 +1577,7 @@ export default function Question() {
           }
 
           case "buy_6_2": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
@@ -1693,7 +1664,7 @@ export default function Question() {
           }
 
           case "sellbuy_6_2": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
@@ -1706,7 +1677,7 @@ export default function Question() {
           }
 
           case "sellbuy_7_1": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 
@@ -1719,7 +1690,7 @@ export default function Question() {
           }
 
           case "sellbuy_8_0": {
-            loadCreateAPasswordPage({ progress: "90%" });
+            loadWellBeInTouchPage({ progress: "90%" });
             break;
           }
 

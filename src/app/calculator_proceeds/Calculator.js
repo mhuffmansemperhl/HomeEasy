@@ -34,7 +34,7 @@ const Calculator = ({}) => {
 
     const[expected_home_sale_price, setExpectedHomeSalePrice] = useState(100000);
     const[remaining_mortgage_owed, setRemainingMortgageOwed] = useState(70000);
-    const[agent_fees_percent, setAgentFeesPercent] = useState(3);
+    const[agent_fees_percent, setAgentFeesPercent] = useState(1);
     const[agent_fees_amount, setAgentFeesAmount] = useState(3000);
     const[seller_concessions, setSellerConcessions] = useState(0);
     const[repair_costs, setRepairCosts] = useState(0);
@@ -42,7 +42,7 @@ const Calculator = ({}) => {
 
     const[expected_home_sale_price_field, setExpectedHomeSalePriceField] = useState("$100,000");
     const[remaining_mortgage_owed_field, setRemainingMortgageOwedField] = useState("$80,000");
-    const[agent_fees_percent_field, setAgentFeesPercentField] = useState("3%");
+    const[agent_fees_percent_field, setAgentFeesPercentField] = useState("1%");
     const[agent_fees_amount_field, setAgentFeesAmountField] = useState("$3,000");
     const[seller_concessions_field, setSellerConcessionsField] = useState("$0");
     const[repair_costs_field, setRepairCostsField] = useState("$0");
@@ -391,7 +391,7 @@ useEffect(() => {
               <div className={`${styles["main-calculator-form-item"]}`}>
                 <div className={`${styles["main-calculator-form-item-title"]}`}>
                 Agent fees <IconPopover 
-                text="The commissions paid to real estate agents for their services in buying or selling. While the standard rate is usually 6% of the final sale price, our agents charge only 1% for listing, and the buyer's agent takes 2%, resulting in a total of 3%." 
+                text="The commissions paid to real estate agents for their services in buying or selling. While the standard rate is usually 6% of the final sale price, our agents charge only 1% for listing." 
                 cssStyles={window_size.width < 1024 ? {marginLeft: "2.933333333vw", width: "5.6vw", height: "6.133333333vw"} : undefined}
                 />
                 </div>

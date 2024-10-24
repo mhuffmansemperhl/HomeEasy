@@ -24,14 +24,14 @@ const Plan = () => {
                 </div>
                 <div onClick={()=>{
                     // window.location.href="/calculator_proceeds";
-                    gtmPush(["callback", "sell_card1", ()=>{window.location.href="/calculator_proceeds";}]);
+                    gtmPush(["callback", "sell_card1", ()=>{window.location.href="/calculator-1";}]);
                 }} className={styles['image-holder']}> <img src="/img/card1.png" alt="how much can I make selling my house" />
                 
                 <div className={styles["advantage-content-item-get-started-link"]}>
               <ArrowButton
                 link_text="Get started"
                 callback={() => {
-                    gtmPush(["callback", "sell_card1", ()=>{window.location.href="/calculator_proceeds";}]);
+                    gtmPush(["callback", "sell_card1", ()=>{window.location.href="/calculator-1";}]);
                 }}
                 large_text={true}
               />
@@ -41,13 +41,13 @@ const Plan = () => {
                 
                 <div onClick={()=>{
                     // window.location.href="/calculator_savings";
-                    gtmPush(["callback", "sell_card2", ()=>{window.location.href="/calculator_savings";}]);
+                    gtmPush(["callback", "sell_card2", ()=>{window.location.href="/calculator-2";}]);
                 }} className={styles['image-holder']}> <img src="/img/card2.png" alt="savings calculator" />
                      <div className={styles["advantage-content-item-get-started-link"]}>
               <ArrowButton
                 link_text="Get started"
                 callback={() => {
-                    gtmPush(["callback", "sell_card2", ()=>{window.location.href="/calculator_savings";}]);
+                    gtmPush(["callback", "sell_card2", ()=>{window.location.href="/calculator-2";}]);
                 }}
                 large_text={true}
               />

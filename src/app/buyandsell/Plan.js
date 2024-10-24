@@ -27,9 +27,9 @@ const Plan = () => {
                     <div className={styles['copy-copy-holder']}>Unlock our unmatched expertise with our free tools and calculators to empower your real estate journey.</div>
                 </div> */}
                 <div className={styles['images-holder']}>
-                <div className={styles['image-holder']}> <a onClick={()=>{gtmPush(["callback", "plan_card_1", ()=>{router.push(`/calculator_proceeds`);}]);}} ><img src="/img/card1.png" alt="how much can I make selling my house" /></a></div>
-                <div className={styles['image-holder']}> <a onClick={()=>{gtmPush(["callback", "plan_card_2", ()=>{router.push(`/calculator_savings`);}]);}} ><img src="/img/card2.png" alt="savings calculator" /></a></div>
-                <div className={styles['image-holder']}> <a onClick={()=>{gtmPush(["callback", "plan_card_3", ()=>{router.push(`/calculator_monthly_payments`);}]);}} ><img src="/img/card3.png" alt="estimated payments" /></a></div>
+                <div className={styles['image-holder']}> <a onClick={()=>{gtmPush(["callback", "plan_card_1", ()=>{router.push(`/calculator-1`);}]);}} ><img src="/img/card1.png" alt="how much can I make selling my house" /></a></div>
+                <div className={styles['image-holder']}> <a onClick={()=>{gtmPush(["callback", "plan_card_2", ()=>{router.push(`/calculator-2`);}]);}} ><img src="/img/card2.png" alt="savings calculator" /></a></div>
+                <div className={styles['image-holder']}> <a onClick={()=>{gtmPush(["callback", "plan_card_3", ()=>{router.push(`/calculator-3`);}]);}} ><img src="/img/card3.png" alt="estimated payments" /></a></div>
                 </div>
             </motion.div>
         </div>

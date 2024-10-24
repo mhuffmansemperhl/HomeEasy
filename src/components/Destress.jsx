@@ -6,6 +6,7 @@ import useWindowSize from "@/hooks/useWindowSize";
 import { motion } from "framer-motion";
 import ArrowButton from "./ArrowButton";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import BetaIcon from "@/compositions/BetaIcon";
 
 const Destress = () => {
   const windowSize = useWindowSize();
@@ -112,8 +113,11 @@ const Destress = () => {
                     : ""
                 }`}
               >
-                Sell
+                <div style={{ display: "flex",  gap: "4px" }}>
+                  Sell
+                </div>
               </div>
+                  <BetaIcon containerSx={{position: "absolute", left: "43px"}} imgSx={{width: "48px"}} />
               <div
                 onClick={() => {
                   // changeIndex(1);
@@ -203,7 +207,7 @@ const Destress = () => {
                       ]
                     }
                   >
-                    Get pre-approved with our Preferred Lender and ready to make an offer in
+                    Get pre-approved with our Preferred Lender and be ready to make an offer in
                     minutes, not days.
                   </div>
                 </div>
@@ -356,7 +360,7 @@ const Destress = () => {
                       ]
                     }
                   >
-                    4. Or list with us for only 1%<sup>2</sup>.
+                    4. Or list with us for only 1%.
                   </div>
                   <div
                     className={

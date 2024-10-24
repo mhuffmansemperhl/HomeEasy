@@ -22,7 +22,7 @@ const HomeEasyBuyers = ({}) => {
 
                     {/* <div className={`${styles['main-copy-copy']}`}>Say goodbye to the complexities of traditional real estate - our hassle-free InstantOffer ensures a seamless and stress-free experience for homeowners like you.</div> */}
 
-                    <div className={`${styles["main-copy-copy-title"]}`}>Lower rates and lower monthly payments</div>
+                    <div className={`${styles["main-copy-copy-title"]}`}>Lower rates and lower monthly payments.</div>
                     <div className={`${styles["main-copy-copy"]}`}>
                         They are our Preferred Lender for a reason - their low rates are hard to beat! So, not only do you enjoy more manageable payments but you also benefit from their streamlined, stress-free process.
                     </div>

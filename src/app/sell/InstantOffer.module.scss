@@ -19,11 +19,13 @@
     // height: 33.85416667vw;
 
     padding: 4.375vw 0px 6.73828125vw 0px;
+    padding-bottom: 0;
 
     @media (min-width: 0px) and (max-width: 1023px) {
         display: flex;
         flex-direction: column-reverse;
-        padding: 12.26666667vw 10vw;        
+        padding: 12.26666667vw 10vw;   
+        padding-bottom: 0;     
     }
     // @media (min-width: 1024px) and (max-width: 1279px) {
     //     grid-template-columns: 1fr 1.1439907fr;
@@ -163,7 +165,7 @@
 
         font-size: 0.833333333vw;
         line-height: 1.302083333vw;
-        padding-bottom: 2.34375vw;
+        padding-bottom: 1.34375vw;
 
         @media (min-width: 0px) and (max-width: 1023px) {
             font-size: 4.266666667vw;

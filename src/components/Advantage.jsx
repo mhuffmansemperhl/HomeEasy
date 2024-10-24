@@ -5,6 +5,7 @@ import styles from "./styles/Advantage.module.scss";
 import { motion } from "framer-motion";
 import ArrowButton from "./ArrowButton";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import BetaIcon from "@/compositions/BetaIcon";
 
 const Advantage = () => {
   const router = useRouter();
@@ -38,11 +39,11 @@ const Advantage = () => {
                 className={`${styles["advantage-content-item-card"]} ${styles["advantage-content-item-card0"]}`}
               >
                 <div className={styles["advantage-content-item-card-title"]}>
-                Buy a home the easy way and save up to $10,000<sup>1</sup>
+                Buy a home the easy way and save up to $10,000
                 </div>
                 <div className={styles["advantage-content-item-card-copy"]}>
                 Find your dream home with one of our Preferred Agents and get
-                1.5% of the loan amount back in closing credit, up to $10,000
+                1.5% of the loan amount back in closing credit, up to $10,000<sup>1</sup>{" "}
                 from our Preferred Lender.{" "}
                 </div>
                 <div
@@ -169,8 +170,9 @@ const Advantage = () => {
               <div
                 className={`${styles["advantage-content-item-card"]} ${styles["advantage-content-item-card1"]}`}
               >
+                <BetaIcon containerSx={{ marginBottom: "22px" }} imgSx={{width: "48px"}} popupSx={{zIndex: "100"}} />
                 <div className={styles["advantage-content-item-card-title"]}>
-                Sell your home instantly for cash or list it for only 1%<sup>2</sup>.
+                Sell your home instantly for cash or list it for only 1%.
                 </div>
                 <div className={styles["advantage-content-item-card-copy"]}>
                 Sell your home with one of our Preferred Agents and save! Sell your
@@ -215,7 +217,7 @@ const Advantage = () => {
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    Receive an instantOffer
+                    Receive an instant offer
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]
@@ -238,7 +240,7 @@ const Advantage = () => {
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    List Your home for 1%
+                    List your home for 1%
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]
@@ -259,13 +261,13 @@ const Advantage = () => {
                   <div
                     className={styles["advantage-content-callout-item-title"]}
                   >
-                    Save Thousands
+                    Save thousands
                     <div
                       className={
                         styles["advantage-content-callout-item-popover"]
                       }
                     >
-                       Our listing fee is just 1%<sup>2</sup> helping our average seller cuts costs by 50% on commissions and fees. Get the same full-service experience for thousands less!
+                       Our listing fee is just 1%<sup>2</sup> helping our average seller cut costs by 50% on commissions and fees. Get the same full-service experience for thousands less!
                     </div>
                   </div>
                 </div>
@@ -372,7 +374,7 @@ const Advantage = () => {
                       }
                     >
                       {" "}
-                      11.Don’t want an InstantOffer? Why pay the avg. 5.46%* listing fee to a realtor? List your home for only 1%<sup>2</sup>, keeping thousands in your pocket.
+                      Don’t want an InstantOffer? Why pay the avg. 5.46%* listing fee to a realtor? List your home for only 1%<sup>2</sup>, keeping thousands in your pocket.
                     </div>
                   </div>
                 </div>

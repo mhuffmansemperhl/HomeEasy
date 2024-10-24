@@ -21,6 +21,7 @@ import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 
 import styles from "./Calculator.module.scss";
 import { userAgent } from "next/server";
+import BetaIcon from "@/compositions/BetaIcon";
 
 const Calculator = ({}) => {
   const router = useRouter();
@@ -45,7 +46,7 @@ const Calculator = ({}) => {
 
     const[closing_costs_tb, setClosingCostsTB] = useState("$15,000");
     const[closing_costs_io, setClosingCostsIO] = useState("$0");
-    const[closing_costs_lfo, setClosingCostsLFO] = useState("$2,500");
+    const[closing_costs_lfo, setClosingCostsLFO] = useState("$2,500"); //vals
 
     const[avg_home_prep_cost_and_move_tb, setAvgHomePrepCostAndMoveTB] = useState("$5,000");
     const[avg_home_prep_cost_and_move_io, setAvgHomePrepCostAndMoveIO] = useState("$2,500");
@@ -91,13 +92,13 @@ useEffect(() => {
   setSellerConcessionsIO(`$${(expected_home_sale_price * 0.00).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
   setSellerConcessionsLFO(`$${(expected_home_sale_price * 0.005).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
 
-  setClosingCostsTB(`$${(expected_home_sale_price * 0.03).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
+  setClosingCostsTB(`$${(expected_home_sale_price * 0.01).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
   setClosingCostsIO(`$${(expected_home_sale_price * 0.00).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
-  setClosingCostsLFO(`$${(expected_home_sale_price * 0.005).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
+  setClosingCostsLFO(`$${(expected_home_sale_price * 0.00).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
 
-  setAvgHomePrepCostAndMoveTB(`$${(expected_home_sale_price * 0.01).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
-  setAvgHomePrepCostAndMoveIO(`$${(expected_home_sale_price * 0.005).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
-  setAvgHomePrepCostAndMoveLFO(`$${(expected_home_sale_price * 0.01).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);  
+  setAvgHomePrepCostAndMoveTB(`$${(expected_home_sale_price * 0.005).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
+  setAvgHomePrepCostAndMoveIO(`$${(expected_home_sale_price * 0.00).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
+  setAvgHomePrepCostAndMoveLFO(`$${(expected_home_sale_price * 0.005).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);  
 
   // setTimeout(() => {
 
@@ -297,7 +298,7 @@ useEffect(() => {
                 Not sure what you could get for your home?
                 </div> 
                 <div className={`${styles["main-calculator-info-link-link"]}`}>
-                  <a target="_blank" href="https://401homevalues.areahomevalues.net/">Get a Free Estimate from us</a>
+                  <a target="_blank" href="https://homeeasyhomes.areahomevalues.net/">Get a Free Estimate from us</a>
                 </div>     
               </div>
               }
@@ -867,36 +868,39 @@ useEffect(() => {
 
               </div>
             </div>
-
             <div className={`${styles["main-calculator-bottom-card"]} ${styles["main-calculator-bottom-card-blue"]}`}>
-            <div className={`${styles["main-calculator-bottom-card-top"]}`}>
-            <div className={`${styles["main-calculator-bottom-card-top-title"]}`}>
-              <div className={`${styles["main-calculator-bottom-card-top-title-image"]}`}>
-              <img src="/img/heh_logo_small.svg" alt="arrow" />
-              </div>
-              Listing for one<IconPopover 
+              <BetaIcon containerSx={{position: "absolute", top: "-24px", right: "-120px"}} imgSx={{width: "54px"}} />
+              <div className={`${styles["main-calculator-bottom-card-top"]}`}>
+                <div className={`${styles["main-calculator-bottom-card-top-title"]}`}>
+                  <div className={`${styles["main-calculator-bottom-card-top-title-image"]}`}>
+                    <img src="/img/heh_logo_small.svg" alt="arrow" />
+                  </div>
+                
+              HOMEONE<IconPopover 
                   white={true}
                   text="Our listing fee is only 1% compared to the national average of 6%. That’s literally putting thousands back in your pocket!" 
                   cssStyles={window_size.width < 1024 ? {marginLeft: "2.933333333vw", width: "5.6vw", height: "6.133333333vw"} : {marginLeft: "0.3125vw", width: "1.09375vw", height: "1.197916667vw"}}
                     />
-            </div>
+                 
               </div>
+            </div>
               <div className={`${styles["main-calculator-bottom-card-middle"]}`}>
-              <div className={`${styles["main-calculator-bottom-card-middle-row"]}`}>
-              <div className={`${styles["main-calculator-bottom-card-middle-row-title"]}`}>
-                  <div className={`${styles["main-calculator-bottom-card-middle-row-title-container"]}`}>
-                    <div className={`${styles["main-calculator-bottom-card-middle-row-left"]}`}>
-                    3%<IconPopover 
-                  white={true}
-                  text="While the standard rate is usually 6% of the final sale price, our agents charge only 1% for listing, and the buyer's agent takes 2%, resulting in a total of 3%." 
-                  cssStyles={window_size.width < 1024 ? {marginLeft: "2.933333333vw", width: "5.6vw", height: "6.133333333vw"} : {marginLeft: "0.5vw", width: "0.729166667vw", height: "0.78125vw"}}
-                    />
-                    </div>
-                    <div className={`${styles["main-calculator-bottom-card-middle-row-right"]}`}>
-                    {agent_fees_lfo}
+                <div className={`${styles["main-calculator-bottom-card-middle-row"]}`}>
+                  <div className={`${styles["main-calculator-bottom-card-middle-row-title"]}`}>
+                    <div className={`${styles["main-calculator-bottom-card-middle-row-title-container"]}`}>
+                      <div className={`${styles["main-calculator-bottom-card-middle-row-left"]}`}>
+                        3%
+                        <IconPopover 
+                          white={true}
+                          text="While the standard rate is usually 6% of the final sale price, our agents charge only 1% for listing, and the buyer's agent takes 2%, resulting in a total of 3%." 
+                          cssStyles={window_size.width < 1024 ? {marginLeft: "2.933333333vw", width: "5.6vw", height: "6.133333333vw"} : {marginLeft: "0.5vw", width: "0.729166667vw", height: "0.78125vw"}}
+                        />
+                      </div>
+                      <div className={`${styles["main-calculator-bottom-card-middle-row-right"]}`}>
+                        {agent_fees_lfo}
+                      </div>
                     </div>
                   </div>
-                </div>
 
                 </div>
                 <div className={`${styles["main-calculator-bottom-card-middle-row"]}`}>
@@ -954,7 +958,7 @@ useEffect(() => {
                   small_text={true}
                   centered={true}
                   white_button={true}
-                  link_text="Listing for One"
+                  link_text="HOMEONE"
                   callback={()=>{
                       router.push(`/sell`);
                   }}

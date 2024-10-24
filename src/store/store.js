@@ -125,7 +125,9 @@ export const useFlowGetStartedStore = create(devtools((set, get) => ({
     nextStep: (pathname, router, searchParams) => {
         // increment step
         // false && console.log(`next_step: ${get().step}`);
-        set((state) => ({ step: (state.step !== undefined) ? state.step + 1 : 1 }));
+        set((state) => ({ 
+            step: (state.step !== undefined) ? state.step + 1 : 1 
+        }));
         // change route
         updateRoute(pathname, router, searchParams);
     },
