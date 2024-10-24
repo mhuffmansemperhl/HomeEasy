@@ -14,15 +14,15 @@ const Questions = () => {
     const tabNames = ["Net Proceeds", "HomeEasy Savings", "Estimated Monthly Payments"];
 
     const tabComponents = [
-        <Net_Proceed />,
-        <Saving />,
-        <Estimated />,
+        <Net_Proceed key={"Net_Proceed_Component"} />,
+        <Saving key={"Saving_Component"} />,
+        <Estimated key={"Estimated_Component"} />,
     ];
 
     const tabHeaders = [
-        <Net_Proceed_header />,
-        <Saving_header />,
-        <Estimated_header />,
+        <Net_Proceed_header key={"Net_Proceed_header"} />,
+        <Saving_header key={"Saving_header"} />,
+        <Estimated_header key={"Estimated_header"} />,
     ];
 
     return (
