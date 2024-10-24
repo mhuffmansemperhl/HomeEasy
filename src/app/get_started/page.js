@@ -19,6 +19,7 @@ import styles from "./page.module.scss";
 import { set } from "immutable";
 import { useDebouncedCallback } from "use-debounce";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import getZipCode from "@/helpers/getCustomerZipCode";
 
 export default function Question() {
   const pathname = usePathname();
@@ -583,16 +584,36 @@ export default function Question() {
   }
 
   function loadWellBeInTouchPage(options) {
+    
+    const validPromoZipCodes = ["02760","02763","02761", "02056","02070","02093","02762"];
+    const customerZipCode = getZipCode(form_data?.sell_address?.address_components);
+    const isCustomerZipCodeValidForPromo = validPromoZipCodes.includes(customerZipCode);
+    const iframe = 'https://api.leadconnectorhq.com/widget/booking/pyXj7RFuqzcePo2Oo1A1';
+    let copy = '';
+    if(flow === "sell"){
+      if(isCustomerZipCodeValidForPromo){
+        copy = 'Let’s schedule a call at a time that works best for you to go over next steps.';
+      } else {
+        copy = 'Our 1% listing option isn’t available in your area at the moment. However, we’ll get in touch to go over other options with you.'
+      }
+    }
+
+    if (flow === "buy") {
+      copy = 'Let’s schedule a call at a time that works best for you to go over next steps.'
+    }
+    console.log(flow, 'xd')
+
     false && console.log("loading  loadWellBeInTouchPage");
     fireEventTag(options.event_tag);
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
-        title={options.title || "We’ll be in touch!"}
+        title={options.title || "Next steps"}
         copy={
-          options.copy ||
+          copy || options.copy ||
           "One of our representatives will call you shortly to learn more about what you are looking for and to discuss options."
         }
+        iframe={iframe}
       />
     );
     setFooterNav(
