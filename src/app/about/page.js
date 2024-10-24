@@ -36,7 +36,7 @@ export default function Home() {
       {/* <HowItWorks /> */}
       {/* <GetStarted /> */}
       <Testimonials />
-      {/* <Accolades /> */}
+      <Accolades />
       {/* <Plan /> */}
       <Questions 
         question_show_link={true}

@@ -28,10 +28,10 @@ export default function Home() {
       <HowItWorks />
       <Buy />
       <Testimonials />
-       {/* <HomeSearchLinks
+       <HomeSearchLinks
         main_component_style={"main-component-gray"}
         centered_style={"centered-content2"}
-        /> */}
+        />
       <Footer />
     </main>
   )

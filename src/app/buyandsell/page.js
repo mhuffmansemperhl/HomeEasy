@@ -35,7 +35,7 @@ export default function Home() {
       <HowItWorks />
       <GetStarted />
       <Testimonials />
-      {/* <Accolades /> */}
+      <Accolades />
       <Plan />
       <Questions 
         question_index={0}
@@ -63,10 +63,10 @@ export default function Home() {
           },        
       ]}
       />
-        {/* <HomeSearchLinks
+        <HomeSearchLinks
         main_component_style={"main-component-gray"}
         centered_style={"centered-content2"}
-        /> */}
+        />
       <Footer />
     </main>
   )

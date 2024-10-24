@@ -1,6 +1,5 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 // import { useEffect } from "react";
 // import useFlowGetStartedStore from "@/store/store.js";
 // import useWindowSize from "@/hooks/useWindowSize";
@@ -12,9 +11,6 @@ import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 const ThreeByOneBlocks = ({}) => {
     const router = useRouter();
     const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
-    const handleClick = () => {
-        router.push("/sell#listings");
-    };
     return (
         <div className={`${styles["main-component"]}`}>
             <div className={`${styles["main-content-container"]}  centered-content2`}>
@@ -29,7 +25,7 @@ const ThreeByOneBlocks = ({}) => {
                     <div className={`${styles["item"]}`}>
                         <div className={`${styles["item-title-container"]}`}>Save money.</div>
                         <div className={`${styles["item-copy-container"]}`}>
-                            Keep thousands in your pocket! Pay no realtor fees. Pay no closing costs. Make no repairs. Get fast cash. Don’t like our offer? No worries, you can still <a href="#" onClick={handleClick}> list for less </a>
+                            Keep thousands in your pocket! Pay no realtor fees. Pay no closing costs. Make no repairs. Get fast cash. Don’t like our offer? No worries, you can still <a href="/sell/#listings"> list for less </a>
                         </div>
                         {/* <div className={`${styles['item-foot-container']}`}>
                             <ArrowButton

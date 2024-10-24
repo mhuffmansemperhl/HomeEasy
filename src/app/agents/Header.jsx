@@ -8,7 +8,7 @@ import useFlowGetStartedStore from "@/store/store.js"
 import GooglePlacesScript, {getSuggestions, getSuggestionsWidget} from "@/components/GooglePlacesScript";
 import { produce } from "immer";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
-import ArrowButton from '@/components/fluid/ArrowButton';
+
 const Header = () => {
 
     const router = useRouter();
@@ -63,62 +63,23 @@ const Header = () => {
          { !google_api_loaded && <GooglePlacesScript />}
             <Navbar />
             <div className={`${styles['main-content-container']} centered-content2`}>
-            <div className={`${styles["header-content-container"]}`}>
-          <div className={styles["header-content-title"]}>
-          Instantly connected with motivated buyers,<span> just for you.</span>
-          </div>
-          <div className={styles["header-content-copy"]}>
-          Become a Preferred Agent. 
-          </div>
-          
-          <div className={styles["header-content-ul"]}>
-            <div className={styles["header-content-inner"]}>
-                <div className={styles["header-content-round"]} >
-                    <div className={styles["header-content-round-box"]}>
-                        1
-                    </div>
-                  <div className={styles["before_round"]}></div>
-                </div>
-                <div className={styles["header-content-text"]}>
-                Connect with motivated buyers
-                </div>
+                <div className={`${styles['header-content-container']}`}>
+                    <div className={styles['header-content-title']}>Become a Preferred Agent, get high-quality leads.</div>
+                    <div className={styles['header-content-copy']}>Close more deals with no upfront cost or obligations.</div>
+                    <div className={styles["transparentprocess-content-tabs-content"]}>
+                        <div className={styles["transparentprocess-content-tabs-content-item"]}>
+                            {/* <input ref={searchInputRef} onKeyUp={(e)=>{handleKeyup(e);}} type="text" placeholder="Enter city, state" /> */}
+                            <div className={styles["transparentprocess-content-tabs-content-item-button-holder"]}>
+                                <button onClick={()=>{
+                                    
+                                    gtmPush(["callback", "agents_hero_sign_up_now", ()=>{processPlaceSelection();}]);
 
-            </div>
-            <div className={styles["header-content-inner"]}>
-            <div className={styles["header-content-round"]} >
-                    <div className={styles["header-content-round-box"]}>
-                        2
+                                }} className='darken-on-hover'>Sign up now &rarr; </button>
+                            </div>
+                        </div>
                     </div>
-                  <div className={styles["before_round"]}></div>
+                        
                 </div>
-                <div className={styles["header-content-text"]}>
-                 No payment required upfront—just settle a fee at closing.
-                </div>
-
-            </div>
-            <div className={styles["header-content-inner"]}>
-            <div className={styles["header-content-round"]} >
-                    <div className={styles["header-content-round-box"]}>
-                        3
-                    </div>
-                </div>
-                <div className={styles["header-content-text"]}>
-                Full transparency on your client’s loan status.
-                </div>
-
-            </div>
-          </div>
-          <div className={`${styles['main-copy-footer']} arrow`}>
-                        <ArrowButton
-                            link_text="Join today!"
-                            callback={()=>{
-                                // router.push(`/get_started?flow=sell&step=0&branch=9`);
-                                gtmPush(["callback", "sell_list_one", ()=>{router.push(`https://homeeasyhomes.com/get_started?flow=partner&step=1`);}]);
-                            }}
-                        />
-          </div>
- 
-        </div>
             </div>
 
         </div>

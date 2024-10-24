@@ -1,19 +1,13 @@
 "use client";
 import { useEffect, useState, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import Link from 'next/link';
+
 import styles from "./styles/Navbar.module.scss";
 import useWindowSize from "@/hooks/useWindowSize";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import BetaIcon from "@/compositions/BetaIcon";
 
 const Navbar = () => {
-  // Get the current URL
-  const currentURL = window.location.pathname;
-
-  // Check if the URL contains '/morgage'
-  const isErrorPage = currentURL.includes('/mortgage');
-
-
   const router = useRouter();
   const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
 
@@ -21,6 +15,7 @@ const Navbar = () => {
   const [navColor, setNavColor] = useState("");
   const [showMenu, setShowMenu] = useState(false);
   const [showIDXMenu, setShowIDXMenu] = useState(false);
+
   const [menuLinks, setMenuLinks] = useState([
     {
       title: "Sell",
@@ -38,8 +33,7 @@ const Navbar = () => {
    
         {
           title: "See how much you save",
-          // link: "/calculator_savings",
-          link: "/calculator-2",
+          link: "/calculator_savings",
           gtag: "how_much_save",
         },
       ],
@@ -52,6 +46,11 @@ const Navbar = () => {
           title: "How it Works",
           link: "/buy",
           gtag: "menu_buy_how_works",
+        },
+        {
+          title: "Browse homes",
+          link: "https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&idxStatus=active&ccz=city&lp=100000&srt=newest&city%5B%5D=37986",
+          gtag: "menu_buy_browse_homes",
         },
       ],
       visible: false,
@@ -69,36 +68,35 @@ const Navbar = () => {
           link: "/instantoffer",
           gtag: "menu_sb_req_io",
         },
-        // {
-        //   title: "Browse homes",
-        //   link: "https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&idxStatus=active&ccz=city&lp=100000&srt=newest&city%5B%5D=37986",
-        //   gtag: "menu_sb_browse_homes",
-        // },
+        {
+          title: "Browse homes",
+          link: "https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&idxStatus=active&ccz=city&lp=100000&srt=newest&city%5B%5D=37986",
+          gtag: "menu_sb_browse_homes",
+        },
         {
           title: "See how much you save",
-          // link: "/calculator_savings",
-          link: "/calculator-2",
+          link: "/calculator_savings",
           gtag: "sellbuy_how_much_save",
         },
       ],
       visible: false,
     },
     {
-      title: "Mortgages",
+      title: "Mortgage",
       links: [
         {
           title: "Today's rates",
-          link: "https://www.gethomeeasy.com/",
+          link: "/mortgage",
           gtag: "menu_mtg_todays_rates",
         },
         {
           title: "Home loans",
-          link: "/mortgage",
+          link: "https://www.gethomeeasy.com/",
           gtag: "menu_mtg_home_loans",
         },
         {
           title: "Refinance",
-          link: "/mortgage",
+          link: "https://www.gethomeeasy.com/",
           gtag: "menu_mtg_refi",
         },
       ],
@@ -137,19 +135,19 @@ const Navbar = () => {
         {
           title: "Net proceeds",
           // link: "/calculator_proceeds",
-          link: "/calculator-1",
+          link: "/calculators",
           gtag: "menu_calc_net_proceeds",
         },
         {
           title: "HomeEasy savings",
           // link: "/calculator_savings",
-          link: "/calculator-2",
+          link: "/calculators",
           gtag: "menu_calc_he_savings",
         },
         {
           title: "Estimated monthly payments",
           // link: "/calculator_monthly_payments",
-          link: "/calculator-3",
+          link: "/calculator",
           gtag: "menu_calc_est_mnt_pmts",
         },
       ],
@@ -238,19 +236,10 @@ const Navbar = () => {
               onClick={() => router.push("/")}
             >
               {" "}
-                 {isErrorPage ?  <img
-                src="/img/morgage-logo.png"
-                alt="Home Easy Homes"
-                style={{width:'230px',height:'auto',marginTop:'-6px'}}
-              /> :  <img
+              <img
                 src="/img/home_easy_homes_logo.svg"
                 alt="Home Easy Homes"
-              />}
-              {/* <img
-                src="/img/home_easy_homes_logo.svg"
-                alt="Home Easy Homes"
-              /> */}
-              {" "}
+              />{" "}
             </div>
           </div>
 
@@ -275,6 +264,26 @@ const Navbar = () => {
                 >
                   Sell
                 </a>{" "}
+              
+                  <div
+                      className={styles["beta-content-callout-item"]}
+                      style={{
+                        position: "absolute",
+                        height: "auto",
+                        top: "-10px ",
+                        left: "34px",
+                      }}
+                  >
+                    <img src="/img/beta.svg" alt="Beta"/>
+                    <div
+                      className={
+                        styles["beta-content-callout-item-popover"]
+                      }
+                    >
+                      1% Listings is currently in beta and available only in select area codes.<sup>2</sup>
+                    </div>
+                  </div> 
+               
               </div>
               <div className={styles["header-link-group-link"]}>
                 {" "}
@@ -338,29 +347,7 @@ const Navbar = () => {
                   (866) 904-3250
                 </div>
               </div>
-              <div className={styles["header-button-group-button-container"]}>
-                <div
-                  onClick={() => {
-                    console.log("clicked");
-                    openIDXMenu();
-                    // header_idx_menu_shown_style = styles["header-idx-menu-shown"];
-                    // gtmPush(["callback", "nav_sign_in", ()=>{window.open('https://homeeasyhomes.idxbroker.com/idx/userlogin', '_blank');}]);
-                  }}
-                  className={
-                    styles[
-                      "header-button-group-button-container-user-icon-holder"
-                    ]
-                  }
-                >
-                  <div
-                    className={
-                      styles["header-button-group-button-container-user-icon"]
-                    }
-                  >
-                    <img src="/img/user.png" alt="User icon" />
-                  </div>
-                </div>
-              </div>
+              
 
               {showIDXMenu && (
                 <div
@@ -404,23 +391,23 @@ const Navbar = () => {
                       Account Settings
                     </a>
                   </div>
-                  {/* <hr /> */}
-                  {/* <div className={styles["header-idx-menu-link"]}>
+                  <hr />
+                  <div className={styles["header-idx-menu-link"]}>
                     <a
                       href="https://homeeasyhomes.idxbroker.com/idx/myaccount#/settings"
                       target="_blank"
                     >
                       Sign Out
                     </a>
-                  </div> */}
-                  {/* <div className={styles["signup-btn"]}>
+                  </div>
+                  <div className={styles["signup-btn"]}>
                     <a
                       href="https://homeeasyhomes.idxbroker.com/idx/myaccount#/settings"
                       target="_blank"
                     >
                       Sign Up
                     </a>
-                  </div> */}
+                  </div>
                 </div>
               )}
             </div>
@@ -491,8 +478,13 @@ const Navbar = () => {
                         ]
                       : styles["header-menu-container-menu-links-item-title"]
                   }
+                  style={{
+                    display: "flex",
+                    gap: "9px",
+                  }}
                 >
                   {item.title}
+                  {item.title === "Sell" && <BetaIcon showPopup={false} />}
                 </div>
 
                 <div
@@ -521,14 +513,34 @@ const Navbar = () => {
                         }
                       >
                         {" "}
-                        <Link
+                        <a
                           className="underline-on-hover-red"
-                           href={link.link}
+                          onClick={() => {
+                            if (item.title === "Mortgage") {
+                              if (link.gtag !== undefined) {
+                                gtmPush(["callback", link.gtag, () => {}]);
+                                window.open(link.link, "_blank");
+                              } else {
+                                window.open(link.link, "_blank");
+                              }
+                            } else {
+                              if (link.gtag !== undefined) {
+                                gtmPush([
+                                  "callback",
+                                  link.gtag,
+                                  () => {
+                                    router.push(link.link);
+                                  },
+                                ]);
+                              } else {
+                                router.push(link.link);
+                              }
+                            }
+                          }}
                         >
                           {link.title}
-                        </Link>{" "}
+                        </a>{" "}
                       </div>
-
                     ))}
                   </div>
                 </div>
@@ -537,23 +549,7 @@ const Navbar = () => {
           </div>
 {/* account */}
 <div className={styles["header-menu-container-mobile-menu-buttons"]}>
-          <div
-            onClick={() => {
-              window.open(
-                "https://homeeasyhomes.idxbroker.com/idx/userlogin",
-                "_blank"
-              );
-            }}
-            className={
-              styles[
-                "header-menu-container-mobile-menu-buttons-button-container"
-              ]
-            }
-          >
-            {" "}
-            <button>My account</button>{" "}
-          </div>
-          <div
+         <div
             onClick={() => {
               window.open("tel:866-904-3250");
             }}

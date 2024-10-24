@@ -17,7 +17,7 @@ const Questions = ({question_title, question_copy, question_questions, question_
     const [questions, setQuestions] = useState([
         {
             title: "This sounds too good to be true.  What’s the catch here?",
-            copy: "You know we get that a lot.  But the truth is it’s not too good to be true, it’s just the way things should be.  By automating parts of the home buying process, our agents are able to work more efficiently for less commission.   And with our long lasting relationships with local attorneys, title companies, escrow companies, and mortgage lenders, you can save thousands more when working with our preferred partners.",
+            copy: "You know we get that a lot.  But the truth is it’s not too good to be true, it’s just the way things should be.  By automating parts of the home buying process, our agents are able to work more efficiently for less commission.   And with our long lasting relationships with local attorney’s, title companies, escrow companies, and mortgage lenders, you can save thousands more when working with our preferred partners.",
             visible: false,
         },
         {
@@ -32,7 +32,7 @@ const Questions = ({question_title, question_copy, question_questions, question_
         },
         {
             title: "Can I sell or buy with HomeEasy homes if I am already working with an agent?",
-            copy: "As a buyer, yes, but as an industry standard, we will ask you to sign an exclusive agreement if you decide to list with us.",
+            copy: "As a buyer yes, but as an industry standard, we will ask you to sign an exclusive agreement if you decide to list with us.",
             visible: false,
         },
     ]);

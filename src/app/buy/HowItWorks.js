@@ -52,7 +52,7 @@ const HowItWorks = ({}) => {
                         <div className={`${styles["main-copy-copy"]}`}>Discover a home you love, make an offer, negotiate, inspect, and appraise – all with your agent right by your side.</div>
 
                         <div className={`${styles["main-copy-copy-title"]}`}>Step 4</div>
-                        <div className={`${styles["main-copy-copy"]}`}>Receive a lender paid credit of 1.50% of your financed loan amount up to $10,000 to put towards your closing costs<sup>1</sup>.</div>
+                        <div className={`${styles["main-copy-copy"]}`}>Receive a lender paid credit of 1.50% of your financed loan amount up to $10,000 to put towards your closing costs<sup>1</sup> </div>
 
                         <div className={`${styles["main-copy-footer"]}`}>
                             <ArrowButton

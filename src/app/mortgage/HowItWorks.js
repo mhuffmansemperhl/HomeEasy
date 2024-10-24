@@ -25,7 +25,7 @@ const HowItWorks = ({}) => {
 
                 {/* {size.width > 1919 && */}
                 <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/animated-phone.gif" alt="How It Works" />
+                    <img src="/img/phone.png" alt="How It Works" />
                 </div>
                 {/* }
                 {size.width < 1920 && size.width > 1279 &&
@@ -66,7 +66,7 @@ const HowItWorks = ({}) => {
                             link_text="Get started"
                             callback={()=>{
                                 // router.push(`/get_started?flow=sell&step=0&branch=9`);
-                                gtmPush(["callback", "sell_list_one", ()=>{router.push(`https://www.gethomeeasy.com/`);}]);
+                                gtmPush(["callback", "sell_list_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);
                             }}
                         />
                     </div>

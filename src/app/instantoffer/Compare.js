@@ -30,7 +30,7 @@ const Compare = ({}) => {
                     }
                     <div className={`${styles['hover_icon1']}`}>
                     <IconPopover
-                 text="The national average listing fee is 5.46%. This would be $21,840 on a $400,000 home."
+                 text="The national average listing fee is 5.37%. This would be $21,480 on a $400,000 home."
                  
                    />
                     </div>             

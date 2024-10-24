@@ -73,18 +73,57 @@ const Header = () => {
             Finance your new home the <span>easy way.</span>
           </div>
           <div className={styles["header-content-copy"]}>
-            Receive up to $10,000<sup>1</sup> towards your closing costs - we&apos;ve got your back!
+            Receive upto $10,000<sup>1</sup> towards your closing costs - we've got your back!
           </div>
           
+          {/* <div className={styles["header-content-ul"]}>
+            <div className={styles["header-content-inner"]}>
+                <div className={styles["header-content-round"]} >
+                <div className={styles["header-content-round-box"]}>
+                        1
+                    </div>
+                  <div className={styles["before_round"]}></div>
+                </div>
+                <div className={styles["header-content-text"]}>
+                 Get matched with a HomeEasy Preferred Agent
+                </div>
+
+            </div>
+            <div className={styles["header-content-inner"]}>
+                <div className={styles["header-content-round"]}>
+                <div className={styles["header-content-round-box"]}>
+                        2
+                    </div>
+                  <div className={styles["before_round"]}></div>
+                </div>
+                <div className={styles["header-content-text"]}>
+                 Sell your home instantly for cash or list for 1%
+                </div>
+
+            </div>
+            <div className={styles["header-content-inner"]}>
+                <div className={styles["header-content-round"]}>
+                <div className={styles["header-content-round-box"]}>
+                        3
+                    </div>
+                </div>
+                <div className={styles["header-content-text"]}>
+                 Save thousands, pop the champaign & start packing
+                </div>
+
+            </div>
+          </div> */}
           <div className={`${styles['main-copy-footer']} arrow`}>
-            <ArrowButton
-              link_text="Get Pre Approved"
-              callback={()=>{
-                // router.push(`/get_started?flow=sell&step=0&branch=9`);
-                gtmPush(["callback", "sell_list_one", ()=>{router.push(`https://www.gethomeeasy.com/`);}]);
-              }}
-            />
+                        <ArrowButton
+                            link_text="Get Pre Approved"
+                            callback={()=>{
+                                // router.push(`/get_started?flow=sell&step=0&branch=9`);
+                                gtmPush(["callback", "sell_list_one", ()=>{router.push(`https://www.gethomeeasy.com/`);}]);
+                            }}
+                        />
           </div>
+    
+ 
         </div>
       </div>
     </div>

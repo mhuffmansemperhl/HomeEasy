@@ -43,8 +43,8 @@
     background-size: cover;
 
     @media (min-width: 0px) and (max-width: 1023px) {
-        height: 200.2666667vw;
-        background-image: url(/img/about_header_mobile.png);
+        height: 216.2666667vw;
+        background-image: url(/img/about_header_background_fluid_mobile.webp);
         background-size: cover;
         // background-position-x: calc(50% - 150px);        
     }
@@ -80,7 +80,7 @@
     @media (min-width: 0px) and (max-width: 1023px) {
         width: 100%;
         left: 0px;
-        top: 40.06666667vw;
+        top: 53.06666667vw;
     }
     // @media (min-width: 1024px) and (max-width: 1279px) {
     //     left: 0px;

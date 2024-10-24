@@ -27,7 +27,7 @@ const Plan = () => {
                 {/* <div className={styles['image-holder']}> <img src="/img/card1.png" alt="how much can I make selling my house" /></div> */}
                 <div onClick={()=>{
                     // router.push('/calculator_monthly_payments')
-                    gtmPush(["callback", "buy_plan_confidence", ()=>{router.push(`/calculator-3`);}]);
+                    gtmPush(["callback", "buy_plan_confidence", ()=>{router.push(`/calculator_monthly_payments`);}]);
 
                 }} className={styles['image-holder']}> <img src="/img/card3.png" alt="savings calculator" />
                 
@@ -35,7 +35,7 @@ const Plan = () => {
               <ArrowButton
                 link_text="Get started"
                 callback={() => {
-                    gtmPush(["callback", "buy_plan_confidence", ()=>{router.push(`/calculator-3`);}]);
+                    gtmPush(["callback", "buy_plan_confidence", ()=>{router.push(`/calculator_monthly_payments`);}]);
                 }}
                 large_text={true}
               />

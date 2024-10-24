@@ -44,10 +44,10 @@ export default function Home() {
       <Calculator />
       {/* <Disclaimer /> */}
 
-      {/* <HomeSearchLinks
+      <HomeSearchLinks
         main_component_style={"main-component-white"}
         centered_style={"centered-content2"}
-        /> */}
+        />
 
       <Footer />
     </main>
