@@ -144,8 +144,7 @@ const Footer = () => {
                                     <a onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_2_terms_conds", ()=>{router.push(`/tos`);}]);}}>Terms &amp; Conditions of Use</a>
                                     <a onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_2_privacy", ()=>{router.push(`/files/privacy.pdf`);}]);}}>Privacy Policy</a>
                                     <a onClick={()=>{
-                                        console.log(window.CC);
-                                        console.log("doing cookies")
+                                        
                                         // preventdefault();
                                         // stopPropagation();
                                         window.CC.showSettings();
@@ -205,8 +204,6 @@ const Footer = () => {
                                     <a onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_2_terms_conds", ()=>{router.push(`/tos`);}]);}}>Terms &amp; Conditions of Use</a>
                                     <a onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_2_privacy", ()=>{router.push(`/files/privacy.pdf`);}]);}}>Privacy Policy</a>
                                     <a onClick={()=>{
-                                        console.log(window.CC);
-                                        console.log("doing cookies")
                                         // preventdefault();
                                         // stopPropagation();
                                         window.CC.showSettings();

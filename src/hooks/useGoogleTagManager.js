@@ -23,28 +23,25 @@ export default function useGoogleTagManager() {
     }
 
 	function doEventClick(options){
-        console.log("doing doEventClick");
+        
             if("event_name" in options){
                 if("callback_function" in options) {
-                    console.log(`sending (with function callback): ${options.event_name}`);
+                    
                     dataLayer.push({
                         'event': options.event_name,
                         'eventCallback': ()=>{options.callback_function();}
                     });
                 } else if("event_location_tab" in options){
-                    console.log(`sending (with redirect to new tab): ${options.event_name}`);
                     dataLayer.push({
                         'event': options.event_name,
                         'eventCallback': ()=>{window.open(options.event_location_tab, "_blank").focus();}
                     });
                 } else if("event_location" in options){
-                    console.log(`sending (with redirect to same tab): ${options.event_name}`);
                     dataLayer.push({
                         'event': options.event_name,
                         'eventCallback': ()=>{window.document.location.href = options.event_location;}
                     });
                 }else{
-                    console.log(`sending (without redirect): ${options.event_name}`);
                     dataLayer.push({
                         'event': options.event_name,
                         'eventCallback': ()=>{}

@@ -16,10 +16,7 @@ const Disclaimer = ({}) => {
                 <div className={`${styles['main-copy-container']}`}>
                 This calculator is offered for educational purposes only. All costs are estimates and no guarantee is made that all possible costs have been included. This calculator does not replace a professional estimate.
                 </div>
-                {/* <div className={`${styles['main-button-container']}`}>
-                    <button onClick={()=>{ router.push(`/get_started?flow=sell&step=0&branch=11`); }} className='darken-on-hover'>Learn More &rarr;</button>
-                </div> */}
-
+             
             </div>
         </div>
     );

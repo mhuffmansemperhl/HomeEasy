@@ -12,12 +12,7 @@ export const pageview = (url) => {
         event: "pageview",
         page: url,
       })
-    } else {
-      console.log({
-        event: "pageview",
-        page: url,
-      })
-    }
+    } 
   }
 
 export default function GTAnalytics() {

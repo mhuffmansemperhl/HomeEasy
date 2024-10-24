@@ -12,10 +12,7 @@ export default function Question() {
         <div className={styles.main}>
         <Header />
         <Questions />
-        {/* <HomeSearchLinks
-        main_component_style={"main-component-gray"}
-        centered_style={"centered-content2"}
-        /> */}
+        
         <Footer />
       </div>
       )

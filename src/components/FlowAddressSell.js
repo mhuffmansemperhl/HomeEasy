@@ -96,7 +96,7 @@ const FlowAddressSell = ({callback, store_key, search_type}) => {
     // }, [places_suggestions]);
 
     useEffect(() => {
-        // false && console.log(selectedChip);
+         
         if(google_api_loaded) {
             if(searchType === "address"){
                 autoCompleteRef.current = getSuggestionsWidgetAddressOnly(searchInputRef);
@@ -131,7 +131,7 @@ const FlowAddressSell = ({callback, store_key, search_type}) => {
     //                 const val = item.split(':')[1];
     //                 add_obj[key] = val;
     //             });
-    //             // false && console.log(add_obj);
+    //             // 
 
     //             if(add_obj['route'] !== undefined) {
     //                 const tadd = `${add_obj['street_number']} ${add_obj['route']}, ${add_obj['locality']}, ${add_obj['administrative_area_level_1']}, ${add_obj['postal_code']}`;

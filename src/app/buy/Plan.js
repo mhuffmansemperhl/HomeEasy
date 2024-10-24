@@ -24,7 +24,6 @@ const Plan = () => {
                     <div className={styles['copy-title-holder']}>Plan with confidence.</div>
                     <div className={styles['copy-copy-holder']}>Unlock our unmatched expertise with our free tools and calculators to empower your real estate journey.</div>
                 </div>
-                {/* <div className={styles['image-holder']}> <img src="/img/card1.png" alt="how much can I make selling my house" /></div> */}
                 <div onClick={()=>{
                     // router.push('/calculator_monthly_payments')
                     gtmPush(["callback", "buy_plan_confidence", ()=>{router.push(`/calculator-3`);}]);

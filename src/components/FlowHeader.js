@@ -22,15 +22,11 @@ const FlowHeader = ({button_info}) => {
             {/* <img onClick={(e)=>{e.preventDefault(); window.history.go(-1);}} src="/img/flow_header_back_arrow.png" alt="back" />              */}
             
             <img onClick={(e)=>{
-                console.log(e);
+                
                 e.preventDefault();                
                 e.stopPropagation();
-            true && console.log("############ GOING BACK NOW ############");
-                // setTimeout(() => {                     
-                    // router.back();
-                    console.log(window.history);
+            
                     window.history.go(-1); return false;
-                // }, 100);
                     
             }} src="/img/flow_header_back_arrow.png" alt="back" />             
             </div>

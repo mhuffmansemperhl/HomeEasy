@@ -1,7 +1,5 @@
 "use client";
 import { useRouter } from "next/navigation";
-// import { useEffect } from "react";
-// import useFlowGetStartedStore from "@/store/store.js";
 import useWindowSize from "@/hooks/useWindowSize";
 
 import styles from "./HomeEasyBuyers.module.scss";
@@ -19,8 +17,6 @@ const HomeEasyBuyers = ({}) => {
                     <div className={`${styles["main-copy-supertitle"]}`}>How it works: HomeEasy Buyers</div>
 
                     <div className={`${styles["main-copy-title"]}`}>How we strengthen your buying power.</div>
-
-                    {/* <div className={`${styles['main-copy-copy']}`}>Say goodbye to the complexities of traditional real estate - our hassle-free InstantOffer ensures a seamless and stress-free experience for homeowners like you.</div> */}
 
                     <div className={`${styles["main-copy-copy-title"]}`}>Lower rates and lower monthly payments.</div>
                     <div className={`${styles["main-copy-copy"]}`}>
@@ -53,16 +49,7 @@ const HomeEasyBuyers = ({}) => {
                         <img src="/img/buy_house.png" alt="buy from homeeasy" />
                     </div>
                 )}
-                {/* {size.width < 1920 && size.width > 1279 &&
-                <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/instantoffer_balance_1280.png" alt="instantoffer" />
-                </div>
-                }
-                {size.width < 1280 && size.width > 1023 &&
-                <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/instantoffer_balance_1024.png" alt="instantoffer" />
-                </div>
-                } */}
+           
                 {size.width < 1024 && (
                     <div className={`${styles["main-image-container"]}`}>
                         <img src="/img/buy_house.png" alt="buy from homeeasy" />

@@ -1,11 +1,4 @@
-// import Header from '../components/Header';
-// import Testamonials from '../components/Testamonials';
-// import Advantage from '../components/Advantage';
-// import Difference from '../components/Difference';
-// import Destress from '../components/Destress';
-// import Questions from '../components/Questions';
-// import Plan from '../components/Plan';
-// import GettingStarted from '../components/GettingStarted';
+
 import Header from './Header';
 import Footer from '@/components/fluid/Footer';
 import ThreeByOneBlocksBuyEasy from './ThreeByOneBlocksBuyEasy';
@@ -32,12 +25,7 @@ export default function Home() {
       <HowItWorks />
       <Sell />
       <Testimonials />
-      {/* <Accolades /> */}
-      {/* <InstantOffer /> */}
-      {/* <ListingForOne /> */}
-      {/* <HowItWorks /> */}
-      {/* <Testimonials /> */}
-      {/* <Accolades /> */}
+    
       <Plan />
       <Questions 
         question_index={2}
@@ -65,10 +53,7 @@ export default function Home() {
             },
         ]}
       />
-        {/* <HomeSearchLinks
-        main_component_style={"main-component-gray"}
-        centered_style={"centered-content2"}
-        /> */}
+        
 
       <Footer />
     </main>

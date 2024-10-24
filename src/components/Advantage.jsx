@@ -63,9 +63,7 @@ const Advantage = () => {
                     }}
                   />
                 </div>
-                {/* <div className={styles['advantage-content-item-card-link']}>
-                                    <a onClick={() => router.push('/get_started')}>Get started</a>
-                                </div> */}
+               
               </div>
               <div
                 className={`${styles["advantage-content-callout-items"]} ${styles["advantage-content-callout-items0"]}`}
@@ -197,9 +195,7 @@ const Advantage = () => {
                   />
                 </div>
 
-                {/* <div className={styles['advantage-content-item-card-link']}>
-                                    <a onClick={() => router.push('/get_started')}>Get started</a>
-                                </div> */}
+               
               </div>
               <div
                 className={`${styles["advantage-content-callout-items"]} ${styles["advantage-content-callout-items1"]}`}
@@ -317,16 +313,7 @@ const Advantage = () => {
                   />
                 </div>
 
-                {/* <div className={styles['advantage-content-item-card-link']}>
-                                    <div className={styles['advantage-content-item-card-link-text']}>Get Started</div>
-                                    <a onClick={() => router.push('/get_started')}>Get started</a>
-                                </div> */}
-                {/* <div className={styles["advantage-content-item-card-subcopy"]}>
-                  *Semper Home Loans is an affiliate of HomeEasy Homes. NMLS
-                  1053. 225 Dupont Drive, Providence, RI, 02907. Any approval is
-                  subject to Semper Home Loan’s underwriting criteria. This is
-                  not a commitment to lend.
-                </div> */}
+           
               </div>
               <div
                 className={`${styles["advantage-content-callout-items"]} ${styles["advantage-content-callout-items2"]}`}

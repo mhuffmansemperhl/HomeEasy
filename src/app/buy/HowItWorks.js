@@ -20,26 +20,11 @@ const HowItWorks = ({}) => {
                 <div className={`${styles["copy-container"]}`}>It’s not too good to be true, it’s just the way things should be.</div>
 
                 <div className={`${styles["content-container"]}`}>
-                    {/* {size.width > 1919 && */}
+             
                     <div className={`${styles["main-image-container"]}`}>
                         <img src="/img/how_it_works2.gif" alt="How It Works" />
                     </div>
-                    {/* }
-                {size.width < 1920 && size.width > 1279 &&
-                <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/instantoffer_balance_1280.png" alt="listing for one percent" />
-                </div>
-                }
-                {size.width < 1280 && size.width > 1023 &&
-                <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/instantoffer_balance_1024.png" alt="listing for one percent" />
-                </div>
-                }
-                {size.width < 1024 &&
-                <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/listingforone_house.png" alt="listing for one percent" />
-                </div>
-                } */}
+                   
 
                     <div className={`${styles["main-copy-container"]}`}>
                         <div className={`${styles["main-copy-copy-title"]}`}>Step 1</div>

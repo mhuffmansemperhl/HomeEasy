@@ -10,12 +10,9 @@ export default function Question() {
     const router = useRouter();
     return (
         <div className={styles.main}>
-        {/* <Header /> */}
+      
         <Questions />
-        {/* <HomeSearchLinks
-        main_component_style={"main-component-gray"}
-        centered_style={"centered-content2"}
-        /> */}
+        
         <Footer />
       </div>
       )

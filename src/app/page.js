@@ -50,10 +50,7 @@ export default function Home() {
       />
       <Plan />
       <GettingStarted />
-      {/* <HomeSearchLinks
-        main_component_style={"main-component-gray"}
-        centered_style={"centered-content"}
-      /> */}
+    
       <Footer centered_style={"centered-content"} />
     </main>
   );

@@ -35,12 +35,12 @@ const Header = () => {
   function handleKeyup(evt) {}
 
   function processPlaceSelection() {
-    // false && console.log('processPlaceSelection');
+     
     router.push(`/get_started?flow=sell&step=1`);
   }
 
   useEffect(() => {
-    // false && console.log(selectedChip);
+     
     if (google_api_loaded) {
       autoCompleteRef.current = getSuggestionsWidgetAddressOnly(searchInputRef);
       autoCompleteRef.current.addListener("place_changed", async function () {

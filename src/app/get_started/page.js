@@ -2,11 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import useFlowGetStartedStore from "@/store/store.js";
-// import Header from './Header';
-// import Questions from "./Questions";
 import ButtonFooter from "@/components/ButtonFooter";
 import FlowHeader from "@/components/FlowHeader";
-// import FlowProgress from "@/components/FlowProgress";
 import FlowContent from "@/components/FlowContent";
 import FlowChips from "@/components/FlowChips";
 import FlowAddressSell from "@/components/FlowAddressSell";
@@ -16,7 +13,6 @@ import FlowProfessionalDetailsForm from "@/components/FlowProfessionalDetailsFor
 import FlowPasswordForm from "@/components/FlowPasswordForm";
 import FlowSignupForm from "@/components/FlowSignupForm";
 import styles from "./page.module.scss";
-import { set } from "immutable";
 import { useDebouncedCallback } from "use-debounce";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 import getZipCode from "@/helpers/getCustomerZipCode";
@@ -31,9 +27,7 @@ export default function Question() {
     router: router,
     searchParams: searchParams,
   };
-  // const [barPercent, setBarPercent] = useState("20%");
-
-  // false && console.log(useFlowGetStartedStore);
+  
   const [flow_loaded, setFlowLoaded] = useState(false);
 
   const flow = useFlowGetStartedStore((state) => state.flow);
@@ -45,8 +39,7 @@ export default function Question() {
   const branch = useFlowGetStartedStore((state) => state.branch);
   const setBranch = useFlowGetStartedStore((state) => state.setBranch);
 
-  const percentage = useFlowGetStartedStore((state) => state.percentage);
-  const setPercentage = useFlowGetStartedStore((state) => state.setPercentage);
+ const setPercentage = useFlowGetStartedStore((state) => state.setPercentage);
 
   const content = useFlowGetStartedStore((state) => state.content);
   const setContent = useFlowGetStartedStore((state) => state.setContent);
@@ -61,12 +54,8 @@ export default function Question() {
 
   const form_data = useFlowGetStartedStore((state) => state.form_data);
 
-  const is_busy = useFlowGetStartedStore((state) => state.is_busy);
   const setIsBusy = useFlowGetStartedStore((state) => state.setIsBusy);
 
-  const account_creation_error = useFlowGetStartedStore(
-    (state) => state.account_creation_error
-  );
   const setAccountCreationError = useFlowGetStartedStore(
     (state) => state.setAccountCreationError
   );
@@ -118,25 +107,9 @@ export default function Question() {
     "My listing agreement is about to expire",
   ];
 
-  // function selectChip(chip_index){
-  //   setFlow(["sell", "buy", "sellbuy"][chip_index]);
-  //   nextStep(pathname, router, searchParams);
-  //   // setBranch(0);
-  //   // false && console.log(index);
 
-  // }
-
-  //  {/* <ButtonFooter
-  // className={styles['allways-bottom']}
-  // button_info={{label: "Next"}}
-  // /> */}
-  // <ButtonFooter
-  // className={styles['allways-bottom']}
-  // button_info={{label: "Submit"}}
-  // />
 
   function loadChipsPage(options) {
-    true && console.log("loading chips");
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -145,13 +118,7 @@ export default function Question() {
         content={
           <FlowChips
             nav_items={nav_items}
-            // pathname={pathname}
-            // router={router}
-            // searchParams={searchParams}
-            // callback={(index) => {
-            //   selectChip(index);
-            // }}
-            // selectedChip={flow}
+           
           />
         }
       />
@@ -159,7 +126,7 @@ export default function Question() {
   }
 
   function loadAddressSellPage(options) {
-    false && console.log("loading address sell page");
+    
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -171,9 +138,7 @@ export default function Question() {
           <FlowAddressSell
             store_key={options.store_key || "sell_address"}
             callback={(address_data) => {
-              false && console.log(address_data);
               if ("branch" in options) {
-                false && console.log("incrementing branch");
                 setBranch(options.branch + branch);
               }
               nextStep(pathname, router, searchParams);
@@ -194,7 +159,6 @@ export default function Question() {
   }
 
   function loadAddressBuyPage(options) {
-    false && console.log("loading loadAddressBuyPage");
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -206,7 +170,6 @@ export default function Question() {
           <FlowAddressSell
             store_key={options.store_key || "buy_address"}
             callback={(address_data) => {
-              false && console.log(address_data);
               nextStep(pathname, router, searchParams);
             }}
           />
@@ -225,7 +188,6 @@ export default function Question() {
   }
 
   function loadSignupFormPage(options) {
-    false && console.log("loading loadSignupFormPage");
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -259,7 +221,6 @@ export default function Question() {
   }
 
   function loadLookingToSellPage(options) {
-    false && console.log("loading looking to sale page");
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -271,12 +232,7 @@ export default function Question() {
             nav_items={nav_items}
             store_key={options.store_key || "looking_to_sell"}
             callback={(index) => {
-              console.log(
-                pathname,
-                router,
-                searchParams,
-                "=======[sell_1]======"
-              );
+          
               nextStep(pathname, router, searchParams);
             }}
           />
@@ -287,7 +243,6 @@ export default function Question() {
   }
 
   function loadLearnMoreAboutHomeEasyHomesPage(options) {
-    false && console.log("loading loadLearnMoreAboutHomeEasyHomesPage");
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -317,7 +272,6 @@ export default function Question() {
   }
 
   function loadMotivatingToBuyPage(options) {
-    false && console.log("loading loadMotivatingToBuyPage");
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -342,7 +296,6 @@ export default function Question() {
   }
 
   function loadWhatWouldYouLikeToDoNextBuyPage(options) {
-    false && console.log("loading loadWhatWouldYouLikeToDoNextBuyPage");
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -374,7 +327,6 @@ export default function Question() {
   }
 
   function loadGotItHowCanWeHelpPage(options) {
-    false && console.log("loading loadGotItHowCanWeHelpPage");
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -415,7 +367,6 @@ export default function Question() {
   }
 
   function loadRelationshipToHomePage(options) {
-    false && console.log("loading  loadRelationshipToHomePage");
     setPercentage("48%");
     setContent(
       <FlowContent
@@ -545,7 +496,7 @@ export default function Question() {
   function loadSorryOnlyHomeownersPage(options) {
     false && console.log("loading  loadSorryOnlyHomeownersPage");
 
-    false && console.log(form_data);
+    false && 
 
     setPercentage(options.progress || "32%");
     setContent(
@@ -611,13 +562,9 @@ export default function Question() {
         className={styles["allways-bottom"]}
         label={"Back to our homepage"}
         callback={() => {
-          // router.push("/");
-          // if(options.event_tag){
-          //   gtmPush(["callback", options.event_tag, ()=>{router.push("/");}]);
-          // }else{
+          
           window.location.href = "/";
-          // }
-          // nextStep(pathname, router, searchParams);
+        
         }}
       />
     );
@@ -651,11 +598,8 @@ export default function Question() {
         className={styles["allways-bottom"]}
         label={"Next"}
         callback={(data) => {
-          console.log("this is form_data________", data);
           nextStepValidate(pathname, router, searchParams);
-          // nextStepValidate(pathname, router, searchParams, () =>
-          //   createNewAccount(data)
-          // );
+         
         }}
       />
     );
@@ -680,7 +624,7 @@ export default function Question() {
                 false && console.log("incrementing branch");
                 setBranch(options.branch + branch);
               }
-              false && console.log(contact_data);
+             
             }}
           />
         }
@@ -704,22 +648,13 @@ export default function Question() {
   }
 
   const createNewIDXAccount = async (form_data) => {
-    console.log("creating new account");
-    // if (!account_created) {
+   
+    
       try {
-        // const requestOptions = {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' }
-        // };
-        // const urlparams = new URLSearchParams({
-        //   firstName: 'Mike',
-        //   lastName: 'Huffman',
-        //   email: 'mhuffman@semperhl.com'
-        // });
-
+    
         const payload = {};
         if ("contact" in form_data) {
-          console.log(form_data, "+++++++ NewIDXAccount +++++++");
+          
           if ("first_name" in form_data.contact) {
             payload.firstName = form_data.contact.first_name;
           }
@@ -741,27 +676,17 @@ export default function Question() {
             }),
           })
             .then((response) => {
-              console.log("idx_api response.status is -------", response.status);
-              console.log("this is the idx_api response -------", response);
+             
               setIsBusy(false);
               return response.json();
             })
             .then((data) => {
-              console.log("data_body********", data.body);
               const jdata = data.body;
-              // if (jdata.status) {
-                console.log("idx_api jdata.status is ------", jdata.status);
                 setAccountCreated(true);
-                // return true;
+                
                 nextStep(pathname, router, searchParams);
                 createNewHubspotAccount(form_data);
-              // } else {
-              //   doAccountCreationError(
-              //     "Error creating account. Please try again or contact us for assistance. Code: 102"
-              //   );
-              //   return false;
-              //   // console.log(jdata.message); //error
-              // }
+              
             });
         } else {
           doAccountCreationError(
@@ -778,9 +703,7 @@ export default function Question() {
         console.log(err); //error
         return false;
       }
-      // set busy flag
-      // setIsBusy(true);
-    // }
+     
   };
 
   const createNewHubspotAccount = async (form_data) => {
@@ -792,40 +715,10 @@ export default function Question() {
           lastname: form_data.contact.last_name,
           email: form_data.contact.email,
           phone: form_data.contact.mobile_phone_number,
-          // "milestone_stage": ""
+        
         };
 
-        // if("contact" in form_data){
-        //   if("first_name" in form_data.contact){
-        //     payload.firstname = form_data.contact.first_name;
-        //   }
-        //   if("last_name" in form_data.contact){
-        //     payload.lastname = form_data.contact.last_name;
-        //   }
-        //   if("email" in form_data.contact){
-        //     payload.email = form_data.contact.email;
-        //   }
-        //   if("mobile_phone_number" in form_data.contact){
-        //     payload.phone = form_data.contact.mobile_phone_number;
-        //   }
-        //   // if("mobile_phone_number" in form_data.contact){
-        //   //   payload.phone = form_data.contact.mobile_phone_number;
-        //   // }
-        // };
-
-        //   if("sell_address" in form_data){
-        //     if("address_components" in form_data['sell_address']){
-        //       // if("first_name" in form_data.contact){
-        //       //   payload.firstname = form_data.contact.first_name;
-        //       // }
-        //       payload.property_address = form_data['sell_address']['address_components']['address'];
-        // //       "property_address": "123 Test St.",
-        // //       "property_city": "Providence",
-        // //       "property_state": "RI",
-        // //       "property_zip_code": "02860",
-
-        //     }
-        //   };
+      
 
         fetch("/api/hubspot_api", {
           method: "POST",
@@ -839,25 +732,14 @@ export default function Question() {
           }),
         })
           .then((response) => {
-            console.log(response.status);
-            console.log(response);
+            
             // setIsBusy(false);
             return response.json();
           })
           .then((data) => {
-            const jdata = data.body;
-            // if (jdata.status) {
-              console.log("hubspot_api jdata.status is -----------", jdata.status);
               setAccountCreated(true);
               return true;
-              // nextStep(pathname, router, searchParams);
-            // } else {
-            //   doAccountCreationError(
-            //     "Error creating account. Please try again or contact us for assistance. Code: 102"
-            //   );
-            //   // return false;
-            //   // console.log(jdata.message); //error
-            // }
+           
           });
       } catch (err) {
         doAccountCreationError(
@@ -871,20 +753,8 @@ export default function Question() {
 
   const createNewAccount = async (data) => {
     setIsBusy(true);
-    console.log("form_data___________", data);
     createNewIDXAccount(data);
-    // createNewHubspotAccount();
-    // const idx_account_created = await createNewIDXAccount();
-    // if(idx_account_created){
-    //   const hubspot_account_created = createNewHubspotAccount();
-    //   if(hubspot_account_created){
-    //     setIsBusy(false);
-    //   }else{
-    //     setIsBusy(false);
-    //   }
-    // }else{
-    //   setIsBusy(false);
-    // }
+ 
   };
 
   function loadCreateAPasswordPage(options) {
@@ -921,243 +791,9 @@ export default function Question() {
     );
   }
 
-  // const scrollToTop = () => window.scrollTo(0, 0);
-
-  // useEffect(() => {
-  //   // false && console.log("scrolling to top");
-  //   // scrollToTop();
-  //   setFooterNav(undefined);
-  //   // false && console.log(searchParams);
-
-  //   // false && console.log(tflow);
-  //   // false && console.log(tstep);
-  //   // false && console.log(tbranch);
-
-  //       // case "sell_4_2": {
-  //       //   loadAgentLookingForInstantOffer({"progress": "60%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sell_4_2": {
-  //       //   loadAgentLookingForInstantOffer({"progress": "60%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sell_5_0": {
-  //       //   loadAddressSellPage({"progress": "70%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sell_6_0": {
-  //       //   loadBestWayToReachYouPage({"progress": "90%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sell_7_0": {
-  //       //   loadWellBeInTouchPage({"progress": "100%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sell_5_1": {
-  //       //   loadBestWayToReachYouPage({"progress": "90%", "title": "Interested in selling your home with HomeEasy Homes?", "copy": "Once your listing agreement expires, we’d love to hear from you."});
-  //       //   break;
-  //       // }
-  //       // case "sell_6_1": {
-  //       //   loadWellBeInTouchPage({"progress": "100%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sell_3_1": {
-  //       //   loadAgentLookingForInstantOffer({"progress": "50%"});
-  //       //   break;
-  //       // }
-
-  //       // // SELL FLOWS
-  //       // case "sell_1_null": {
-  //       //   loadAddressSellPage({"progress": "32%"});
-  //       //   break;
-  //       // }
-  //       // case "sell_2_null": {
-  //       //   loadLookingToSellPage({"progress": "40%"});
-  //       //   break;
-  //       // }
-  //       // case "sell_3_null": {
-  //       //   loadRelationshipToHomePage({"progress": "50%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sell_4_0": {
-  //       //   loadSignedSellerAgreementAgentPage({"branch": 3, "progress": "60%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sell_4_1": {
-  //       //   loadSorryOnlyHomeownersPage({"progress": "100%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sell_4_2": {
-  //       //   loadSignedSellerAgreementAgentPage({"branch": 5, "progress": "50%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sell_5_3": {
-  //       //   loadSorryOnlyHomeownersPage({"progress": "100%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sell_5_4": {
-  //       //   loadBestWayToReachYouPage({"progress": "70%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sell_6_4": {
-  //       //   loadCreateAPasswordPage({"progress": "90%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sell_7_4": {
-  //       //   loadWellBeInTouchPage({"progress": "100%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sell_5_5": {
-  //       //   loadSorryOnlyHomeownersPage({"progress": "100%"});
-  //       //   break;
-  //       // }
-  //       // case "sell_5_6": {
-  //       //   loadBestWayToReachYouPage({"progress": "70%"});
-  //       //   break;
-  //       // }
-  //       // case "sell_6_6": {
-  //       //   loadCreateAPasswordPage({"progress": "90%"});
-  //       //   break;
-  //       // }
-  //       // case "sell_7_6": {
-  //       //   loadWellBeInTouchPage({"progress": "100%"});
-  //       //   break;
-  //       // }
-
-  //       // // BUY FLOWS
-  //       // case "buy_1_null": {
-  //       //   loadAddressBuyPage({"progress": "32%"});
-  //       //   break;
-  //       // }
-  //       // case "buy_2_null": {
-  //       //   loadMotivatingToBuyPage({"progress": "50%"});
-  //       //   break;
-  //       // }
-
-  //       // case "buy_3_null": {
-  //       //   loadWhatWouldYouLikeToDoNextBuyPage({"progress": "60%"});
-  //       //   break;
-  //       // }
-
-  //       // case "buy_4_0": {
-  //       //   loadSearchAndBrowseHomesPage();
-  //       //   break;
-  //       // }
-
-  //       // case "buy_4_1": {
-  //       //   loadSignupFormPage({"progress": "90%"});
-  //       //   break;
-  //       // }
-  //       // case "buy_5_1": {
-  //       //   loadWellBeInTouchPage({"progress": "100%"});
-  //       //   break;
-  //       // }
-
-  //       // case "buy_4_2": {
-  //       //   loadLearnMoreAboutHomeEasyHomesPage({"progress": "80%"});
-  //       //   break;
-  //       // }
-
-  //       // case "buy_5_2": {
-  //       //   loadSignupFormPage({
-  //       //     "progress": "90%",
-  //       //     "title": "We will be reaching out to answer all of your questions.",
-  //       //     // "copy": "You will be connected with a HomeEasy Homes specialist.  No obligation, no pressure.",
-  //       //   });
-  //       //   break;
-  //       // }
-
-  //       // case "buy_6_2": {
-  //       //   loadWellBeInTouchPage({"progress": "100%"});
-  //       //   break;
-  //       // }
-
-  //       // case "buy_4_3": {
-  //       //   loadSignupFormPage({
-  //       //     "progress": "90%",
-  //       //     "title": "You need advice, we can give it.",
-  //       //   });
-  //       //   break;
-  //       // }
-
-  //       // case "buy_5_3": {
-  //       //   loadWellBeInTouchPage({"progress": "100%"});
-  //       //   break;
-  //       // }
-
-  //       // case "buy_4_4": {
-  //       //   loadSignupFormPage({
-  //       //     "progress": "90%",
-  //       //     "title": "We will be reaching out to answer all of your questions.",
-  //       //     // "copy": "You will be connected with a HomeEasy Homes specialist.  No obligation, no pressure.",
-  //       //   });
-  //       //   break;
-  //       // }
-
-  //       // case "buy_5_4": {
-  //       //   loadWellBeInTouchPage({"progress": "100%"});
-  //       //   break;
-  //       // }
-
-  //       // // SELL/BUY FLOWS
-  //       // case "sellbuy_1_null": {
-  //       //   loadAddressSellPage({"progress": "32%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sellbuy_2_null": {
-  //       //   loadLookingToSellPage({"progress": "48%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sellbuy_3_null": {
-  //       //   loadAddressBuyPage({"progress": "64%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sellbuy_4_null": {
-  //       //   loadSignedSellerAgreementAgentPage({"branch": 3, "progress": "90%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sellbuy_5_3": {
-  //       //   loadSorryOnlyHomeownersPage({"progress": "100%"});
-  //       //   break;
-  //       // }
-
-  //       // case "sellbuy_5_4": {
-  //       //   loadBestWayToReachYouPage({"progress": "90%"});
-  //       //   break;
-  //       // }
-  //       // case "sellbuy_6_4": {
-  //       //   loadWellBeInTouchPage({"progress": "100%"});
-  //       //   break;
-  //       // }
-
-  //     }
-  //   }
-
-  //   }
-  // }, [searchParams]);
 
   function parseStepFlowBranch(default_if_missing) {
-    // for(let key in searchParams.keys()){
-    //   false && console.log(`${key} = ${searchParams.get(key)}`);
-    // }
+ 
     const tstep = searchParams.get("step");
     const tflow = searchParams.get("flow");
     const tbranch = searchParams.get("branch");
@@ -1816,8 +1452,7 @@ export default function Question() {
             break;
           }
         }
-        // false && console.log(setFlowLoaded);
-        // setFlowLoaded(true);
+       
       }
     }
   }
@@ -1830,50 +1465,32 @@ export default function Question() {
 
   const debouncedNavigation = useDebouncedCallback(
     // function
-    (value) => {
-      true && console.log("... doing debounced navigation");
-      true && console.log(`value is ${value}`);
-      doFlowStepDisplay();
-      // setFooterNav(undefined);
-      // parseStepFlowBranch(true);
-      // doFlowStep();
+    (value) => {doFlowStepDisplay();
+      
     },
     // delay in ms
     0
   );
 
   useEffect(() => {
-    true && console.log("page loaded");
     debouncedNavigation();
 
     window.addEventListener("popstate", (event) => {
       debouncedNavigation();
-      // false && console.log(window.location.href);
-      // false && console.log("popstate");
     });
 
-    // setFooterNav(undefined);
-    // parseStepFlowBranch(true);
-    // doFlowStep();
+   
   }, []);
 
   useEffect(() => {
-    true && console.log("router update");
     debouncedNavigation();
-    // setFooterNav(undefined);
-    // parseStepFlowBranch(false);
-    // doFlowStep();
+    
   }, [searchParams]);
 
   useEffect(() => {
     if (!flow_loaded) {
-      // setFlowLoaded(true);
-      false && console.log("step, flow, branch update");
       debouncedNavigation();
-      // false && console.log(flow);
-      // false && console.log(step);
-      // false && console.log(branch);
-      // doFlowStep();
+      
     }
   }, [step, flow, branch]);
 
@@ -1886,119 +1503,17 @@ export default function Question() {
     }
   }, [account_created]);
 
-  // useEffect(() => {
-  //   // for (const key of searchParams.keys()) {
-  //   //   false && console.log(key);
-  //   // }
 
-  //   // const tstep = searchParams.get('step');
-  //   // const tflow = searchParams.get('flow');
-  //   // const tbranch = searchParams.get('branch');
-  //   // if(tflow !== null) {
-  //   //   setFlow(tflow);
-  //   // }
-  //   // if(tstep !== null) {
-  //   //   setStep(tstep);
-  //   // }
-  //   // if(tbranch !== null) {
-  //   //   setBranch(parseInt(tbranch));
-  //   // }
-
-  //   // setPercentage("20%");
-  //   // setStep(0);
-  //   // nextStep();
-  //   // false && console.log(tstep);
-  //   // false && console.log(tflow);
-  //   // false && console.log(tbranch);
-
-  //   // false && console.log(flow);
-  //   // false && console.log(step);
-  //   // false && console.log(branch);
-  //   // setTimeout(() => {
-  //   //   // router.push({
-  //   //       // pathname: "/get_started",
-  //   //   // });
-  //   //   // false && console.log(step);
-  //   // }, 3000);
-
-  //   // false && console.log(search);
-  //   // setTimeout(() => {
-  //   //   router.push(`/get_started?flow=2&step=2`);
-  //   // }, 5000);
-  //     // setInterval(() => {
-  //     //     // setBarPercent("23%");
-  //     //     setBarPercent(`${Math.floor(Math.random() * 100) + 1}%`);
-  //     // }, 5000);
-  // }, []);
-
-  useEffect(() => {
-    console.log("============hello=========", form_data);
-  }, [form_data]);
 
   return (
     <div className={styles["main"]}>
       <FlowHeader />
       <div className={`${styles["progress-container"]} centered-content`}>
-        {/* <FlowProgress
-          visualParts={[
-            {
-              percentage: percentage,
-              color: "#D30200",
-            },
-          ]}
-        /> */}
+       
       </div>
       <div className={`${styles["content-container"]} centered-content`}>
         {content}
-        {/* <FlowContent
-        title="What’s the address of the home you want to sell?"
-        copy="Enter a city, neighborhood, or address."
-        content={<FlowAddressSell />}
-        /> */}
-
-         {/* <FlowContent
-        title="When are you looking to sell?"
-        copy="Your timeline helps us understand how we can help you get ready to sell your home"
-        content={<FlowListItems
-          list_items={list_items}
-          callback={(index) => {
-            false && console.log(index);
-          }}
-        />}
-        />  */}
-
-        {/* <FlowContent
-          title={"What’s the best way to reach you?"}
-          copy={"Our advice is always free."}
-          content={<FlowContactForm 
-            callback={(contact_data) => {
-              false && console.log(contact_data);
-            }}
-          
-          />}
-        /> */}
-{/* 
-         <FlowContent
-          title={"Create a password to"}
-          content={<FlowPasswordForm 
-            callback={(contact_data) => {
-              false && console.log(contact_data);
-            }}
-          
-          />}
-        />  */}
-
-        {/* <FlowContent
-            // title={`${flow} - ${step} - ${branch}`}
-            title={"Let’s start with the basics!"}
-            copy={"You will be connected with a HomeEasy Homes specialist.  No obligation, no pressure."}
-            content={<FlowSignupForm 
-              callback={(contact_data) => {
-                false && console.log(contact_data);
-              }}
-            
-            />}
-          /> */}
+        
       </div>
 
       <div className={styles["footer-container"]}>{footer_nav}</div>

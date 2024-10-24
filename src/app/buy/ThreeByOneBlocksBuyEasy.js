@@ -43,18 +43,12 @@ const ThreeByOneBlocksBuyEasy = ({}) => {
                             Receive a 1.50% lender paid credit.
                         </div>
                         <div className={`${styles["item-copy-container"]}`}>Our Preferred Lender will provide 1.50%<sup>1</sup> of your financed loan amount, up to $10,000 to go towards closing costs. </div>
-                        {/* <div className={`${styles['item-foot-container']}`}>
-                            <ArrowButton
-                                link_text="Get your InstantOffer"
-                                callback={()=>{console.log("clicked")}}
-                            />
-                        </div> */}
+                       
                          <div className={`${styles["item-foot-container"]}`}>
                             <ArrowButton
                                 small_text={true}
                                 link_text="Get started"
                                 callback={() => {
-                                    // router.push(`/get_started?flow=instantoffer&step=1`);
                                     gtmPush([
                                         "callback",
                                         "sell_io",

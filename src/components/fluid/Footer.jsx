@@ -16,18 +16,14 @@ const Footer = ({centered_style}) => {
     const [centerType, setCenterType] = useState("centered-content2");
 
     useEffect(() => {
-        console.log(centered_style);
         if(centered_style) {
             setCenterType(centered_style);
-        }else{
-            console.log("doing nothing")
         }
     }, [centered_style]);
 
     useEffect(() => {
 
         if (!document.getElementById('cc--main')) {
-            console.log("..initializing cookie consent")
             window.CC = window.initCookieConsent();
             window.CC.run({
                 current_lang: 'en',
@@ -172,15 +168,7 @@ const Footer = ({centered_style}) => {
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_buy_sell_pricing", ()=>{router.push(`/calculator-1`);}]);}}>Pricing</a> </div>
                                         {/* <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_buy_sell_brows_homes", ()=>{router.push(`https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&idxStatus=active&ccz=city&lp=100000&srt=newest&city%5B%5D=37986`);}]);}}>Browse homes</a> </div> */}
                                     </div>
-{/* 
-                                    {windowSize.width > 1023 && 
-                                    <div className={styles["upper-footer-content-left-links-item"]}>
-                                        <div className={styles["upper-footer-content-left-links-title"]}>Mortgage</div>
-                                        <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_mort_todays_rates", ()=>{router.push(`https://www.gethomeeasy.com/`);}]);}}>Today’s rates</a> </div>
-                                        <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_mort_home_loans", ()=>{router.push(`https://www.gethomeeasy.com/`);}]);}}>Home loans</a> </div>
-                                        <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_mort_refi", ()=>{router.push(`https://www.gethomeeasy.com/`);}]);}}>Refinance</a> </div>
-                                    </div>
-                                } */}
+
 
                                 </div>
                             </div>
@@ -288,8 +276,8 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                                     <a href="/tos" target="_blank">Terms &amp; Conditions of Use</a>
                                     <a href="/privacy_policy" target="_blank">Privacy Policy</a>
                                     <a onClick={()=>{
-                                        console.log(window.CC);
-                                        console.log("doing cookies")
+                                        
+                                      
                                         // preventdefault();
                                         // stopPropagation();
                                         
@@ -351,8 +339,7 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                                     <a href="/tos" target="_blank">Terms &amp; Conditions of Use</a>
                                     <a href="/privacy_policy" target="_blank">Privacy Policy</a>
                                     <a onClick={()=>{
-                                        console.log(window.CC);
-                                        console.log("doing cookies")
+                                        
                                         // preventdefault();
                                         // stopPropagation();
                                         window.CC.showSettings();

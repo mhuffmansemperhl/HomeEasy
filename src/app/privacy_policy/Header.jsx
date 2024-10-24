@@ -24,19 +24,17 @@ const Header = () => {
     const searchInputRef = useRef();
     const autoCompleteRef = useRef();
 
-    function handleKeyup(evt){
-      
-    }
+     
 
 
     function processPlaceSelection(){
-        // false && console.log('processPlaceSelection');
+         
         router.push(`/get_started?flow=sell&step=1`);
     }
 
 
     useEffect(() => {
-        // false && console.log(selectedChip);
+         
         if(google_api_loaded) {
             autoCompleteRef.current = getSuggestionsWidget(searchInputRef);
             autoCompleteRef.current.addListener("place_changed", async function () {
@@ -47,10 +45,7 @@ const Header = () => {
                 setNewAddress(true);
                 processPlaceSelection();
   
-                // processPlaceSelection(place);
-                    // false && console.log(results);
-                    // getLatLng(results[0])
-                // })                
+                          
                });            
         }
     }, [google_api_loaded]);
@@ -62,15 +57,8 @@ const Header = () => {
             <div className={`${styles['main-content-container']} centered-content2`}>
                 <div className={`${styles['header-content-container']}`}>
                     <div className={styles['header-content-title']}>Privacy Policy.</div>
-                    {/* <div className={styles['header-content-copy']}>Been dreaming of a new home, selling an old one, or maybe even both? We’re here for you seven days a week, to get things rolling.</div> */}
-                    {/* <div className={styles["transparentprocess-content-tabs-content"]}>
-                        <div className={styles["transparentprocess-content-tabs-content-item"]}>
-                            <input ref={searchInputRef} onKeyUp={(e)=>{handleKeyup(e);}} type="text" placeholder="Enter city, state" />
-                            <div className={styles["transparentprocess-content-tabs-content-item-button-holder"]}>
-                                <button onClick={()=>{processPlaceSelection();}} className='darken-on-hover'><span>Get Started</span> &rarr; </button>
-                            </div>
-                        </div>
-                    </div> */}
+                      
+                 
                         
                 </div>
             </div>

@@ -77,23 +77,15 @@ const setNewAddress = useFlowGetStartedStore(state => state.setNewAddress);
 
     let last_search_type = "";
 
-    function handleKeyup(evt){
-      
-    }
+     
 
 
-    function processPlaceSelection(){
-      true && console.log("process place selection");
-      // true && console.log(flow);
+    function processPlaceSelection(){// 
       let store_key_prefix = "sell";
       // if(flow === "buy") {
       store_key_prefix = "buy";
       // }
-      true && console.log(store_key_prefix);
-      true && console.log(form_data);
-      const place = form_data[`${store_key_prefix}_address`];
-      true && console.log(place);
-      if(place && 'address_components' in place && place['address_components'].length > 0) {
+      const place = form_data[`${store_key_prefix}_address`];if(place && 'address_components' in place && place['address_components'].length > 0) {
           const gadd = place['address_components'];
           const add_obj = {};
           const items = gadd.map((item) => {
@@ -103,8 +95,7 @@ const setNewAddress = useFlowGetStartedStore(state => state.setNewAddress);
               const val = item.split(':')[1];
               add_obj[key] = val;
           });
-          false && console.log(add_obj);
-
+          
           if(add_obj['route'] !== undefined) {
               const tadd = `${add_obj['street_number']} ${add_obj['route']}`;
               last_search_type = "street";
@@ -127,26 +118,8 @@ const setNewAddress = useFlowGetStartedStore(state => state.setNewAddress);
 
 
   function doAddressSearch(search_type, the_address) {
-      false && console.log("doing address search");
-      false && console.log(search_type);
-      false && console.log(the_address);
-      // false && console.log(flow);
-      // if(flow === "sell"){
-      //   false && console.log("doing sell");
-      //   router.push('/get_started?flow=sell&step=2');
-      // }
-      // if(flow === "instantoffer"){
-      //   false && console.log("doing instantoffer");
-      //   router.push('/get_started?flow=instantoffer&step=2');
-      // }
-      // if(flow === "sellbuy"){
-      //   false && console.log("doing sellbuy");
-      //   router.push('/get_started?flow=sellbuy&step=2');
-      // }
-
+     
       if(true){
-        // if(flow === "buy"){
-          false && console.log("doing buy");
         let turl = undefined;
         if(the_address === undefined){
             the_address = form_data['address'];
@@ -163,10 +136,8 @@ const setNewAddress = useFlowGetStartedStore(state => state.setNewAddress);
         }
         
         if(search_type === 'town'){
-            false && console.log(the_address);
             let matches = [];
             const add_match = the_address.toLowerCase().split(',')[0].trim();
-            false && console.log(add_match); 
             for(let i = 0; i < city_codes.length; i++){
                 let next_city = city_codes[i][1].toLowerCase().trim();
                 if(next_city === add_match){
@@ -177,33 +148,25 @@ const setNewAddress = useFlowGetStartedStore(state => state.setNewAddress);
             }
             if(matches.length > 0){
                 const tcities = `&city[]=${matches.join('&city[]=')}`;
-                // false && console.log(matches);
-                // false && console.log(tcities);
                 turl = `https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=city&a_statusCategory[]=active${tcities}&srt=newest`;
             }
-            // &city[]=50031&city[]=50036
-            // &city[]=50036&city[]=50031
-            // turl = `https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=zipcode&a_statusCategory[]=active&a_statusCategory[]=sold&zipcode[]=${the_address}`;
         }
 
 
-        // window.location.href = `https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=city&aw_address=1+Dalton+St&a_statusCategory[]=active&a_statusCategory[]=sold&city[]=5046`;
         if(turl !== undefined) {
             window.open(turl, '_blank');
         }
       }
-      
-      
 
     }
 
 
     useEffect(() => {
-      true && console.log("...checking buy_address");
+      
 
       if(form_data['buy_address'] && Object.keys(form_data['buy_address']).length > 0 && "place_id" in form_data['buy_address']){
         // do process place here
-        true && console.log("..... would be going to idx here");
+        
         processPlaceSelection();
 
       }
@@ -212,8 +175,7 @@ const setNewAddress = useFlowGetStartedStore(state => state.setNewAddress);
 
 
     useEffect(() => {
-        true && console.log("...checking form changed_address");
-        true && console.log(form_data['changed_address']);
+       
 
         if(form_data['changed_address']){
           if(Object.keys(form_data['changed_address']).length > 0){
@@ -225,13 +187,12 @@ const setNewAddress = useFlowGetStartedStore(state => state.setNewAddress);
                 draft['changed_address'] = {};
               }));
             }else{
-              true && console.log("...doing by text");
+              
               if("name" in form_data['changed_address']){
                 const name = form_data['changed_address']['name'];
                 if(name !== undefined){
                   // STARTING NEW GEOCODER
-                  true && console.log("name");
-                  true && console.log(name);
+                 
                   const payload = {};
                   payload.address = name;
 
@@ -247,7 +208,7 @@ const setNewAddress = useFlowGetStartedStore(state => state.setNewAddress);
                   fetch('https://webhooks.semperhl.com/api/geodecoder', options)
                   .then(response => response.json())
                   .then(data => {
-                    console.log(data)
+                    
                     const place = data[0];
                     
                     setFormData(produce(form_data, draft => {
@@ -262,11 +223,7 @@ const setNewAddress = useFlowGetStartedStore(state => state.setNewAddress);
 
             // if name, do geocoder and reset changed_address
           }
-          }else{
-            true && console.log("...changed address is empty");
           }
-        }else{
-          true && console.log("...changed address is undefined");
         }
 
     }, [form_data['changed_address']]);
@@ -275,100 +232,32 @@ const setNewAddress = useFlowGetStartedStore(state => state.setNewAddress);
     function doGetStarted(){
       const search_text = searchInputRef.current.value;
       setFormData(produce(form_data, draft => {
-        // draft['buy_address'] = form_data['changed_address'];
         draft['changed_address'] = {
           name: search_text
         };
       }));
     }
 
-  //   useEffect(() => {
-  //     false && console.log("...checking form for address data");
-
-  //     if(new_address) {
-
-  //       if(form_data['buy_address'] && "place_id" in form_data['buy_address']){
-  //         // do process place here
-  //         console.log("..... would be going to idx here");
-  //         setNewAddress(false);
-  //       }else if(form_data['buy_address'] && !("place_id" in form_data['buy_address']) && "name" in form_data['buy_address']){
-  //         const name = form_data['buy_address']['name'];
-  //         if(name !== undefined){
-  //           // STARTING NEW GEOCODER
-  //           true && console.log("name");
-  //           true && console.log(name);
-  //           const payload = {};
-  //           payload.address = name;
-
-
-  //           const options = {
-  //             method: 'POST',
-  //             headers: {
-  //               'Content-Type': 'application/json',
-  //             },
-  //             body: JSON.stringify(payload)
-  //           };          
-
-  //           fetch('https://webhooks.semperhl.com/api/geodecoder', options)
-  //           .then(response => response.json())
-  //           .then(data => {
-  //             console.log(data)
-  //             const place = data[0];
-              
-  //             setFormData(produce(form_data, draft => {
-  //                 draft['buy_address'] = place;
-  //                 true && console.log("buy address");
-  //                 true && console.log(place);
-  //                 setTimeout(() => {
-  //                   setNewAddress(true);
-  //                 }
-  //                 , 1000);
-  //             }));
-
-
-  //           })
-  //           .catch(error => console.error(error));            
-  //         }
-  //         // get from server and reprocess
-  //         // setNewAddress(false);
-  //       }
-
-  //         // setNewAddress(false);
-  //         // processPlaceSelection();
-  //     }else{
-  //       false && console.log("...no address data found");
-  //     }
-  // }, [new_address]);
 
 
     useEffect(() => {
-        // false && // console.log(selectedChip);
+        
         if(google_api_loaded) {
             autoCompleteRef.current = getSuggestionsWidget(searchInputRef);
             autoCompleteRef.current.addListener("place_changed", async function () {
-                // console.log("place changed");
+                
                 const place = await autoCompleteRef.current.getPlace();
                 setFormData(produce(form_data, draft => {
                   draft['changed_address'] = place;
               }));
               setNewAddress(true);
 
-                // setFormData(produce(form_data, draft => {
-                //     draft['sell_address'] = place;
-                // }));
-                // setNewAddress(true);
-                // processPlaceSelection();
-  
-                // processPlaceSelection(place);
-                    // false && // console.log(results);
-                    // getLatLng(results[0])
-                // })                
-               });            
+            });            
         }
     }, [google_api_loaded]);
 
   useEffect(() => {
-    // // console.log("useEffect");
+   
     setMortgageTypes([["30-year fixed", "30-year fixed"],]);
     setStateInfo([["Select State", "XX", "0.00"],
     ["Alabama", "AL", "0.41"],
@@ -436,75 +325,30 @@ const setNewAddress = useFlowGetStartedStore(state => state.setNewAddress);
 
   }, []);
 
-//   useEffect(() => {
-//     if(down_payment_amount !== down_payment_amount_field) {
-//         setDownPaymentAmountField(down_payment_amount);
-//     }
-//     if(down_payment_percent !== down_payment_percent_field) {
-//         setDownPaymentPercentField(down_payment_percent);
-//     }
-//   }, [down_payment_amount]);  
 
-//   useEffect(() => {
-//     // console.log("update payment data");
-//   }, [payment_data]);
-
-//   useEffect(() => {
-//     interestRef.current.value = interest_rate;
-//   }, [interest_rate]);
 
 
   function adjustPropertyTax(){
     const state_tax_info_item = state_info[location_idx];
     if(state_tax_info_item && state_tax_info_item.length > 0){
-        // console.log("update location tax amount");
+        
         const state_tax_rate = parseFloat(state_info[location_idx][2]);
-        // console.log(`state_tax_rate: ${state_tax_rate}`);
-
-        // const purchase_price_amount = parseFloat(purchase_price.replace(/[^0-9.]/g, ''));
-        // console.log(`purchase_price_amount: ${purchase_price}`);
+        
         
         const property_tax_amount = purchase_price * (state_tax_rate / 100);
-        // console.log(`property_tax_amount: ${property_tax_amount}`);
         
-        // setPropertyTax(`$${property_tax_field.toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
         setPropertyTaxField(property_tax_amount);
     }
   }
 
   useEffect(() => {
-    // console.log("update location tax amount");
+    
     adjustPropertyTax();
   }, [location_idx]);
 
 
-//   useEffect(() => {
-//     setMonthlyInsurance(`$${(parseFloat(insurance.replace(/[^0-9.]/g, '')) / 12).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
-//   }, [insurance]);
-
-//   useEffect(() => {
-//     setMonthlyPropertyTax(`$${(parseFloat(property_tax.replace(/[^0-9.]/g, '')) / 12).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
-//   }, [property_tax]);
-
-
-//   useEffect(() => {
-//     setMonthlyHoAFees(`$${(parseFloat(hoa_fees.replace(/[^0-9.]/g, '')) / 1).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
-//   }, [hoa_fees]);
-
-//   useEffect(() => {
-//     // console.log("update monthly payment");
-//     const mpai = parseFloat(monthly_principal_and_interest.replace(/[^0-9.]/g, ''));
-//     const mi = parseFloat(monthly_insurance.replace(/[^0-9.]/g, ''));
-//     const mpt = parseFloat(monthly_property_tax.replace(/[^0-9.]/g, ''));
-//     const mhf = parseFloat(monthly_hoa_fees.replace(/[^0-9.]/g, ''));
-//     const monthly_payment_amount = mpai + mi + mpt + mhf;
-//     setMonthlyPayment(`$${monthly_payment_amount.toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
-//     setChartStyle({gridTemplateColumns: `${mpai}fr ${mpt}fr ${mi}fr ${mhf}fr`});
-//   }, [monthly_principal_and_interest, monthly_insurance, monthly_property_tax, monthly_hoa_fees]);
-
-function updateChart(){
-    // console.log("update monthly payment and chart");
-
+  function updateChart(){
+    
     // first set up the monthly payment fields
     const mpt = property_tax / 12;
     const mi = insurance / 12;
@@ -520,12 +364,9 @@ function updateChart(){
     const r = interest_rate / 100 / 12;
     const n = 360; // number of payments months
 
-    // console.log(`a: ${a}`);
-    // console.log(`r: ${r}`);
-    // console.log(`n: ${n}`);
 
     const payment = a / ((((1 + r) ** n) - 1) / (r * (1 + r) ** n));
-    // console.log(payment);
+   
     setMonthlyPrincipalAndInterest(`$${payment.toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
 
     const  mp = payment + mpt + mi + mhf;
@@ -540,9 +381,7 @@ function updateChart(){
 const debouncedSendUpdateEvent = useDebouncedCallback(
   // function
   () => {
-    if(location_idx !== 0){
-      console.log("sending calc_pmts_conv event")
-      dataLayer.push({
+    if(location_idx !== 0){dataLayer.push({
         event: "calc_pmts_conv",
         "purchase_price": purchase_price,
         "down_payment_amount": down_payment_amount,
@@ -568,64 +407,25 @@ useEffect(() => {
 
 useEffect(() => {
     const new_down_payment_amount = (down_payment_percent / 100) * purchase_price;
-    // console.log(`new_down_payment_amount: ${new_down_payment_amount}`);
+    
     setDownPaymentAmountField(new_down_payment_amount);
 
-    // const new_property_tax = purchase_price * (property_tax / 100);
-    // setPropertyTaxField(new_property_tax);
+ 
     adjustPropertyTax();
 }, [purchase_price]);
 
 
-//   useEffect(() => {
-//     // console.log("update monthly principal and interest payment");
-
-//     const a = parseFloat(purchase_price.replace(/[^0-9.]/g, '')) - parseFloat(down_payment_amount.replace(/[^0-9.]/g, ''));
-//     const r = parseFloat(interest_rate.replace(/[^0-9.]/g, '')) / 100 / 12;
-//     const n = 360; // number of payments months
-
-//     const payment = a / ((((1 + r) ** n) - 1) / (r * (1 + r) ** n));
-//     // console.log(payment);
-//     setMonthlyPrincipalAndInterest(`$${payment.toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
-
-//   }, [purchase_price, down_payment_amount, interest_rate]);
-
-//   function getLoanPayment(){
-//     const a = 100000; // loan amount
-//     const r = 0.06 / 12; // interest rate
-//     const n = 360; // number of payments months
-
-//     const payment = a / ((((1 + r) ** n) - 1) / (r * (1 + r) ** n));
-//     // console.log(payment);
-//     // console.log(payment.toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 }));
-    
-//     setMonthlyPayment(`$${payment.toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
-// }
-
-
-    // useEffect(() => {
-    //     // // console.log("useEffect");
-    //     setTimeout(() => {
-    //         setChartStyle({gridTemplateColumns: "1fr 1fr 1fr 1fr"});
-    //     }, 1000);
-
-    //     setTimeout(() => {
-    //         setChartStyle({gridTemplateColumns: "874fr 210fr 75fr 0fr"});
-    //     }, 5000);
-        
-    // }, []);
 
 
 
     function updateLocation(e){
-        // console.log("updating location");
-        // console.log(e.target.value);
+        
         const state_abbrev = e.target.value;
         const state_info_idx = state_info.findIndex((state) => {
             return state[1] === state_abbrev;
         }
         );
-        // console.log(state_info_idx);
+     
         setLocationIDX(state_info_idx);
 
     }
@@ -641,49 +441,19 @@ useEffect(() => {
       );
 
     function updatePurchasePrice(values, sourceInfo){
-        // console.log("=----------------------updating purchase price");
-        // console.log(values, sourceInfo);
-
-        // update purchase_price?
-        // console.log(purchase_price);
-        // setPurchasePrice(values.floatValue);
+        
         debouncedupdatePurchasePrice(values.floatValue);
 
-        // // console.log(e.target.value);
-        // const payment = parseFloat(e.target.value.replace(/[^0-9.]/g, ''));
-        // setPurchasePrice(`$${payment.toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
-
-        // // down payment
-        // const dpa = parseFloat(down_payment_percent.replace(/[^0-9.]/g, ''));
-        // const dpp = parseFloat(purchase_price.replace(/[^0-9.]/g, ''));
-        // const dp_percent = (dpa / dpp) * 100;
-        // // setDownPaymentPercent(`${dp_percent.toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}%`);
-        // setDownPaymentAmount(`$${dp_percent.toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);    
-
-        // // property tax
-        // setTimeout(() => {
-        //     adjustPropertyTax();
-        // }, 1000);
-
+       
     }
 
         
-        // const debouncedupdatePurchasePrice = useDebouncedCallback(
-    //     // function
-    //     (value) => {
-    //         updatePurchasePrice(value);
-    //     },
-    //     // delay in ms
-    //     500
-    //   );
+  
 
     const debouncedupdateDownPayment = useDebouncedCallback(
         // function
         () => {
-            // console.log(`down_payment_amount: ${down_payment_amount}`);
-            // console.log(`down_payment_percent: ${down_payment_percent}`);
-            // console.log(`down_payment_amount_field: ${down_payment_amount_field}`);
-            // console.log(`down_payment_percent_field: ${down_payment_percent_field}`);
+         
 
             if(down_payment_amount !== down_payment_amount_field) {
                 setDownPaymentAmountField(down_payment_amount);
@@ -698,31 +468,17 @@ useEffect(() => {
     );
 
     function updateDownPayment(data){
-        // console.log("updating down payment");
-        // console.log(data);
-
-        // left_value - percent
-        // right_value - amount
-        // last_change_element - left or right
-
+       
         if(data.last_change_element === 'left' || data.last_change_element === undefined){
             if(data?.left_value?.floatValue !== undefined){
                 const dper = data.left_value.floatValue;
                 const dpp = purchase_price;
                 const dp_amount = (dper / 100) * dpp;
-                // console.log(`dper: ${dper}`);
-                // console.log(`dpp: ${dpp}`);
-                // console.log(`dp_amount: ${dp_amount}`);
-                // setDownPaymentAmountField(dp_amount);
+                
                 setDownPaymentPercent(dper);
                 setDownPaymentAmount(dp_amount);
                 debouncedupdateDownPayment();
-                // if(dp_amount !== down_payment_amount_field) {
-                //     setDownPaymentAmountField(dp_amount);
-                // }
-                // if(dper !== down_payment_percent_field) {
-                //     setDownPaymentPercentField(dper);
-                // }
+               
 
             }
         }else{
@@ -760,35 +516,18 @@ useEffect(() => {
         
     }
 
-    // const debouncedInterestRate = useDebouncedCallback(
-    //     // function
-    //     (value) => {
-    //         setInterestRate(value);
-    //     },
-    //     // delay in ms
-    //     1000
-    //   );
 
 
     function updateInterestRate(values, sourceInfo){
         // console.log("updating interest rate");
         // console.log(values, sourceInfo);
         setInterestRate(values.floatValue);
-        // // console.log(e.target.value);
-        // // console.log(e.target.selectionStart);
-        // const tmp_irate = parseFloat(e.target.value.replace(/[^0-9.]/g, ''));
-        // debouncedInterestRate(`${tmp_irate.toLocaleString("en-US", { maximumFractionDigits: 2, minimumFractionDigits: 2 })}%`);
-        // // const ss = e.target.selectionStart;
-        // // setTimeout(() => {
-        // //     e.target.selectionStart = ss;
-        // // }, 100);
-        // // // console.log(e.target.value);
-        // // setInterestRate(e.target.value);
+      
     }
 
     function updatePropertyTax(data){
         // console.log("updating property tax");
-        // console.log(data);
+        // 
         setPropertyTax(data?.floatValue || 0);
         // setPropertyTax(data.value.floatValue);
         // const tmp_ptax = parseFloat(data.value.replace(/[^0-9.]/g, ''));
@@ -797,7 +536,7 @@ useEffect(() => {
 
     function updateInsurance(data){
         // console.log("updating insurance");
-        // console.log(data);
+        // 
         setInsurance(data?.floatValue || 0);
         // const tmp_ins = parseFloat(data.value.replace(/[^0-9.]/g, ''));
         // setInsurance(`$${tmp_ins.toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
@@ -805,7 +544,7 @@ useEffect(() => {
 
     function updateHOAFees(data){
         // console.log("updating HOA fees");
-        // console.log(data);
+        // 
         setHoAFees(data?.floatValue || 0);
         // const tmp_hoa = parseFloat(data.value.replace(/[^0-9.]/g, ''));
         // setHoAFees(`$${tmp_hoa.toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
@@ -892,9 +631,7 @@ useEffect(() => {
                         }}
                         right_validate={(values) => {
                           const { formattedValue, floatValue } = values;
-                          // console.log(purchase_price);
-                          // console.log(floatValue);
-                          // console.log(floatValue < purchase_price);
+                         
                           return floatValue < purchase_price;
                         }}
                     />

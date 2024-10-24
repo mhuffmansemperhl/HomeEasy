@@ -34,22 +34,20 @@ const Header = () => {
     const flow = useFlowGetStartedStore(state => state.flow);
     const setFlow = useFlowGetStartedStore(state => state.setFlow);
 
-    function handleKeyup(evt){
-      
-    }
+     
 
 
     function processPlaceSelection(){
-        true && console.log("process place selection");
-        true && console.log(flow);
+        
+        
         let store_key_prefix = "sell";
         // if(flow === "buy") {
         store_key_prefix = "buy";
         // }
-        true && console.log(store_key_prefix);
-        true && console.log(form_data);
+        
+        
         const place = form_data[`${store_key_prefix}_address`];
-        true && console.log(place);
+        
         if(place && 'address_components' in place && place['address_components'].length > 0) {
             const gadd = place['address_components'];
             const add_obj = {};
@@ -60,8 +58,7 @@ const Header = () => {
                 const val = item.split(':')[1];
                 add_obj[key] = val;
             });
-            false && console.log(add_obj);
-
+            
             if(add_obj['route'] !== undefined) {
                 const tadd = `${add_obj['street_number']} ${add_obj['route']}`;
                 last_search_type = "street";
@@ -84,25 +81,18 @@ const Header = () => {
 
 
     function doAddressSearch(search_type, the_address) {
-        false && console.log("doing address search");
-        false && console.log(search_type);
-        false && console.log(the_address);
-        false && console.log(flow);
+       
         if(flow === "sell"){
-          false && console.log("doing sell");
           router.push('/get_started?flow=sell&step=2');
         }
         if(flow === "instantoffer"){
-          false && console.log("doing instantoffer");
           router.push('/get_started?flow=instantoffer&step=2');
         }
         if(flow === "sellbuy"){
-          false && console.log("doing sellbuy");
           router.push('/get_started?flow=sellbuy&step=2');
         }
   
         if(flow === "buy"){
-          false && console.log("doing buy");
           let turl = undefined;
           if(the_address === undefined){
               the_address = form_data['address'];
@@ -119,10 +109,9 @@ const Header = () => {
           }
           
           if(search_type === 'town'){
-              false && console.log(the_address);
               let matches = [];
               const add_match = the_address.toLowerCase().split(',')[0].trim();
-              false && console.log(add_match); 
+              
               for(let i = 0; i < city_codes.length; i++){
                   let next_city = city_codes[i][1].toLowerCase().trim();
                   if(next_city === add_match){
@@ -133,8 +122,6 @@ const Header = () => {
               }
               if(matches.length > 0){
                   const tcities = `&city[]=${matches.join('&city[]=')}`;
-                  // false && console.log(matches);
-                  // false && console.log(tcities);
                   turl = `https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&ccz=city&a_statusCategory[]=active${tcities}&srt=newest`;
               }
               // &city[]=50031&city[]=50036
@@ -158,18 +145,14 @@ const Header = () => {
     }, []);
 
     useEffect(() => {
-        false && console.log("...checking form for address data");
         if(new_address) {
           setNewAddress(false);
           processPlaceSelection();
-        }else{
-          false && console.log("...no address data found");
         }
     }, [new_address]);
   
 
     useEffect(() => {
-        // false && console.log(selectedChip);
         if(google_api_loaded) {
             autoCompleteRef.current = getSuggestionsWidget(searchInputRef);
             autoCompleteRef.current.addListener("place_changed", async function () {
@@ -178,16 +161,7 @@ const Header = () => {
                     draft['buy_address'] = place;
                 }));
                 setNewAddress(true);
-
-                // setTimeout(() => {
-                //     processPlaceSelection();
- 
-                // }, 1000);
-                // processPlaceSelection(place);
-                    // false && console.log(results);
-                    // getLatLng(results[0])
-                // })                
-               });            
+            });            
         }
     }, [google_api_loaded]);
 
