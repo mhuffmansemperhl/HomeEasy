@@ -527,6 +527,7 @@ const Navbar = () => {
                         <Link
                           className="underline-on-hover-red"
                            href={link.link}
+                           target={link.link === "https://www.gethomeeasy.com/" ? "_blank" : "_self"}
                         >
                           {link.title}
                         </Link>{" "}
