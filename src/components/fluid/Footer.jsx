@@ -389,10 +389,8 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                             </div>
                         <div className={styles["grand_text2"]}>
                         <div className={styles["grand_text"]}>
-                        2 Save with HomeEasy Homes’ lower 1% listing fee when you buy and sell with a Preferred HomeEasy Homes Agent, versus a more-typical 2.5% listing fee. Fees subject to change,
-                         <a href="/homeeasy_listing" target='_blank'>minimums apply</a> . Buyer’s agent fee not included. 1% listing agreement is only valid for first 60 days of listing. After 60 days,
-                          the listing will revert to a traditional 2.5% commission.
-
+                        2 Save with HomeEasy Homes’ lower 1% listing fee when you buy and sell with a Preferred HomeEasy Homes Agent, versus a more-typical 2.5% listing fee. Fees subject to change, 1% Listings is currently in Beta Testing. Only available in the following area codes 02760, 02763, 02761, 02056, 02070, 02093, and 02762. 
+                         <a href="/homeeasy_listing" target='_blank'>minimums apply</a> . Buyer’s agent fee not included.
                             </div>
                         <div className={styles["bottom_text"]}>
                         <p>Apple and the Apple logo are trademarks of Apple Inc. registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>

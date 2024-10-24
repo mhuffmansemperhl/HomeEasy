@@ -74,8 +74,8 @@ const Questions = () => {
 
     const questions1 = [
         {
-            title: "What services are included when I sell my home with HomeEasy?",
-            copy: "Listing with us? We handle all the necessary steps to make your home show worthy and ensure you get top dollar.  Our comprehensive services cover everything you need, including listing your home, taking professional photos that truly showcase your home, and even a virtual tour to showcase your property.  We also go the extra mile with extensive marketing efforts, a pre-inspection report, and hosting engaging Open Houses.  Rest assured, we've got you covered every step of the way.  And in case you forgot, for only 1% commission.",
+            title: "Now Beta Testing in select zip codes<sup>2</sup>!",
+            copy: "Listing with us? We handle all the necessary steps to make your home show worthy and ensure you get top dollar.  Our comprehensive services cover everything you need, including listing your home, taking professional photos that truly showcase your home, and even a virtual tour to showcase your property.  We also go the extra mile with extensive marketing efforts, a pre-inspection report, and hosting engaging Open Houses.  Rest assured, we&apos;ve got you covered every step of the way.  And in case you forgot, for only 1% commission.",
             visible: true,
         },
         {
@@ -110,7 +110,7 @@ const Questions = () => {
         },
         {
             title: "What costs are involved when I sell my home with HomeEasy Homes?",
-            copy: "As the listing agent, we only charge 1% vs the national average of 5.46% of your home's final purchase amount for our all-inclusive services. As the seller, you may also be required to pay the buyer’s agent commission.  Additional fees include any local taxes and closing costs associated with the state's legal requirements.     ",
+            copy: "As the listing agent, we only charge 1% vs the national average of 6% of your home&apos;s final purchase amount for our all-inclusive services.  As the seller, you are also required to pay the buyer&apos;s agent commission, which typically ranges between 2.5-3%, depending on the market.  Additional fees include any local taxes and closing costs associated with the state&apos;s legal requirements. Available in select zip codes<sup>2</sup>     ",
             visible: false,
         },
         {

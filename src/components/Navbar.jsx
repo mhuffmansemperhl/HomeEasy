@@ -5,6 +5,7 @@ import Link from 'next/link';
 import styles from "./styles/Navbar.module.scss";
 import useWindowSize from "@/hooks/useWindowSize";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import BetaIcon from "@/compositions/BetaIcon";
 
 const Navbar = () => {
   // Get the current URL
@@ -275,6 +276,26 @@ const Navbar = () => {
                 >
                   Sell
                 </a>{" "}
+              
+                  <div
+                      className={styles["beta-content-callout-item"]}
+                      style={{
+                        position: "absolute",
+                        height: "auto",
+                        top: "-10px ",
+                        left: "34px",
+                      }}
+                  >
+                    <img src="/img/beta.svg" alt="Beta"/>
+                    <div
+                      className={
+                        styles["beta-content-callout-item-popover"]
+                      }
+                    >
+                      1% Listings is currently in beta and available only in select area codes.<sup>2</sup>
+                    </div>
+                  </div> 
+               
               </div>
               <div className={styles["header-link-group-link"]}>
                 {" "}
@@ -338,29 +359,7 @@ const Navbar = () => {
                   (866) 904-3250
                 </div>
               </div>
-              <div className={styles["header-button-group-button-container"]}>
-                <div
-                  onClick={() => {
-                    console.log("clicked");
-                    openIDXMenu();
-                    // header_idx_menu_shown_style = styles["header-idx-menu-shown"];
-                    // gtmPush(["callback", "nav_sign_in", ()=>{window.open('https://homeeasyhomes.idxbroker.com/idx/userlogin', '_blank');}]);
-                  }}
-                  className={
-                    styles[
-                      "header-button-group-button-container-user-icon-holder"
-                    ]
-                  }
-                >
-                  <div
-                    className={
-                      styles["header-button-group-button-container-user-icon"]
-                    }
-                  >
-                    <img src="/img/user.png" alt="User icon" />
-                  </div>
-                </div>
-              </div>
+              
 
               {showIDXMenu && (
                 <div
@@ -491,8 +490,13 @@ const Navbar = () => {
                         ]
                       : styles["header-menu-container-menu-links-item-title"]
                   }
+                  style={{
+                    display: "flex",
+                    gap: "9px",
+                  }}
                 >
                   {item.title}
+                  {item.title === "Sell" && <BetaIcon showPopup={false} />}
                 </div>
 
                 <div
@@ -537,23 +541,7 @@ const Navbar = () => {
           </div>
 {/* account */}
 <div className={styles["header-menu-container-mobile-menu-buttons"]}>
-          <div
-            onClick={() => {
-              window.open(
-                "https://homeeasyhomes.idxbroker.com/idx/userlogin",
-                "_blank"
-              );
-            }}
-            className={
-              styles[
-                "header-menu-container-mobile-menu-buttons-button-container"
-              ]
-            }
-          >
-            {" "}
-            <button>My account</button>{" "}
-          </div>
-          <div
+         <div
             onClick={() => {
               window.open("tel:866-904-3250");
             }}
