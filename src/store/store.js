@@ -1,6 +1,5 @@
 "use client"
 
-// import { useRouter, useSearchParams } from "next/navigation";
 import { devtools } from 'zustand/middleware'
 import { create } from 'zustand'
 
@@ -18,28 +17,14 @@ function updateRoute(pathname, router, searchParams) {
     if(tbranch !== undefined){
         tquery.push(`branch=${tbranch}`);
     }
-    // false && console.log(tquery);
-    // false && console.log(typeof(pathname));
-    // false && console.log(searchParams);
+  
     const query_string = tquery.join("&");
     let turl = pathname;
     if(query_string !== ""){
         turl = `${pathname}?${query_string}`;
     }
     router.push(turl);
-    // router.push({
-    //     pathname: "/get_started",
-    //     query: tquery,
-    // });
-    // if(tflow !== undefined){
-    //     searchParams.set('flow', tflow);
-    // }
-    // if(tstep !== undefined){
-    //     searchParams.set('step', tstep);
-    // }
-    // if(tbranch !== undefined){
-    //     searchParams.set('branch', tbranch);
-    // }
+
 
 }
 
@@ -100,11 +85,11 @@ export const useFlowGetStartedStore = create(devtools((set, get) => ({
                     get().setFormNeedsValidation(false);
                     const tvalid = get().form_validated;
                     if(tvalid){
-                        console.log(callback);
+                       
                         if(callback){
                             callback();
                         }        
-                        console.log(callback);
+                       
                         if(valid_callback){
                             valid_callback();
                             resolve();  

@@ -12,7 +12,6 @@ const Testimonials = ({}) => {
     return (
         <div className={`${styles['main-component']}`}>
             <div className={`${styles['main-content-container']}  centered-content2`}>
-                {/* <div className={`${styles['main-component-title']}`}>Sell easy.  Sell fast.</div> */}
                 <div className={`${styles['main-component-copy']}`}>Don’t just take our word for it, take theirs!</div>
                 <div className={`${styles['items']}`}>
                     

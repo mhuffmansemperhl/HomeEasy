@@ -207,7 +207,6 @@ const Navbar = () => {
   // let show_idx_menu = false;
   // const header_idx_menu_shown_style_shown = styles["header-idx-menu-shown"];
   function openIDXMenu() {
-    console.log("openIDXMenu");
     setShowIDXMenu(!showIDXMenu);
     // show_idx_menu = true;
     // header_idx_menu_shown_style = `${styles["header-idx-menu"]} ${styles["header-idx-menu-shown"]}`;

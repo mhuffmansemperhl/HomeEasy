@@ -24,23 +24,13 @@ const ThreeByOneBlocks = ({}) => {
                     <div className={`${styles['item']}`}>
                         <div className={`${styles['item-title-container']}`}>Save money.</div>
                         <div className={`${styles['item-copy-container']}`}>Keep thousands in your pocket! Pay no realtor fees.  Pay no closing costs.  Make no repairs.  Get fast cash.  Keep thousands in your pocket. </div>
-                        {/* <div className={`${styles['item-foot-container']}`}>
-                            <ArrowButton
-                                link_text="Get your InstantOffer"
-                                callback={()=>{console.log("clicked")}}
-                            />
-                        </div> */}
+                        
                     </div>
                     
                     <div className={`${styles['item']}`}>
                         <div className={`${styles['item-title-container']}`}>Get a fair offer.</div>
                         <div className={`${styles['item-copy-container']}`}>Let our market specialists handle it all! Your home value is carefully evaluated by our real estate team specializing in your local market.</div>
-                        {/* <div className={`${styles['item-foot-container']}`}>
-                            <ArrowButton
-                                link_text="Listing for One"
-                                callback={()=>{console.log("clicked")}}
-                            />
-                        </div> */}
+                        
                     </div>
 
                 </div>

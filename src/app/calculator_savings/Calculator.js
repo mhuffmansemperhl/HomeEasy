@@ -70,9 +70,7 @@ function cleanNumberString(str){
 
 const debouncedSendUpdateEvent = useDebouncedCallback(
   // function
-  () => {
-      console.log("sending calc_savings_conv event")
-      dataLayer.push({
+  () => {dataLayer.push({
         event: "calc_savings_conv",
         "expected_home_sale_price": expected_home_sale_price,
         "remaining_mortgage_owed": remaining_mortgage_owed,
@@ -103,7 +101,6 @@ useEffect(() => {
   // setTimeout(() => {
 
     const equity = expected_home_sale_price - remaining_mortgage_owed;
-    console.log(equity);
     const costs_tb = cleanNumberString(agent_fees_tb) + cleanNumberString(seller_consessions_tb) + cleanNumberString(closing_costs_tb) + cleanNumberString(avg_home_prep_cost_and_move_tb);
     // console.log(costs_tb);
     // console.log(cleanNumberString(agent_fees_tb));
@@ -137,8 +134,7 @@ useEffect(() => {
       );
 
     function updateExpectedHomeSalePrice(values, sourceInfo){
-        console.log("=----------------------updating expected home sale price");
-        console.log(values, sourceInfo);
+       
         debouncedupdateExpectedHomeSalePrice(values.floatValue);
     }        
 
@@ -187,19 +183,19 @@ useEffect(() => {
 
     // function updateSellerConcessions(data){
     //     // console.log("updating seller concessions");
-    //     // console.log(data);
+    //     // 
     //     setSellerConcessions(data?.floatValue || 0);
     // }
 
     // function updateRepairCosts(data){
     //     // console.log("updating repair costs");
-    //     // console.log(data);
+    //     // 
     //     setRepairCosts(data?.floatValue || 0);
     // }
 
     // function updateMovingCosts(data){
     //     // console.log("updating moving costs");
-    //     // console.log(data);
+    //     // 
     //     setMovingCosts(data?.floatValue || 0);
     // }
 

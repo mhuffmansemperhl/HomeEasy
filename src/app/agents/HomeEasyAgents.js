@@ -22,9 +22,6 @@ const HomeEasyAgents = ({}) => {
 
                     <div className={`${styles['main-copy-title']}`}>More clients, more products, and more support.</div>
 
-                    {/* <div className={`${styles['main-copy-copy']}`}>Say goodbye to the complexities of traditional real estate - our hassle-free InstantOffer ensures a seamless and stress-free experience for homeowners like you.</div> */}
-
-
                     <div className={`${styles['main-copy-copy-title']}`}>Motivated, pre-approved buyers.</div>
                     <div className={`${styles['main-copy-copy']}`}>We’re a step ahead of our competition – our leads are pre-approved and excited to get the keys to their dream home.</div>
 

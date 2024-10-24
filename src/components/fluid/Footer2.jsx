@@ -16,17 +16,13 @@ const Footer = ({ centered_style }) => {
     const [centerType, setCenterType] = useState("centered-content2");
 
     useEffect(() => {
-        console.log(centered_style);
         if (centered_style) {
             setCenterType(centered_style);
-        } else {
-            console.log("doing nothing");
         }
     }, [centered_style]);
 
     useEffect(() => {
         if (!document.getElementById("cc--main")) {
-            console.log("..initializing cookie consent");
             window.CC = window.initCookieConsent();
             window.CC.run({
                 current_lang: "en",
@@ -288,24 +284,7 @@ const Footer = ({ centered_style }) => {
                                                 See how much you save
                                             </a>{" "}
                                         </div>
-                                        {/* <div className={styles["upper-footer-content-left-links-link"]}>
-                                            {" "}
-                                            <a
-                                                className="underline-on-hover-red"
-                                                onClick={(e) => {
-                                                    e.preventDefault();
-                                                    gtmPush([
-                                                        "callback",
-                                                        "foot_1_buy_sell_brows_homes",
-                                                        () => {
-                                                            router.push(`https://homeeasyhomes.idxbroker.com/idx/results/listings?pt=sfr&idxStatus=active&ccz=city&lp=100000&srt=newest&city%5B%5D=37986`);
-                                                        },
-                                                    ]);
-                                                }}
-                                            >
-                                                Browse homes
-                                            </a>{" "}
-                                        </div> */}
+                             
                                     </div>
 
                                     {windowSize.width > 1023 && (
@@ -611,8 +590,8 @@ const Footer = ({ centered_style }) => {
                                         </a>
                                         <a
                                             onClick={() => {
-                                                console.log(window.CC);
-                                                console.log("doing cookies");
+                                                
+                                                
                                                 // preventdefault();
                                                 // stopPropagation();
 
@@ -685,8 +664,8 @@ const Footer = ({ centered_style }) => {
                                         </a>
                                         <a
                                             onClick={() => {
-                                                console.log(window.CC);
-                                                console.log("doing cookies");
+                                                
+                                                
                                                 // preventdefault();
                                                 // stopPropagation();
                                                 window.CC.showSettings();

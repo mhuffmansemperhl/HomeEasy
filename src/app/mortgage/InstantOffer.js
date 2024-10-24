@@ -81,16 +81,11 @@ const formatNumber = (number) => {
                     <div className={`${styles['main-copy-copy']}`}>We’ve got up to 10,000 reasons to work with us. Get 1.50% of your financed loan up to $10,000 towards your closing costs<sup>1</sup>.</div>
                   
 
-                    {/* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-    Open modal
-  </button> */}
+       
                     <div className={`${styles['main-copy-footer']}`} data-bs-toggle="modal" data-bs-target="#myModal">
                         <ArrowButton
                             link_text="Calculate my savings"
-                            // callback={()=>{
-                            //     // router.push(`/get_started?flow=sell&step=0&branch=9`);
-                            //     gtmPush(["callback", "sell_list_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);
-                            // }}
+                       
                             
                         />
                     </div>

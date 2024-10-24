@@ -24,17 +24,15 @@ const Header = () => {
     const searchInputRef = useRef();
     const autoCompleteRef = useRef();
 
-    function handleKeyup(evt){
-      
-    }
+     
 
     function processPlaceSelection(){
-        // false && console.log('processPlaceSelection');
+         
         router.push(`/get_started?flow=instantoffer&step=1`);
     }
 
     useEffect(() => {
-        // false && console.log(selectedChip);
+         
         if(google_api_loaded) {
             autoCompleteRef.current = getSuggestionsWidget(searchInputRef);
             autoCompleteRef.current.addListener("place_changed", async function () {
@@ -45,10 +43,7 @@ const Header = () => {
                 setNewAddress(true);
                 processPlaceSelection();
   
-                // processPlaceSelection(place);
-                    // false && console.log(results);
-                    // getLatLng(results[0])
-                // })                
+                          
                });            
         }
     }, [google_api_loaded]);

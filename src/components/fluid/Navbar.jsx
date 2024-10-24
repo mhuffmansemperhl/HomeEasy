@@ -162,7 +162,6 @@ const Navbar = () => {
   ]);
 
   function openIDXMenu() {
-    console.log("openIDXMenu");
     setShowIDXMenu(!showIDXMenu);
   }
 

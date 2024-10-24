@@ -27,16 +27,7 @@ const ThreeByOneBlocks = ({}) => {
                     <div className={`${styles['item']}`}>
                         <div className={`${styles['item-title-container']}`}>Who you work with matters.</div>
                         <div className={`${styles['item-copy-container']}`}>By partnering up with our Preferred Lender, you can ensure your client not only receives a closing credit, but also breezes through the mortgage process effortlessly and with low rates.</div>
-                        {/* <div className={`${styles['item-foot-container']}`}>
-                            <ArrowButton
-                                small_text={true}
-                                link_text="Get your InstantOffer"
-                                callback={()=>{
-                                    // router.push(`/get_started?flow=instantoffer&step=1`);
-                                    gtmPush(["callback", "agents_sell_more_io", ()=>{router.push(`/get_started?flow=instantoffer&step=1`);}]);
-                                }}
-                            />
-                        </div> */}
+                     
                     </div>
                     
                     <div className={`${styles['item']}`}>

@@ -7,7 +7,6 @@ export default function CookieConsent() {
     useEffect(() => {
 
         if (!document.getElementById('cc--main')) {
-            console.log("..initializing cookie consent")
             window.CC = window.initCookieConsent();
             window.CC.run({
                 current_lang: 'en',

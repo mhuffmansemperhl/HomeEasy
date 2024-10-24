@@ -46,24 +46,17 @@ const Header = () => {
 
     
     useEffect(() => {
-      true && console.log("...checking form for address data");
-      true && console.log(new_address);
+  
       if(new_address) {
-        true && console.log("...address data found, processing place location");
         setNewAddress(false);
         processPlaceSelection();
-      }else{
-        true && console.log("...no address data found, not processing place selection");
       }
   }, [new_address]);
 
     useEffect(() => {
-      true && console.log(`...form data addressed changed: flow is ${flow}`);
-      true && console.log(form_data);
-      // true && console.log(form_data["sell_address"]);
-      // true && console.log(form_data["buy_address"]);
+   
       if((form_data['sell_address'] || form_data['buy_address']) && ((form_data['sell_address'] && "place_id" in form_data['sell_address']) || (form_data['buy_address'] && "place_id" in form_data['buy_address']))) {
-        true && console.log("...address found");
+        
         setNewAddress(true);
       }else{
         let name = undefined;
@@ -78,8 +71,7 @@ const Header = () => {
         if (name !== undefined) {
 
           // STARTING NEW GEOCODER
-          true && console.log("name");
-          true && console.log(name);
+          
           const payload = {};
           payload.address = name;
 
@@ -95,7 +87,7 @@ const Header = () => {
           fetch('https://webhooks.semperhl.com/api/geodecoder', options)
           .then(response => response.json())
           .then(data => {
-            console.log(data)
+            
             const place = data[0];
             
             setFormData(produce(form_data, draft => {
@@ -110,8 +102,8 @@ const Header = () => {
               }
               if(flow === "buy") {
                 draft['buy_address'] = place;
-                // true && console.log("buy address");
-                // true && console.log(place);
+                // 
+                // 
               }
             }));
 
@@ -126,7 +118,7 @@ const Header = () => {
   }, [form_data['sell_address'], form_data['buy_address']]);
 
     function changeIndex(idx) {
-      console.log(`changing index to ${idx}`);
+      
         setFlow(idx);
         if(idx === "sell") {
           setPlaceholderText("Enter Home Address");
@@ -143,14 +135,12 @@ const Header = () => {
     }
 
     function processPlaceSelection() {
-      true && console.log("process place selection");
-      true && console.log(flow);
       let store_key_prefix = "sell";
       if(flow === "buy") {
         store_key_prefix = "buy";
       }
       const place = form_data[`${store_key_prefix}_address`];
-      true && console.log(place);
+      
 
       if(place && 'address_components' in place && place['address_components'].length > 0) {
           const gadd = place['address_components'];
@@ -162,7 +152,7 @@ const Header = () => {
               const val = item.split(':')[1];
               add_obj[key] = val;
           });
-          false && console.log(add_obj);
+          
 
           if(add_obj['route'] !== undefined) {
               const tadd = `${add_obj['street_number']} ${add_obj['route']}`;
@@ -187,24 +177,21 @@ const Header = () => {
     }
 
     function doAddressSearch(search_type, the_address) {
-      false && console.log("doing address search");
-      false && console.log(search_type);
-      false && console.log(the_address);
-      false && console.log(flow);
+      
       if(flow === "sell"){
-        false && console.log("doing sell");
+        
         router.push('/get_started?flow=sell&step=2');
       }
       if(flow === "instantoffer"){
-        false && console.log("doing instantoffer");
+        
         router.push('/get_started?flow=instantoffer&step=2');
       }
       if(flow === "sellbuy"){
-        false && console.log("doing sellbuy");
+       
         router.push('/get_started?flow=sellbuy&step=2');
       }
       if(flow === "buy"){
-        false && console.log("doing buy");
+    
         router.push('/get_started?flow=buy&step=2');
       }
 
@@ -213,32 +200,25 @@ const Header = () => {
 
     }
 
-    function handleKeyup(evt){
-      false && console.log(evt.keyCode);
-      false && console.log(evt.target.value);
-      
-    }
+ 
 
       
     const size = useWindowSize();
       useEffect(() => {
-        true && console.log("...checking flow");
+       
         if(!flow) {
-          true && console.log("...setting flow to buy");
+          
           setFlow("buy");
-        }else{
-          true && console.log("...flow already set");
-          true && console.log(flow);
         }
       }, []);
 
 
       useEffect(() => {
-        true && console.log(`...checking form data for changed address: flow is ${flow}`);
-        true && console.log(form_data);
+        
+        
         if(form_data['changed_address']){
           if(Object.keys(form_data['changed_address']).length === 0){
-            true && console.log("...no changed address, or changed address is empty");
+            
   
           }else{
             setFormData(produce(form_data, draft => {
@@ -253,8 +233,7 @@ const Header = () => {
               }
               if(flow === "buy") {
                 draft['buy_address'] = form_data['changed_address'];
-                true && console.log("buy address");
-                true && console.log(form_data['changed_address']);
+                
               }
               draft['changed_address'] = {};
             }));
@@ -268,12 +247,11 @@ const Header = () => {
       
 
       useEffect(() => {
-        // false && console.log(selectedChip);
+         
         if(google_api_loaded) {
             autoCompleteRef.current = getSuggestionsWidget(searchInputRef);
             autoCompleteRef.current.addListener("place_changed", async function () {
-              true && console.log("place changed");
-              true && console.log(`flow is ${flow}`);
+             
                 const place = await autoCompleteRef.current.getPlace();
                 setFormData(produce(form_data, draft => {
                 
@@ -292,7 +270,7 @@ const Header = () => {
 
    
             <Navbar />
-            {console.log(flow)}
+           
             <div className={`${styles['main-content-container']} centered-content`}>
                 <div className={`${styles['header-content-container']}`}>
                     {flow === "sell" && 
@@ -372,10 +350,8 @@ const Header = () => {
 
                     <div className={styles["transparentprocess-content-tabs-content"]}>
                         <div className={styles["transparentprocess-content-tabs-content-item"]}>
-                            <input ref={searchInputRef} onKeyUp={(e)=>{handleKeyup(e);}} type="text" placeholder={placeholder_text} />
- 
-                  
-                        </div>
+                            <input ref={searchInputRef} type="text" placeholder={placeholder_text} />
+                         </div>
                     </div>
 
                   

@@ -17,14 +17,9 @@ const Accolades = () => {
                 {windowSize.width <  1024 && 
                     <img src="/img/testimonials_mobile2.png" alt="accolades" />
                 }
-                {/* {windowSize.width >  1023 && windowSize.width < 1280 &&  */}
+               
                 {windowSize.width >  1023 && 
-                    //     <img src="/img/testimonials_1024.png" alt="accolades" />
-                // }
-                // {windowSize.width >  1279 && windowSize.width < 1920 && 
-                //     <img src="/img/testimonials_1280.png" alt="accolades" />
-                // }
-                // {windowSize.width >  1919 &&  
+                
                     <img src="/img/accolades.png" alt="accolades" />
                 }
 
