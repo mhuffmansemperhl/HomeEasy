@@ -113,11 +113,11 @@ const Destress = () => {
                     : ""
                 }`}
               >
-                <div style={{ display: "flex",  gap: "4px" }}>
+                <div>
                   Sell
                 </div>
               </div>
-                  <BetaIcon containerSx={{position: "absolute", left: "43px"}} imgSx={{width: "48px"}} />
+                  <BetaIcon containerSx={{position: "absolute", left: windowSize.width > 1920 ? "52px" : "42px", top: "4px"}} imgSx={{width: "48px"}} />
               <div
                 onClick={() => {
                   // changeIndex(1);
