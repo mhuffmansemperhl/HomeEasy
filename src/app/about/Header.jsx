@@ -30,7 +30,6 @@ const Header = () => {
 
 
     function processPlaceSelection(){
-        // false && console.log('processPlaceSelection');
         router.push(`/get_started?flow=sell&step=1`);
     }
 

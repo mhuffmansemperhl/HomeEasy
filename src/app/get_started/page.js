@@ -471,16 +471,7 @@ export default function Question() {
         }
       />
     );
-    setFooterNav(
-      <ButtonFooter
-        className={styles["allways-bottom"]}
-        label={"Next"}
-        store_key={options.store_key || "signed_seller_agreement_agent"}
-        callback={() => {
-          nextStep(pathname, router, searchParams);
-        }}
-      />
-    );
+    
   }
 
   function loadAgentLookingForInstantOffer(options) {
@@ -598,11 +589,10 @@ export default function Question() {
       }
     }
 
-    if (flow === "buy") {
+    if (flow === "buy" || flow === "sellbuy") {
       copy = 'Let’s schedule a call at a time that works best for you to go over next steps.'
     }
-    console.log(flow, 'xd')
-
+   
     false && console.log("loading  loadWellBeInTouchPage");
     fireEventTag(options.event_tag);
     setPercentage(options.progress || "32%");
