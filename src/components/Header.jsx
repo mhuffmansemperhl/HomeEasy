@@ -169,6 +169,8 @@ const Header = () => {
               last_search_type = "town";
               doAddressSearch("town", tadd);
               // setAddress(tadd);
+          }else {
+            doAddressSearch()
           }
   
       }else{
