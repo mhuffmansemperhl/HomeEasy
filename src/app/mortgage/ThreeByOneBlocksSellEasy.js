@@ -60,8 +60,10 @@ const ThreeByOneBlocks = ({}) => {
                                 link_text="Book a call"
                                 callback={()=>{
                                     // router.push(`/get_started?flow=sell&step=0&branch=8`);
-                                    gtmPush(["callback", "sell_list_one", ()=>{router.push(`/booking`);}]);
+                                    gtmPush(["callback", "sell_list_one", ()=>{   window.open('/booking', '_blank', 'noopener,noreferrer');}]);
                                 }}
+                                ariaLabel="Open booking calendar in new window"
+                                role="button"
                             />
                         </div>
                     </div>
