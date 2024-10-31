@@ -32,7 +32,7 @@ export default function Home() {
             },
             {
                 title: "How do I request an instant cash offer from HomeEasy Homes?",
-                copy: "If you are looking for a fast, easy, stress-free way of selling your home, all you need to do is request an InstantOffer.  Don&apos;t worry, the process is simple, fast, a completely obligation free.  Just enter in your address and we&apos;ll guide you through a few brief questions about the condition, features, and upgrades of your home.  We genuinely want to understand all the unique aspects that make your home special, and we&apos;ll take these details into account when creating your personalized InstantOffer.",
+                copy: "If you are looking for a fast, easy, stress-free way of selling your home, all you need to do is request an InstantOffer.  Don&apos;t worry, the process is simple, fast, and completely obligation free.  Just enter in your address and we&apos;ll guide you through a few brief questions about the condition, features, and upgrades of your home.  We genuinely want to understand all the unique aspects that make your home special, and we&apos;ll take these details into account when creating your personalized InstantOffer.",
                 visible: false,
             },
             {

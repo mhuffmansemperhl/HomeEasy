@@ -168,13 +168,13 @@ const Advantage = () => {
               <div
                 className={`${styles["advantage-content-item-card"]} ${styles["advantage-content-item-card1"]}`}
               >
-                <BetaIcon containerSx={{ marginBottom: "22px" }} imgSx={{width: "48px"}} popupSx={{zIndex: "100"}} />
+                <BetaIcon containerSx={{ marginBottom: "36px" }} imgSx={{width: "48px"}} popupSx={{zIndex: "100"}} />
                 <div className={styles["advantage-content-item-card-title"]}>
                 Sell your home instantly for cash or list it for only 1%.
                 </div>
                 <div className={styles["advantage-content-item-card-copy"]}>
                 Sell your home with one of our Preferred Agents and save! Sell your
-                home instantly for cash avoiding listing and closing fees, or list with for
+                home instantly for cash avoiding listing and closing fees, or list with us for
                 only 1% (compared to the average  5.46%*)!{" "}
                 </div>
                 <div

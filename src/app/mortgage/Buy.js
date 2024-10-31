@@ -19,7 +19,7 @@ const Buy = ({}) => {
                 <div className={`${styles['main-button-container']}`}>
                     <button onClick={()=>{ 
                         // router.push(`/get_started?flow=sell&step=0&branch=11`); 
-                        gtmPush(["callback", "sell_learn_more", ()=>{router.push(`https://www.gethomeeasy.com/`);}]);
+                        gtmPush(["callback", "sell_learn_more", ()=>{ window.open('https://www.gethomeeasy.com/', '_blank')}]);
                     }} className='darken-on-hover'>Get Started &rarr;</button>
                 </div>
 

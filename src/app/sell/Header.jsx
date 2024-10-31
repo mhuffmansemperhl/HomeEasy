@@ -110,7 +110,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className={styles["header-content-text"]}>
-                 Save thousands, pop the champaign & start packing
+                 Save thousands, pop the champagne & start packing
                 </div>
 
             </div>
