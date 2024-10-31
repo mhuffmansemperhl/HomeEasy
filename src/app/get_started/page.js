@@ -16,6 +16,7 @@ import styles from "./page.module.scss";
 import { useDebouncedCallback } from "use-debounce";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 import getZipCode from "@/helpers/getCustomerZipCode";
+import cermoPayload from "@/helpers/cermoPayload";
 
 export default function Question() {
   const pathname = usePathname();
@@ -211,10 +212,17 @@ export default function Question() {
         className={styles["allways-bottom"]}
         label={"Next"}
         callback={(data) => {
+          const payloadForCermo = cermoPayload({flow, ...data,})
+          console.log(payloadForCermo, 'xdd')
+          fetch('/api/cermo_api', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payloadForCermo)
+          });
           // nextStepValidate(pathname, router, searchParams);
-          nextStepValidate(pathname, router, searchParams, () =>
-            createNewAccount(data)
-          );
+          nextStepValidate(pathname, router, searchParams);
         }}
       />
     );
@@ -554,7 +562,7 @@ export default function Question() {
         title={options.title || "Next steps"}
         copy={
           copy || options.copy ||
-          "One of our representatives will call you shortly to learn more about what you are looking for and to discuss options."
+          "Schedule a time with us and one of our representatives will call you, to discover and explore more about what you are looking for, and to discuss your best options"
         }
         iframe={iframe}
       />
@@ -573,8 +581,6 @@ export default function Question() {
   }
 
   const loadBestWayToReachYouPage = (options) => {
-    false && console.log("loading  loadBestWayToReachYouPag");
-    false && console.log(`precall branch is${branch}`);
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -600,6 +606,15 @@ export default function Question() {
         className={styles["allways-bottom"]}
         label={"Next"}
         callback={(data) => {
+        const payloadForCermo = cermoPayload({flow, ...data,})
+        fetch('/api/cermo_api', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payloadForCermo)
+        });
+
           nextStepValidate(pathname, router, searchParams);
          
         }}

@@ -5,6 +5,7 @@ import { produce } from "immer";
 
 import styles from './styles/FlowSignupForm.module.scss';
 import { useEffect, useState } from "react";
+import { formatPhoneNumber } from "@/helpers/formatPhoneNumber";
 
 const FlowSignupForm = ({callback, store_key}) => {
     const router = useRouter();
@@ -86,9 +87,9 @@ const FlowSignupForm = ({callback, store_key}) => {
     }
 
     function handleMobilePhoneNumberChange(evt){
-        const tval = evt.target.value;
+        const tval = evt.target.value.replace(/\D/g, '').slice(0, 10);
         setFormData(produce(form_data, draft => {
-            draft[store_key]["mobile_phone_number"] = tval;
+            draft[store_key]["mobile_phone_number"] = formatPhoneNumber(tval);
         }));
     }
 
@@ -236,7 +237,7 @@ const FlowSignupForm = ({callback, store_key}) => {
                     {/* TODO: add links to terms of use and privacy policy */}
 
                     <div className={`${styles['signup-form-disclaimer-container']}`}>
-                    By signing up, I agree to HomeEasy Home’s <a href="">Terms of Use</a>,<a href="">Privacy Policy</a>, and expressly agree to receive HomeEasy Homes email and texts.  Message and data rates may apply. 
+                    By signing up, I agree to HomeEasy Home’s <a a href="/tos" target="_blank">Terms of Use</a>,<a href="/files/privacy.pdf" target="_blank"> Privacy Policy</a>, and expressly agree to receive HomeEasy Homes email and texts.  Message and data rates may apply. 
                     </div>
                   
 

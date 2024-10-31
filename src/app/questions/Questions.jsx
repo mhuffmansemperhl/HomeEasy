@@ -90,7 +90,7 @@ const Questions = () => {
         },
         {
             title: "How do I request an instant cash offer from HomeEasy Homes?",
-            copy: "If you are looking for a fast, easy, stress-free way of selling your home, all you need to do is <a href='/get_started?flow=sell&step=0&branch=9'> request an InstantOffer</a>.  Don't worry, the process is simple, fast, a completely obligation free.  Just enter in your address and we'll guide you through a few brief questions about the condition, features, and upgrades of your home.  We genuinely want to understand all the unique aspects that make your home special, and we'll take these details into account when creating your personalized InstantOffer.",
+            copy: "If you are looking for a fast, easy, stress-free way of selling your home, all you need to do is <a href='/get_started?flow=sell&step=0&branch=9'> request an InstantOffer</a>.  Don't worry, the process is simple, fast, and completely obligation free.  Just enter in your address and we'll guide you through a few brief questions about the condition, features, and upgrades of your home.  We genuinely want to understand all the unique aspects that make your home special, and we'll take these details into account when creating your personalized InstantOffer.",
             visible: false,
         },
         {
@@ -125,7 +125,7 @@ const Questions = () => {
         },
         {
             title: "What does contingent mean when selling a home?",
-            copy: " Contingent or contingency means the sale of the home is dependent on something, so the buyer has additional conditions before finalizing the sale. For example, a lot of the time a home sale is contingent pending a home inspection and appraisal of a property. Once both of those things come back to the buyer’s liking, they proceed forward with the home sale. ",
+            copy: " Contingent or contingency means the sale of the home is dependent on something, so the buyer has additional conditions before finalizing the sale. For example, a lot of the time a home sale is contingent pending a home inspection and appraisal of a property. Once both of those things come back to the buyer’s liking, proceed with the home sale. ",
             visible: false,
         },
         {
@@ -183,7 +183,7 @@ const Questions = () => {
         },
         {
             title: "Do I need to have a home inspection?",
-            copy: " Home inspections are for the buyer’s wellbeing, however it is also a tool that is used for leverage when putting in an offer. The seller can sell a property as-is, but a home sale is always encouraged from the buyer’s agent so the buyer knows what they’re in for.",
+            copy: " Home inspections are for the buyer’s wellbeing, however it is also a tool that is used for leverage when putting in an offer. The seller can sell a property as-is, but a home inspection is always encouraged from the buyer’s agent so the buyer knows what they’re in for.",
             visible: false,
         },
         {
@@ -197,7 +197,7 @@ const Questions = () => {
             visible: false,
         },
         {
-            title: "Why the appraisal matter when buying/selling a house?",
+            title: "Why does the appraisal matter when buying/selling a house?",
             copy: "The appraisal is done by a third party that the lender hires to give an unbiased, fair market value for what the house is worth in today’s market and in the condition it is in. If the home appraises for over or under what the buyer is paying it can make or break a deal.",
             visible: false,
         },

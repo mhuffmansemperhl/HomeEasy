@@ -66,7 +66,7 @@ const HowItWorks = ({}) => {
                             link_text="Get started"
                             callback={()=>{
                                 // router.push(`/get_started?flow=sell&step=0&branch=9`);
-                                gtmPush(["callback", "sell_list_one", ()=>{router.push(`https://www.gethomeeasy.com/`);}]);
+                                gtmPush(["callback", "sell_list_one", ()=>{ window.open('https://www.gethomeeasy.com/', '_blank')}]);
                             }}
                         />
                     </div>
