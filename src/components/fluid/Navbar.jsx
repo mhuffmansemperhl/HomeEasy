@@ -304,7 +304,7 @@ const Navbar = () => {
                       "callback",
                       "nav_phone",
                       () => {
-                        window.open("tel:866-904-3250");
+                        window.location.href = "tel:866-904-3250";
                       },
                     ]);
                   }}
