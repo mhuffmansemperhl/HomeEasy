@@ -15,16 +15,18 @@ const FlowChips = ({nav_items}) => {
     const flow = useFlowGetStartedStore(state => state.flow);
     const setFlow = useFlowGetStartedStore(state => state.setFlow);
     const nextStep = useFlowGetStartedStore(state => state.nextStep);
+    const setStep = useFlowGetStartedStore(state => state.setStep);
 
     
 
     useEffect(() => {
-       
-        if(chipIndex > -1){
+       if(chipIndex > -1){
             setFlow(["sell", "buy", "sellbuy", "instantoffer"][chipIndex]);
+            if(chipIndex === 0){
+                setStep(-1);
+            }
             nextStep(nav_items.pathname, nav_items.router, nav_items.searchParams);
-
-}
+        }
     }, [chipIndex]);
 
 
