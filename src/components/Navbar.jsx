@@ -93,13 +93,13 @@ const Navbar = () => {
           gtag: "menu_mtg_todays_rates",
         },
         {
-          title: "Home loans",
+          title: "Purchase",
           link: "/mortgage",
           gtag: "menu_mtg_home_loans",
         },
         {
           title: "Refinance",
-          link: "/mortgage",
+          link: "https://www.gethomeeasy.com/",
           gtag: "menu_mtg_refi",
         },
       ],
