@@ -306,7 +306,7 @@ const Advantage = () => {
                         () => {
                         },
                       ]);
-                      window.open("/booking", "_blank");
+                      router.push(`/get_started`);
 
                       // router.push('/booking');
                     }}
