@@ -110,7 +110,7 @@ const Questions = () => {
         },
         {
             title: "What costs are involved when I sell my home with HomeEasy Homes?",
-            copy: "As the listing agent, we only charge 1% vs the national average of 6% of your home&apos;s final purchase amount for our all-inclusive services.  As the seller, you are also required to pay the buyer&apos;s agent commission, which typically ranges between 2.5-3%, depending on the market.  Additional fees include any local taxes and closing costs associated with the state&apos;s legal requirements. Available in select zip codes<sup>2</sup>     ",
+            copy: "As the listing agent, we only charge 1% vs the national average of 6% of your home&apos;s final purchase amount for our all-inclusive services.  As the seller, you may be required to pay the buyer&apos;s agent commission, which typically ranges between 2.5-3%, depending on the market.  Additional fees include any local taxes and closing costs associated with the state&apos;s legal requirements. Available in select zip codes<sup>2</sup>     ",
             visible: false,
         },
         {
