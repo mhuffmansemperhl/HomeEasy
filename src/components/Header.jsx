@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import Navbar from './Navbar';
 import styles from './styles/Header.module.scss';
 import useWindowSize from '../hooks/useWindowSize';
-import GooglePlacesScript, {getSuggestions, getSuggestionsAddressOnly, getSuggestionsWidget} from "@/components/GooglePlacesScript";
+import GooglePlacesScript, {getSuggestionsWidget} from "@/components/GooglePlacesScript";
 import useFlowGetStartedStore from "@/store/store.js"
 import { produce } from "immer";
 import city_codes from "public/data/city_codes.json";
@@ -23,100 +23,78 @@ import BetaIcon from '@/compositions/BetaIcon';
 
 const Header = () => {
     const router = useRouter();
-    const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
-    // AIzaSyDEAax0e2MX0H37S9EK9K18GpHhOYOrFSk
-    const [googleApiLoaded, setGoogleApiLoaded] = useState(false);
     const [placeholder_text, setPlaceholderText] = useState("Enter Address or City, State");
-    // const [selectedIndex, setSelectedIndex] = useState(0);
     const flow = useFlowGetStartedStore(state => state.flow);
     const setFlow = useFlowGetStartedStore(state => state.setFlow);
 
-    // const [address, setAddress] = useState("");
-    let last_search_type = "street";
-
+   
     const form_data = useFlowGetStartedStore(state => state.form_data);
     const setFormData = useFlowGetStartedStore(state => state.setFormData);
-    const new_address = useFlowGetStartedStore(state => state.new_address);
-    const setNewAddress = useFlowGetStartedStore(state => state.setNewAddress);
+   
 
     const google_api_loaded = useFlowGetStartedStore(state => state.google_api_loaded);
 
     const searchInputRef = useRef();
     const autoCompleteRef = useRef();
+    
+    
+
+    useEffect(() => {
+       
+      if(!flow) {
+        
+        setFlow("buy");
+      }
+    }, []);
+
+
+    useEffect(() => {
+      if(form_data['changed_address']){
+        if(Object.keys(form_data['changed_address']).length === 0){
+          
+
+        }else{
+          setFormData(produce(form_data, draft => {
+            if(flow === "instantoffer") {
+              draft['sell_address'] = form_data['changed_address'];
+            }
+            if(flow === "sell") {
+              draft['sell_address'] = form_data['changed_address'];
+            }
+            if(flow === "sellbuy") {
+              draft['sell_address'] = form_data['changed_address'];
+            }
+            if(flow === "buy") {
+              draft['buy_address'] = form_data['changed_address'];
+              
+            }
+            draft['changed_address'] = {};
+          }));
+          doAddressSearch()
+
+        }
+
+      }
+
+    }, [form_data['changed_address']]);
+
+    useEffect(() => {
+       
+      if(google_api_loaded) {
+          autoCompleteRef.current = getSuggestionsWidget(searchInputRef);
+          autoCompleteRef.current.addListener("place_changed", async function () {
+           
+              const place = await autoCompleteRef.current.getPlace();
+              setFormData(produce(form_data, draft => {
+              
+                draft['changed_address'] = place;
+              }));
+            
+             });            
+      }
+    }, [google_api_loaded]);
 
     
-    useEffect(() => {
-  
-      if(new_address) {
-        setNewAddress(false);
-        processPlaceSelection();
-      }
-  }, [new_address]);
-
-    useEffect(() => {
-   
-      if((form_data['sell_address'] || form_data['buy_address']) && ((form_data['sell_address'] && "place_id" in form_data['sell_address']) || (form_data['buy_address'] && "place_id" in form_data['buy_address']))) {
-        
-        setNewAddress(true);
-      }else{
-        let name = undefined;
-
-        if(form_data['sell_address']){
-          name = form_data['sell_address']['name'];
-        }
-        if(form_data['buy_address']){
-          name = form_data['buy_address']['name'];
-        }
-
-        if (name !== undefined) {
-
-          // STARTING NEW GEOCODER
-          
-          const payload = {};
-          payload.address = name;
-
-
-          const options = {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(payload)
-          };          
-
-          fetch('https://webhooks.semperhl.com/api/geodecoder', options)
-          .then(response => response.json())
-          .then(data => {
-            
-            const place = data[0];
-            
-            setFormData(produce(form_data, draft => {
-              if(flow === "instantoffer") {
-                draft['sell_address'] = place;
-              }
-              if(flow === "sell") {
-                draft['sell_address'] = place;
-              }
-              if(flow === "sellbuy") {
-                draft['sell_address'] = place;
-              }
-              if(flow === "buy") {
-                draft['buy_address'] = place;
-                // 
-                // 
-              }
-            }));
-
-
-
-          })
-          .catch(error => console.error(error));
-
-        }
-
-      }
-  }, [form_data['sell_address'], form_data['buy_address']]);
-
     function changeIndex(idx) {
       
         setFlow(idx);
@@ -134,51 +112,7 @@ const Header = () => {
         }
     }
 
-    function processPlaceSelection() {
-      let store_key_prefix = "sell";
-      if(flow === "buy") {
-        store_key_prefix = "buy";
-      }
-      const place = form_data[`${store_key_prefix}_address`];
-      
-
-      if(place && 'address_components' in place && place['address_components'].length > 0) {
-          const gadd = place['address_components'];
-          const add_obj = {};
-          const items = gadd.map((item) => {
-              return `${item.types[0]}:${item.long_name}`;
-          }).forEach((item) => {
-              const key = item.split(':')[0];
-              const val = item.split(':')[1];
-              add_obj[key] = val;
-          });
-          
-
-          if(add_obj['route'] !== undefined) {
-              const tadd = `${add_obj['street_number']} ${add_obj['route']}`;
-              last_search_type = "street";
-              doAddressSearch("street", tadd);
-              // setAddress(tadd);
-          }else if(add_obj['postal_code'] !== undefined){
-              const tadd = `${add_obj['postal_code']}`;
-              last_search_type = "zipcode";
-              doAddressSearch("zipcode", tadd);
-              // setAddress(tadd);
-          }else if(add_obj['locality'] !== undefined && add_obj['administrative_area_level_1'] !== undefined) {
-              const tadd = `${add_obj['locality']}, ${add_obj['administrative_area_level_1']}`;
-              last_search_type = "town";
-              doAddressSearch("town", tadd);
-              // setAddress(tadd);
-          }else {
-            doAddressSearch()
-          }
-  
-      }else{
-      }
-
-    }
-
-    function doAddressSearch(search_type, the_address) {
+    function doAddressSearch() {
       
       if(flow === "sell"){
         
@@ -202,69 +136,8 @@ const Header = () => {
 
     }
 
- 
-
-      
     const size = useWindowSize();
-      useEffect(() => {
-       
-        if(!flow) {
-          
-          setFlow("buy");
-        }
-      }, []);
-
-
-      useEffect(() => {
-        
-        
-        if(form_data['changed_address']){
-          if(Object.keys(form_data['changed_address']).length === 0){
-            
-  
-          }else{
-            setFormData(produce(form_data, draft => {
-              if(flow === "instantoffer") {
-                draft['sell_address'] = form_data['changed_address'];
-              }
-              if(flow === "sell") {
-                draft['sell_address'] = form_data['changed_address'];
-              }
-              if(flow === "sellbuy") {
-                draft['sell_address'] = form_data['changed_address'];
-              }
-              if(flow === "buy") {
-                draft['buy_address'] = form_data['changed_address'];
-                
-              }
-              draft['changed_address'] = {};
-            }));
-  
-          }
-  
-        }
-
-      }, [form_data['changed_address']]);
-
-      
-
-      useEffect(() => {
-         
-        if(google_api_loaded) {
-            autoCompleteRef.current = getSuggestionsWidget(searchInputRef);
-            autoCompleteRef.current.addListener("place_changed", async function () {
-             
-                const place = await autoCompleteRef.current.getPlace();
-                setFormData(produce(form_data, draft => {
-                
-                  draft['changed_address'] = place;
-                }));
-              
-               });            
-        }
-    }, [google_api_loaded]);
-
-
+ 
     return (
         <div  className={styles['main-component']}>
      

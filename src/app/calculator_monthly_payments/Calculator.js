@@ -161,69 +161,30 @@ const setNewAddress = useFlowGetStartedStore(state => state.setNewAddress);
     }
 
 
-    useEffect(() => {
+    // useEffect(() => {
       
 
-      if(form_data['buy_address'] && Object.keys(form_data['buy_address']).length > 0 && "place_id" in form_data['buy_address']){
-        // do process place here
+    //   if(form_data['buy_address'] && Object.keys(form_data['buy_address']).length > 0 && "place_id" in form_data['buy_address']){
+    //     // do process place here
         
-        processPlaceSelection();
+    //     processPlaceSelection();
 
-      }
+    //   }
 
-    }, [form_data['buy_address']]);
+    // }, [form_data['buy_address']]);
 
 
     useEffect(() => {
        
 
         if(form_data['changed_address']){
-          if(Object.keys(form_data['changed_address']).length > 0){
-
-            // if good, switch to buy_address
-            if("place_id" in form_data['changed_address']){
-              setFormData(produce(form_data, draft => {
-                draft['buy_address'] = form_data['changed_address'];
-                draft['changed_address'] = {};
-              }));
-            }else{
-              
-              if("name" in form_data['changed_address']){
-                const name = form_data['changed_address']['name'];
-                if(name !== undefined){
-                  // STARTING NEW GEOCODER
-                 
-                  const payload = {};
-                  payload.address = name;
-
-
-                  const options = {
-                    method: 'POST',
-                    headers: {
-                      'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(payload)
-                  };          
-
-                  fetch('https://webhooks.semperhl.com/api/geodecoder', options)
-                  .then(response => response.json())
-                  .then(data => {
-                    
-                    const place = data[0];
-                    
-                    setFormData(produce(form_data, draft => {
-                        draft['changed_address'] = place;
-                    }));
-
-
-                  })
-                  .catch(error => console.error(error));                            
-              }
-            }
-
-            // if name, do geocoder and reset changed_address
-          }
-          }
+          setFormData(produce(form_data, draft => {
+            draft['buy_address'] = form_data['changed_address'];
+            draft['changed_address'] = null;
+          
+          }));
+          router.push('/get_started?flow=buy&step=2');
+         
         }
 
     }, [form_data['changed_address']]);
@@ -806,7 +767,7 @@ useEffect(() => {
                 <div className={`${styles["main-calculator-display-get-started-title"]}`}>Find your next home the easy way.</div>
                 <div className={`${styles["main-calculator-display-get-started-copy"]}`}>Finding your dream home doesn’t have to be complicated. Start your search the easy way.</div>
                 <div className={`${styles["main-calculator-display-get-started-field-container"]}`}>
-                <input  ref={searchInputRef} onKeyUp={(e)=>{handleKeyup(e);}} type="text" placeholder="Enter city, state" />
+                <input  ref={searchInputRef} type="text" placeholder="Enter city, state" />
                     {window_size.width < 1024 && 
                     <button onClick={()=>{
                       

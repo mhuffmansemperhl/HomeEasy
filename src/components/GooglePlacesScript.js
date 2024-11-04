@@ -19,7 +19,7 @@ export function getSuggestionsWidget(the_ref) {
     return new window.google.maps.places.Autocomplete(
         the_ref.current,
         searchOptions
-       );
+    );
 }
 
 export function getSuggestionsWidgetAddressOnly(the_ref) {
@@ -110,14 +110,14 @@ const GooglePlacesScript = () => {
     useEffect(() => {
         setGoogleApiLoaded(false);
         const intervalToken = setInterval(() => {
-            false && console.log("...checking for google maps");
+            
             if(window.google !== undefined){
-                false && console.log("...google maps loaded");
+                
                 setGoogleApiLoaded(true);
                 clearInterval(intervalToken);
             }
         }, 1000);
-        false && console.log("...back on google places script");
+        
     }, []);
   return (
     <>
