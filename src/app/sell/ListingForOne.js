@@ -63,7 +63,7 @@ experience.</div>
 to getting you home faster, smarter, and easier.</div>
 
                     <div className={`${styles['main-copy-copy-title']}`}>Close on your home with more money in your pocket!</div>
-                    <div className={`${styles['main-copy-copy']}`}>Close on your home with more money in your pocket!</div>
+                    <div className={`${styles['main-copy-copy']}`}>Get the same full-service experience for thousands less!</div>
 
                     <div className={`${styles['main-copy-footer']}`}>
                         <ArrowButton
