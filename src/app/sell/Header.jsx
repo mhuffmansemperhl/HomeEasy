@@ -70,7 +70,7 @@ const Header = () => {
       <Navbar />
       <div className={`${styles["main-content-container"]} centered-content2`}>
         <div className={`${styles["header-content-container"]}`}>
-          <BetaIcon containerSx={{ marginBottom: 32}} imgSx={{ width: 54 }} />
+          <BetaIcon containerSx={{ position: "absolute", top: "-35px", left: "4px"}} imgSx={{ width: 54 }} />
           <div className={styles["header-content-title"]}>
             How to sell & save, the <span>easy way.</span>
           </div>

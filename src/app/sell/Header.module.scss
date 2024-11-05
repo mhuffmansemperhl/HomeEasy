@@ -118,7 +118,7 @@ display: none;
             width: 100%;
             font-weight: 700 !important;
 
-            font-size: 3.2vw;
+            font-size: 3.75vw;
             line-height: 3.385416667vw;                    
 
             @media (min-width: 0px) and (max-width: 1023px) {
@@ -131,26 +131,7 @@ display: none;
                 line-height: 11.46666667vw;
                 // padding: 0px 20px;
             }
-            // @media (min-width: 1024px) and (max-width: 1279px) {
-            //     font-size: calc(0.88888 * 56px);
-            //     // font-weight: 800;
-            //     // line-height: 58px;                    
-            //     line-height: calc(0.8888 * 58px);  
-            //     width: 80%;                  
-                
-            // }
-            // @media (min-width: 1280px) and (max-width: 1919px) {
-            //     font-size: calc(0.88888 * 72px);
-            //     // font-weight: 800;
-            //     // line-height: 65px;                    
-            //     line-height: calc(0.8888 * 65px);                    
-            //     width: 80%;                   
-            // }
-            // @media (min-width: 1920px) {
-            //     font-size: calc(0.88888 * 72px);
-            //     line-height: calc(0.8888 * 65px); 
-            //     width: 80%;                   
-            // }
+           
 
             span {
                 font-weight: 900 !important;
