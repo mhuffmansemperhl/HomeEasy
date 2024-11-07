@@ -2,38 +2,31 @@
 import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import styles from "./Header.module.scss";
-import useWindowSize from "../../hooks/useWindowSize";
 import { useRouter } from "next/navigation";
 import ArrowButton from '@/components/fluid/ArrowButton';
 import useFlowGetStartedStore from "@/store/store.js";
 import GooglePlacesScript, {
-  getSuggestionsAddressOnly,
   getSuggestionsWidgetAddressOnly,
 } from "@/components/GooglePlacesScript";
 import { produce } from "immer";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 import BetaIcon from "@/compositions/BetaIcon";
+import useScreenSize from "@/hooks/useScreenSize";
 
 const Header = () => {
   const router = useRouter();
   const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
-
-  // const [selectedIndex, setSelectedIndex] = useState(0);
   const form_data = useFlowGetStartedStore((state) => state.form_data);
   const setFormData = useFlowGetStartedStore((state) => state.setFormData);
   const google_api_loaded = useFlowGetStartedStore(
     (state) => state.google_api_loaded
   );
 
-  const new_address = useFlowGetStartedStore((state) => state.new_address);
+  const {isTablet} = useScreenSize()
   const setNewAddress = useFlowGetStartedStore((state) => state.setNewAddress);
-
-  const size = useWindowSize();
 
   const searchInputRef = useRef();
   const autoCompleteRef = useRef();
-
-  function handleKeyup(evt) {}
 
   function processPlaceSelection() {
      
@@ -52,14 +45,8 @@ const Header = () => {
           })
         );
         setNewAddress(true);
-        // setTimeout(() => {
-
         processPlaceSelection();
-        // }, 1000);
-        // processPlaceSelection(place);
-        // false && console.log(results);
-        // getLatLng(results[0])
-        // })
+     
       });
     }
   }, [google_api_loaded]);
@@ -70,7 +57,16 @@ const Header = () => {
       <Navbar />
       <div className={`${styles["main-content-container"]} centered-content2`}>
         <div className={`${styles["header-content-container"]}`}>
-          <BetaIcon containerSx={{ position: "absolute", top: "-35px", left: "4px"}} imgSx={{ width: 54 }} />
+          <BetaIcon 
+            containerSx={{ 
+              position: !isTablet && "absolute", top: "-35px", left: !isTablet && "4px",
+              width: isTablet && "100%",
+              display: isTablet && "flex",
+              flexDirection: isTablet && "column",
+              alignItems: isTablet && "center",
+            }} 
+            imgSx={{ width: 54 }} 
+          />
           <div className={styles["header-content-title"]}>
             How to sell & save, the <span>easy way.</span>
           </div>
@@ -119,7 +115,6 @@ const Header = () => {
                         <ArrowButton
                             link_text="Let’s sell your home!"
                             callback={()=>{
-                                // router.push(`/get_started?flow=sell&step=0&branch=9`);
                                 gtmPush(["callback", "sell_list_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);
                             }}
                         />

@@ -6,9 +6,11 @@ import { motion } from "framer-motion";
 import ArrowButton from "./ArrowButton";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 import BetaIcon from "@/compositions/BetaIcon";
+import useScreenSize from "@/hooks/useScreenSize";
 
 const Advantage = () => {
   const router = useRouter();
+  const {isTablet} = useScreenSize();
   const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
 
   return (
@@ -52,7 +54,6 @@ const Advantage = () => {
                   <ArrowButton
                     link_text="Get started"
                     callback={() => {
-                      // router.push('/get_started');
                       gtmPush([
                         "callback",
                         "home_advtg_get_started_1",
@@ -168,7 +169,17 @@ const Advantage = () => {
               <div
                 className={`${styles["advantage-content-item-card"]} ${styles["advantage-content-item-card1"]}`}
               >
-                <BetaIcon containerSx={{ marginBottom: "36px" }} imgSx={{width: "48px"}} popupSx={{zIndex: "100"}} />
+                <BetaIcon 
+                  containerSx={{ 
+                    marginBottom: isTablet ? "20px" : "36px",
+                    width: isTablet && "100%",
+                    display: isTablet && "flex",
+                    flexDirection: isTablet && "column",
+                    alignItems: isTablet && "center",
+                  }} 
+                  imgSx={{width: "48px"}} 
+                  popupSx={{zIndex: "100", left: isTablet && "45px"}}
+                />
                 <div className={styles["advantage-content-item-card-title"]}>
                 Sell your home instantly for cash or list it for only 1%.
                 </div>
@@ -183,7 +194,6 @@ const Advantage = () => {
                   <ArrowButton
                     link_text="Get started"
                     callback={() => {
-                      // router.push('/get_started');
                       gtmPush([
                         "callback",
                         "home_advtg_get_started_2",
@@ -299,7 +309,6 @@ const Advantage = () => {
                   <ArrowButton
                     link_text="Get started"
                     callback={() => {
-                      // window.open("/booking", '_blank');
                       gtmPush([
                         "callback",
                         "home_advtg_get_started_3",
@@ -307,8 +316,7 @@ const Advantage = () => {
                         },
                       ]);
                       router.push(`/get_started`);
-
-                      // router.push('/booking');
+                    
                     }}
                   />
                 </div>

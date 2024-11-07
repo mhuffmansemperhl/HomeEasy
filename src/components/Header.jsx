@@ -1,9 +1,6 @@
 "use client"
 import { useRef, useState, useEffect } from 'react';
-import { flushSync } from 'react-dom';
-// import Head from 'next/head';
-import Script from "next/script"
-// import GoogleJS from './GoogleJS';
+
 import { useRouter } from "next/navigation";
 import Navbar from './Navbar';
 import styles from './styles/Header.module.scss';
@@ -11,18 +8,14 @@ import useWindowSize from '../hooks/useWindowSize';
 import GooglePlacesScript, {getSuggestionsWidget} from "@/components/GooglePlacesScript";
 import useFlowGetStartedStore from "@/store/store.js"
 import { produce } from "immer";
-import city_codes from "public/data/city_codes.json";
-// import { geocodeByAddress } from 'react-places-autocomplete';
-// import PlacesAutocomplete, {
-//     geocodeByAddress,
-//     getLatLng,
-//   } from 'react-places-autocomplete';
-import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+
 import BetaIcon from '@/compositions/BetaIcon';
+import useScreenSize from '@/hooks/useScreenSize';
 
 
 const Header = () => {
     const router = useRouter();
+    const {isTablet} = useScreenSize();
     const [placeholder_text, setPlaceholderText] = useState("Enter Address or City, State");
     const flow = useFlowGetStartedStore(state => state.flow);
     const setFlow = useFlowGetStartedStore(state => state.setFlow);
@@ -181,7 +174,6 @@ const Header = () => {
                     <div className={styles["transparentprocess-content-tabs-tabs"]}>
 
                     <div onClick={()=>{
-                          // gtmPush(["callback", "home_hero_buy", ()=>{changeIndex("buy");}]);
                           changeIndex("buy");
                         }} className={`${styles["transparentprocess-content-tabs-tab"]} ${flow === "buy" ? styles["transparentprocess-content-tabs-tab-selected"] : ''}`}>
                         Buy
@@ -189,33 +181,30 @@ const Header = () => {
                     <div
                         style={{display: "flex", opacity: "1", marginRight: "74px"}}
                         onClick={()=>{
-                        // gtmPush(["callback", "home_hero_sell", ()=>{changeIndex("sell");}]);
-                        changeIndex("sell");                          
-                      }} 
+                          changeIndex("sell");                          
+                        }} 
                       className={`${styles["transparentprocess-content-tabs-tab"]} ${flow === "sell" ? styles["transparentprocess-content-tabs-tab-selected"] : ''}`}
                     >
                       <span style={{opacity: flow === "sell" ? 1 : 0.5 }} >Sell</span>
                       <BetaIcon 
                         containerSx={{
                           position: "absolute",
-                          left: "34px",
+                          left: isTablet ? "38px" : "34px",
                           zIndex: "100",
                         }}
                         popupSx={{
                           position: "absolute",
-                          left: "-20px",
+                          left: isTablet ? "0" : "-20px",
                         }}
                       />
                     </div>      
                     <div onClick={()=>{
-                        // gtmPush(["callback", "home_hero_buy_sell", ()=>{changeIndex("sellbuy");}]);
                         changeIndex("sellbuy");
                       }} className={`${styles["transparentprocess-content-tabs-tab"]} ${flow === "sellbuy" ? styles["transparentprocess-content-tabs-tab-selected"] : ''}`}>
                       Buy &amp; Sell
                     </div>
                       {size.width >= 1024 &&
                     <div onClick={()=>{
-                        // gtmPush(["callback", "home_hero_io", ()=>{changeIndex("instantoffer");}]);
                         changeIndex("instantoffer");
                         }} className={`${styles["transparentprocess-content-tabs-tab"]} ${flow === "instantoffer" ? styles["transparentprocess-content-tabs-tab-selected"] : ''}`}>
                       InstantOffer

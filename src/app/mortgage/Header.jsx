@@ -1,13 +1,11 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import styles from "./Header.module.scss";
-import useWindowSize from "../../hooks/useWindowSize";
 import { useRouter } from "next/navigation";
 import ArrowButton from '@/components/fluid/ArrowButton';
 import useFlowGetStartedStore from "@/store/store.js";
 import GooglePlacesScript, {
-  getSuggestionsAddressOnly,
   getSuggestionsWidgetAddressOnly,
 } from "@/components/GooglePlacesScript";
 import { produce } from "immer";
@@ -17,25 +15,18 @@ const Header = () => {
   const router = useRouter();
   const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
 
-  // const [selectedIndex, setSelectedIndex] = useState(0);
   const form_data = useFlowGetStartedStore((state) => state.form_data);
   const setFormData = useFlowGetStartedStore((state) => state.setFormData);
   const google_api_loaded = useFlowGetStartedStore(
     (state) => state.google_api_loaded
   );
 
-  const new_address = useFlowGetStartedStore((state) => state.new_address);
   const setNewAddress = useFlowGetStartedStore((state) => state.setNewAddress);
-
-  const size = useWindowSize();
 
   const searchInputRef = useRef();
   const autoCompleteRef = useRef();
 
-  function handleKeyup(evt) {}
-
   function processPlaceSelection() {
-     
     router.push(`/get_started?flow=sell&step=1`);
   }
 
@@ -51,14 +42,8 @@ const Header = () => {
           })
         );
         setNewAddress(true);
-        // setTimeout(() => {
-
         processPlaceSelection();
-        // }, 1000);
-        // processPlaceSelection(place);
-        // false && console.log(results);
-        // getLatLng(results[0])
-        // })
+    
       });
     }
   }, [google_api_loaded]);

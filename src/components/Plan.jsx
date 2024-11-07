@@ -18,13 +18,7 @@ const Plan = () => {
                     <div className={styles['main-component-title']}>Plan with confidence.</div>
                     <div className={styles['main-component-copy']}>Unlock our unmatched expertise with our free tools and calculators to empower your real estate journey.</div>
                     <div className={styles['main-component-card-container']}>
-                        {/* <motion.div 
-                        initial={{opacity: 0}}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ ease: "easeOut", duration: 2, delay: 0 }}            
-                        viewport={{ once: true }}
-                        className={styles['main-component-card']}> <a onClick={()=>{gtmPush(["callback", "home_plan_card_1", ()=>{router.push(`/calculator_proceeds`);}]);}} > <img src="/img/card1.png" alt="How much can I make" /> </a></motion.div> */}
-                        <motion.div 
+                       <motion.div 
                         initial={{opacity: 0}}
                         whileInView={{ opacity: 1 }}
                         transition={{ ease: "easeOut", duration: 2, delay: 0 }}            
