@@ -1,16 +1,10 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import useWindowSize from "@/hooks/useWindowSize";
 import IconPopover from "@/components/fluid/IconPopover";
-import DuoInput from "@/components/fluid/DuoInput";
-// import UnitInput from "@/components/fluid/UnitInput";
 import ArrowButton from '@/components/fluid/ArrowButton';
 
-import useFlowGetStartedStore from "@/store/store.js";
-import { produce } from "immer";
-
-import GooglePlacesScript, {getSuggestions, getSuggestionsWidget} from "@/components/GooglePlacesScript";
 
 import { useDebouncedCallback } from "use-debounce";
 
@@ -20,41 +14,37 @@ import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 
 
 import styles from "./Calculator.module.scss";
-import { userAgent } from "next/server";
 import BetaIcon from "@/compositions/BetaIcon";
+import useScreenSize from "@/hooks/useScreenSize";
 
 const Calculator = ({}) => {
   const router = useRouter();
+  const {isTablet} = useScreenSize();
   const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
 
   const window_size = useWindowSize();
+  const[expected_home_sale_price, setExpectedHomeSalePrice] = useState(500000);
+  const[remaining_mortgage_owed, setRemainingMortgageOwed] = useState(200000);
 
+  const[agent_fees_tb, setAgentFeesTB] = useState("$30,000");
+  const[agent_fees_io, setAgentFeesIO] = useState("$0");
+  const[agent_fees_lfo, setAgentFeesLFO] = useState("$15,000");
 
+  const[seller_consessions_tb, setSellerConcessionsTB] = useState("$10,000");
+  const[seller_consessions_io, setSellerConcessionsIO] = useState("$0");
+  const[seller_consessions_lfo, setSellerConcessionsLFO] = useState("$2,500");
 
-  const payment_data = useFlowGetStartedStore(state => state.payment_data);
+  const[closing_costs_tb, setClosingCostsTB] = useState("$15,000");
+  const[closing_costs_io, setClosingCostsIO] = useState("$0");
+  const[closing_costs_lfo, setClosingCostsLFO] = useState("$2,500"); //vals
 
-    const[expected_home_sale_price, setExpectedHomeSalePrice] = useState(500000);
-    const[remaining_mortgage_owed, setRemainingMortgageOwed] = useState(200000);
+  const[avg_home_prep_cost_and_move_tb, setAvgHomePrepCostAndMoveTB] = useState("$5,000");
+  const[avg_home_prep_cost_and_move_io, setAvgHomePrepCostAndMoveIO] = useState("$2,500");
+  const[avg_home_prep_cost_and_move_lfo, setAvgHomePrepCostAndMoveLFO] = useState("$5,000");
 
-    const[agent_fees_tb, setAgentFeesTB] = useState("$30,000");
-    const[agent_fees_io, setAgentFeesIO] = useState("$0");
-    const[agent_fees_lfo, setAgentFeesLFO] = useState("$15,000");
-
-    const[seller_consessions_tb, setSellerConcessionsTB] = useState("$10,000");
-    const[seller_consessions_io, setSellerConcessionsIO] = useState("$0");
-    const[seller_consessions_lfo, setSellerConcessionsLFO] = useState("$2,500");
-
-    const[closing_costs_tb, setClosingCostsTB] = useState("$15,000");
-    const[closing_costs_io, setClosingCostsIO] = useState("$0");
-    const[closing_costs_lfo, setClosingCostsLFO] = useState("$2,500"); //vals
-
-    const[avg_home_prep_cost_and_move_tb, setAvgHomePrepCostAndMoveTB] = useState("$5,000");
-    const[avg_home_prep_cost_and_move_io, setAvgHomePrepCostAndMoveIO] = useState("$2,500");
-    const[avg_home_prep_cost_and_move_lfo, setAvgHomePrepCostAndMoveLFO] = useState("$5,000");
-
-    const[total_tb, setTotalTB] = useState("");
-    const[total_io, setTotalIO] = useState("");
-    const[total_lfo, setTotalLFO] = useState("");
+  const[total_tb, setTotalTB] = useState("");
+  const[total_io, setTotalIO] = useState("");
+  const[total_lfo, setTotalLFO] = useState("");
 
   useEffect(() => {
     setExpectedHomeSalePrice(500000);
@@ -64,7 +54,7 @@ const Calculator = ({}) => {
 
 
 function cleanNumberString(str){
-  // console.log(`cleaning ${str}`);
+ 
   return 0 || parseFloat(str.replace(/[^0-9-]+/g, ""));
 }
 
@@ -98,36 +88,23 @@ useEffect(() => {
   setAvgHomePrepCostAndMoveIO(`$${(expected_home_sale_price * 0.00).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
   setAvgHomePrepCostAndMoveLFO(`$${(expected_home_sale_price * 0.005).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);  
 
-  // setTimeout(() => {
+ 
 
     const equity = expected_home_sale_price - remaining_mortgage_owed;
     const costs_tb = cleanNumberString(agent_fees_tb) + cleanNumberString(seller_consessions_tb) + cleanNumberString(closing_costs_tb) + cleanNumberString(avg_home_prep_cost_and_move_tb);
-    // console.log(costs_tb);
-    // console.log(cleanNumberString(agent_fees_tb));
-    // console.log(cleanNumberString(seller_consessions_tb));
-    // console.log(cleanNumberString(closing_costs_tb));
-    // console.log(cleanNumberString(avg_home_prep_cost_and_move_tb));
+   
     const costs_io = cleanNumberString(agent_fees_io) + cleanNumberString(seller_consessions_io) + cleanNumberString(closing_costs_io) + cleanNumberString(avg_home_prep_cost_and_move_io);
     const costs_lfo = cleanNumberString(agent_fees_lfo) + cleanNumberString(seller_consessions_lfo) + cleanNumberString(closing_costs_lfo) + cleanNumberString(avg_home_prep_cost_and_move_lfo);
     setTotalTB(`$${(equity - costs_tb).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
     setTotalIO(`$${(equity - costs_io).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
     setTotalLFO(`$${(equity - costs_lfo).toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
-  // }, 500);
+
   debouncedSendUpdateEvent();
 }, [expected_home_sale_price, remaining_mortgage_owed]);
 
-
-// useEffect(() => {
-//   const new_agent_fees_amount = (agent_fees_percent / 100) * expected_home_sale_price;
-//   setAgentFeesAmountField(new_agent_fees_amount);
-// }, [expected_home_sale_price]);
-
-
     const debouncedupdateExpectedHomeSalePrice = useDebouncedCallback(
-        // function
         (value) => {
             setExpectedHomeSalePrice(value);
-            // setExpectedHomeSalePriceFormatted(`$${value.toLocaleString("en-US", { maximumFractionDigits: 0, minimumFractionDigits: 0 })}`);
         },
         // delay in ms
         1000
@@ -139,70 +116,10 @@ useEffect(() => {
     }        
 
     function updateRemainingMortgageOwed(values, sourceInfo){
-        // console.log("=----------------------updating remaining mortgage owed");
-        // console.log(values, sourceInfo);
-        setRemainingMortgageOwed(values.floatValue);
+       setRemainingMortgageOwed(values.floatValue);
     }
-
-    // const debouncedUpdateAgentFees = useDebouncedCallback(
-    //     // function
-    //     () => {
-    //       if(agent_fees_amount !== agent_fees_amount_field){
-    //         setAgentFeesAmountField(agent_fees_amount);
-    //       }
-    //       if(agent_fees_percent !== agent_fees_percent_field){
-    //         setAgentFeesPercentField(agent_fees_percent);
-    //       }
-    //     },
-    //     // delay in ms
-    //     1000
-    //   );
-
-    // function updateAgentFees(data){
-    //   if(data.last_change_element === 'left' || data.last_change_element === undefined){
-    //     if(data?.left_value?.floatValue !== undefined){
-    //       const afp = data.left_value.floatValue;
-    //       const ehs = expected_home_sale_price;
-    //       const af_amount = (afp / 100) * ehs;
-    //       setAgentFeesPercent(afp);
-    //       setAgentFeesAmount(af_amount);
-    //       debouncedUpdateAgentFees();
-    //     }
-    //   }else{
-    //     if(data?.right_value?.floatValue !== undefined){
-    //       const afa = data.right_value.floatValue;
-    //       const ehs = expected_home_sale_price;
-    //       const af_percent = (afa / ehs) * 100;
-    //       setAgentFeesPercent(af_percent);
-    //       setAgentFeesAmount(afa);
-    //       debouncedUpdateAgentFees();
-    //     }
-    //   }
-    // }
-
-
-    // function updateSellerConcessions(data){
-    //     // console.log("updating seller concessions");
-    //     // 
-    //     setSellerConcessions(data?.floatValue || 0);
-    // }
-
-    // function updateRepairCosts(data){
-    //     // console.log("updating repair costs");
-    //     // 
-    //     setRepairCosts(data?.floatValue || 0);
-    // }
-
-    // function updateMovingCosts(data){
-    //     // console.log("updating moving costs");
-    //     // 
-    //     setMovingCosts(data?.floatValue || 0);
-    // }
-
-
-
-
-  return (
+  
+    return (
     <div className={`${styles["main-component"]}`}>
 
       <div className={`${styles["main-content-container"]}  centered-content`}>
@@ -533,7 +450,6 @@ useEffect(() => {
 
 
 
-
               <div className={`${styles["main-calculator-bottom-mobile-infoblock"]}`}>
                 <div className={`${styles["main-calculator-bottom-mobile-infoblock-title"]}`}>
                 <div className={`${styles["main-calculator-bottom-mobile-infoblock-title-image-holder"]}`}>
@@ -546,7 +462,8 @@ useEffect(() => {
                   cssStyles={window_size.width < 1024 ? {marginLeft: "2.933333333vw", width: "5.6vw", height: "6.133333333vw"} : {marginLeft: "0.3125vw", width: "1.09375vw", height: "1.197916667vw"}}
                     />
                 </div>
-                <div className={`${styles["main-calculator-bottom-mobile-infoblock-card"]}`}>
+                <div style={{position: "relative"}} className={`${styles["main-calculator-bottom-mobile-infoblock-card"]}`}>
+                  <BetaIcon containerSx={{position: "absolute", top: "-24px", right: isTablet ? "-58px" : "-120px"}} imgSx={{width: "54px"}} />
                   <div className={`${styles["main-calculator-bottom-mobile-infoblock-card-left"]} ${styles["main-calculator-bottom-mobile-infoblock-card-left-buttoned"]}`}>
                     <div className={`${styles["main-calculator-bottom-mobile-infoblock-card-left-top"]}`}>
 

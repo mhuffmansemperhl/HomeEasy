@@ -8,9 +8,11 @@ import styles from './ListingForOne.module.scss';
 import ArrowButton from '@/components/ArrowButton';
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 import BetaIcon from "@/compositions/BetaIcon";
+import useScreenSize from "@/hooks/useScreenSize";
 
 const ListingForOne = ({}) => {
     const size = useWindowSize();
+    const {isTablet} = useScreenSize()
     const router = useRouter();
     const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
     return (
@@ -23,16 +25,7 @@ const ListingForOne = ({}) => {
                     <img src="/img/listingforone_house.webp" alt="listing for one percent" />
                 </div>
                 }
-                {/* {size.width < 1920 && size.width > 1279 &&
-                <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/listingforone_house_1280.webp" alt="listing for one percent" />
-                </div>
-                }
-                {size.width < 1280 && size.width > 1023 &&
-                <div className={`${styles['main-image-container']}`}>
-                    <img src="/img/listingforone_house_1024.webp" alt="listing for one percent" />
-                </div>
-                } */}
+                
                 {size.width < 1024 &&
                 <div className={`${styles['main-image-container']}`} >
                     <img src="/img/listingforone_house.webp" alt="listing for one percent" />
@@ -44,7 +37,7 @@ const ListingForOne = ({}) => {
 
                     <div style={{display: "flex"}} className={`${styles['main-copy-supertitle']}`}>
                         <BetaIcon popupSx={{position: "absolute"}}/>
-                        <span style={{marginLeft: "-30px"}}>How it works: HomeOne</span>
+                        <span style={{marginLeft: !isTablet && "-30px"}}>How it works: HomeOne</span>
                     </div>
 
                     <div className={`${styles['main-copy-title']}`}>Work with a full-service Preferred Agent for only 1%.</div>
@@ -69,7 +62,6 @@ to getting you home faster, smarter, and easier.</div>
                         <ArrowButton
                             link_text="Get started"
                             callback={()=>{
-                                // router.push(`/get_started?flow=sell&step=0&branch=9`);
                                 gtmPush(["callback", "sell_list_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);
                             }}
                         />
