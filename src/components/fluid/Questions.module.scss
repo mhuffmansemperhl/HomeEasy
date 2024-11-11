@@ -230,6 +230,9 @@
             // padding: 40px 0px 0px 0px;
             padding: 2.083333333vw 0px 0px 0px;
             grid-template-rows: 1fr !important;
+            @media (min-width: 1024px) and (max-width: 1290px) {
+                padding: 0;
+            }
         }
     }
     .main-component-question-visible {
@@ -251,11 +254,11 @@
         line-height: 6.666666667vw;
         padding: 0px 0px 4px 40px;                        
     }
-    // @media (min-width: 1024px) and (max-width: 1279px) {
-    //     font-size: 16px;
-    //     line-height: 25px;
-    //     padding: 0px 0px 0px 88px;                                            
-    // }
+    @media (min-width: 1024px) and (max-width: 1279px) {
+        font-size: 12px;
+        line-height: 16px;
+        // padding: 0px 0px 0px 88px;                                            
+    }
     // @media (min-width: 1280px) and (max-width: 1919px) {
     //     font-size: 16px;
     //     line-height: 25px;

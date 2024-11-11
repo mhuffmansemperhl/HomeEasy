@@ -112,9 +112,12 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @media (min-width: 0px) and (max-width: 1023px) {
+   @media (min-width: 0px) and (max-width: 1023px) {
         height: 76.26666667vw;
         justify-content: space-around;
+    }
+    @media (min-width: 1024px) and (max-width: 1290px) {
+        height: 176px;
     }
     @media (min-width: 1024px) and (max-width: 1279px) {
         height: 25.9296875vw;        

@@ -228,6 +228,10 @@
             line-height: 6.4vw;
             text-align: center;
         }
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            font-size: 11.5px;
+            line-height: 16px;
+        }
         // @media (min-width: 1024px) and (max-width: 1279px) {
         //     // font-size: 1.5625vw;
         //     // line-height: 2.34375vw;                

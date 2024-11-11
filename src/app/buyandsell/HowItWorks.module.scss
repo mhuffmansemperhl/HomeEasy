@@ -158,10 +158,14 @@
         line-height: 1.5625vw;
         padding-bottom: 2.135416667vw;
 
-        @media (min-width: 0px) and (max-width: 1023px) {
+      @media (min-width: 0px) and (max-width: 1023px) {
             font-size: 4.266666667vw;
             line-height: 6.4vw;
             padding-bottom: 6.4vw;            
+        }
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            font-size:12px;
+            line-height: 16px;
         }
     }
     .main-copy-title {
@@ -172,10 +176,14 @@
         line-height: 1.5625vw;
         padding-bottom: 2vw;
 
-        @media (min-width: 0px) and (max-width: 1023px) {
+      @media (min-width: 0px) and (max-width: 1023px) {
             font-size: 4.266666667vw;
             line-height: 6.4vw;
             padding-bottom: 6.4vw;            
+        }
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            font-size:12px;
+            line-height: 16px;
         }
     }
 

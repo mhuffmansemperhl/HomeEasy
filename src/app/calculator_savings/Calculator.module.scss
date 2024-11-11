@@ -94,6 +94,9 @@
                         font-size: 5.6vw;
                         line-height: 6.666666667vw;
                     }
+                    @media (min-width: 1024px) and (max-width: 1290px) {
+                        font-size: 16px;
+                    }
                 }
 
                 .main-calculator-form-item-input {
@@ -207,6 +210,9 @@
             margin-top: 5vw;
             margin-bottom: 8vw;
         }
+        @media (min-width: 1024px) and (max-width: 1290px) {
+            font-size: 12px;
+        }
 
     }
 
@@ -239,6 +245,9 @@
                 font-size: 4.266666667vw;
                 line-height: 6.666666667vw;
                     
+            }
+            @media (min-width: 1024px) and (max-width: 1290px) {
+                font-size: 12px;
             }
         }
 
@@ -332,6 +341,7 @@
                 font-weight: 700;
                 letter-spacing: 0px;
                 width: 100%;
+                
 
                 @media (min-width: 0px) and (max-width: 1023px) {
                     width: 90vw;
@@ -339,6 +349,9 @@
                     margin-right: auto;
                     font-size: 5.6vw;
                     line-height: 6.666666667vw;
+                }
+                @media (min-width: 1024px) and (max-width: 1290px) {
+                    font-size: 16px;
                 }
 
                 .main-calculator-bottom-card-middle-row-title-container {
@@ -350,6 +363,9 @@
                     .main-calculator-bottom-card-middle-row-left, .main-calculator-bottom-card-middle-row-right {
                         flex: 1;
                         font-size: 0.9375vw;
+                        @media (min-width: 1024px) and (max-width: 1290px) {
+                            font-size: 14px;
+                        }
                     }
     
                     .main-calculator-bottom-card-middle-row-left {
@@ -419,6 +435,9 @@
         font-size: 0.833333333vw;
         font-weight: 300;
         padding-top: 1.510416667vw;
+        @media (min-width: 1024px) and (max-width: 1290px) {
+            font-size: 14px;
+        }
     }
     .main-calculator-bottom-card-bottom-total {
         width: 100%;

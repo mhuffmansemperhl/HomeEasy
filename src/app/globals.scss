@@ -615,8 +615,11 @@ button {
   margin-right: auto;
   // max-width: 90.234375vw;    
   max-width: 68.64583333vw;
-  @media (min-width: 0px) and (max-width: 1024px) {
+  @media (min-width: 0px) and (max-width: 1023px) {
     max-width: 100%;      
+  }
+  @media (min-width: 1024px) and (max-width: 1290px) {
+    max-width: 75%;      
   }
 }
 .darken-on-hover {

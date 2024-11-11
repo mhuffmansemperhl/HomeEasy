@@ -59,7 +59,9 @@ const Header = () => {
         <div className={`${styles["header-content-container"]}`}>
           <BetaIcon 
             containerSx={{ 
-              position: !isTablet && "absolute", top: "-35px", left: !isTablet && "4px",
+              position: !isTablet && "absolute", 
+              top: "-35px",
+              left: !isTablet && "4px",
               width: isTablet && "100%",
               display: isTablet && "flex",
               flexDirection: isTablet && "column",
