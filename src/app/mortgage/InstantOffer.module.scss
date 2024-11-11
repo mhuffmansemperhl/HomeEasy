@@ -92,6 +92,10 @@
             line-height: 6.4vw;
             padding-bottom: 6.4vw;
         }
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            font-size:16px;
+            line-height: 16px;
+        }
         // @media (min-width: 1024px) and (max-width: 1279px) {
         //     font-size:16px;
         //     line-height: 24px;
@@ -150,6 +154,10 @@
             line-height: 6.4vw;
             // padding-bottom: 6.4vw;            
         }
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            font-size:16px;
+            line-height: 16px;
+        }
         // @media (min-width: 1024px) and (max-width: 1279px) {
         //     font-size:16px;
         //     line-height: 24px;
@@ -170,10 +178,14 @@
         line-height: 1.302083333vw;
         padding-bottom: 1.24375vw;
 
-        @media (min-width: 0px) and (max-width: 1023px) {
+      @media (min-width: 0px) and (max-width: 1023px) {
             font-size: 4.266666667vw;
             line-height: 6.4vw;
             padding-bottom: 6.4vw;            
+        }
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            font-size:12px;
+            line-height: 16px;
         }
         // @media (min-width: 1024px) and (max-width: 1279px) {
         //     font-size:16px;

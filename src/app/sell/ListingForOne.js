@@ -37,7 +37,7 @@ const ListingForOne = ({}) => {
 
                     <div style={{display: "flex"}} className={`${styles['main-copy-supertitle']}`}>
                         <BetaIcon popupSx={{position: "absolute"}}/>
-                        <span style={{marginLeft: !isTablet && "-30px"}}>How it works: HomeOne</span>
+                        <span style={{marginLeft: !isTablet && "-24px"}}>How it works: HomeOne</span>
                     </div>
 
                     <div className={`${styles['main-copy-title']}`}>Work with a full-service Preferred Agent for only 1%.</div>

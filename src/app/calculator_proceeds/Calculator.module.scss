@@ -35,6 +35,9 @@
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
+    @media (min-width: 1024px) and (max-width: 1290px) {
+        grid-template-columns: 41vw 27.1875vw;
+    }
 
 }
 .main-calculator-form-container {
@@ -89,6 +92,11 @@
             margin-top: 5vw;
             margin-bottom: 8vw;
         }
+        @media (min-width: 1024px) and (max-width: 1290px) {
+            font-size: 12px;
+            width: 100%;
+            line-height: 18px;
+        }
 
         a {
             all: unset;
@@ -107,6 +115,10 @@
                 text-align: center;
                 font-size: 4.266666667vw;
                 line-height: 6.666666667vw;
+                    
+            }
+            @media (min-width: 1024px) and (max-width: 1920px) {
+               font-size: 12px;
                     
             }
         }
@@ -139,7 +151,7 @@
         .main-calculator-form-item-title {
             display: flex;
             align-items: center;
-            font-size: 1.09375vw;
+            font-size: 16px;
             line-height: 1.302083333vw;
             font-weight: 700;
             letter-spacing: 0px;
@@ -492,6 +504,9 @@
             margin-left: auto;
             margin-right: auto;
         }
+        @media (min-width: 1024px) and (max-width: 1290px) {
+            font-size: 16px;
+        }
     }
 
     .main-calculator-display-get-started-copy {
@@ -508,6 +523,10 @@
             margin-left: auto;
             margin-right: auto;
             padding-top: 10.8vw;            
+        }
+        @media (min-width: 1024px) and (max-width: 1290px) {
+            font-size: 14px;
+            line-height: 16px;
         }
     }
 

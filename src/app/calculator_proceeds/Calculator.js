@@ -8,9 +8,6 @@ import DuoInput from "@/components/fluid/DuoInput";
 import ArrowButton from '@/components/fluid/ArrowButton';
 
 import useFlowGetStartedStore from "@/store/store.js";
-import { produce } from "immer";
-
-import GooglePlacesScript, {getSuggestions, getSuggestionsWidget} from "@/components/GooglePlacesScript";
 
 import { useDebouncedCallback } from "use-debounce";
 
@@ -19,7 +16,7 @@ import { NumericFormat } from 'react-number-format';
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 
 import styles from "./Calculator.module.scss";
-import { userAgent } from "next/server";
+
 
 const Calculator = ({}) => {
   const router = useRouter();

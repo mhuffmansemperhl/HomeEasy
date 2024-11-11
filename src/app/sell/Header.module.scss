@@ -80,7 +80,11 @@
 
     left: 0px;
     top: 9.5vw;
-    width: 35.0015625vw;       
+    width: 35.0015625vw; 
+    @media (min-width: 1024px) and (max-width: 1290px) {
+        width: 36vw;
+        top: 12.5vw
+    }
 .arrow{
     padding: 25px 0 0 8px;
 }
@@ -191,6 +195,9 @@ display: none;
                 width: 84.65333333vw;
                 margin-left: auto;
                 margin-right: auto;
+                margin-bottom:25px;
+            }
+            @media (min-width: 1024px) and (max-width: 1290px) {
                 margin-bottom:25px;
             }
             .header-content-inner{

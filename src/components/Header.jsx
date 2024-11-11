@@ -15,7 +15,7 @@ import useScreenSize from '@/hooks/useScreenSize';
 
 const Header = () => {
     const router = useRouter();
-    const {isTablet} = useScreenSize();
+    const {isLaptop, isTablet} = useScreenSize();
     const [placeholder_text, setPlaceholderText] = useState("Enter Address or City, State");
     const flow = useFlowGetStartedStore(state => state.flow);
     const setFlow = useFlowGetStartedStore(state => state.setFlow);
@@ -179,7 +179,7 @@ const Header = () => {
                         Buy
                     </div>
                     <div
-                        style={{display: "flex", opacity: "1", marginRight: "74px"}}
+                        style={{display: "flex", opacity: "1", marginRight: (isLaptop && !isTablet) ? "46px" : "74px"}}
                         onClick={()=>{
                           changeIndex("sell");                          
                         }} 
