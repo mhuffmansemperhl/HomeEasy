@@ -62,7 +62,7 @@ const Header = () => {
           <BetaIcon 
             containerSx={{ 
               position: !isTablet && "absolute", 
-              top: isTablet ? "-30px" : "-50px",
+              top: isTablet ? "-30px" : "-62px",
               // left: !isTablet ? "4px" : isMobile && "31px",
               width: isTablet && "100%",
               display: isTablet && "flex",
