@@ -49,9 +49,10 @@
         font-size: 7.466666667vw;
         line-height: 8.533333333vw;
         // width: 620px;
-        width: 50vw;
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
+        text-align: left;
     }
     // @media (min-width: 1024px) and (max-width: 1279px) {
     //     font-size: 42px;
@@ -161,7 +162,7 @@
     // height: 25.09765625vw;       
     // padding: 3.22265625vw 2.5390625vw;
     height: 13.59375vw;       
-    padding: 1.822916667vw 2.5vw;
+    padding: 1.822916667vw 20px;
 
     @media (min-width: 0px) and (max-width: 1023px) {
         height: 64vw;

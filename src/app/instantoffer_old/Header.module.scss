@@ -75,8 +75,8 @@
                 width: 84.65333333vw;
                 margin-left: auto;
                 margin-right: auto;
-                text-align: center;
-                font-size: 11.2vw;
+                text-align: left;
+                font-size: 40px;
                 // font-weight: 800;
                 line-height: 11.46666667vw;
                 // padding: 0px 20px;
@@ -108,10 +108,10 @@
 
             font-weight: 300 !important;
             @media (min-width: 0px) and (max-width: 1023px) {
-                width: 76.736vw;
+                width: 84.65333333vw;
                 margin-left: auto;
                 margin-right: auto;
-                text-align: center;
+                text-align: left;
                 font-size: 5.866666667vw;
                 // font-weight: 300;
                 line-height: 6.666666667vw;
@@ -154,7 +154,7 @@
     border-bottom: 1px solid #AAAAAA;
     padding-bottom: 10px;
     @media (min-width: 0px) and (max-width: 1023px) {
-        width: 76.736vw;
+        width: 84.65333333vw;
         margin-left: auto;
         margin-right: auto;
         justify-content: space-between;
@@ -246,7 +246,7 @@
 
     @media (min-width: 0px) and (max-width: 1023px) {
         padding: 3.666666667vw 0px 0px 0px;
-        width: 76.736vw;
+        width: 84.65333333vw;
         margin-left: auto;
         margin-right: auto;
     }

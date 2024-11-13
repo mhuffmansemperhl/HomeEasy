@@ -31,9 +31,10 @@
         font-size: 7.466666667vw;
         line-height: 8.533333333vw;
         // width: 620px;
-        width: 50vw;
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
+        text-align: left;
     }
     // @media (min-width: 1024px) and (max-width: 1279px) {
     //     font-size: var(--secondarytitlesize);
@@ -67,6 +68,7 @@
         font-size: 4.266666667vw;
         line-height: 6.4vw;
         padding: 9.333333333vw 10.66666667vw;
+        text-align: left;
     }
     // @media (min-width: 1024px) and (max-width: 1279px) {
     //     // width: 813px;
@@ -124,7 +126,7 @@
     // justify-content: space-around;
 
     height: 14.59375vw;       
-    padding: 1.822916667vw 2.5vw;
+    padding: 1.822916667vw 20px;
 
    @media (min-width: 0px) and (max-width: 1023px) {
         height: 76.26666667vw;
@@ -154,7 +156,7 @@
         @media (min-width: 0px) and (max-width: 1023px) {
             font-size: 5.6vw;
             line-height: 6.933333333vw;
-            text-align: center;            
+            text-align: left;            
         }
         // @media (min-width: 1024px) and (max-width: 1279px) {
         //     font-size: min(21px, 2.05078125vw);
@@ -180,7 +182,7 @@
         @media (min-width: 0px) and (max-width: 1023px) {
             font-size: 4.266666667vw;
             line-height: 6.4vw;
-            text-align: center;
+            text-align: left;
         }
         @media (min-width: 1024px) and (max-width: 1279px) {
             font-size: 11.5px;

@@ -64,6 +64,7 @@
         line-height: 6.666666667vw;
         border-top: none;
         padding: 12.8vw 0px;
+        text-align: left;
     }
 }
 
@@ -503,6 +504,7 @@
             width: 80vw;
             margin-left: auto;
             margin-right: auto;
+            text-align: left;
         }
         @media (min-width: 1024px) and (max-width: 1290px) {
             font-size: 16px;
@@ -522,7 +524,8 @@
             width: 85vw;
             margin-left: auto;
             margin-right: auto;
-            padding-top: 10.8vw;            
+            padding-top: 10.8vw;    
+            text-align: left;        
         }
         @media (min-width: 1024px) and (max-width: 1290px) {
             font-size: 14px;

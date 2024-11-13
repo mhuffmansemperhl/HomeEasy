@@ -17,7 +17,7 @@
     padding: 4.375vw 0px 6.73828125vw 0px;
 
     @media (min-width: 0px) and (max-width: 1023px) {
-        padding: 50px 20px;
+        padding: 50px 32px;
     }
 }
 
@@ -34,6 +34,7 @@
         line-height: 8.533333333vw;
         // width: 620px;
         width: 100%;
+        text-align: left;
     }
     // @media (min-width: 1024px) and (max-width: 1279px) {
     //     font-size: var(--secondarytitlesize);
@@ -67,6 +68,7 @@
         font-size: 4.266666667vw;
         line-height: 6.4vw;
         padding: 4.333333333vw 0px 4.36666667vw 0px;
+        text-align: left;
     }
     // @media (min-width: 1024px) and (max-width: 1279px) {
     //     font-size: 28px;
