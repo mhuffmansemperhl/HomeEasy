@@ -55,16 +55,18 @@ const ThreeByOneBlocks = ({}) => {
                         <div className={`${styles['item-title-container']}`}>There for you every step of the way.</div>
                         <div className={`${styles['item-copy-container']}`}>Have questions? We love to give answers! Book a call with one of our Loan Officers to learn more</div>
                         <div className={`${styles['item-foot-container']}`}>
-                            <ArrowButton
-                                small_text={true}
-                                link_text="Book a call"
-                                callback={()=>{
-                                    // router.push(`/get_started?flow=sell&step=0&branch=8`);
-                                    gtmPush(["callback", "sell_list_one", ()=>{   window.open('/booking', '_blank', 'noopener,noreferrer');}]);
-                                }}
-                                ariaLabel="Open booking calendar in new window"
-                                role="button"
-                            />
+                            <a href="/booking" target="_blank" rel="noopener" style={{textDecoration: 'none', color: 'inherit'}}>
+                                <ArrowButton
+                                    small_text={true}
+                                    link_text="Book a call"
+                                    callback={()=>{
+                                        // router.push(`/get_started?flow=sell&step=0&branch=8`);
+                                        gtmPush(["callback", "sell_list_one", ()=>{ return;}]);
+                                    }}
+                                    ariaLabel="Open booking calendar in new window"
+                                    role="button"
+                                />
+                            </a>
                         </div>
                     </div>
 

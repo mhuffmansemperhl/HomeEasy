@@ -62,13 +62,15 @@ const HowItWorks = ({}) => {
                     <div className={`${styles['main-copy-copy']}`}>Closing time! We give you 1.50% of your financed loan up to $10,000 towards your closing costs1 making your home purchase more affordable.</div>
 
                     <div className={`${styles['main-copy-footer']}`}>
-                        <ArrowButton
-                            link_text="Get started"
-                            callback={()=>{
-                                // router.push(`/get_started?flow=sell&step=0&branch=9`);
-                                gtmPush(["callback", "sell_list_one", ()=>{ window.open('https://www.gethomeeasy.com/', '_blank')}]);
-                            }}
-                        />
+                        <a href='https://www.gethomeeasy.com/' target="_blank" rel="noopener" style={{textDecoration: 'none', color: 'inherit'}}>
+                            <ArrowButton
+                                link_text="Get started"
+                                callback={()=>{
+                                    // router.push(`/get_started?flow=sell&step=0&branch=9`);
+                                    gtmPush(["callback", "sell_list_one", ()=>{ return;}]);
+                                }}
+                            />
+                        </a>
                     </div>
 
 
