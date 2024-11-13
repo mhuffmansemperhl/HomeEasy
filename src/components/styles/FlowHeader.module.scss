@@ -17,6 +17,11 @@
         padding-bottom: 0px;
         padding: 9.866666667vw 0px;
     }
+    @media (min-width: 1024px) and (max-width: 1279px) {
+        padding: 24px;
+        height: auto;
+        gap: 16px;
+    }
 }
 
 .header-logo-container {
@@ -29,6 +34,9 @@
     @media (min-width: 0px) and (max-width: 1023px) {
         width: 45.288vw;
         height: 8.386666667vw;
+    }
+    @media (min-width: 1024px) and (max-width: 1279px) {
+        height: 28px;
     }
 
     img {
@@ -46,6 +54,10 @@
         top: 50%;
         transform: translateY(-50%);
         left: 10vw;
+    }
+
+    @media  (min-width: 1024px) and (max-width: 1279px) {
+        height: 12px;
     }
     
     img {

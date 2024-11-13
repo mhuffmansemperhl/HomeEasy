@@ -35,9 +35,10 @@
         font-size: 7.466666667vw;
         line-height: 8.533333333vw;
         // width: 620px;
-        width: calc(100vw - 40px);
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
+        text-align: left;
     }
     // @media (min-width: 1024px) and (max-width: 1279px) {
     //     font-size: var(--secondarytitlesize);

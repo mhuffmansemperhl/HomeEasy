@@ -15,7 +15,7 @@ import useScreenSize from '@/hooks/useScreenSize';
 
 const Header = () => {
     const router = useRouter();
-    const {isLaptop, isTablet} = useScreenSize();
+    const {isMobile, isLaptop, isTablet} = useScreenSize();
     const [placeholder_text, setPlaceholderText] = useState("Enter Address or City, State");
     const flow = useFlowGetStartedStore(state => state.flow);
     const setFlow = useFlowGetStartedStore(state => state.setFlow);
@@ -146,7 +146,7 @@ const Header = () => {
                     }
                     {flow === "buy" &&
                     <>
-                      <div className={styles['header-content-title']}>Buy a home the <br /> easy way and <br /> save thousands.</div>
+                      <div className={styles['header-content-title']}>Buy a home the <br /> easy way and {!isMobile && <br />} save thousands.</div>
                     </>
                     }
                     {flow === "sellbuy" && 

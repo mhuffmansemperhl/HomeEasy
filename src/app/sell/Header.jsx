@@ -22,7 +22,7 @@ const Header = () => {
     (state) => state.google_api_loaded
   );
 
-  const {isTablet} = useScreenSize()
+  const {isTablet, isMobile} = useScreenSize()
   const setNewAddress = useFlowGetStartedStore((state) => state.setNewAddress);
 
   const searchInputRef = useRef();
@@ -57,19 +57,20 @@ const Header = () => {
       <Navbar />
       <div className={`${styles["main-content-container"]} centered-content2`}>
         <div className={`${styles["header-content-container"]}`}>
+         
+          <div className={styles["header-content-title"]}>
           <BetaIcon 
             containerSx={{ 
               position: !isTablet && "absolute", 
-              top: "-35px",
-              left: !isTablet && "4px",
+              top: isTablet ? "-30px" : "-50px",
+              // left: !isTablet ? "4px" : isMobile && "31px",
               width: isTablet && "100%",
               display: isTablet && "flex",
               flexDirection: isTablet && "column",
-              alignItems: isTablet && "center",
+              alignItems: (isTablet && !isMobile) && "center",
             }} 
             imgSx={{ width: 54 }} 
           />
-          <div className={styles["header-content-title"]}>
             How to sell & save, the <span>easy way.</span>
           </div>
           <div className={styles["header-content-copy"]}>
