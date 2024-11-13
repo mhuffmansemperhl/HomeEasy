@@ -17,10 +17,13 @@ const Buy = ({}) => {
                 <div className={`${styles['main-title-container']}`}>Let’s get started!</div>
                 <div className={`${styles['main-copy-container']}`}>Getting pre-approved is easy with our seamless and headache-free process.</div>
                 <div className={`${styles['main-button-container']}`}>
-                    <button onClick={()=>{ 
-                        // router.push(`/get_started?flow=sell&step=0&branch=11`); 
-                        gtmPush(["callback", "sell_learn_more", ()=>{ window.open('https://www.gethomeeasy.com/', '_blank')}]);
-                    }} className='darken-on-hover'>Get Started &rarr;</button>
+                    <a href='https://www.gethomeeasy.com/' target="_blank" rel="noopener" style={{textDecoration: 'none', color: 'inherit'}}>
+                            
+                        <button onClick={()=>{ 
+                            // router.push(`/get_started?flow=sell&step=0&branch=11`); 
+                            gtmPush(["callback", "sell_learn_more", ()=>{ return}]);
+                        }} className='darken-on-hover'>Get Started &rarr;</button>
+                    </a>
                 </div>
 
             </div>
