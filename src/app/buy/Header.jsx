@@ -10,6 +10,7 @@ import { produce } from "immer";
 import ArrowButton from '@/components/fluid/ArrowButton';
 import city_codes from "public/data/city_codes.json";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import { FORM_TAGS } from '@/helpers/formTags';
 
 const Header = () => {
 
@@ -220,7 +221,7 @@ const Header = () => {
                             link_text="Let’s find your dream home!"
                             callback={()=>{
                                 // router.push(`/get_started?flow=sell&step=0&branch=9`);
-                                gtmPush(["callback", "sell_io", ()=>{router.push(`/get_started?flow=buy&step=1`);}]);
+                                gtmPush(["callback", FORM_TAGS.lets_find_dream_home, ()=>{router.push(`/get_started?flow=buy&step=1`);}]);
                             }}
                         />
           </div>

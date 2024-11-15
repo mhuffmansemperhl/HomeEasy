@@ -9,6 +9,7 @@ import GooglePlacesScript, {getSuggestions, getSuggestionsWidget} from "@/compon
 import { produce } from "immer";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 import ArrowButton from '@/components/fluid/ArrowButton';
+import { FORM_TAGS } from '@/helpers/formTags';
 
 const Header = () => {
 
@@ -106,7 +107,7 @@ const Header = () => {
                             link_text="Let’s get started!"
                             callback={()=>{
                                 // router.push(`/get_started?flow=sell&step=0&branch=9`);
-                                gtmPush(["callback", "sell_list_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);
+                                gtmPush(["callback", FORM_TAGS.get_started_sell, ()=>{router.push(`/get_started?fflow=sellbuy&step=1`);}]);
                             }}
                         />
           </div>

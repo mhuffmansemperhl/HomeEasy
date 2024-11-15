@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 
 import styles from './Buy.module.scss';
+import { FORM_TAGS } from "@/helpers/formTags";
 
 const Buy = ({}) => {
     const router = useRouter();
@@ -19,7 +20,7 @@ const Buy = ({}) => {
                 <div className={`${styles['main-button-container']}`}>
                     <button onClick={()=>{ 
                         // router.push(`/get_started?flow=sell&step=0&branch=11`); 
-                        gtmPush(["callback", "sell_learn_more", ()=>{router.push(`/get_started?flow=buy&step=1`);}]);
+                        gtmPush(["callback", FORM_TAGS.get_started_buy, ()=>{router.push(`/get_started?flow=buy&step=1`);}]);
                     }} className='darken-on-hover'>Get Started &rarr;</button>
                 </div>
 

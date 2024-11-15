@@ -40,7 +40,7 @@ const GettingStarted = () => {
                     <div className={`${styles['main-component-button-container']} ${show}`}>
                         <button onClick={() => {
                             // router.push("/get_started");
-                            gtmPush(["callback", "home_gs_get_started", ()=>{router.push(`/get_started`);}]);
+                            gtmPush(["callback", "get_started_gen", ()=>{router.push(`/get_started`);}]);
                         }} className='darken-on-hover'>Get Started <img src="/img/button_right_arrow.svg" alt="arrow" /> </button>
                     </div>
                 </div>

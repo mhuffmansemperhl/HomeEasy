@@ -32,7 +32,7 @@ const Destress = () => {
   function doGetStarted() {
     switch (selectedIndex) {
       case 0:
-        router.push("/get_started?flow=sell&step=1");
+        router.push("/get_started?flow=sell&step=0");
         break;
       case 1:
         router.push("/get_started?flow=buy&step=1");
@@ -493,9 +493,15 @@ const Destress = () => {
               <ArrowButton
                 link_text="Get started"
                 callback={() => {
+                  const eventNames = {
+                    0: "get_started_sell",
+                    1: "get_started_buy", 
+                    2: "get_started_buysell"
+                  };
+                  
                   gtmPush([
                     "callback",
-                    "home_destress_get_started",
+                    eventNames[selectedIndex],
                     () => {
                       doGetStarted();
                     },

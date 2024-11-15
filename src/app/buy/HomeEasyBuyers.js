@@ -5,6 +5,7 @@ import useWindowSize from "@/hooks/useWindowSize";
 import styles from "./HomeEasyBuyers.module.scss";
 import ArrowButton from '@/components/ArrowButton';
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import { FORM_TAGS } from "@/helpers/formTags";
 
 const HomeEasyBuyers = ({}) => {
     const size = useWindowSize();
@@ -38,7 +39,7 @@ const HomeEasyBuyers = ({}) => {
                             link_text="Get started"
                             callback={()=>{
                                 // router.push(`/get_started?flow=instantoffer&step=1`);
-                                gtmPush(["callback", "sell_io", ()=>{router.push(`/get_started?flow=buy&step=1`);}]);
+                                gtmPush(["callback", FORM_TAGS.get_started_buy, ()=>{router.push(`/get_started?flow=buy&step=1`);}]);
 
                             }}
                         />

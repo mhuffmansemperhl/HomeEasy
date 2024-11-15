@@ -17,6 +17,7 @@ import { useDebouncedCallback } from "use-debounce";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 import getZipCode from "@/helpers/getCustomerZipCode";
 import cermoPayload from "@/helpers/cermoPayload";
+import { FORM_TAGS } from "@/helpers/formTags";
 
 export default function Question() {
   const pathname = usePathname();
@@ -127,7 +128,9 @@ export default function Question() {
   }
 
   function loadAddressSellPage(options) {
-    
+    if (options?.tag) {
+      fireEventTag(options.tag);
+    }
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -229,6 +232,9 @@ export default function Question() {
   }
 
   function loadLookingToSellPage(options) {
+    const tag = FORM_TAGS.sell_timeline;
+    fireEventTag(tag);
+    
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -251,6 +257,13 @@ export default function Question() {
   }
 
   function loadLearnMoreAboutHomeEasyHomesPage(options) {
+    const tagClickedDictionary = {
+      "Instant cash offers": "buy_learn_heh_icoffers",
+      "List for 1%": "buy_learn_heh_list1",
+      "Selling & buying your home": "buy_learn_heh_sellbuy",
+      "HomeEasy Homes process": "buy_learn_heh_process",
+      "Other": "buy_learn_heh_other"
+  };
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -260,7 +273,9 @@ export default function Question() {
           <FlowListItems
             store_key={options.store_key || "learn_more_about_heh"}
             list_items={learn_more_about_heh_list_items}
-            callback={(index) => {
+            callback={(index, selectedOption) => {
+              const selectedTag = tagClickedDictionary[selectedOption];
+              fireEventTag(selectedTag)
               nextStep(pathname, router, searchParams);
             }}
           />
@@ -280,6 +295,8 @@ export default function Question() {
   }
 
   function loadMotivatingToBuyPage(options) {
+    const tag = FORM_TAGS.buy_motivation;
+    fireEventTag(tag);
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -304,6 +321,16 @@ export default function Question() {
   }
 
   function loadWhatWouldYouLikeToDoNextBuyPage(options) {
+    const tag = FORM_TAGS.buy_next;
+    fireEventTag(tag);
+    const tagClickedDictionary = {
+      "Search & browse homes": "buy_browse",
+      "Learn more about homebuying": "buy_learn",
+      "Learn about HomeEasy Homes": "buy_learn_heh", 
+      "Get advice on the market": "buy_advice",
+      "Other": "buy_other"
+  };
+    
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -315,7 +342,9 @@ export default function Question() {
               options.store_key || "what_would_you_like_to_do_next_buy"
             }
             list_items={what_would_you_like_to_do_next_buy_list_items}
-            callback={(index) => {
+            callback={(index, selectedOption) => {
+              const selectedTag = tagClickedDictionary[selectedOption];
+              fireEventTag(selectedTag);
               if ("branch" in options) {
                 
                 setBranch(options.branch + index);
@@ -335,6 +364,9 @@ export default function Question() {
   }
 
   function loadGotItHowCanWeHelpPage(options) {
+    if (options?.tag) {
+      fireEventTag(options.tag);
+    }
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -375,6 +407,9 @@ export default function Question() {
   }
 
   function loadRelationshipToHomePage(options) {
+    if (options?.tag) {
+      fireEventTag(options.tag);
+    }
     setPercentage("48%");
     setContent(
       <FlowContent
@@ -410,6 +445,9 @@ export default function Question() {
   }
 
   function loadSignedSellerAgreementAgentPage(options) {
+    if (options?.tag) {
+      fireEventTag(options.tag);
+    }
     false && console.log("loading  loadSignedSellerAgreementAgentPage");
     setPercentage(options.progress || "32%");
     setContent(
@@ -434,6 +472,8 @@ export default function Question() {
   }
 
   function loadAgentLookingForInstantOffer(options) {
+    const tag = FORM_TAGS.sell_agent_instant;
+    fireEventTag(tag);
     false && console.log("loading  loadAgentLookingForInstantOffer");
     setPercentage(options.progress || "32%");
     setContent(
@@ -534,6 +574,7 @@ export default function Question() {
   }
 
   function loadWellBeInTouchPage(options) {
+    let tag = "";
     const isSell = flow === "sell";
     const customerAddress = isSell ? form_data?.sell_address?.address_components : form_data?.buy_address?.address_components;
     const validPromoZipCodes = ["02760","02763","02761", "02056","02070","02093","02762"];
@@ -541,6 +582,7 @@ export default function Question() {
     let copy = '';
     
     if(flow === "sell"){
+      tag = FORM_TAGS.sell_instant_calendar
       const customerZipCode = getZipCode(customerAddress);
       const isCustomerZipCodeValidForPromo = validPromoZipCodes.includes(customerZipCode);
       if(isCustomerZipCodeValidForPromo){
@@ -551,11 +593,16 @@ export default function Question() {
     }
 
     if (flow === "buy" || flow === "sellbuy") {
+      tag = FORM_TAGS.buy_calendar
       copy = 'Let’s schedule a call at a time that works best for you to go over next steps.'
     }
+
+    if (flow === "instantoffer") {
+      tag = FORM_TAGS.instant_calendar
+     }
    
     false && console.log("loading  loadWellBeInTouchPage");
-    fireEventTag(options.event_tag);
+    fireEventTag(tag);
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -581,6 +628,9 @@ export default function Question() {
   }
 
   const loadBestWayToReachYouPage = (options) => {
+    if (options?.tag) {
+      fireEventTag(options.tag);
+    }
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -866,11 +916,12 @@ export default function Question() {
             loadRelationshipToHomePage({
               progress: "40%",
               relationship_items: ["Owner", "Agent"],
+              tag: FORM_TAGS.sell_relationship,
             });
             break;
           }
           case "sell_3_0": {
-            loadSignedSellerAgreementAgentPage({ progress: "50%", branch: 0 });
+            loadSignedSellerAgreementAgentPage({ progress: "50%", branch: 0, tag: FORM_TAGS.sell_owner });
             break;
           }
           case "sell_3_1": {
@@ -893,6 +944,7 @@ export default function Question() {
 
           case "sell_4_0": {
             loadGotItHowCanWeHelpPage({
+              tag: FORM_TAGS.sell_yagreement,
               progress: "60%",
               infobox:
                 "<strong>*InstantOffer:</strong><br/>Get an instant, cash offer to buy your home. The fastest way and most trouble-free way to selling your home.",
@@ -905,12 +957,13 @@ export default function Question() {
               progress: "90%",
               branch: 1,
               copy: "Our advice and instant cash offers are always free.",
+              tag: FORM_TAGS.sell_instant_contact,
             });
             break;
           }
 
           case "sell_4_2": {
-            loadAddressSellPage({ progress: "60%", branch: 2 });
+            loadAddressSellPage({ progress: "60%", branch: 2, tag: "sell_instant" });
             break;
           }
 
@@ -920,12 +973,13 @@ export default function Question() {
               branch: 1,
               title: "Interested in growing your business with HomeEasy Homes?",
               copy: "We work with agents in Rhode Island, Massachusetts, and Connecticut.",
+              tag: FORM_TAGS.sell_agent_contact,
             });
             break;
           }
 
           case "sell_5_0": {
-            loadAddressSellPage({ progress: "80%" });
+            loadAddressSellPage({ progress: "80%", tag: "sell_instant" });
             break;
           }
 
@@ -951,6 +1005,7 @@ export default function Question() {
             loadBestWayToReachYouPage({
               progress: "90%",
               copy: "We will be reaching out shortly with our InstantOffer.",
+              tag: FORM_TAGS.sell_instant_contact,
             });
             break;
           }
@@ -965,7 +1020,7 @@ export default function Question() {
           }
 
           case "sell_6_0": {
-            loadBestWayToReachYouPage({ progress: "90%" });
+            loadBestWayToReachYouPage({ progress: "90%", tag: FORM_TAGS.sell_instant_contact, });
             break;
           }
 
@@ -1029,6 +1084,7 @@ export default function Question() {
             loadBestWayToReachYouPage({
               progress: "66%",
               copy: "We will be reaching out shortly with our InstantOffer",
+              tag: FORM_TAGS.sell_instant_contact,
             });
             break;
           }
@@ -1069,7 +1125,7 @@ export default function Question() {
           }
 
           case "sell_4_9": {
-            loadBestWayToReachYouPage({ progress: "80%" });
+            loadBestWayToReachYouPage({ progress: "80%", tag: FORM_TAGS.sell_instant_contact, });
             break;
           }
 
@@ -1087,7 +1143,7 @@ export default function Question() {
           }
 
           case "sell_3_10": {
-            loadBestWayToReachYouPage({ progress: "90%" });
+            loadBestWayToReachYouPage({ progress: "90%", tag: FORM_TAGS.sell_instant_contact, });
             break;
           }
 
@@ -1129,7 +1185,7 @@ export default function Question() {
           }
 
           case "sell_3_11": {
-            loadBestWayToReachYouPage({ progress: "80%" });
+            loadBestWayToReachYouPage({ progress: "80%", tag: FORM_TAGS.sell_instant_contact, });
             break;
           }
 
@@ -1177,7 +1233,7 @@ export default function Question() {
           }
 
           case "buy_4_1": {
-            loadSignupFormPage({ progress: "60%" });
+            loadSignupFormPage({ progress: "60%", tag: FORM_TAGS.buy_contact_info, });
             break;
           }
 
@@ -1384,12 +1440,13 @@ export default function Question() {
             loadRelationshipToHomePage({
               progress: "50%",
               relationship_items: ["Owner", "Agent"],
+              tag: FORM_TAGS.instant_relationship
             });
             break;
           }
 
           case "instantoffer_3_0": {
-            loadBestWayToReachYouPage({ progress: "75%" });
+            loadBestWayToReachYouPage({ progress: "75%", tag: FORM_TAGS.instant_contact });
             break;
           }
 
@@ -1410,7 +1467,7 @@ export default function Question() {
           }
 
           case "instantoffer_3_1": {
-            loadBestWayToReachYouPage({ progress: "75%" });
+            loadBestWayToReachYouPage({ progress: "75%", tag: FORM_TAGS.instant_contact });
             break;
           }
 

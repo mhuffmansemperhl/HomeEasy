@@ -7,6 +7,7 @@ import useWindowSize from "@/hooks/useWindowSize";
 import styles from './HowItWorks.module.scss';
 import ArrowButton from '@/components/ArrowButton';
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import { FORM_TAGS } from "@/helpers/formTags";
 
 const HowItWorks = ({}) => {
     const size = useWindowSize();
@@ -66,7 +67,7 @@ const HowItWorks = ({}) => {
                             link_text="Get started"
                             callback={()=>{
                                 // router.push(`/get_started?flow=sell&step=0&branch=9`);
-                                gtmPush(["callback", "sell_list_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);
+                                gtmPush(["callback", FORM_TAGS.get_started_sell, ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);
                             }}
                         />
                     </div>

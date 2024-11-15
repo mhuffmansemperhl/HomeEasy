@@ -11,7 +11,7 @@ const FlowListItems = ({list_items, nav_items, store_key, checkbox_mode, callbac
     const setFormData = useFlowGetStartedStore(state => state.setFormData);
     const nextStep = useFlowGetStartedStore(state => state.nextStep);
 
-    function doAction(index){
+    function doAction(index, selectedOption){
         if(checkbox_mode === true){
 false && console.log("checkbox mode");
         }else{
@@ -29,7 +29,7 @@ false && console.log("checkbox mode");
 
             // false && console.log("...doing navigation");
             if(callback){
-                callback(index);
+                callback(index, selectedOption);
             }
             // nextStep(nav_items.pathname, nav_items.router, nav_items.searchParams);
 
@@ -43,7 +43,7 @@ false && console.log("checkbox mode");
 
             <div className={`${styles['list-items-container']}`}>
                 {list_items.map((item, index) => (
-                    <div onClick={()=>{doAction(index);}}  className={`${styles['list-item']} ${form_data[store_key] === item ? styles["selected"] : "" }`} key={index}>
+                    <div onClick={()=>{doAction(index, item);}}  className={`${styles['list-item']} ${form_data[store_key] === item ? styles["selected"] : "" }`} key={index}>
                         <div className={`${styles['list-item-title']} ${form_data[store_key] === item ? styles["selected"] : "" }`}>
                             {item}
                         </div>
