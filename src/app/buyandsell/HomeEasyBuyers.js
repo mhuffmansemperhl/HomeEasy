@@ -46,7 +46,7 @@ const HomeEasyBuyers = ({}) => {
                                 "callback",
                                 "buysell_how_it_works_gs",
                                 () => {
-                                    router.push(`/get_started?flow=sell&step=0&branch=9`);
+                                    router.push(`/get_started?flow=buy&step=1`);
                                 },
                             ]);
                         }}

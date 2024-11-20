@@ -9,6 +9,7 @@ import ArrowButton from '@/components/ArrowButton';
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 import BetaIcon from "@/compositions/BetaIcon";
 import useScreenSize from "@/hooks/useScreenSize";
+import { FORM_TAGS } from "@/helpers/formTags";
 
 const ListingForOne = ({}) => {
     const size = useWindowSize();
@@ -62,7 +63,7 @@ to getting you home faster, smarter, and easier.</div>
                         <ArrowButton
                             link_text="Get started"
                             callback={()=>{
-                                gtmPush(["callback", "sell_list_one", ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);
+                                gtmPush(["callback", FORM_TAGS.get_started_sell, ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);
                             }}
                         />
                     </div>

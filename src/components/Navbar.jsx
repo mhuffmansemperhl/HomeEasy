@@ -233,25 +233,27 @@ const Navbar = () => {
               {" "}
               <img src="/img/hamburger_menu.svg" alt="Menu Button" />{" "}
             </div>
-            <div
-              className={styles["header-logo-group-logo-container"]}
-              onClick={() => router.push("/")}
-            >
-              {" "}
-                 {isErrorPage ?  <img
-                src="/img/home_easy_homes_logo.svg"
-                alt="Home Easy Homes"
-               
-              /> :  <img
-                src="/img/home_easy_homes_logo.svg"
-                alt="Home Easy Homes"
-              />}
-              {/* <img
-                src="/img/home_easy_homes_logo.svg"
-                alt="Home Easy Homes"
-              /> */}
-              {" "}
-            </div>
+            <Link href="/">
+              <div
+                className={styles["header-logo-group-logo-container"]}
+              >
+                {" "}
+                  {isErrorPage ?  <img
+                  src="/img/home_easy_homes_logo.svg"
+                  alt="Home Easy Homes"
+                
+                /> :  <img
+                  src="/img/home_easy_homes_logo.svg"
+                  alt="Home Easy Homes"
+                />}
+                {/* <img
+                  src="/img/home_easy_homes_logo.svg"
+                  alt="Home Easy Homes"
+                /> */}
+                {" "}
+              </div>
+            </Link>
+
           </div>
 
           {windowSize.width > 1023 && (

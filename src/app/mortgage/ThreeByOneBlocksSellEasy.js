@@ -28,7 +28,7 @@ const ThreeByOneBlocks = ({}) => {
                                 link_text="Shop our rates"
                                 callback={()=>{
                                     // router.push(`/get_started?flow=instantoffer&step=1`);
-                                    gtmPush(["callback", "sell_io", ()=>{router.push(`https://www.gethomeeasy.com/`);}]);
+                                    gtmPush(["callback", "sell_io", ()=>{window.open('https://www.gethomeeasy.com/', '_blank')}]);
 
                                 }}
                             />

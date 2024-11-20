@@ -19,7 +19,7 @@ const Sell = ({}) => {
                 <div className={`${styles['main-button-container']}`}>
                     <button onClick={()=>{ 
                         // router.push(`/get_started?flow=instantoffer&step=1`); 
-                        gtmPush(["callback", "buy_learn_more", ()=>{router.push(`/get_started?flow=instantoffer&step=1`);}]);
+                        gtmPush(["callback", "buy_learn_more", ()=>{router.push(`/get_started?flow=sell&step=0`);}]);
 
                     }} className='darken-on-hover'>Get Started &rarr;</button>
                 </div>

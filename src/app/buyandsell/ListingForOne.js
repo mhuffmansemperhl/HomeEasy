@@ -8,6 +8,7 @@ import styles from "./ListingForOne.module.scss";
 import ArrowButton from "@/components/ArrowButton";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 import BetaIcon from "@/compositions/BetaIcon";
+import { FORM_TAGS } from "@/helpers/formTags";
 const ListingForOne = ({}) => {
     const size = useWindowSize();
     const router = useRouter();
@@ -63,7 +64,7 @@ const ListingForOne = ({}) => {
                             callback={() => {
                                 gtmPush([
                                     "callback",
-                                    "buysell_listing_one",
+                                    FORM_TAGS.get_started_sell,
                                     () => {
                                         router.push(`/get_started?flow=sell&step=0&branch=9`);
                                     },

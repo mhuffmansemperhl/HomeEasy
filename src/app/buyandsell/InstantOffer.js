@@ -7,6 +7,7 @@ import useWindowSize from "@/hooks/useWindowSize";
 import styles from "./InstantOffer.module.scss";
 import ArrowButton from "@/components/ArrowButton";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import { FORM_TAGS } from "@/helpers/formTags";
 
 const InstantOffer = ({}) => {
     const size = useWindowSize();
@@ -37,9 +38,9 @@ const InstantOffer = ({}) => {
                             callback={() => {
                                 gtmPush([
                                     "callback",
-                                    "buysell_listing_one",
+                                    FORM_TAGS.get_started_sell,
                                     () => {
-                                        router.push(`/get_started?flow=sell&step=0&branch=9`);
+                                        router.push(`/get_started?flow=instantoffer&step=1`);
                                     },
                                 ]);
                                 //

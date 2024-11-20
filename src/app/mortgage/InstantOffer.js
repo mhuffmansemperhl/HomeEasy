@@ -148,6 +148,7 @@ const formatNumber = (number) => {
       <div class="modal-footer border-0 justify-content-center">
         <a 
         href="https://www.gethomeeasy.com"
+        target='_blank'
         style={{backgroundColor:'#D30200',padding:' 0.520833333vw 1.145833333vw',fontSize:' 0.833333333vw;',border:'none',color:'white',borderRadius:'5px',textDecoration:'none'}} >Get pre-approved &rarr;</a>
       </div>
 

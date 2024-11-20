@@ -19,7 +19,7 @@ const GetStarted = ({}) => {
                 <div className={`${styles['main-button-container']}`}>
                     <button onClick={()=>{ 
                         // router.push(`/get_started?flow=sell&step=0&branch=11`); 
-                        gtmPush(["callback", "buysell_learn_more", ()=>{router.push(`/get_started?flow=sell&step=0&branch=11`);}]);
+                        gtmPush(["callback", "buysell_learn_more", ()=>{router.push(`/get_started?flow=sellbuy&step=1`);}]);
 
                     }} className='darken-on-hover'>Get Started &rarr;</button>
                 </div>

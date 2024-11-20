@@ -56,7 +56,7 @@ const Advantage = () => {
                     callback={() => {
                       gtmPush([
                         "callback",
-                        "home_advtg_get_started_1",
+                        "get_started_gen",
                         () => {
                           router.push(`/get_started`);
                         },
@@ -196,9 +196,9 @@ const Advantage = () => {
                     callback={() => {
                       gtmPush([
                         "callback",
-                        "home_advtg_get_started_2",
+                        "get_started_sell",
                         () => {
-                          router.push(`/get_started`);
+                          router.push(`/get_started?flow=sell&step=0`);
                         },
                       ]);
                     }}
@@ -311,7 +311,7 @@ const Advantage = () => {
                     callback={() => {
                       gtmPush([
                         "callback",
-                        "home_advtg_get_started_3",
+                        "get_started_gen",
                         () => {
                         },
                       ]);

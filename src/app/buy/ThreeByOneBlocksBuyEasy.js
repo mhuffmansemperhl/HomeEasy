@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import ArrowButton from "@/components/fluid/ArrowButton";
 import styles from "./ThreeByOneBlocksBuyEasy.module.scss";
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import { FORM_TAGS } from "@/helpers/formTags";
 // import ArrowButton from './ArrowButton';
 
 const ThreeByOneBlocksBuyEasy = ({}) => {
@@ -28,7 +29,7 @@ const ThreeByOneBlocksBuyEasy = ({}) => {
                                     // router.push(`/get_started?flow=instantoffer&step=1`);
                                     gtmPush([
                                         "callback",
-                                        "sell_io",
+                                        FORM_TAGS.get_started_buy,
                                         () => {
                                             router.push(`/get_started?flow=buy&step=1`);
                                         },
