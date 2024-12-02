@@ -23,6 +23,7 @@ export const FORM_TAGS = {
     instant_calendar: "instant_calendar",
     get_started_sell: "get_started_sell",
     get_started_buy: "get_started_buy",
+    get_started_buysell: "get_started_buysell",
     get_started_instant_offer: "get_started_instant_offer",
 
 }

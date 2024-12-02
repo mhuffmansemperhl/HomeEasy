@@ -20,6 +20,7 @@ import cermoPayload from "@/helpers/cermoPayload";
 import { FORM_TAGS } from "@/helpers/formTags";
 
 export default function Question() {
+  const [firedEvents, setFiredEvents] = useState(new Set());
   const pathname = usePathname();
   const router = useRouter();
   const [dataLayer, doEventClick, gtmPush] = useGoogleTagManager();
@@ -246,7 +247,6 @@ export default function Question() {
             nav_items={nav_items}
             store_key={options.store_key || "looking_to_sell"}
             callback={(index) => {
-          
               nextStep(pathname, router, searchParams);
             }}
           />
@@ -297,6 +297,7 @@ export default function Question() {
   function loadMotivatingToBuyPage(options) {
     const tag = FORM_TAGS.buy_motivation;
     fireEventTag(tag);
+
     setPercentage(options.progress || "32%");
     setContent(
       <FlowContent
@@ -323,6 +324,7 @@ export default function Question() {
   function loadWhatWouldYouLikeToDoNextBuyPage(options) {
     const tag = FORM_TAGS.buy_next;
     fireEventTag(tag);
+
     const tagClickedDictionary = {
       "Search & browse homes": "buy_browse",
       "Learn more about homebuying": "buy_learn",
@@ -344,6 +346,7 @@ export default function Question() {
             list_items={what_would_you_like_to_do_next_buy_list_items}
             callback={(index, selectedOption) => {
               const selectedTag = tagClickedDictionary[selectedOption];
+
               fireEventTag(selectedTag);
               if ("branch" in options) {
                 
@@ -568,8 +571,9 @@ export default function Question() {
   }
 
   function fireEventTag(tag) {
-    if (tag) {
+    if (tag && !firedEvents.has(`${flow}_${step}_${tag}`)) {
       doEventClick({ event_name: tag });
+      setFiredEvents(prev => new Set(prev).add(`${flow}_${step}_${tag}`));
     }
   }
 

@@ -31,7 +31,7 @@ const Plan = () => {
               <ArrowButton
                 link_text="Get started"
                 callback={() => {
-                    gtmPush(["callback", "home_plan_card_1", ()=>{router.push(`/calculator-1`);}]);
+                    gtmPush(["callback", "net_proceeds_calc", ()=>{router.push(`/calculator-1`);}]);
                 }}
                 large_text={true}
               />
@@ -46,7 +46,7 @@ const Plan = () => {
               <ArrowButton
                 link_text="Get started"
                 callback={() => {
-                    gtmPush(["callback", "home_plan_card_2", ()=>{router.push(`/calculator-2`);}]);
+                    gtmPush(["callback", "home_savings_calc", ()=>{router.push(`/calculator-2`);}]);
                 }}
                 large_text={true}
               />
@@ -62,7 +62,7 @@ const Plan = () => {
               <ArrowButton
                 link_text="Get started"
                 callback={() => {
-                    gtmPush(["callback", "home_plan_card_3", ()=>{router.push(`/calculator-3`);}]);
+                    gtmPush(["callback", "est_payments_calc", ()=>{router.push(`/calculator-3`);}]);
                 }}
                 large_text={true}
               />
