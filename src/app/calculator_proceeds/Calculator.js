@@ -133,7 +133,7 @@ const debouncedSendUpdateEvent = useDebouncedCallback(
   // function
   () => {
       dataLayer.push({
-        event: "calc_proceeds_conv",
+        event: "net_proceeds_calc",
         "expected_home_sale_price": expected_home_sale_price,
         "remaining_mortgage_owed": remaining_mortgage_owed,
         "agent_fees_percent": agent_fees_percent,

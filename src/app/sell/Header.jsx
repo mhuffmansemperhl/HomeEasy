@@ -119,8 +119,9 @@ const Header = () => {
                         <ArrowButton
                             link_text="Let’s sell your home!"
                             callback={()=>{
-                                gtmPush(["callback", FORM_TAGS.lets_sell_your_home, ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);
-                            }}
+                              // router.push(`/get_started?flow=sell&step=0&branch=9`);
+                              gtmPush(["callback", "lets_sell", ()=>{router.push(`/get_started?flow=sell&step=0&branch=9`);}]);
+                          }}
                         />
           </div>
     

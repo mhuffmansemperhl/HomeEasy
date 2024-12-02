@@ -61,7 +61,7 @@ function cleanNumberString(str){
 const debouncedSendUpdateEvent = useDebouncedCallback(
   // function
   () => {dataLayer.push({
-        event: "calc_savings_conv",
+        event: "home_savings_calc",
         "expected_home_sale_price": expected_home_sale_price,
         "remaining_mortgage_owed": remaining_mortgage_owed,
       });
