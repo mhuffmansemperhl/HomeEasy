@@ -107,7 +107,7 @@ const Header = () => {
                             link_text="Let’s get started!"
                             callback={()=>{
                                 // router.push(`/get_started?flow=sell&step=0&branch=9`);
-                                gtmPush(["callback", FORM_TAGS.get_started_buysell, ()=>{router.push(`/get_started?fflow=sellbuy&step=1`);}]);
+                                gtmPush(["callback", FORM_TAGS.get_started_buysell, ()=>{router.push(`/get_started?flow=sellbuy&step=1`);}]);
                             }}
                         />
           </div>

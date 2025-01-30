@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Navbar from './Navbar';
 import styles from './styles/Header.module.scss';
 import useWindowSize from '../hooks/useWindowSize';
-import GooglePlacesScript, {getSuggestionsWidget} from "@/components/GooglePlacesScript";
+import GooglePlacesScript, {getLatLongFromIP, getSuggestionsWidget, getZipCodeFromLatLng} from "@/components/GooglePlacesScript";
 import useFlowGetStartedStore from "@/store/store.js"
 import { produce } from "immer";
 
@@ -74,6 +74,7 @@ const Header = () => {
     useEffect(() => {
        
       if(google_api_loaded) {
+        
           autoCompleteRef.current = getSuggestionsWidget(searchInputRef);
           autoCompleteRef.current.addListener("place_changed", async function () {
            
@@ -83,7 +84,16 @@ const Header = () => {
                 draft['changed_address'] = place;
               }));
             
-             });            
+             }); 
+             (async () => {
+              const location = await getLatLongFromIP();
+              if (location) {
+                const zipCode = await getZipCodeFromLatLng(location.lat, location.lng);
+                console.log(`ZIP Code: ${zipCode}`);
+              } else {
+                console.log('Failed to determine location.');
+              }
+            })()           
       }
     }, [google_api_loaded]);
 
