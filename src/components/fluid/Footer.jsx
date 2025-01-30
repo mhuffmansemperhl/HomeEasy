@@ -153,15 +153,7 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                                     <a href="/electronic_consent" target="_blank">Electronic Consent</a>
                                     <a href="/tos" target="_blank">Terms &amp; Conditions of Use</a>
                                     <a href="/privacy_policy" target="_blank">Privacy Policy</a>
-                                    <a onClick={()=>{
-                                        
-                                      
-                                        // preventdefault();
-                                        // stopPropagation();
-                                        
-                                        window.CC.showSettings();
-                                        return false;
-                                    }}>Cookie Preferences</a>
+                                    
                                 </div>                     
                             </div>
                             <div className={styles["lower-footer-content-middle-links-container"]}>
@@ -216,13 +208,7 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                                     <a href="/electronic_consent" target="_blank">Electronic Consent</a>
                                     <a href="/tos" target="_blank">Terms &amp; Conditions of Use</a>
                                     <a href="/privacy_policy" target="_blank">Privacy Policy</a>
-                                    <a onClick={()=>{
-                                        
-                                        // preventdefault();
-                                        // stopPropagation();
-                                        window.CC.showSettings();
-                                        return false;
-                                    }}>Cookie Preferences</a>
+                                    
                                 </div>                     
                             </div>
                             <div className={styles["lower-footer-content-middle-links-container"]}>

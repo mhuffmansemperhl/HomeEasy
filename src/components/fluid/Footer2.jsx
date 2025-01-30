@@ -466,19 +466,7 @@ const Footer = ({ centered_style }) => {
                                         >
                                             Privacy Policy
                                         </a>
-                                        <a
-                                            onClick={() => {
-                                                
-                                                
-                                                // preventdefault();
-                                                // stopPropagation();
-
-                                                window.CC.showSettings();
-                                                return false;
-                                            }}
-                                        >
-                                            Cookie Preferences
-                                        </a>
+                                       
                                     </div>
                                 </div>
                                 <div className={styles["lower-footer-content-middle-links-container"]}>
@@ -540,18 +528,7 @@ const Footer = ({ centered_style }) => {
                                         >
                                             Privacy Policy
                                         </a>
-                                        <a
-                                            onClick={() => {
-                                                
-                                                
-                                                // preventdefault();
-                                                // stopPropagation();
-                                                window.CC.showSettings();
-                                                return false;
-                                            }}
-                                        >
-                                            Cookie Preferences
-                                        </a>
+                                      
                                     </div>
                                 </div>
                                 <div className={styles["lower-footer-content-middle-links-container"]}>

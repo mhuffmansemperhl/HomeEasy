@@ -142,13 +142,7 @@ const Footer = () => {
                                     <a href="/">Electronic Consent</a>
                                     <a onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_2_terms_conds", ()=>{router.push(`/tos`);}]);}}>Terms &amp; Conditions of Use</a>
                                     <a onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_2_privacy", ()=>{router.push(`/files/privacy.pdf`);}]);}}>Privacy Policy</a>
-                                    <a onClick={()=>{
-                                        
-                                        // preventdefault();
-                                        // stopPropagation();
-                                        window.CC.showSettings();
-                                        return false;
-                                    }}>Cookie Preferences</a>
+                                    
                                 </div>                     
                             </div>
                             <div className={styles["lower-footer-content-middle-links-container"]}>
@@ -202,13 +196,7 @@ const Footer = () => {
                                     <a href="/">Electronic Consent</a>
                                     <a onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_2_terms_conds", ()=>{router.push(`/tos`);}]);}}>Terms &amp; Conditions of Use</a>
                                     <a onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_2_privacy", ()=>{router.push(`/files/privacy.pdf`);}]);}}>Privacy Policy</a>
-                                    <a onClick={()=>{
-                                        // preventdefault();
-                                        // stopPropagation();
-                                        window.CC.showSettings();
-                                        return false;
-                                    }}>Cookie Preferences</a>
-                                </div>                     
+                                            
                             </div>
                             <div className={styles["lower-footer-content-middle-links-container"]}>
                                 <div className={styles["lower-footer-content-middle-links"]}>
