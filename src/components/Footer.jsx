@@ -2,7 +2,6 @@
 
 import styles from './styles/Footer.module.scss';
 import useWindowSize from '@/hooks/useWindowSize';
-import CookieConsent from './CookieConsent';
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 import { useRouter } from "next/navigation";
 
@@ -228,7 +227,6 @@ const Footer = () => {
 
 
             </div>
-            <CookieConsent/>
         </div>
     );
 };
