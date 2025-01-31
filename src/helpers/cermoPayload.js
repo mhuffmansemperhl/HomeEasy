@@ -58,6 +58,14 @@ export default function cermoPayload(data) {
         }
     }
 
+    if (flow === "instantoffer") {
+        payload = {
+            ...payload,
+            ...sellAddressInfo,
+            relationship_to_home,
+        }
+    }
+
 
     return payload;
   
