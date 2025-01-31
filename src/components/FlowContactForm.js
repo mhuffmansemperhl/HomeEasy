@@ -219,7 +219,7 @@ const FlowContactForm = ({callback, store_key}) => {
                     </div>
                 </div>
                 {/*Todo: ask for href in empty href below*/}
-                <div className={`${styles['contact-form-disclaimer-container']}`}> By clicking Continue, I agree to HomeEasy Home’s <a href="/tos" target="_blank">Terms of Use</a>, <a href="/files/privacy.pdf" target="_blank">Privacy Policy</a>, and the <a href="">Affiliated Business Disclosure and Privacy Notice</a> and I agree that HomeEasy Homes and its affiliated companies may contact me via phone or text, including by automated means. I understand that standard message/data rates may apply. HomeEasy Homes does not sell customer data.</div>
+                <div className={`${styles['contact-form-disclaimer-container']}`}> By clicking Continue, I agree to HomeEasy Home’s <a href="/tos" target="_blank">Terms of Use</a>, <a href="/files/privacy.pdf" target="_blank">Privacy Policy</a>, and I agree that HomeEasy Homes and its affiliated companies may contact me via phone or text, including by automated means. I understand that standard message/data rates may apply. HomeEasy Homes does not sell customer data.</div>
             </div>
         </div>
     )

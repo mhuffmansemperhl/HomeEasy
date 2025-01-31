@@ -35,8 +35,8 @@ export default function RootLayout({ children }) {
         </Head> 
 
       <body>
-      <img src='https://rdcdn.com/rt?aid=26956&e=1&img=1' height='1' width='1' referrerpolicy='no-referrer-when-downgrade' />
-      <img src='https://rdcdn.com/rt?aid=26957&e=1&img=1' height='1' width='1' referrerpolicy='no-referrer-when-downgrade' />
+      <img src='https://rdcdn.com/rt?aid=26956&e=1&img=1' height='1' width='1' style={{position: "absolute"}} referrerpolicy='no-referrer-when-downgrade' />
+      <img src='https://rdcdn.com/rt?aid=26957&e=1&img=1' height='1' width='1' style={{position: "absolute"}} referrerpolicy='no-referrer-when-downgrade' />
         <GTAnalytics />
         {children}
         <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2761640.js"></script>

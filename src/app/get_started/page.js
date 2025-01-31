@@ -492,7 +492,7 @@ export default function Question() {
             list_items={yes_no_list_items}
             callback={(index) => {
               if ("branch" in options) {
-                setBranch(options.branch + index);
+                setBranch(3);
               } else {
                 setBranch(index);
               }
