@@ -660,14 +660,14 @@ export default function Question() {
         className={styles["allways-bottom"]}
         label={"Next"}
         callback={(data) => {
-        const payloadForCermo = cermoPayload({flow, ...data,})
-        fetch('/api/cermo_api', {
+          const payloadForCermo = cermoPayload({flow, ...data,});
+          fetch('/api/cermo_api', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+              'Content-Type': 'application/json',
             },
             body: JSON.stringify(payloadForCermo)
-        });
+          });
 
           nextStepValidate(pathname, router, searchParams);
          
