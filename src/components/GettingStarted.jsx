@@ -3,6 +3,7 @@ import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import styles from './styles/GettingStarted.module.scss';
 import useGoogleTagManager from "@/hooks/useGoogleTagManager";
+import Link from "next/link";
 
 const GettingStarted = () => {
     const router = useRouter();
@@ -38,10 +39,12 @@ const GettingStarted = () => {
                     <div className={styles['main-component-title']}>Getting started is easy and obligation free.</div>
                     <div className={styles['main-component-copy']}>The whole real estate process may seem intimidating, but we’re here to help!</div>
                     <div className={`${styles['main-component-button-container']} ${show}`}>
-                        <button onClick={() => {
-                            // router.push("/get_started");
-                            gtmPush(["callback", "get_started_gen", ()=>{router.push(`/get_started`);}]);
-                        }} className='darken-on-hover'>Get Started <img src="/img/button_right_arrow.svg" alt="arrow" /> </button>
+                        <Link href="/get_started" style={{textDecoration: 'none'}}>
+                            <button onClick={() => {
+                                // router.push("/get_started");
+                                gtmPush(["callback", "get_started_gen", ()=>{return;}]);
+                            }} className='darken-on-hover'>Get Started <img src="/img/button_right_arrow.svg" alt="arrow" /> </button>
+                        </Link>
                     </div>
                 </div>
             </div>
