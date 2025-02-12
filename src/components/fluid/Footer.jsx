@@ -231,7 +231,7 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                        
                         </div>
                         <div className={styles["grand_text"]}>
-                            1 The following offers are available only to clients who are purchasing a home and financing with HomeEasy Mortgage: (1) Client purchasing with a HomeEasy Homes Partner Agent
+                            1 The following offers are available only to clients who are purchasing a home and financing with Semper Home Loans, Inc.: (1) Client purchasing with a HomeEasy Homes Partner Agent
                             through HomeEasy Homes will receive a lender paid credit that is 1.50% of their loan amount. For example, a $200,000 home purchase price minus a 5% down payment of $10,000
                             results in a loan amount of $190,000. Client would receive a credit of 1.50% of the $190,000, for a credit of $2,850 toward closing costs. (2) Client is referred by a real estate agent
                             to buy a new home will not receive a lender paid credit. Offer does not apply to new loans submitted through an Executive Loan Officer, mortgage broker, through Schwab, or on nonagency jumbo loans, non-QM loans, bank statement loans, second lien products or team member loans. Offer may not be redeemed for cash and is nontransferable. Offer cannot be
@@ -247,7 +247,7 @@ By searching, you agree to the <a href="/tos" target="_blank">Terms of Use</a>, 
                         <p>Apple and the Apple logo are trademarks of Apple Inc. registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
                         <p>Wear OS by Google and Google Play are trademarks of Google LLC.</p>
                         <p>
-                        Semper Home Loans, Inc., HomeEasy Homes, LLC, and HomeEasy Mortgage, LLC are separate operating subsidiaries of Semper Home Loans, Inc. Each company is a distinct legal entity, operated and managed through its own management and governance structure as necessitated by its state of incorporation and the relevant legal and regulatory requirements.
+                        Semper Home Loans, Inc., and HomeEasy Homes, LLC are separate operating subsidiaries of Semper Home Loans, Inc. Each company is a distinct legal entity, operated and managed through its own management and governance structure as necessitated by its state of incorporation and the relevant legal and regulatory requirements.
                         </p>
                             </div>
                             </div>
