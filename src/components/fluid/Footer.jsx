@@ -56,7 +56,7 @@ const Footer = ({centered_style}) => {
                                 <div className={styles["upper-footer-content-left-links"]}>
                                     <div className={styles["upper-footer-content-left-links-item"]}>
                                         <div className={styles["upper-footer-content-left-links-title"]}>Mortgage</div>
-                                        <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_mort_todays_rates", ()=>{router.push(`/mortgage`);}]);}}>Today’s rates</a> </div>
+                                        <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_mort_todays_rates", ()=>{window.open('https://gethomeeasy.com/', '_blank');}]);}}>Today’s rates</a> </div>
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_mort_home_loans", ()=>{router.push(`/mortgage`);}]);}}>Home loans</a> </div>
                                         <div className={styles["upper-footer-content-left-links-link"]}> <a className='underline-on-hover-red' onClick={(e) => {e.preventDefault(); gtmPush(["callback", "foot_1_mort_refi", ()=>{router.push(`/mortgage`);}]);}}>Refinance</a> </div>
                                     </div>

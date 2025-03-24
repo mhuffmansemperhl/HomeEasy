@@ -178,7 +178,7 @@ const Footer = ({ centered_style }) => {
                                                             "callback",
                                                             "foot_1_mort_todays_rates",
                                                             () => {
-                                                                router.push(`/mortgage`);
+                                                                window.open('https://gethomeeasy.com/', '_blank')
                                                             },
                                                         ]);
                                                     }}
