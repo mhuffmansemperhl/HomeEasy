@@ -415,11 +415,11 @@ const Footer = ({ centered_style }) => {
                                             NMLS Consumer Access
                                         </a>
                                     </p>
-                                    <p>
+                                    {/* <p>
                                         <a href="https://help.jmaclending.com/hc/files/11272354/12124268/1/1548800701341/Affiliated+Business+Disclosure.pdf" target="_blank">
                                             Affiliated Business Arrangement Disclosure
                                         </a>
-                                    </p>
+                                    </p> */}
                                     {/* By searching, you agree to the Terms of Use, Privacy Policy and California Privacy Notice. California DRE #02012110; Semper Home Loans: NMLS #1053
     TREC: Info about Brokerage Services, Consumer Protection Notice, Texas Mortgage Company Compliant/Recovery Fund Notice
     Real estate brokerage licenses

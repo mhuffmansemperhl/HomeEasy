@@ -104,7 +104,7 @@ const Footer = ({centered_style}) => {
                                 <a href="/"><img src="/img/equal-housing-opportunity-logo-1200w copy.svg" alt="Equal Housing Opportunity" /></a>
                             </div>
                             <div className={styles["upper-footer-content-right-copy-container"]}>
-                                <p>HOMEEASY HOMES IS COMMITTED TO AND ABIDES BY THE FAIR HOUSING ACT AND EQUAL OPPORTUNITY ACT. READ HOMEEASY HOME’S <a href="/fair_housing" target="_blank">FAIR HOUSING POLICY</a> AND THE <a href="https://dos.ny.gov/system/files/documents/2021/08/fairhousingnotice.pdf" target="_blank">NEW YORK STATE FAIR HOUSING NOTICE</a>.</p>
+                                <p>HOMEEASY HOMES IS COMMITTED TO AND ABIDES BY THE FAIR HOUSING ACT AND EQUAL OPPORTUNITY ACT. READ HOMEEASY HOME’S <a href="/fair_housing" target="_blank">FAIR HOUSING POLICY</a>. {/*AND THE <a href="https://dos.ny.gov/system/files/documents/2021/08/fairhousingnotice.pdf" target="_blank">NEW YORK STATE FAIR HOUSING NOTICE</a>*/}</p>
 
                                 <p>HomeEasy&trade; is a registered trademark licensed to HomeEasy LLC.</p> 
 
