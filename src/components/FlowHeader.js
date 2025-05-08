@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 
 import styles from './styles/FlowHeader.module.scss';
+import Link from "next/link";
 
 const FlowHeader = ({button_info}) => {
     const router = useRouter();
@@ -12,10 +13,12 @@ const FlowHeader = ({button_info}) => {
                 e.preventDefault();                
                 e.stopPropagation();
                 // router.push('/');
-                window.location.href = "/";
+                // window.location.href = "/";
                 
                 }}>
+            <Link href="/">
                 <img src="/img/flow_header_logo.png" alt="logo" />             
+            </Link>                    
             </div>
             <div className={`${styles['header-arrow-container']}  centered-content`}  onClick={() => router.push('/')}>
             {/* <img onClick={()=>{window.history.back();}} src="/img/flow_header_back_arrow.png" alt="back" />              */}

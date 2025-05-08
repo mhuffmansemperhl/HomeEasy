@@ -36,6 +36,8 @@ export default function Question() {
   const flow = useFlowGetStartedStore((state) => state.flow);
   const setFlow = useFlowGetStartedStore((state) => state.setFlow);
 
+  const resetState = useFlowGetStartedStore(state => state.reset);
+
   const step = useFlowGetStartedStore((state) => state.step);
   const setStep = useFlowGetStartedStore((state) => state.setStep);
 
@@ -156,6 +158,7 @@ export default function Question() {
       <ButtonFooter
         className={styles["allways-bottom"]}
         label={"Next"}
+        name={"sell_address"}
         callback={() => {
           nextStep(pathname, router, searchParams);
         }}
@@ -185,6 +188,7 @@ export default function Question() {
       <ButtonFooter
         className={styles["allways-bottom"]}
         label={"Next"}
+        name={"buy_address"}
         callback={() => {
           nextStep(pathname, router, searchParams);
         }}
@@ -1564,6 +1568,12 @@ export default function Question() {
       debouncedNavigation();
     });
 
+    return () => {
+      resetState();
+      window.removeEventListener("popstate", (event) => {
+        debouncedNavigation();
+      });
+    };
    
   }, []);
 
@@ -1576,6 +1586,12 @@ export default function Question() {
     if (!flow_loaded) {
       debouncedNavigation();
       
+    }
+    if((flow === "sell" && +step > 0) || (flow !== "sell" && +step > 1)) {
+      if(JSON.stringify(form_data) === "{}") {
+        router.push(`/get_started`);
+      }
+      return
     }
   }, [step, flow, branch]);
 
