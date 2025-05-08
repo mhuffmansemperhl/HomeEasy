@@ -50,7 +50,8 @@ const initialState = {
     account_creation_error: undefined,
     account_created: false,
     selected_questions_tab_index: 0,
-    selected_questions_tab_index_agent:3
+    selected_questions_tab_index_agent:3,
+    addressFromDropDownErr: "",
 };
 
 export const useFlowGetStartedStore = create(devtools((set, get) => ({
@@ -118,6 +119,7 @@ export const useFlowGetStartedStore = create(devtools((set, get) => ({
     },
     // nextStep: () => set((state) => ({ step: (state.step !== undefined) ? state.step + 1 : 0 })),
     prevStep: () => set((state) => ({ step: state.step - 1 })),
+    setAddressFrommDropDownErr: (value) => set({ addressFromDropDownErr: value }),
 })));
 
 //   increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),

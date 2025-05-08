@@ -29,6 +29,8 @@ const FlowAddressSell = ({callback, store_key, search_type}) => {
 
     const form_data = useFlowGetStartedStore(state => state.form_data);
     const setFormData = useFlowGetStartedStore(state => state.setFormData);
+    const addressErrMsg = useFlowGetStartedStore(state => state.addressFromDropDownErr);
+    const setAddressFrommDropDownErr = useFlowGetStartedStore(state => state.setAddressFrommDropDownErr);
 
     const [searchType, setSearchType] = useState("all");
 
@@ -37,28 +39,14 @@ const FlowAddressSell = ({callback, store_key, search_type}) => {
     const handleChange = (evt) => {
         false && console.log("...handling change");
         setAddress(evt.target.value);
+        setFormData(produce(form_data, (draft) => {
+            draft[store_key] = "";
+        }));
     };
 
-    // const debounced = useDebouncedCallback(
-    //     // function
-    //     (value) => {
-    //         getSuggestions(value, (results) => {
-    //             setPlacesSuggestions(results);
-    //         });
-    //     },
-    //     // delay in ms
-    //     300
-    //   );
 
     const handleKeyUp = (evt) => {
-        // false && console.log("...handling keyup");
-        // false && console.log(evt.keyCode);
-        // false && console.log(google.maps.places);
-        // debounced(evt.target.value);
-        // if(evt.keyCode === 13){
-        //     false && console.log("need to do next here");
-        //     // validateForm();
-        // }
+   
     };
     useEffect(() => {
 
@@ -72,14 +60,14 @@ const FlowAddressSell = ({callback, store_key, search_type}) => {
             setSearchType("all");
         }
 
-        if(store_key in form_data === false){
+        if(!form_data || (form_data && form_data[store_key] == null)){
             setFormData(produce(form_data, draft => {
                 draft[store_key] = {};
             }));
         }else{
             setAddress(form_data[store_key].formatted_address);
         }
-    }, []);
+    }, [store_key]);
 
 
 
@@ -110,59 +98,16 @@ const FlowAddressSell = ({callback, store_key, search_type}) => {
                 const place = await autoCompleteRef.current.getPlace();
 
                 false && console.log(place );
+                setAddressFrommDropDownErr("");
                 setFormData(produce(form_data, draft => {
                     draft[store_key] = place;
                 }));
                 setAddress(place.formatted_address);
+                
                });            
         }
-    }, [google_api_loaded]);
+    }, [google_api_loaded, store_key]);
 
-    // function handleSelect(address) {
-    //     geocodeByAddress(address)
-    //     .then(results => {
-    //         if(results.length > 0) {
-    //             const gadd = results[0]['address_components'];
-    //             const add_obj = {};
-    //             const items = gadd.map((item) => {
-    //                 return `${item.types[0]}:${item.long_name}`;
-    //             }).forEach((item) => {
-    //                 const key = item.split(':')[0];
-    //                 const val = item.split(':')[1];
-    //                 add_obj[key] = val;
-    //             });
-    //             // 
-
-    //             if(add_obj['route'] !== undefined) {
-    //                 const tadd = `${add_obj['street_number']} ${add_obj['route']}, ${add_obj['locality']}, ${add_obj['administrative_area_level_1']}, ${add_obj['postal_code']}`;
-    //                 setAddress(tadd);
-    //                 callback({...add_obj, address: tadd});
-    //             }
-
-    //             // if(add_obj['route'] !== undefined) {
-    //             //     const tadd = `${add_obj['street_number']} ${add_obj['route']}`;
-    //             //     last_search_type = "street";
-    //             //     doAddressSearch("street", tadd);
-    //             //     setAddress(tadd);
-    //             // }else if(add_obj['postal_code'] !== undefined){
-    //             //     const tadd = `${add_obj['postal_code']}`;
-    //             //     last_search_type = "zipcode";
-    //             //     doAddressSearch("zipcode", tadd);
-    //             //     setAddress(tadd);
-    //             // }else if(add_obj['locality'] !== undefined && add_obj['administrative_area_level_1'] !== undefined) {
-    //             //     const tadd = `${add_obj['locality']}, ${add_obj['administrative_area_level_1']}`;
-    //             //     last_search_type = "town";
-    //             //     doAddressSearch("town", tadd);
-    //             //     // setAddress(tadd);
-    //             // }
-        
-    //         }
-    
-    //         // false && console.log(results);
-    //         // getLatLng(results[0])
-    //     })
-
-    // };
 
     return (
         <div className={`${styles['main-component']}`}>
@@ -171,10 +116,10 @@ const FlowAddressSell = ({callback, store_key, search_type}) => {
 
             <div  className={`${styles['address-input-container']}`}>
                 <input ref={searchInputRef} onChange={(evt) => {handleChange(evt);}} onKeyUp={(evt) => {handleKeyUp(evt);}} value={address} type="text" placeholder="Enter location" />
-
             </div>
 
             </div>
+                {addressErrMsg && <div className={`${styles['err-msg']}`}>{addressErrMsg}</div>}
         </div>
     )
 };
