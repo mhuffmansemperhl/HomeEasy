@@ -18,6 +18,7 @@ import useGoogleTagManager from "@/hooks/useGoogleTagManager";
 import getZipCode from "@/helpers/getCustomerZipCode";
 import cermoPayload from "@/helpers/cermoPayload";
 import { FORM_TAGS } from "@/helpers/formTags";
+import { validateUser } from "@/helpers/validateUser";
 
 export default function Question() {
   const [firedEvents, setFiredEvents] = useState(new Set());
@@ -58,7 +59,6 @@ export default function Question() {
   );
 
   const form_data = useFlowGetStartedStore((state) => state.form_data);
-
   const setIsBusy = useFlowGetStartedStore((state) => state.setIsBusy);
 
   const setAccountCreationError = useFlowGetStartedStore(
@@ -218,19 +218,24 @@ export default function Question() {
     setFooterNav(
       <ButtonFooter
         className={styles["allways-bottom"]}
+        needValidation={true}
         label={"Next"}
         callback={(data) => {
-          const payloadForCermo = cermoPayload({flow, ...data,})
-          console.log(payloadForCermo, 'xdd')
-          fetch('/api/cermo_api', {
-            method: 'POST',
-            headers: {
+          const contact = data?.contact;
+          const isValidUserData = validateUser(contact?.email, contact?.first_name, contact?.last_name, contact?.mobile_phone_number);
+          
+          if(isValidUserData?.isValid ){
+            const payloadForCermo = cermoPayload({flow, ...data,});
+            fetch('/api/cermo_api', {
+              method: 'POST',
+              headers: {
                 'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(payloadForCermo)
-          });
-          // nextStepValidate(pathname, router, searchParams);
-          nextStepValidate(pathname, router, searchParams);
+              },
+              body: JSON.stringify(payloadForCermo)
+            });
+            nextStepValidate(pathname, router, searchParams);
+
+          }
         }}
       />
     );
@@ -664,16 +669,21 @@ export default function Question() {
         className={styles["allways-bottom"]}
         label={"Next"}
         callback={(data) => {
-          const payloadForCermo = cermoPayload({flow, ...data,});
-          fetch('/api/cermo_api', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(payloadForCermo)
-          });
+          const contact = data?.contact;
+          const isValidUserData = validateUser(contact?.email, contact?.first_name, contact?.last_name, contact?.mobile_phone_number);
+          
+          if(isValidUserData?.isValid ){
+            const payloadForCermo = cermoPayload({flow, ...data,});
+            fetch('/api/cermo_api', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(payloadForCermo)
+            });
+            nextStepValidate(pathname, router, searchParams);
 
-          nextStepValidate(pathname, router, searchParams);
+          }
          
         }}
       />
