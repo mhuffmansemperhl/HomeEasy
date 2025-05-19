@@ -16,7 +16,7 @@ const FlowHeader = ({button_info}) => {
                 // window.location.href = "/";
                 
                 }}>
-            <Link href="/">
+            <Link href="/" className={`${styles['header-logo-container']}  centered-content`}>
                 <img src="/img/flow_header_logo.png" alt="logo" />             
             </Link>                    
             </div>
