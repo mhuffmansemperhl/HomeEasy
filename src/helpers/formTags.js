@@ -20,6 +20,7 @@ export const FORM_TAGS = {
     instant_contact: "instant_contact",
     sell_instant_calendar: "sell_instant_calendar",
     buy_calendar: "buy_calendar",
+    sellbuy_calendar: "sellbuy_calendar",
     instant_calendar: "instant_calendar",
     get_started_sell: "get_started_sell",
     get_started_buy: "get_started_buy",

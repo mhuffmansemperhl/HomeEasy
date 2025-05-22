@@ -606,7 +606,7 @@ export default function Question() {
     }
 
     if (flow === "buy" || flow === "sellbuy") {
-      tag = FORM_TAGS.buy_calendar
+      tag = flow === "buy" ? FORM_TAGS.buy_calendar : FORM_TAGS.sellbuy_calendar;
       copy = 'Let’s schedule a call at a time that works best for you to go over next steps.'
     }
 
