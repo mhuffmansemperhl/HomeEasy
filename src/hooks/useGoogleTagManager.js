@@ -26,11 +26,21 @@ export default function useGoogleTagManager() {
         
             if("event_name" in options){
                 if("callback_function" in options) {
-                    
-                    dataLayer.push({
-                        'event': options.event_name,
-                        'eventCallback': ()=>{options.callback_function();}
-                    });
+                    if (dataLayer){
+
+                        dataLayer.push({
+                            'event': options.event_name,
+                            'eventCallback': ()=>{options.callback_function();}
+                        });
+                        setTimeout(() => {
+                            if (!callbackExecuted) {
+                                options.callback_function();
+                            }
+                        }, 500); // Adjus
+                    } else{
+                        // Directly execute the callback if dataLayer is unavailable
+                        options.callback_function();
+                    }
                 } else if("event_location_tab" in options){
                     dataLayer.push({
                         'event': options.event_name,
