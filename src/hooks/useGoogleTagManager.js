@@ -27,10 +27,13 @@ export default function useGoogleTagManager() {
             if("event_name" in options){
                 if("callback_function" in options) {
                     if (dataLayer){
-
+                        let callbackExecuted = false;
                         dataLayer.push({
                             'event': options.event_name,
-                            'eventCallback': ()=>{options.callback_function();}
+                            'eventCallback': ()=>{
+                                callbackExecuted = true;
+                                options.callback_function();
+                            }
                         });
                         setTimeout(() => {
                             if (!callbackExecuted) {
