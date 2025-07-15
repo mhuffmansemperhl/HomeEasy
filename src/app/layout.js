@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import './globals.scss'
 import GTAnalytics from '@/components/GTAnalytics';
+import { GtmAnalytics } from '@/components/GtmAnalytics';
 
 export const metadata = {
   title: 'HomeEasy Homes',
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
       <img src='https://rdcdn.com/rt?aid=26956&e=1&img=1' height='1' width='1' style={{position: "absolute"}} referrerpolicy='no-referrer-when-downgrade' />
       <img src='https://rdcdn.com/rt?aid=26957&e=1&img=1' height='1' width='1' style={{position: "absolute"}} referrerpolicy='no-referrer-when-downgrade' />
         <GTAnalytics />
+        <GtmAnalytics />
         {children}
         <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2761640.js"></script>
        </body>

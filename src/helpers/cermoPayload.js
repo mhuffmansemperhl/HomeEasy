@@ -1,4 +1,5 @@
 import extractAddressInfo from "./extractAddressInfor";
+import { getUtm } from "./getUtm";
 
 export default function cermoPayload(data) {
     const { 
@@ -19,6 +20,7 @@ export default function cermoPayload(data) {
     let payload = {
         flow,
         ...contact,
+        ...getUtm(),
     };
 
     const buyAddressInfo = extractAddressInfo(buy_address?.address_components);
