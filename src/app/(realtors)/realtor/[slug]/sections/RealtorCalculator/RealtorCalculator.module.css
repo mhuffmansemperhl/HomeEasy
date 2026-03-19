@@ -1,0 +1,630 @@
+.calculatorSection {
+  width: 100vw;
+  padding: 50px 30px;
+  margin: 0 -30px;
+  background-color: #f9f9f9;
+}
+
+@media (min-width: 768px) {
+  .calculatorSection {
+    margin: 0 -105px;
+    padding: 60px 105px;
+  }
+}
+
+@media (min-width: 1338px) {
+  .calculatorSection {
+    margin: 0 -66px 0 -352px;
+    padding: 80px 66px 80px 352px;
+    width: auto;
+  }
+}
+
+@media (min-width: 1600px) {
+  .calculatorSection {
+    margin: 0;
+    padding: 100px 0;
+  }
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+.mainHeading {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 32px 0;
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  .mainHeading {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1338px) {
+  .mainHeading {
+    margin-bottom: 48px;
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .buttonGroup {
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+.tabButton {
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid #d22730;
+  background-color: transparent;
+  color: #d22730;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .tabButton {
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tabButton {
+    width: 235px;
+    height: 43px;
+    padding: 0;
+  }
+}
+
+.tabButtonActive {
+  background-color: #d22730;
+  color: #fff;
+}
+
+.tabButton:hover {
+  opacity: 0.8;
+}
+
+.description {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #444;
+  margin: 0 0 48px 0;
+  max-width: 600px;
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 16px;
+    margin-bottom: 56px;
+    max-width: none;
+  }
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .contentWrapper {
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+  }
+}
+
+@media (min-width: 1338px) {
+  .contentWrapper {
+    gap: 80px;
+  }
+}
+
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .inputSection {
+    gap: 32px;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (min-width: 1024px) {
+  .inputGroup {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.inputLabel {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (min-width: 768px) {
+  .inputLabel {
+    font-size: 16px;
+    flex-basis: 36%;
+  }
+}
+
+.helpText {
+  font-size: 13px;
+  font-weight: 400;
+  color: #666;
+}
+
+.helpText a {
+  color: #0066ff;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.helpText a:hover {
+  opacity: 0.8;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.currencySymbol {
+  position: absolute;
+  left: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 14px 14px 32px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .input {
+    padding: 16px 16px 16px 36px;
+    font-size: 16px;
+  }
+}
+
+.input:focus {
+  outline: none;
+  border-color: #d22730;
+  box-shadow: 0 0 0 3px rgba(210, 39, 48, 0.1);
+}
+
+.input::placeholder {
+  color: #ccc;
+}
+
+.disclaimerLink {
+  font-size: 14px;
+  color: #0066ff;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  align-self: flex-start;
+}
+
+@media (min-width: 768px) {
+  .disclaimerLink {
+    font-size: 15px;
+    width: 100%;
+    text-align: right;
+  }
+}
+
+.disclaimerLink:hover {
+  opacity: 0.8;
+}
+
+.resultsSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .resultsSection {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.resultsCard {
+  width: 100%;
+  max-width: 340px;
+  padding: 40px 32px;
+  background: linear-gradient(135deg, #1a3a52 0%, #254d6b 100%);
+  border-radius: 16px;
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .resultsCard {
+    max-width: 380px;
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
+
+.resultsLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 12px 0;
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 768px) {
+  .resultsLabel {
+    font-size: 18px;
+  }
+}
+
+.resultsAmount {
+  font-size: 52px;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  line-height: 1.1;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .resultsAmount {
+    font-size: 56px;
+  }
+}
+
+.resultsDivider {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 24px 0;
+}
+
+@media (min-width: 768px) {
+  .resultsDivider {
+    margin: 32px 0;
+  }
+}
+
+.resultDetail {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media (min-width: 768px) {
+  .resultDetail {
+    margin-bottom: 20px;
+  }
+}
+
+.resultDetail:last-child {
+  margin-bottom: 0;
+}
+
+.resultDetailLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (min-width: 768px) {
+  .resultDetailLabel {
+    font-size: 18px;
+  }
+}
+
+.resultDetailValue {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .resultDetailValue {
+    font-size: 36px;
+  }
+}
+
+/* Select Dropdown Styles */
+.select {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .select {
+    padding: 16px 16px;
+    font-size: 16px;
+    flex-grow: 1;
+  }
+}
+
+.select:focus {
+  outline: none;
+  border-color: #d22730;
+  box-shadow: 0 0 0 3px rgba(210, 39, 48, 0.1);
+}
+
+/* Dual Input Group for Down Payment */
+.dualInputGroup {
+  display: grid;
+  flex-grow: 1;
+  grid-template-columns: 28% 1fr;
+  gap: 0;
+  border: 1px solid #bdd9e6;
+  border-radius: 20px;
+  padding: 0;
+  height: fit-content;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .dualInputGroup {
+    gap: 0;
+  }
+}
+
+.dualInputItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.dualInputItem label {
+  display: none;
+}
+
+.dualInputItem:first-child {
+  background-color: #e8f4f8;
+}
+
+.dualInputItem:first-child .inputWrapper {
+  border-radius: 20px 0 0 20px;
+  border-right: 1px solid #bdd9e6;
+  padding: 12px 20px;
+}
+
+@media (min-width: 768px) {
+  .dualInputItem:first-child .inputWrapper {
+    padding: 14px 24px;
+  }
+}
+
+.dualInputItem:last-child .inputWrapper {
+  border-radius: 0 20px 20px 0;
+  border-left: none;
+  padding: 12px 16px;
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .dualInputItem:last-child .inputWrapper {
+    padding: 14px 16px;
+  }
+}
+
+.dualInputItem .input {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-size: 15px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .dualInputItem .input {
+    font-size: 16px;
+  }
+}
+
+.dualInputItem .input:focus {
+  outline: none;
+}
+
+.dualInputItem .inputWrapper {
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dualInputItem .currencySymbol,
+.dualInputItem .unitSymbol {
+  position: absolute;
+  right: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .dualInputItem .currencySymbol,
+  .dualInputItem .unitSymbol {
+    right: 14px;
+    font-size: 15px;
+  }
+}
+
+/* Unit Symbol (for % and other units) */
+.unitSymbol {
+  position: absolute;
+  right: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  pointer-events: none;
+}
+
+/* Unit Label (for /year, /month) */
+.unitLabel {
+  position: absolute;
+  right: 16px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #999;
+  pointer-events: none;
+}
+
+/* Payment Chart */
+.paymentChart {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2px;
+  width: 100%;
+  height: 12px;
+  margin: 24px 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .paymentChart {
+    height: 16px;
+    margin: 32px 0;
+  }
+}
+
+.chartSegment {
+  width: 100%;
+  height: 100%;
+}
+
+/* Payment Breakdown */
+.paymentBreakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .paymentBreakdown {
+    gap: 20px;
+  }
+}
+
+.breakdownItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 8px;
+}
+
+@media (min-width: 768px) {
+  .breakdownItem {
+    gap: 16px;
+  }
+}
+
+.breakdownDot {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .breakdownDot {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.breakdownLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .breakdownLabel {
+    font-size: 15px;
+  }
+}
+
+.breakdownValue {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .breakdownValue {
+    font-size: 17px;
+  }
+}
