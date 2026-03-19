@@ -35,7 +35,7 @@ export default function RealtorPageClient({ realtorData }) {
 
         <ProfileSection 
           name={realtorData?.name}
-          profileImage={`https://realtor-admin-panel.vercel.app/${profileImageURL}`}
+          profileImage={`https://realtor-admin-panel.vercel.app${profileImageURL}`}
           isopened={isopened}
           facebookURL={realtorData?.facebookLink}
           instagramURL={realtorData?.igLink}
