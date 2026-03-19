@@ -2,12 +2,12 @@
 import { reviewHelper } from "./helpers/reviewHelper";
 import RealtorPageClient from "./RealtorPageClient";
 
-const ZILLOW_PARTNER_ID = process.env.ZILLOW_PARTNER_ID; // Ensure this is set in your environment variables
+// const ZILLOW_PARTNER_ID = process.env.ZILLOW_PARTNER_ID; // Ensure this is set in your environment variables
 
 async function getRealtorData(slug) {
   try {
     const response = await fetch(
-      `http://localhost:3001/api/realtors?where[slug][equals]=${slug}`,
+      `https://realtor-admin-panel.vercel.app/api/realtors?where[slug][equals]=${slug}`,
       { next: { revalidate: 3600 } }
     )
     const data = await response.json()
