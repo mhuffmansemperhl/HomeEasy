@@ -93,7 +93,7 @@ const AboutSection = ({
                 >
                     {selectedSection === 'agent' && <AbountAgent bio={bio} />}
                     {selectedSection === 'semper' && <AboutHEH />}
-                    {selectedSection === 'process' && <GetPreApproved />}
+                    {selectedSection === 'process' && <GetPreApproved preApprovedLink={agent?.startPreApprovalUrl} />}
                 </motion.div>
             </AnimatePresence>
         </section>
