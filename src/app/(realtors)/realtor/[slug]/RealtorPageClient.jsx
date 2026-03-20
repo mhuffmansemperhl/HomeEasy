@@ -57,8 +57,8 @@ export default function RealtorPageClient({ realtorData }) {
           <button 
             className={styles.getStartedButton}
             onClick={() => {
-              if (realtorData?.applicationURL) {
-                window.open(realtorData.applicationURL, '_blank');
+              if (realtorData?.getStartedLink) {
+                window.open(realtorData.getStartedLink, '_blank');
               }
             }}
           >
@@ -66,7 +66,7 @@ export default function RealtorPageClient({ realtorData }) {
           </button>
           
           <div className={styles.bioSection}>
-            <p>{realtorData?.bio || "Buying or selling a home can feel overwhelming, but I've got you. I'll help you find the right place, get the best deal, and make the whole thing way less stressful."}</p>
+            <p>{"Buying or selling a home can feel overwhelming, but I've got you. I'll help you find the right place, get the best deal, and make the whole thing way less stressful."}</p>
           </div>
         </div>
       </div>

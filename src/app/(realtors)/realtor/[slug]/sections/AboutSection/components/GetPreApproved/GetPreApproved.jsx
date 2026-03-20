@@ -11,6 +11,7 @@ const addLineBreaks = (text) => {
 const GetPreApproved = ({
   // Dummy data defaults
   bio = "Our lending partner makes buying a home easier—and your wallet happier. Eligible buyers can get up to $10,0001 toward closing costs and access low rates instantly, helping you save thousands while making your next move more affordable.<br><br>They also offer same-day pre-approvals, so you can act fast in today’s competitive market and feel confident every step of the way. Working with our trusted partner is a smart, stress-free way to get home, easy.",
+  preApprovedLink,
   handleTeamIcon = () => "/team_semper.svg",
   
 }) => {
@@ -36,7 +37,7 @@ const GetPreApproved = ({
         <button 
                         className={styles.getStartedButton}
                         onClick={() => {
-                            // windowInstance.open(applicationURL, '_blank');
+                            window.open(preApprovedLink, '_blank');
                         }}
                     >
                         Get Pre-Approved
