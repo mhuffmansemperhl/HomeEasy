@@ -88,6 +88,8 @@ const RealtorCalculator = () => {
   const [monthlyInsurance, setMonthlyInsurance] = useState(0)
   const [monthlyHoaFees, setMonthlyHoaFees] = useState(0)
   const [chartStyle, setChartStyle] = useState({})
+  const [showDisclaimerModal, setShowDisclaimerModal] = useState(false)
+  const [showPaymentsDisclaimerModal, setShowPaymentsDisclaimerModal] = useState(false)
 
   // Calculate net proceeds whenever inputs change
   useEffect(() => {
@@ -341,9 +343,12 @@ const RealtorCalculator = () => {
                   </div>
                 </div>
 
-                {/* <a href="/" className={styles.disclaimerLink}>
+                <button 
+                  onClick={() => setShowDisclaimerModal(true)}
+                  className={styles.disclaimerLink}
+                >
                   Calculator Disclaimer
-                </a> */}
+                </button>
               </div>
 
               <div className={styles.resultsSection}>
@@ -516,6 +521,13 @@ const RealtorCalculator = () => {
                     <span className={styles.unitLabel}>/month</span>
                   </div>
                 </div>
+
+                <button 
+                  onClick={() => setShowPaymentsDisclaimerModal(true)}
+                  className={styles.disclaimerLink}
+                >
+                  Calculator Disclaimer
+                </button>
               </div>
 
               <div className={styles.resultsSection}>
@@ -559,6 +571,48 @@ const RealtorCalculator = () => {
             </>
           )}
         </div>
+
+        {showDisclaimerModal && (
+          <div className={styles.modalOverlay} onClick={() => setShowDisclaimerModal(false)}>
+            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+              <div className={styles.modalHeader}>
+                <h2>Calculator Disclaimer</h2>
+                <button 
+                  className={styles.modalCloseButton}
+                  onClick={() => setShowDisclaimerModal(false)}
+                  aria-label="Close modal"
+                >
+                  ×
+                </button>
+              </div>
+              <div className={styles.modalBody}>
+                <p>This calculator is offered for educational purposes only. All costs are estimates and no guarantee is made that all possible costs have been included. This calculator does not replace a professional estimate.</p>
+              </div>
+              
+            </div>
+          </div>
+        )}
+
+        {showPaymentsDisclaimerModal && (
+          <div className={styles.modalOverlay} onClick={() => setShowPaymentsDisclaimerModal(false)}>
+            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+              <div className={styles.modalHeader}>
+                <h2>Calculator Disclaimer</h2>
+                <button 
+                  className={styles.modalCloseButton}
+                  onClick={() => setShowPaymentsDisclaimerModal(false)}
+                  aria-label="Close modal"
+                >
+                  ×
+                </button>
+              </div>
+              <div className={styles.modalBody}>
+                <p>Our calculators are intended to be used for educational purposes only. Actual available rates and monthly payment amounts are subject to market fluctuations and will depend on a number of factors, including geography and loan characteristics. The estimates are based on information you provide, and may not include other fees and costs that a lender may assess in addition to monthly principal and interest, such as taxes and insurance and the actual payment obligation may be greater. This is not a commitment to lend with Semper Home Loans.</p>
+              </div>
+              
+            </div>
+          </div>
+        )}
       </div>
     </section>
   )

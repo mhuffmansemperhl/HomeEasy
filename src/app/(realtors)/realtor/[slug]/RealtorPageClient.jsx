@@ -58,7 +58,7 @@ export default function RealtorPageClient({ realtorData }) {
             className={styles.getStartedButton}
             onClick={() => {
               if (realtorData?.getStartedLink) {
-                window.open(realtorData.getStartedLink, '_blank');
+                window.open(`mailto:${realtorData.getStartedLink}`, '_blank');
               }
             }}
           >
